@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Generate table</title>
+    <script defer type="text/javascript" src="./table-service.js"></script>
+    <link rel="stylesheet" href="table-styles.css" />
+  </head>
+  <body>
+    <div>
+      <div class="container input-container">
+        <input type="text" id="rows" />
+        <input type="text" id="cols" />
+      </div>
+      <div class="container labels-container">
+        <span class="labels">Rows</span>
+        <span class="labels">Cols</span>
+      </div>
+      <div class="container btn-container">
+        <input
+          id="btnSubmit"
+          class="btn btn-primary"
+          type="submit"
+          class="gen-table"
+        />
+      </div>
+      <div id="tableContainer" class="container tbl--container"></div>
+    </div>
+  </body>
+</html>
