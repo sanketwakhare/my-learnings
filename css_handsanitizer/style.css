@@ -1,0 +1,98 @@
+body {
+  width: 100%;
+  height: 100%;
+  background: #1a4341;
+}
+
+.bg-henna {
+  background: #998235;
+}
+.bg-yellow {
+  background: #f3ac3c;
+}
+.bg-green {
+  background: #1a4341;
+}
+.main-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  height: 100%;
+  /* height: 100%; */
+}
+.base-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.right-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.circle {
+  border-radius: 50%;
+  height: 75px;
+  width: 75px;
+}
+.drops {
+  border-radius: 50%;
+  height: 20px;
+  width: 20px;
+  margin-top: 10px;
+}
+.square--1 {
+  border-radius: 0 0 20px 20px;
+  height: 100px;
+  width: 150px;
+}
+.square--2 {
+  border-radius: 20px 20px 0 0;
+  height: 100px;
+  width: 150px;
+}
+.horizontal-line--1 {
+  height: 20px;
+  width: 150px;
+  border-radius: 10px 0 0 10px;
+}
+.vertical-line-rounded {
+  height: 40px;
+  width: 20px;
+  border-radius: 10px;
+  margin-top: -20px;
+}
+.horizontal-line-rounded {
+  height: 20px;
+  width: 50px;
+  border-radius: 0 10px 10px 0;
+}
+.vertical-line-plain {
+  height: 30px;
+  width: 20px;
+}
+.square-bottlecap {
+  border-radius: 10px 10px 0 0;
+  height: 25px;
+  width: 50px;
+}
+
+.semi-circle-1 {
+  border-radius: 50% 50% 0 0;
+  height: 75px;
+  width: 75px;
+  margin-top: -37.5px;
+}
+.semi-circle-2 {
+  border-radius: 0 0 50% 50%;
+  height: 75px;
+  width: 75px;
+  margin-bottom: -37.5px;
+  z-index: 1;
+}
+.semi-container {
+  display: flex;
+  flex-direction: row;
+}
