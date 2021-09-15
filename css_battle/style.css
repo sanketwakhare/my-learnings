@@ -1,0 +1,101 @@
+body {
+  width: 100%;
+  height: 100%;
+  background: #1a4341;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  margin-top: 100px;
+}
+
+.centered {
+  height: 100%;
+  align-items: center;
+  display: flex;
+}
+
+.circle-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.line {
+  height: 150px;
+  width: 10px;
+  border-radius: 10px;
+  position: absolute;
+  top: 50;
+  left: 50;
+}
+
+.rotate-60 {
+  transform: rotate(60deg);
+}
+
+.rotate-120 {
+  transform: rotate(120deg);
+}
+
+.circle {
+  border-radius: 50%;
+}
+
+.big-circle {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 50;
+  left: 50;
+}
+
+.circle-1 {
+  height: 25px;
+  width: 25px;
+  display: flex;
+  align-items: flex-start;
+  position: absolute;
+  top: 30;
+  left: 30;
+  margin-top: -25px;
+  margin-right: 40px;
+}
+
+.circle-2 {
+  height: 20px;
+  width: 20px;
+  flex-direction: column;
+  display: flex;
+  align-items: flex-end;
+  position: absolute;
+  top: 50;
+  left: 50;
+  margin-top: 40px;
+  margin-left: 20px;
+}
+
+.circle-3 {
+  height: 10px;
+  width: 10px;
+  position: absolute;
+  top: 100;
+  left: 100;
+  margin-top: -5px;
+  margin-left: 50px;
+}
+
+.bg-yellow {
+  background: #f3ac3c;
+}
+
+.bg-green {
+  background: #998235;
+}
