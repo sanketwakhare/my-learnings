@@ -38,11 +38,21 @@ Explanation 2:
  Element 4 is missing, so we return 0.
 */
 const consecutiveSum = (A) => {
+  A = A.sort();
+
   // find min,max and actual sum of all elements
   let min = A[0];
   let max = A[0];
   let actualSum = 0;
-  A.forEach((element) => {
+  // A.forEach((element) => {
+  for (let i = 0; i < A.length; i++) {
+    const element = A[i];
+    if (i !== A.length - 1) {
+      const nextElement = A[i + 1];
+      if (element === nextElement) {
+        return 0;
+      }
+    }
     if (element < min) {
       min = element;
     }
@@ -50,9 +60,9 @@ const consecutiveSum = (A) => {
       max = element;
     }
     actualSum += element;
-  });
+  }
   // formula to calculate sum of n terms when first and last term is known
-  const sum = ((max + min) * A.length) / 2;
+  const sum = Math.floor(((max + min) * A.length) / 2);
 
   if (sum === actualSum) {
     return 1;
@@ -60,7 +70,8 @@ const consecutiveSum = (A) => {
   return 0;
 };
 
-// consecutiveSum([1, 2, 3, 4, 5]);
+consecutiveSum([1, 2, 3, 4, 5]);
+consecutiveSum([3, 5, 5, 5, 7]);
 consecutiveSum([
   285, 223, 327, 320, 107, 127, 266, 277, 324, 282, 322, 260, 257, 87, 288, 321,
   269, 86, 69, 206, 66, 165, 160, 67, 316, 216, 161, 118, 330, 337, 274, 145,
