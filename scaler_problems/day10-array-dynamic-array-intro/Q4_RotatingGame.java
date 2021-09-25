@@ -16,11 +16,7 @@ public class Q4_RotatingGame {
 		String[] tokens = line1.split(" ");
 		int arrayLength = Integer.parseInt(tokens[0]);
 		int bRotations = Integer.parseInt(line2);
-		
-//		int actualRotations = tokens.length-bRotations;
-//		if(bRotations > arrayLength) {
 		int actualRotations = (bRotations%arrayLength);
-//		}
 		
 		for (int i = arrayLength - actualRotations+1 ; i < tokens.length; i++) {
 			System.out.print(tokens[i] + " ");
