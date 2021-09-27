@@ -40,6 +40,7 @@ const multiplicationOfPrevAndNext = (A) => {
         const next = A[i + 1];
         outArray.push(prev * next);
     }
+    // for last element in array
     outArray.push(A[A.length - 2] * A[A.length - 1]);
 
     console.log(outArray);
