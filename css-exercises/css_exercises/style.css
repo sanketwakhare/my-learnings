@@ -1,0 +1,38 @@
+.main-container {
+  display: flex;
+  margin-top: 50rem;
+  /* border: 10px solid black; */
+  justify-content: center;
+  margin-left: 50rem;
+  margin-right: 50rem;
+  padding: 1rem;
+  background-color: black;
+  color: white;
+  animation-name: right-bounce;
+  animation-duration: 0.8s;
+}
+
+@keyframes right-bounce {
+  0% {
+    transform: rotate(8deg);
+    transform-origin: 0%;
+  }
+  20% {
+    /* transform: translateY(-10px); */
+    color: black;
+  }
+  60% {
+    /* transform: translateY(-10px); */
+    color: black;
+  }
+  80% {
+    /* transform: translateY(-10px); */
+    color: black;
+  }
+  100% {
+    /* transform: translateY(-10); */
+    color: black;
+  }
+}
+.green-heart {
+}
