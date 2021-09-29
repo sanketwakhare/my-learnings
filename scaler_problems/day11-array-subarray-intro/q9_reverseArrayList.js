@@ -36,7 +36,11 @@ Explanation 2:
 
 Clearly, Reverse of [1,1,10] is [10,1,1]
  */
-
+/**
+ * reverse array with O(N) time and space complexity
+ * 
+ * @param {Array} A 
+ */
 const reverseArrayList = (A) => {
     let reversedArray = [];
     for (let i = A.length - 1; i >= 0; i--) {
