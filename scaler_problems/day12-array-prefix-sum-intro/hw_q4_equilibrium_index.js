@@ -96,4 +96,37 @@ const findEquilibriumIndex = (A) => {
     console.log(minEquilibriumIndex);
 }
 
-findEquilibriumIndex([-7, 1, 5, 2, -4, 3, 0]);
+const findEquilibriumIndexOptimizedWithNoExtraSpace = (A) => {
+
+
+    // find totalSum
+    let totalSum = A[0];
+    for (let i = 1; i < A.length; i++) {
+        totalSum += A[i];
+    }
+
+    let minEquilibriumIndex = A.length;
+    let leftSum = 0;
+    for (let i = 0; i < A.length; i++) {
+        // calculate leftSum on the fly using carry forward technique
+        leftSum += A[i];
+        // rightSum can be calculated using totalSum and leftSum
+        let rightSum = totalSum - leftSum + A[i];
+
+        // alternate way to calculate leftSUm and rightSum
+        // leftSum = sum of [0,i]
+        // rightSum = sum of [i, N-1]
+
+        if (leftSum === rightSum) {
+            minEquilibriumIndex = Math.min(minEquilibriumIndex, i);
+        }
+    }
+    if (minEquilibriumIndex === A.length) {
+        minEquilibriumIndex = -1;
+    }
+    console.log(minEquilibriumIndex);
+}
+
+
+// findEquilibriumIndex([-7, 1, 5, 2, -4, 3, 0]);
+findEquilibriumIndexOptimizedWithNoExtraSpace([-7, 1, 5, 2, -4, 3, 0]);
