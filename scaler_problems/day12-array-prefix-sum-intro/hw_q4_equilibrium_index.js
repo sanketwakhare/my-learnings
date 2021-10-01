@@ -42,17 +42,21 @@ There is no such index.
  */
 
 /**
- * 
+ * solved using Observations/pattern
+ * use left prefix sum array and right prefix sum array
+ * and compare the left[i-1] and right[i+1] indexes
+ * TC: O(N+N+N)~ O(N)
+ * SC: O(N+N) ~ O(N)
  * @param {Array} A 
  */
 const findEquilibriumIndex = (A) => {
-    // generate left prefix array
+    // generate left prefix array. TC: O(N) SC: O(N)
     let left = [];
     left.push(A[0]);
     for (let i = 1; i < A.length; i++) {
         left.push(left[i - 1] + A[i]);
     }
-    // generate right prefix array
+    // generate right prefix array. TC: O(N) SC: O(N)
     let right = [];
     right[A.length - 1] = A[A.length - 1];
     for (let i = (A.length - 2); i >= 0; i--) {
@@ -61,9 +65,11 @@ const findEquilibriumIndex = (A) => {
     console.log(left);
     console.log(right);
 
+    // for the current index i, compare the [i-1]th element from left prefix sum array and [i+1]th right prefix sum array
     let prevEleSum = left[0];
     let nextEleSum = right[right.length - 1];
     let minEquilibriumIndex = A.length;
+    // TC: O(N) SC: O(1)
     for (let i = 0; i < A.length; i++) {
 
         if (i === 0) {
