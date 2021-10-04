@@ -23,6 +23,15 @@ Example Output
 Explanation M'Baku has 5 votes here. One way to win the elections is to bribe 4 people who are going to vote for third candidate and reduce his/her votes from 11 to 7. One more way can be to bribe 3 people who are going to vote candidate 3 and bribe 1 person who is going to vote to candidate 2.
  */
 
+/**
+ * Since constraints are less, N^2 solution is acceptable.
+ * 
+ * Total Time Complexity:
+ * For Sorting:  N*log(N) * N => N^2 * log(N)
+ * 
+ * @param {Array} A 
+ * @returns 
+ */
 const makeMBakuWinTheElections = (A) => {
     let mBakuVotes = A[0];
     let tempArray = [...A];
