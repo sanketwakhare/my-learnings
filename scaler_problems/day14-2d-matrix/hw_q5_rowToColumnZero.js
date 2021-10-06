@@ -32,7 +32,8 @@ A[2][4] = A[3][3] = 0, so make 2nd row, 3rd row, 3rd column and 4th column zero.
  */
 
 /**
- * 
+ * TC: O(N*N)
+ * SC: O(1)
  * @param {Array} A 
  * @returns Array with row and column elements 0 when there was already a ith and jth element is 0
  */
