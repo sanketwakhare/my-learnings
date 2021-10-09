@@ -130,6 +130,7 @@ lengthOfLongestConsecutive1s('11');
 lengthOfLongestConsecutive1s('1');
 lengthOfLongestConsecutive1s('0');
 lengthOfLongestConsecutive1s('110011');
+lengthOfLongestConsecutive1s('11101110');
 
 // solve('110011');
 // solve('111011101');
