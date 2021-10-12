@@ -1,0 +1,18 @@
+Ratio of Boys and Girls
+In a country where everyone wants a boy, each family continues having babies till they have a boy. After some time, what is the proportion of boys to girls in the country? (Assuming probability of having a boy or a girl is the same)
+
+ Round off your answer to 2 decimal places and output the answer as I.xx where I is the integer part of your answer, and xx are the first 2 decimal places of the rounded off answer. 
+
+
+ Ans : -> 1.00
+
+Complete Solution : -
+ Number of girls = 0*(Probability of 0 girls) + 1*(Probability of 1 girl) + 2*(Probability of 2 girls) + …
+	Number of girls = 0*(C*1/2) + 1*(C*1/2*1/2) + 2*(C*1/2*1/2*1/2) + …
+	Number of girls = 0 + C/4 + 2*C/8 + 3*C/16 + …
+	Number of girls = C
+	(using mathematical formulas; it becomes apparent if you just sum up the first 4-5 terms)
+
+
+The proportion of boys to girls is 1 : 1.
+As such, the answer would be 1.00
