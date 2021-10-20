@@ -40,7 +40,7 @@ const findFirstRepeatingElement = (A) => {
     let hashMap = new Map();
     // store element and frequency
     for (let i = 0; i < A.length; i++) {
-        const curr = A[i].toString();
+        const curr = A[i];
         if (hashMap.has(curr)) {
             let currentFrequency = hashMap.get(curr);
             hashMap.set(curr, currentFrequency + 1);
@@ -51,7 +51,7 @@ const findFirstRepeatingElement = (A) => {
 
     // iterate and find first element with frequency 2
     for (let i = 0; i < A.length; i++) {
-        const curr = A[i].toString();
+        const curr = A[i];
         if (hashMap.has(curr)) {
             if (hashMap.get(curr) > 1) {
                 ans = A[i];
