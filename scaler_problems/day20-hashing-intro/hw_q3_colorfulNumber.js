@@ -49,7 +49,12 @@ Explanation 2:
  This number is not a COLORFUL number since the product sequence 23  and sequence 6 is same.
  */
 
-
+/**
+ * TC: O(N^2) where N is length of number A
+ * 
+ * @param {Integer} A number
+ * @returns 
+ */
 const isColorFulNumber = (A) => {
 
     // break all digits and create array of each digit
