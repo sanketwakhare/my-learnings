@@ -57,6 +57,7 @@ const isSubarrayWithSumZeroPresent = (A) => {
     let isSubArrayPresent = 0;
     if (hashMap.has(0)) {
         isSubArrayPresent = 1;
+        return isSubArrayPresent;
     }
     // check if there exist a duplicate element in prefix sum
     // or check if there exist a zero in prefix sum
@@ -73,3 +74,5 @@ const isSubarrayWithSumZeroPresent = (A) => {
     return isSubArrayPresent;
 
 }
+isSubarrayWithSumZeroPresent([1, 2, 3, 4, 5]);
+isSubarrayWithSumZeroPresent([1, -1]);
