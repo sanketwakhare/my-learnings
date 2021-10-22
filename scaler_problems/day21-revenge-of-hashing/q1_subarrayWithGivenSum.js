@@ -40,6 +40,9 @@ Explanation 2:
 
 /**
  * Find subarray with sum matching B
+ * Iteration: 2N
+ * TC: O(N)
+ * SC: O(N)
  * @param {Array} A input positive integer array
  * @param {Number} B target sum of subarray
  * @returns 
@@ -78,5 +81,7 @@ const subArrayWithGivenSum = (A, B) => {
     return result;
 }
 
-// subArrayWithGivenSum([1, 2, 3, 4, 5], 5);
+subArrayWithGivenSum([1, 2, 3, 4, 5], 5);
 subArrayWithGivenSum([5, 10, 20, 100, 105], 105);
+subArrayWithGivenSum([5, 10, 20, 100, 105], 110);
+subArrayWithGivenSum([5, 10, 20, 100, 105], 120);
