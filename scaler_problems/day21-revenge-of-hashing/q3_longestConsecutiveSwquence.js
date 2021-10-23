@@ -35,6 +35,8 @@ Explanation 2:
 
 /**
  * Find length of longest Consecutive Sequence
+ * TC: O(N)
+ * SC: O(N)
  * @param {Array} A input array
  * @returns find length of longest consecutive sequence
  */
