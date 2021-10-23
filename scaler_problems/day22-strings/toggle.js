@@ -1,0 +1,1 @@
+String.fromCharCode((s[2].charCodeAt(0) ^ 32))
