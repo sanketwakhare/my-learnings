@@ -33,11 +33,12 @@ Explanation 1:
  */
 
 /**
- * Reverse the given string
+ * Reverse the given string using char array
  * @param {String} A 
  */
 const reverse = (A) => {
 
+    // convert string to char array and then swap elements
     let reversedString = A.split('');
     let start = 0;
     let end = A.length - 1;
@@ -51,6 +52,7 @@ const reverse = (A) => {
     }
     console.log(reversedString);
 
+    // convert char array to string
     let output = '';
     for (let i = 0; i < reversedString.length; i++) {
         output += reversedString[i];
