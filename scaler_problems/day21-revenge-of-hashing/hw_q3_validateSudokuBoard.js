@@ -122,6 +122,11 @@ const validateSubSquares = (grid) => {
     return true;
 }
 
+/**
+ * validate sudoku using 2D matrix and HashSet
+ * @param {Array} A 
+ * @returns 
+ */
 const isValidSudoku = (A) => {
 
     const grid = convertBoardToGrid(A);
