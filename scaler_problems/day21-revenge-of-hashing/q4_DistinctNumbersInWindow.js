@@ -41,8 +41,11 @@ Explanation 2:
  */
 
 /**
- * 
- * @param {Array} A 
+ * Sliding window and hashMap
+ * TC: O(N)
+ * SC: O(N)
+ * @param {Array} A array
+ * @param {Number} K window size
  */
 const countDistinctElementsInWindow = (A, K) => {
 
