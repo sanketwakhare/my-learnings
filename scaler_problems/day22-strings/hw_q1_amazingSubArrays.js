@@ -32,6 +32,13 @@ Explanation
  * Idea:  if vowel is at index i, there would be (N-i) subarray
  */
 
+/**
+ * TC: O(N)
+ * SC: O(1)
+ * count no of subarray starting with vowels
+ * @param {String} A input string
+ * @returns no of subarray starting with vowels % 10003
+ */
 const findNoOfAmazingSubArrays = function (A) {
 
     // initialize total subarray to 0
