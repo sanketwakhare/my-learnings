@@ -33,6 +33,8 @@ Explanation 2:
 
 /**
  * Find no of occurrences of string 'bob'
+ * TC: O(N^2)
+ * SC: O(1)
  * @param {String} A input string
  * @returns 
  */
