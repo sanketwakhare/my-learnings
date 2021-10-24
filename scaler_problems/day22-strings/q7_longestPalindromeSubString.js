@@ -29,6 +29,13 @@ Example Explanation
 We can see that longest palindromic substring is of length 7 and the string is "aaabaaa".
  */
 
+/**
+ * 
+ * @param {String} S input string.
+ * @param {Number} start start index of substring
+ * @param {Number} end end index of substring
+ * @returns longest palindromic substring with center as start/end
+ */
 const expand = (S, start, end) => {
     while (start >= 0 && end < S.length && S[start] === S[end]) {
         start--;
@@ -46,6 +53,9 @@ const expand = (S, start, end) => {
 
 /**
  * Use expand at center approach
+ * Iterations: 2N * N
+ * TC: O(N^2)
+ * SC: O(1)
  * Find longest palindromic substring
  * @param {String} A input string.
  */
