@@ -43,9 +43,9 @@ Explanation 2:
  */
 const isDictionarySorted = (A, B) => {
 
-    // store all characters in B into hashMap
+    // store all characters of B into hashMap
     let hashMap = new Map();
-    // edge case, add -1 for black character.. thi will come for end of string
+    // edge case, add -1 for blank character.. this will come for end of string
     hashMap.set('', -1);
     const b = B.split('');
     for (let i = 0; i < b.length; i++) {
@@ -66,7 +66,7 @@ const isDictionarySorted = (A, B) => {
             const s1 = hashMap.get(str1.charAt(j));
             const s2 = hashMap.get(str2.charAt(j));
             if (s1 < s2) {
-                // if char at str1 is less, compare next set of string
+                // if char at str1 is less, compare next set of characters in string
                 break;
             }
             if (s1 > s2) {
