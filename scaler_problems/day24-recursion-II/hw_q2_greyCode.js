@@ -59,8 +59,9 @@ const greyRecursive = (array, N, A) => {
     }
     let out = [];
     const addValue = Math.pow(2, N);
-    // grey code recursive
+    // iterate from last to first
     for (let i = array.length - 1; i >= 0; i--) {
+        // grey code recursive
         out.push(Number(array[i]) + Number(addValue));
     }
     // call the function recursively
