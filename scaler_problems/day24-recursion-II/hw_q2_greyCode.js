@@ -43,6 +43,15 @@ for A = 1 the gray code sequence is:
 So, return [0, 1].
  */
 
+/**
+ * Grey code recursive function
+ * TC: O(2^N) for iterating no of array elements
+ * SC: O(2^N) array size
+ * @param {Array} array current grey code array elements
+ * @param {Number} N power value of 2
+ * @param {Number} A 
+ * @returns 
+ */
 const greyRecursive = (array, N, A) => {
     // base condition
     if (N === A) {
@@ -62,6 +71,7 @@ const greyRecursive = (array, N, A) => {
 //param A : integer
 //return a array of integers
 const grayCode = function (A) {
+    // pass initial pow value as 0 and initial array element as 0
     return greyRecursive([0], 0, A);
 }
 
