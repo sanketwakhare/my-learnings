@@ -22,29 +22,57 @@ Output : 2
  * @param {Number} D mode
  * @returns 
  */
-const custPower = (A, N, D) => {
+const custPower = (a, n, d) => {
 
-    if (N === 0) {
-        return 1 % D;
+    // convert to BigInt
+    let A = BigInt(a);
+    let N = BigInt(n);
+    let D = BigInt(d);
+
+    // anything raise to 0 is 1
+    if (N === 0n) {
+        return BigInt(1n % D);
     }
 
-    let ans = custPower(A, Math.floor(N / 2), D);
-
-    if (N % 2 === 0) {
-        ans = ((ans % D) * (ans % D)) % D;
-    } else {
-        ans = ((ans % D) * (ans % D) * (A % D)) % D;
+    // if N is 1
+    // if N is -ve, add mod value to make it positive
+    if (N === 1n) {
+        let ans = BigInt(A % D);
+        if (A < 0) {
+            ans = BigInt(ans % D + D);
+        }
+        return ans;
     }
-    if (ans < 0) {
-        ans = (ans % D + D) % D;
+
+    // call recursivce function dividing N by 2
+    let ans = BigInt(custPower(A, BigInt(N / 2n), D));
+
+    // if power value N is more than 1
+    if (N > 1n) {
+        if (N % 2n === 0n) {
+            // if power is even
+            ans = ((ans % D) * (ans % D)) % D;
+        } else {
+            // if power is odd
+            ans = ((ans % D) * (ans % D) * (A % D)) % D;
+        }
+        // if answer is -ve, add mod value D to final answer
+        if (ans < 0) {
+            ans = (ans % D + D) % D;
+        }
     }
     return ans;
 }
 
-const pow = (A, N, D) => {
-    return custPower(A, N, D);
-}
+//param A : integer
+//param B : integer
+//param C : integer
+//return an integer
+const solve = (A, N, D) => {
 
+    return Number(custPower(A, N, D));
+
+}
 
 console.log(custPower(-1, 1, 20));
 console.log(custPower(2, 5, 30));
