@@ -16,7 +16,9 @@ Output : 2
  */
 
 /**
- * 
+ * Consider overflow scenarios
+ * Use BigInt
+ * Consider +ve as well as -ve inputs
  * @param {Number} A base
  * @param {Number} N power
  * @param {Number} D mode
