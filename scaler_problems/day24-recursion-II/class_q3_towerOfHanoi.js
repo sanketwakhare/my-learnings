@@ -1,3 +1,12 @@
+
+/**
+ * Tower of Hanoi
+ * @param {*} N no of discs
+ * @param {*} S source
+ * @param {*} T temp
+ * @param {*} D destination
+ * @returns 
+ */
 const TOH = (N, S, T, D) => {
 
     if (N === 0) {
