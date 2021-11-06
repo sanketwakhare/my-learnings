@@ -2,3 +2,66 @@ article p:first-of-type {
   color: red;
   font-size: 2rem;
 }
+
+/* universal selector */
+* {
+  color: darkblue;
+}
+
+/* this is type selector */
+small {
+  color: blueviolet;
+}
+
+/* class selector */
+.danger {
+  color: red;
+}
+
+/* another class selector */
+.bg__black {
+  background-color: yellowgreen;
+}
+
+/* id selector */
+#custom-box {
+  border: 1px solid blue;
+}
+
+/* attribute selector 1*/
+[data-type="primary"] {
+  color: darkgreen;
+}
+
+/* attribute selector 2*/
+[data-type="secondary"] {
+  color: lightgreen;
+}
+
+/* attribute selector: select all elements which has attribute data-type*/
+[data-type] {
+  background-color: orange;
+}
+
+/* contains keyword example */
+[data-search-value*="example"] {
+  background-color: red;
+}
+
+/* starts with keyword laptop */
+[data-search-value^="laptop"] {
+  color: orange;
+}
+
+/* ends with keyword done */
+[data-search-value$="done"] {
+  color: red;
+}
+
+/* group selectors */
+strong,
+em,
+.my-class,
+[lang] {
+  color: #009688;
+}
