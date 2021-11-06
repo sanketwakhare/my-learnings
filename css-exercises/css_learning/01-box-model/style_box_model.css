@@ -1,0 +1,48 @@
+.p__extrinsic {
+  width: 100px;
+  height: 50px;
+  padding: 20px;
+  border: 1px solid;
+}
+
+.p__extrinsic_avoids_overflow {
+  width: 100px;
+  /* height: 50px; */
+  height: min-content;
+  padding: 20px;
+  border: 1px solid;
+}
+
+.box {
+  outline: 5px solid var(--color-primary-dark);
+  padding: 20px;
+  border: 50px solid var(--color-primary-light);
+}
+
+.my-box {
+  width: 200px;
+  border: 10px solid;
+  padding: 20px;
+  box-sizing: content-box;
+}
+
+:root {
+  --color-primary-dark: #5934ff;
+  --color-primary-light: #c1b8e7;
+}
+
+/* box sizing models
+default sizing model is content-box
+box-sizing: content-box;
+the padding and border will be added to the actual contents size
+ */
+
+/* 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  
+  // the padding and border will be added to the actual contents size 
+}  
+*/
