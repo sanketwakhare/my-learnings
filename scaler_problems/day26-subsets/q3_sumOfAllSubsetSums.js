@@ -39,6 +39,13 @@ Similar to the first example, the sum of all subarray sums for this array is 19.
 
 //param A : array of integers
 //return a long integers
+
+/**
+ * TC: O(N) using contribution method
+ * Calculate sum of subarray sums where subarray elements can be removed either from start or end
+ * @param {Array} A 
+ * @returns Number sum of subarray sums
+ */
 const subarraySum = (A) => {
 
     // calculate contribution of set bits in an subset
