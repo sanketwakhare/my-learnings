@@ -28,6 +28,8 @@ small {
   border: 1px solid blue;
 }
 
+/* Attribute Selector starts*/
+
 /* attribute selector 1*/
 [data-type="primary"] {
   color: darkgreen;
@@ -57,6 +59,8 @@ small {
 [data-search-value$="done"] {
   color: red;
 }
+
+/* Attribute Selector ends*/
 
 /* group selectors */
 strong,
