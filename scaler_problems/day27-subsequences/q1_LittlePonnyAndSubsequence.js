@@ -1,0 +1,147 @@
+/**
+ * Problem Description
+
+Little Ponny is given a string A and he wants to find out the lexicographically minimum subsequence from it of size >= 2. Can you help him?
+
+A string a is lexicographically smaller than a string b, if the first different letter in a and b is smaller in a. For example, "abc" is lexicographically smaller than "acc" because the first different letter is 'b' and 'c' which is smaller in "abc".
+
+Problem Constraints
+1 <= |A| <= 105
+A only contains lowercase alphabets.
+
+Input Format
+The first and the only argument of input contains the string, A.
+
+Output Format
+Return a string representing the answer.
+
+Example Input
+Input 1:
+ A = "abcdsfhjagj"
+Input 2:
+ A = "ksdjgha"
+
+Example Output
+Output 1:
+ "aa"
+Output 2:
+ "da"
+
+Example Explanation
+
+Explanation 1:
+ "aa" is the lexicographically minimum subsequence from A.
+Explanation 2:
+ "da" is the lexicographically minimum subsequence from A.
+ */
+
+
+/**
+ * Find smallest subsequence string from given input string
+ * TC: O(N)
+ * SC: O(2N + N)
+ * @param {Array} A input array
+ * @returns {String} smallest subsequence string
+ */
+//param A : string
+//return a strings
+const findSubSmallestSubsequenceOfLength2 = function (A) {
+
+    // Approach:
+    /* For a given index i, split the array into two partitions and find minimum from each charArray.
+    Store all subsequences in some new array and sort it */
+
+    const charArray = A.split('');
+
+    // calculate left prefix array of min values till every index i
+    let prefixMinLeftArray = [];
+    let min = charArray[0];
+    prefixMinLeftArray.push(min);
+    for (let i = 1; i < charArray.length; i++) {
+        if (A[i] < min) {
+            min = A[i];
+        }
+        prefixMinLeftArray.push(min);
+    }
+
+    // calculate right prefix array of min values from right to left till every index i
+    let prefixMinRightArray = [];
+    min = charArray[charArray.length - 1];
+    prefixMinRightArray.push(min);
+    for (let i = charArray.length - 2; i >= 0; i--) {
+        if (A[i] < min) {
+            min = A[i];
+        }
+        prefixMinRightArray.push(min);
+    }
+
+    // maintain the unique subsets
+    let uniqueSubSets = new Set();
+
+    for (let i = charArray.length - 2; i >= 0; i--) {
+        // compare min values of each partitions left and right
+        minFromFirstPartition = prefixMinLeftArray[i];
+        minFromSecondPartition = prefixMinRightArray[prefixMinRightArray.length - 2 - i];
+        // add subsequences of length 2 to set
+        uniqueSubSets.add(minFromFirstPartition + minFromSecondPartition);
+    }
+
+    /* Find minimum subsequence from set */
+    // convert set to array
+    let possibleSubSequences = [...uniqueSubSets];
+    let minSubSequence = possibleSubSequences[0];
+    for (let i = 1; i < possibleSubSequences.length; i++) {
+        if (possibleSubSequences[i] < minSubSequence) {
+            minSubSequence = possibleSubSequences[i];
+        }
+    }
+
+    console.log(minSubSequence);
+    return minSubSequence;
+}
+
+
+// find minimum character from array 
+Array.prototype.findMinChar = function () {
+    const inputArray = this;
+    return inputArray.reduce((min, current) => {
+        if (current < min) {
+            min = current;
+        }
+        return min;
+    }, inputArray[0]);
+}
+
+
+/* Sort the string array in ascending order*/
+Array.prototype.sortStrings = function () {
+    // custom sorting
+    let inputArray = this;
+    return inputArray.sort(function (a, b) {
+        if (a < b) {
+            return -1;
+        }
+        if (a > b) {
+            return 1;
+        }
+        return 0;
+    });
+}
+
+Array.prototype.findMinInt = function () {
+    const inputArray = this;
+    return inputArray.reduce((min, current) => {
+        if (current < min) {
+            min = current;
+        }
+        return min;
+    }, Number.MAX_SAFE_INTEGER);
+}
+
+
+findSubSmallestSubsequenceOfLength2('abcdsfhjagj');
+findSubSmallestSubsequenceOfLength2('ksdjgha');
+findSubSmallestSubsequenceOfLength2('piaouim');
+
+findSubSmallestSubsequenceOfLength2('epujxwjiad');
+findSubSmallestSubsequenceOfLength2('wxgmbebqywgbwebeeyqcgtymygxbwbmcbbcwcewcycexxxggtxxebxgycbecgtcybttcxtmbexqxmeeycgcgxwxtmetmmcyetmybtgtwqqmyceexemmbcmtbxqbgeybccymxwqxcqcebmqwxbqxtbxeygxgycqwtxgwqycwygbwwxtxeqxyxtqgbcgcyxgyybwmqgtxbywgygcewmteeyygecqcbcqewqttwbwbyxtxbqbegxebbbbycexqgbgwctqxbxecmecqbcqygbbytegxqgmxbyewxyxgwwetqmwxtwxbxcctgwgbqwwgqyxtxqmyqcmmxeegytycwqeteqtegmtqbgqmegwbbxygtbtyxecwgxxyymymwxxqcqmmbegmexmygwcmcctgcgygbbtccgxtxqqweccbbwqbxwqggcyygxccqqxmgeeycmewtbexxceemwggmggmeycgwgxqgyymbbmgybyxcetgycxweeyxeyqbtgcgycwxycyxytyeettqxgteettgmxgwwqtcxygwggyqctewgbxgqxqwtggtxybgcxcbyybqwxqccqmybxmybmxywxwbceqetwxmbyxbbtmbtgywtxcgmmmyqwybwqcgbxgmtmqbemebcxwmtmbetbetmwceweycybqytqgmcymcyxcxgegbtwbytxgbbecywgxyybcxcqbwxtmcgewmbtexyyqqqggqqmwqttbtxbwetgybmmxbeeewwwextbtcweqeqgeegygbtmtmcytgcxwqxwgbxxbeegxqeemwbewetttqyqteeyytcbwcmgbxtqyemeqwcqgqyemtxemcmgqtmqqtcyxbwyewtbmeeqybmycmtwqqwtywqqmqexwqcwetwxqqcqwgtbqtggeewqygmyxemxmtemqectmmqmgccmxgmwgwwyybcbbxcmeegqqxcxxtcbtqtxteqbcttgycmbmcxwmgbqmbygqwxbbmycgxceebbxymxtmymcccbtbywqyecmxgeemqygqmmmybmtyxcbmxwgtwgxcxqywtbbxcetmgwcwtyygectctqbxwwtwtmetctxmyxtebtybtmmqttxyxcytmqgqtmybtgqmbmeyymmbgbqcqwggebxtyymwtwgbqmtgwycxyewgywqymgebtggwgmyqycwbcxwqmtqxxwetectytgycymbqwwbcbtymxecqggbymyqqbxqmmyexwmemxmexcxcyygxymwcqcmbetxtqqyqgytyyqbgweyqbmtxwwxctmtmbcywbmmtbbeyeyqbgywmwewccbemtbctwcbxtegxtbqgcxtmbttqtxcbxtqwmbygbwtyytmmbtbwbxywqmygtqwbwbbxqmbywqgxbtbqcxqgcygexccbqyyygbqywmqtemmttembtcmwqbgbyccxeggmgmwgtbqgcymcqcgwyqwbybwbecybqgtbxcgwmmecwgebmmcxqctwgebqyemgeygebwxgcecgtwwwbbtmxwyxmqgebgmwqymewexbttmgxtttbtwcwqxcwqgcxbmmtqqqeegybewtxwgbqbqemtetmbmmcqqtycmbmgxtxwgbwxtegqcxxbwtqecebtcgccgxeymcegtmwmyxqcgbtygqxwegeqtwgqtxytemcmcwmyxcyggweymqmbgttgxqqwgbqgttbcbtqyqtbxgmbeywycbxytqmwcygyxwgwqxgytcxtgwgmtywqwteebwqmeeqwcbxtgqtbmctbxqmeqqctbtyybxbmwctqmmbmeebqqbccxxmwcbbybmbqtytgmetqxeqtbymtgwbgtcmceycgbcgcygybcebwbcetmbcwweebqwqymtegyqexyebwebytybbbcqmwgeqxmmcbxbqmcxwcxwetyxyyqqqbbmebcqccebxtmtmcebwcwybbmbcemmqcwtbtbyexmcgcxewbqxmwmqtqmegwegqtgyemtygmgeqecwbqwxgqycqycxqcmetymcexwxwwmqmyxmxqtmcqgqcwwqmwcewmxmcebeecgbgtqtgtwxewcmbxwyxwtqgwegxmyxttbccxqtmyqbmqxmmtbcwwywggwcbycyqyccqqegxcqceqetwqbcbeqmmmqgycxebqwxeecyxcbyxmqwcxegqcbgxwxwtwgwmgemqyxwcmxcmqqbtcettqgemxewxtbqqwtgmqmqgbgbywxqmbwqwmgqbbtctyxbqbqyqtyyymeqytqgbyqxmqqxtexebwgxwgeywgbxtetyxqtxtbecxqeqwemcewebytxbtywqtmqmbmeeyxggxcbexbmqtybmmegqyqxwbmxwtxcyxwgmmeewwegyqgtcyqtxmwtxyqecqxqgymmqxexwxymgtmbcbyqcwwwcccxqycqytxemtwgtxeqwtmqmmmybxgqbgmgexeebgqbcqbycmctmyeeywbweeyyxcyxbwtwbcmcxxwcetgqgeebxteqytttctgyewwytcywwtctyexxwmgebcyxgbcwbemxqcqqcwmcxebgwymygqgeymxqbqtcytymwbtemmxcgxbewybwtbybeywmxtwbcqeqcbetgmcxqxemyqebtcwwmemceqcqetymwqwywwmxggcxgcbcmycyxmcttecebeemwxmbybmgcqybqwtetxeycqccxxtxgbemeqwbmtmqtcxwqwyqyqgwbwtmcygctxwgqbgbcmbexcebtybeccggmyeexmewemwxwxxtewbeeeeyxqcmgtmqeyxwceqmxtegxymtxxqbwgctxqywqcbmtemcmqtwbttqbqcwbygtygtytqyetyytcxccbqeyxtyxybtwygcmwmyyxqycxqbwmtcebbywxywqqmccgxmbecewqyymxbxycybyqcmewcbtbeqqxgmgmbgbmbtgcmmyexebytxwyetbbeyxbxwmgxgxtbxebbccgwyyctgbctemmwtmgqxmmgcmgbxbxbttwceqbecwebetebexceeewycembmebgeextgmwmmmwctmqwxweqqwxbtemwexgwecctebmtmmeyeywqmtmqmtgytggwxeqqqwctqebxwxgqwxxymebggqgxmtbegggctqebgcmygxxybtyewtyywbmwwmcxtcyqgcqwxybqbewwqywmmcxyxbtebcmtyxxmxeqcewcmqxmgeemcwmcqytgceewwtewwqyqqyxccecxbwwexmmbcbbtbwyggwtceymxtymcyxxxqexggqmbgyeewgybtmtbbqgcwexmtecgygtmctmxbmccmtgxqwwmtcwqqyeywxycxwxbecexyweqtywqyymewqqtqqgbbgyxtqyecqqbetcmxwgttqwtttmmetbyxetmxexqgtetqgxgyxcwtmcetqyxqbtycqqtecmgtxcqbqeqtceeqqwtxeeeeyywcqtgmgbyxeqtwbcwmqmcxexgmgtyqbqgweqwyywtmmmgqtqbbxwbgbwyyetbmegebmccgcbtxeqtcctmyxgexytxmyyxecggbcbxwemgwtqyegcbytqeetctybqxxxwmybqmmctbgwwtwtqgbcccbcexmmqgxemqteggwwbwybbbteyqtbexmceymmwyxemtqyegtqxbtmgwgcxqxmcgtmtxtcmwmxcmgmwmcbqwbbewgbtqmgtccbybeweeecymgbtcmmbcqmewqxtexwwqmgtxtmtexewxgbmwwwxygxxcwbbcgyeqembyxyweggxmwgemecgyewyegqtwcyxgbgxxemqxmtbyyxycwwcgqcbwtyxeeycyqtbcxgeqbxxetbmgbwtgbycbbqewxwtymexgwtwwmeewmytqqtbwbwbtwtxmmyqqqwewbqwgbxyqtcxxqcewexwyexexycxmwwwemmtwmwgcebwmtywytttqxxbqecxbqqtxxcweegxqwbwcwbtmegxymycemweeqbxgyyeybwxceqbggqwmxetwmwycyxgbgegecqcweqebxxmgmewyccqqqqwwxqxxcwmymyxmtteqyxtbtxtbeqmyweqtybmxycxgcqyttcqcmxgcxgwbgbgteyemgmxwtxgyewcegebxqtqcygexwmybqbyqtgwmgmgbegewxegywxbeyybetxcmbybexxceygxgwbemwexyyxgeyqteqeeegcxtxbxbxgqgebexmetttbeyygmxmxwttmwgyqbtgtybwxxcwqctcgyxqwqwxctmewbgbxgtxtemctyyxymegmywqxgxgmqgwcqwmxmwyxwycbemeytxtxqemegbwxgeqbctwxgctetgqywemtbtxmqeytwcttxcxmqexmycggqmxwcgtmggbmgqtwemmyywbbmwxtgycbmbbwcceqymwyggbtemqcycqttwtqxcmtgxtwxcmbbbqmxwwxcqymwxytmcceqymymbxyywgweybmygqebetmeemyxwgtebqtwytcbmmqgtcgxyxxwybwmtmtqmmewtyqyeqqeqmgemewwmgmxcxbmbbbemgyeegytxwqwtwecgegxwgymtebggwwyqggbbmgbccwgewymwtybgctqewetbyetybmqttbcbcxxeyymxwwqxqgqggeqgqtbcwttectbwbwqbtcygwbxcgxqcbqmyyywqxwqtygebbcbgxyexxmcgxycxyytxmmygymbctymytxbgxyxxcgccbcmgqtgeyeyygxwbbtytmgybyywbxbctbqxcwtetwwwcgxqcxcxxbgwbqywtwgytqgwtwmbqgcgtmecxbyywxqqcmccweeyqwbmqtqttxqbxbqcwmbmmwwtwqmcceqxqecbgtytcytemwyemgygmtceygexbmwqcetymgxmbwqgcewbcyqbetmtxebcxbqebmyqcbexyytbmmbcgtmmmegcwmmbgybggbwgqxyyeyqbwyyxewmbbbmmewmeecqtwqeewtxxmtxbmemyggyytycqcctqwbqmxmtmeqewmgyyqycgweegtmmbmbxqbctgmggetmxbgmgtgqewmxmqcqggywcgbxyqbxtqeycgxxeyqbxwecggxexqwqeygggyttybyewxmqmexbqteeyqwmwectxycbmxcxgxtexwmqmbqtgyymgqgteqyywqmeytmmxbxtqqcctqqmqymwbymqbeytmxqgbweeqtgtymycmcbgwwmqtcbgxbcbwmbmmxgxcqmwtgebcbtqqcyywgwegybtqebqgetmeebmcywwywmebxcyqgymegbqmwbwctegqxmwbcqgcwxeggmqbytqwxgctwtwmqwggcqeqyqctqgtwqbqxtwycgmqqgyycqcqmbtetqeqbewwegmygmxqgbygyqxqyqqbymyeyxtqxtgmcxmwgcxgtwgceytxxqyyebbbctbygtwtymgxcgxyyxbctebmwtwbxmexbmgxceyyggmbeyeeebmcwwcwxggemcxwgybwxecymexeteebxwxmeygqecewywcqgcxqtxyqwmwgxywybyqtgqttgcyewcetmxmxywmwbcyqyqmmgcgxmccqyeewbbwqqbqtyycwxtbeyqyxctyxbxqmetccwggewcbxgmtwggmqqccgyqtbxemxmmmwccggceqybxmbqegcecwmxwwxgtbwqwywmgmxyxebttmmyqwyqtxxwwxwtmcmwbqeeytbqwcyqmgxmgebgccgqmcmwxmxxbwgxxxyxgmgttcymbmbttxmeyyxqccccyecbgbwqmyeggtytqyxgtmeqttxtgmtxbegxgtexmbwbyccbwcgeygemcwxwwtxbqcbmxwbwymtyytmqyqwexyqbxxqtctyqweqyxmwqwgmqwybmxybbycmeeebbcyebtqyemewggcbxbwtmmbqgqxgebmywyxyqmwweqbyqcwcggbcyxemeccbbtqqqbbwxebxcewcbbtgybmttymygbmxwmqyeebxyyxccqtyqccgmtwcetggqmwttmgtemyybqtcbygmytmygywtcqgmegcmebmtwyqxqqqqqewmmgxcbqteqyccywtqcqmqexwgtcqxwybgbeyqctqqmmeyqgbmtwmmgyxywmqqmxqywtbyymqgwmqmbctgtmceecgbcyweeewgbgbygmeqxeymqmcxwytgqecxeycggcmygbbmcgxmxwcxegycwygctqggbbbeyxxemwyceqbecgbwqycqtyebmyxcceytbcwwmqtwycwcbeegmxymbgyxxyycwmwqyqgxeebyyxtwgttcxebxwxxccxtxtmyqmxbeccwbycwxxtbqbmmxqcewgqgcewtggqxyewxbmwcebwqycyetgmtbgwgbgggtytwxccgtgcbyweeyyyywgcqywbxmygeqytgmbwcqwbeycgxcgteggqgweecxbccbggtwyybybqemtgmemqeyqcxqgwmcgqbbbyqxqmwqxebqwmbgqcwbcqxycgwmggctecqqqtggtemwxtcmcqgextytteececgmxmytcygbbbbcygqmmxebeqwqtbwgxcebcygyebgwgmbmtteebeeeccctybbegccxcymbqmtybcqweyemmcmegembybwbqybtcmteqxqxeeqqbxeqwxyqqwtbgyxgeybytteeqeqywyqygettwtemwxgeyxqqcbmeecmgbqcwywyqmywccxwbecweetyyxxgeqmqcggcbqwgcmemwbmxwemgtxxtxxgtwemtegctxbymbqeeemcxxtwcteyxgecwcyybqqqcxmwxggegxtqgwgbygwyxbmqmmymtcemweccebyctwbeqmwcbqmgqggwbyyqgwbbwbbbwgbqccywtbqqeqwbxybxxqqtqbbyeetxyxcbyxqbxwbgxcemteqwcyyqxbqebtycqmtwtxytyymgcwybgqexwxcxwyeqetbbqxbycbccygebtgtetqyxwmwtywyxexbqbyqcxtyqyyeggqqbwtyybygmewxtmqybxqxbtmgwtebcwqyybbemqcmbqxweyyctwggygybbtyeyqbtytwtmeyexbxtmgctyxycmymmmyxebmqexwgwgtgcgxtecccyxcxyyqbwegcqwexmwgmeytgxcqmgembtcyegqecwwbecmtcycqtgggyyqybwctygmcxtttqebcbycbtqmmwexwemtqxywtybyeqyygmtqbgmttyqqxwbtgqywmgwctywwgxeqcebyqyqwbewbxemggeytwqetxqcxqyyggctwmbmeqmggeeexxytcmxtwcqgebecbycxbcxyqcytexmxwyewwxbetxqebyywmmqgbgcxgqqmcymyxgtbxettgqbqqqgxgyxbbebxtybwtgeqxwqtbmbccqgqqxbwgtqxeqewbxcmgxyxgewqxwbgmcgygwqbwwmegbmbqygccgwwwxytcbgxqccmqywmbtqcwxcyygbqmmbccqqcwbgytcxmggqbxeycggetbwbcwgxmqxqqgbtwtmbetmbcybgqwtyxtqxcqymewqwcybtgwcgqwwtgqcxwbqmytcgwxecggxqymbegbxccmgetqtbmymwqbbemecqbqtmbeegbeqcgmcqebxgxetebtqmeyqcyyqqgmexyxbcytqqtqeybbqxmwggxbqeecytqymxgbxygbcbcbwctxcbmybytymbcbtbmebymcebqbgtetxttbbxxcxxxcbxcebbmxxxytxeygwttbgbtxbqyyeqmyytecyqyqbxqcggcygbeqbgqmggtgctygyecgyctxggmwmgywebcttcgxwwebyyetwyxggcyxmqwcyxetmtcgtexwqbcqcgbmgmycgmtgmbxcycmtqbgqyxwegqxyxwgtmwcbqtctbtcmecwgwbgytwygmwwbetytwwtcqtqgwwygymbwgmmtyxqtbwqxbtbyweewqeyxxybbyyxbtwcwxbtgmytmeyqmqmqmytqtgxceexcemmygqwqqtbgeytxgcmewbbywtextygbgtewqtbmmmgmyqxyexcbxmxeeycxtctmctybqbccmewcqymctbxbwxbytxqggqxmgqxwxwytqxmxgtyceqytcwqbtmetgmxmqmygwbgtmyemwwxewebceeybgbxmebcwtbteggqqtgcexqmwwqcbyxxgbtbxxecqmetbbbewxqmbcxcecgxteyxcqqwctymtcxqqqctggtgebycetecxgxcgmmxmybgeweceqqqgqctcgyytbcmwtebwxqcqyqemgymbcqmtqqyegmwmmytxxwqywqmqbxcbggxmqyxweqxwttwyyxcwtygeewwtbwgtgygybggtcbycxbtxgwqcegqxgqxeqtwgecbcxyqgtqqxbwqxwbgcwtggqwcgwtcqgewexxtybbebmwmwqxbqgcgqxqwbecbmmcycbxqtmeeqqmgcbtbgbxtcxwwmbcmbctemywwccxwcgqgeyyecegqtwecwgbmtbgyxqbexymmggbxtemqgqtcxtqgwybcemybwebbxbywemxewxmeebcbqbqymmebqqcqqttmgwxcccxbymebmteyexbxwcqwtmtgmgmqmqgbbqwcwqgbqxxcmqtywyexttcgqxgqgwqbbwwmmetweyeymctcwmbtgtxtqycyywtmywtwctxxywemyxgcgebtycbcqtxeyybwcetbmxcbeqyxgcgwbmbcmttyxtywxmmwmewmmcctgymxqmbbwwqcgeeqtgebwbxggmbxxxbmbqgtegyqetxxexxeqexegmybbwcctewewcbbqmxwcwgyeyccmymwqqmcbcycxqgcbymxxgxxcwgtebetwbmgwqgeqbmwqmtwybbgctwcegtcetbqxbqcgcctyqqgbmyccecmccmwqwwqgbwycqgccextqmwtggctgbwbeqbqcxqmgttxwewetxgygeygcbccgyxxtcqqcxbyytgggegcqtcwytgcgmeymqqwewwcqbeyqgwqxwteggbttcebqxybwwtmwqbwxbewbwcxbybwqexcqewqxwbtxytytcmybemxbgcbqcqcqexcemcymxcxwexqbxxggcgyetgbxgeqeytycwmtbwcqybwyxxxmqwyccygccbtcwbqmxbewbgygbtwytbmmbgmbtmcewttwexmbcwyewebetwegxyytmqbyxbtcmmetctgewxecygxbxqeqmqqqxqcgxqbbgwmggxmgcwyxgbcxebtwxgxbtmgbtgyymbybecmetmbtetcmecgbmxcbygtbybexwcecggxqeqwqxbxccbbebxyeqmcgqmceqqxggmywbbmbegxecxbgbgcteqtqqctbqcqgmgtggceeeqgmwmgxtttbgcmxyyewygywymyqbccgcxtwyxxxeweetqqqmyttxeqwbxbwecmxebgmgbewgcbteqmgyxttttwmyyeewtxtgbegwbwbtxyxqgewmqmcmywqwgmcqcbybtbgggexcxqcetmexxeectxgmcemqecwwegcmyecybwqegmcteecbggmywtebeyqgwmqmwybxygyexwccybgmggtmwqwmtxwcccgmqwggbbgwmcgtgbwqcywwtwebcmbmcgctcmqxtwgcwtqwwcxycgtgyegbcbtttxexwqmwbyctmtcwtqmbqyqetwqcxxeewwxbeebyeggxqwtgttqgemtqmcmetyyqcgtxeqwcmgbgeyexeqygcymewqxbxcwweyxqbyqmqcwxwbmmteyeyeemegtwqbcgycegmwgwcqgetbmbxqtggqgteqcmwcwwbxgtgtxxxtwwcwmcwtmgwcwytqxqycqmgmxgebtgmxygwtyqwtmtxetcgcxxqqcxyxywwextwwmxqtwqyttbqtebybxtxyb');
