@@ -51,6 +51,13 @@ const powerMod = function (A, N, M) {
     return ans % M;
 }
 
+/**
+ * Sum the difference
+ * TC: O( N*logN + N)
+ * SC: O(1)
+ * @param {Array} A input array
+ * @returns 
+ */
 //param A : array of integers
 //return an integer
 const sumTheDifference = (A) => {
