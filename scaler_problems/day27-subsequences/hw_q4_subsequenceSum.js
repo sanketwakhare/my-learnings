@@ -49,7 +49,16 @@ const checkBit = (N, i) => {
 }
 
 
-/* main function which will compare sub of each subsequence with B */
+/* Main function which will compare sub of each subsequence with B */
+
+/**
+ * Main function which will compare sub of each subsequence with B
+ * TC: O(2^N * N)
+ * SC: O(1)
+ * @param {Array} A input array
+ * @param {Number} B integer no sum
+ * @returns 
+ */
 const subSequenceSum = function (A, B) {
 
     // given an array of size N, there are 2^N subsequences
