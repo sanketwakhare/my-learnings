@@ -64,8 +64,10 @@ const isDictionary = (A, B) => {
             }
         }
     }
+    console.log(areStringsSorted);
     return areStringsSorted;
 }
 
 isDictionary(["hello", "scaler", "interviewbit"], 'adhbcfegskjlponmirqtxwuvzy');
 isDictionary(["fine", "none", "no"], 'qwertyuiopasdfghjklzxcvbnm');
+isDictionary(["fxasxpc", "dfbdrifhp", "nwzgs", "cmwqriv", "ebulyfyve", "miracx", "sxckdwzv", "dtijzluhts", "wwbmnge", "qmjwymmyox"], "zkgwaverfimqxbnctdplsjyohu");
