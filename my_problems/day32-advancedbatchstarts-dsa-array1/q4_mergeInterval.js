@@ -32,6 +32,13 @@ Explanation 2:
 (2,6) completely merges the given intervals
  */
 
+/**
+ * TC: O(N)
+ * SC: O(1)
+ * @param {Array} A 2d array of intervals
+ * @param {Array} B new interval to be inserted
+ * @returns merged/updated intervals
+ */
 const mergeIntervals = (A, B) => {
 
     // sort the new interval B. make sure it is sorted.
