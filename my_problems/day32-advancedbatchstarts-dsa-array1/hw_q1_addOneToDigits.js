@@ -36,6 +36,7 @@ The returned vector should be [1, 2, 4] as 123 + 1 = 124.
 
 /**
  * Add 1 to array of digits
+ * TC: O(N)
  * @param {Array} A 
  * @returns updated array after adding 1 to array
  */
