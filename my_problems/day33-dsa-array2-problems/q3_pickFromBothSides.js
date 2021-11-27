@@ -48,6 +48,8 @@ Explanation 2:
 
 /**
  * Pick from both ends and find the maximum possible sum of elements with size B
+ * TC: O(N): we are iterating each element only once
+ * SC: O(1): storing the maxSum number
  * @param {Array} A input array
  * @param {Number} B the size of window
  * @returns 
