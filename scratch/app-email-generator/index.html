@@ -1,21 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Email Generator</title>
     <script defer src="script.js"></script>
-  </head>
-  <body>
-    FirstName: <input type="text" id="firstName" /> LastName:
-    <input type="text" id="lastName" /> @
-    <select id="domain">
-      <option value=".com">.com</option>
-      <option value=".in">.in</option>
-      <option value=".us">.us</option>
-      <option value=".co.in">.co.in</option>
-    </select>
-    <button id="genEmail" type="button">Generate Email</button>
-  </body>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <form action="#" class="input-form">
+        <input type="text" id="firstName" value="" placeholder="First Name" required />
+        <input type="text" id="lastName" value="" placeholder="Last Name" required /> @
+        <input type="text" id="domainName" value="machintel" required />
+        <select id="domain_extension">
+                <option value=".com">.com</option>
+                <option value=".org">.org</option>
+                <option value=".aus">.aus</option>
+                <option value=".net">.net</option>
+                <option value=".br">.br</option>
+                <option value=".ca">.ca</option>
+                <option value=".uk">.uk</option>
+                <option value=".ge">.ge</option>
+                <option value=".nz">.nz</option>
+            </select>
+        <input id="genEmail" type="submit" value="Generate Email Pattern(s)" onClick="handleSubmit()">
+        </input>
+    </form>
+    <div id="output">
+    </div>
+</body>
+
 </html>
