@@ -27,7 +27,7 @@ const arrangeArray = (A) => {
     // Idea: store both index and value in single value such that index and value can be fetched from array element 
     const N = A.length
 
-    // step 1: multiple array with value N
+    // step 1: multiply array with value N
     for (let i = 0; i < N; i++) {
         A[i] *= N;
     }
