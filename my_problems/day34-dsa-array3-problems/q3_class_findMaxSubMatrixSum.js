@@ -82,6 +82,7 @@ const maxSubMatrixSumOfSortedMatrix = (A) => {
 
         console.log('prefix sum', pf);
 
+        //  just return the last element in prefix array
         console.log('max sum', pf[N - 1][M - 1]);
         return pf[N - 1][M - 1];
     }
