@@ -41,11 +41,16 @@ Explanation 2:
 
 /**
  * Find GCD of 2 numbers
+ * TC: O(log(max(A,B)))
+ * SC: O(1)
  * @param {Number} A integer A
  * @param {Number} B integer B
  * @returns GCD of A and B
  */
 const gcd = (A, B) => {
+
+    const a = A;
+    const b = B;
 
     // Consider B> A for all the cases
     if (A > B) {
@@ -64,6 +69,6 @@ const gcd = (A, B) => {
         A = B % A;
         B = temp;
     }
-
+    console.log(`GCD of ${a} and ${b} is ${B}`);
     return B;
 }
