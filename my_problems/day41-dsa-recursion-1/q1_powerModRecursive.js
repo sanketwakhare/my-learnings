@@ -92,7 +92,7 @@ const pow = (A, N, D) => {
     if (ans < 0) {
         ans = ans + d;
     }
-    console.log('a^n mod d', '', A, N, D, 'is', Number(ans));
+    console.log(A, '^', N, 'mod', D, '=', Number(ans));
     // convert final answer to number/integer and return
     return Number(ans);
 };
@@ -101,3 +101,4 @@ pow(213, 231, 1);
 pow(67790475, 13522204, 98794224);
 pow(-1, 2, 20);
 pow(2, 50, 1000000000 + 7);
+pow(0, 10, 5);
