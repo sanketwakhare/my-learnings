@@ -32,6 +32,28 @@ Explanation 2:
  Sum of digits of 11 = 1 + 1 = 2
  */
 
+/**
+ * recursive function to find sum of digits
+ * TC: Recursive Relation calculations
+ * Assumption: T(N) = T(N/10) + 1 
+ * Known TC: T(0) = 1
+ * 
+ * Use substitution method
+ * T(N/10) = T(N/100) + 1
+ * T(N/100) = T(N/1000) + 1
+ * T(N/100) = T(N/10^k) + 1
+ * where k=no of digits in number N
+ * 
+ * T(N) = T(N/10^k) + k
+ * 
+ * if N=94362 and k=5 no of digits, then N/10^5 = 94362/10000 will become 0
+ * as T(0) = 1
+ * 
+ * T(N) = 1 + k ~ TC will be O(k) = no of digits = no of iteration
+ * 
+ * @param {Number} N 
+ * @returns 
+ */
 const sumDigits = (N) => {
 
     // base condition
@@ -43,7 +65,7 @@ const sumDigits = (N) => {
     // divide N by 10 to process the remaining digits
     N = Math.floor(N / 10);
 
-    // subproblem
+    // subproblem/main logic
     return sumDigits(N) + digit;
 }
 
@@ -51,14 +73,14 @@ const sumDigits = (N) => {
 //param A : integer
 //return an integer
 /**
- * 
- * @param {Number} A input number
+ * Sum of digits of number N
+ * @param {Number} N input number
  * @returns 
  */
-const sumOfDigitsMain = (A) => {
+const sumOfDigitsMain = (N) => {
     // Approach: extract last digit and add to answer
-    const ans = sumDigits(A);
-    console.log('sum of digits of', A, 'is', ans);
+    const ans = sumDigits(N);
+    console.log('sum of digits of', N, 'is', ans);
     return ans;
 }
 
