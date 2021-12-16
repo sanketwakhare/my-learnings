@@ -80,7 +80,7 @@ const sumDigits = (N) => {
 const sumOfDigitsMain = (N) => {
     // Approach: extract last digit and add to answer
     const ans = sumDigits(N);
-    console.log('sum of digits of', N, 'is', ans);
+    console.log(`sum of digits of ${N} is ${ans}`);
     return ans;
 }
 

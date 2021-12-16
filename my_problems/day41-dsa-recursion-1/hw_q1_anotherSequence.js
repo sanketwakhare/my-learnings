@@ -68,7 +68,7 @@ const findSequence = (A) => {
 const anotherSequenceMain = (A) => {
     // call to recursive function
     let ans = findSequence(A);
-    console.log(A, 'th term=', ans);
+    console.log(`${A} th term= ${ans}`);
     return ans;
 }
 
