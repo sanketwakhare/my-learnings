@@ -61,3 +61,4 @@ const waveArray = (A) => {
 waveArray([1, 2, 3, 4]);
 waveArray([1, 2]);
 waveArray([1, 2, 5, 4, 7, 6, 3, 8, 9]);
+waveArray([1, 20, 55, 24, 76, 26, 13, 78, 19]);
