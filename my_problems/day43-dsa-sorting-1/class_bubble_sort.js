@@ -8,6 +8,9 @@
 /**
  * TC: O(N^2)
  * SC: O(1)
+ * no of swap : N^2
+ * Stable sort
+ * In place sorting: no extra space
  * @param {Array} A array of integers
  */
 const bubbleSort = (A) => {

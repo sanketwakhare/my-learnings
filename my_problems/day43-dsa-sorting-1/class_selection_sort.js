@@ -8,6 +8,9 @@
  * Selection Sort
  * TC: O(N^2)
  * SC: O(1)
+ * no of swaps: N-1
+ * unstable sorting
+ * in place sorting: no extra space
  * @param {Array} A array of integers
  */
 const selectionSort = (A) => {
