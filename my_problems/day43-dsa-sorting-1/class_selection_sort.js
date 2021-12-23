@@ -4,6 +4,12 @@
  * 
  */
 
+/**
+ * Selection Sort
+ * TC: O(N^2)
+ * SC: O(1)
+ * @param {Array} A array of integers
+ */
 const selectionSort = (A) => {
 
     for (let i = 0; i < A.length; i++) {
