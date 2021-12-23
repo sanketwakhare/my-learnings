@@ -35,8 +35,17 @@ Explanation 2:
  Element 4 is missing, so we return 0.
  */
 
+/**
+ * Check if array is with consecutive elements
+ * @param {Array} A array of integers
+ * @returns 
+ */
 const isArrayWithConsecutiveElements = (A) => {
+
+    // sort the array elements
     A.sort((a, b) => a - b);
+
+    // find if the difference between two consecutive elements is 1
     let isConsecutive = 1;
     for (let i = 0; i < A.length - 1; i++) {
         // check difference between elements is 1
