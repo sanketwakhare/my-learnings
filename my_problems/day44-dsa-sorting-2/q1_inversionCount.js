@@ -111,6 +111,8 @@ const inversion = (A, l, r) => {
 
 /**
  * Inversion count
+ * TC: O(N logN)
+ * SC: N(for storing temp array) + logN(for recursive stack) => N + logN => O(N)
  * @param {Array} A array of integers
  * @returns 
  */
