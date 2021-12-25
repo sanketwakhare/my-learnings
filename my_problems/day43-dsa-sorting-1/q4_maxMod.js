@@ -73,7 +73,7 @@ const maxMod = (A) => {
     // A.sort((a, b) => a - b);
     // return A[A.length - 2] % A[A.length - 1];
 
-    // Another approach can be to sort the array and fidn max mod of last 2 distuinct elements in
+    // Another approach can be to sort the array and find max mod of last 2 distinct elements in
 }
 
 maxMod([1, 2, 44, 3]);
