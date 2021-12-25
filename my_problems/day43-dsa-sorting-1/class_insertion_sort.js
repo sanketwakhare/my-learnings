@@ -5,6 +5,14 @@
  * e.g.array cards while they are being inserted
  */
 
+/**
+ * TC: O(N^2)
+ * SC: O(1)
+ * no of swap : N^2
+ * Stable sort
+ * In place sorting: no extra space
+ * @param {Array} A array of integers
+ */
 const insertionSort = (A) => {
 
     for (let i = 1; i < A.length; i++) {
