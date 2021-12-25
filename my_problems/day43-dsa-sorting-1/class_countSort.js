@@ -2,6 +2,11 @@
  * Count Sort
  */
 
+/***
+ * Count sort
+ * TC: O(N + K)
+ * SC: O(K) to store the frequency array
+ */
 const countSort = (A) => {
 
     console.log(`input array`, A);
