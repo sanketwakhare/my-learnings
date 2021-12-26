@@ -34,7 +34,7 @@ Explanation 1:
 /**
  * 
  * TC: O(N logN)
- * SC: O(N logN) for recursive call stack
+ * SC: O(logN) for recursive call stack
  * In place sorting: Yes
  * 
  * Rearrange range within array
