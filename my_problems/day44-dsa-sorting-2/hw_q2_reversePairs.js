@@ -35,6 +35,17 @@ Explanation 2:
  There is only one pair i.e (4, 1).
  */
 
+/**
+ * Merge function to calculate the count and merge sorted arrays.
+ * Recursive Relation: T(N) = T(N/2) + T(N/2) + N
+ * TC: O(N logN)
+ * SC: N + logN => N for temp array and logN for recursive stack => O(N)
+ * @param {Array} A array of integers
+ * @param {*} l start index of first array
+ * @param {*} m start index of second array
+ * @param {*} r end index of second array
+ * @returns 
+ */
 const merge = (A, l, m, r) => {
 
     // initialize pointers
@@ -45,20 +56,29 @@ const merge = (A, l, m, r) => {
     let p3 = 0;
     let temp = new Array(r - l + 1).fill(0);
 
+    // count based on condition separately
     let count = 0;
+    while (p1 < m && p2 <= r) {
+        if (A[p1] > (2 * A[p2])) {
+            // if condition is met, increase the count by m-p1
+            count = count + m - p1;
+            // move p2 to next
+            p2++;
+        } else {
+            // move p1 to next
+            p1++;
+        }
+    }
+
+    // merge elements separately
+    p1 = l;
+    p2 = m;
     while (p1 < m && p2 <= r) {
         if (A[p1] <= A[p2]) {
             temp[p3] = A[p1];
             p1++;
             p3++;
         } else {
-            let tempPtr = p1;
-            while (tempPtr < m) {
-                if (A[tempPtr] > (2 * A[p2])) {
-                    count = count + 1;
-                }
-                tempPtr++;
-            }
             temp[p3] = A[p2];
             p2++;
             p3++;
@@ -84,9 +104,16 @@ const merge = (A, l, m, r) => {
 
 }
 
-
+/**
+ * recursive function to calculate the count
+ * @param {*} A array of integers
+ * @param {*} l start index of range
+ * @param {*} r end index of range
+ * @returns 
+ */
 const reversePair = (A, l, r) => {
 
+    // base condition
     if (l === r) {
         return 0;
     }
