@@ -25,20 +25,20 @@ const rearrangeRange = (A, l, r) => {
     let p2 = r;
 
     // while p1 and p2 does not cross
-    while (p1 < p2) {
+    while (p1 <= p2) {
 
-        // swap A[p1] and A[p2] if below condition is met
-        if (A[p1] >= pivot && A[p2] < pivot) {
-            // swap A[p1] and A[p2]
-            A[p1] = A[p1] ^ A[p2];
-            A[p2] = A[p1] ^ A[p2];
-            A[p1] = A[p1] ^ A[p2];
-        }
         if (A[p1] <= pivot) {
             // increase p1 if A[p1] is less than pivot
             p1++;
         } else if (A[p2] > pivot) {
             // decrease p2 if A[p2] is greater than pivot
+            p2--;
+        } else {
+            // swap A[p1] and A[p2]
+            A[p1] = A[p1] ^ A[p2];
+            A[p2] = A[p1] ^ A[p2];
+            A[p1] = A[p1] ^ A[p2];
+            p1++;
             p2--;
         }
     }

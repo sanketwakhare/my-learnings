@@ -14,22 +14,23 @@ const rearrangeArray = (A) => {
     let p2 = A.length - 1;
 
     // while p1 and p2 does not cross
-    while (p1 < p2) {
+    while (p1 <= p2) {
 
-        // swap A[p1] and A[p2] if condition is met
-        if (A[p1] >= A[0] && A[p2] < A[0]) {
-            // swap A[p1] and A[p2]
-            let temp = A[p1];
-            A[p1] = A[p2];
-            A[p2] = temp;
-        }
         if (A[p1] <= A[0]) {
             // increase p1 when A[p1] is less than or equal to A[0]
             p1++;
         } else if (A[p2] > A[0]) {
             // decrement p2 when A[p2] is greater than A[0]
             p2--;
+        } else {
+            // swap A[p1] and A[p2]
+            let temp = A[p1];
+            A[p1] = A[p2];
+            A[p2] = temp;
+            p1++;
+            p2--;
         }
+
     }
 
     // at last, swap A[0] and A[p1-1]
