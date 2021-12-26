@@ -33,9 +33,11 @@ const rearrangeArray = (A) => {
     }
 
     // at last, swap A[0] and A[p1-1]
-    A[0] = A[0] ^ A[p1 - 1];
-    A[p1 - 1] = A[0] ^ A[p1 - 1];
-    A[0] = A[0] ^ A[p1 - 1];
+    if (p1 - 1 !== 0) {
+        A[0] = A[0] ^ A[p1 - 1];
+        A[p1 - 1] = A[0] ^ A[p1 - 1];
+        A[0] = A[0] ^ A[p1 - 1];
+    }
 
     console.log('array after rearrangement -> ', A);
 }
