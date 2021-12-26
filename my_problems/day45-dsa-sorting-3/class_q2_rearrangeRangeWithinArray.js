@@ -52,6 +52,9 @@ const rearrangeRange = (A, l, r) => {
     }
 
     console.log('rearranged array after range [', l, ',', r, ']-> ', A);
+
+    // return sorted position: this would be used for quick sort
+    return p1 - 1;
 }
 
 /**
