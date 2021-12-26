@@ -76,3 +76,5 @@ uniqueElements([
 ]);
 uniqueElements([1, 1, 3]);
 uniqueElements([2, 4, 5]);
+uniqueElements([1, 6, 3, 2, 3, 2, 4, 1]);
+uniqueElements([5, 8, 7, 3, 2, 2, 4, 7, 5, 6, 8]);
