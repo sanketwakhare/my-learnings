@@ -95,14 +95,16 @@ const MaximumUnsortedArrayApproach1 = (A) => {
 
 /*****
  * Test case 1: [4, 5, 8, 6, 7], expected output = [2,4]
- * Test case 1: [1, 3, 2, 4, 5], expected output = [1,2]
- * Test case 1: [1, 2, 3, 4, 5], expected output = [-1]
- * Test case 1: [1, 2, 3], expected output = [-1]
+ * Test case 2: [1, 3, 2, 4, 5], expected output = [1,2]
+ * Test case 3: [1, 2, 3, 4, 5], expected output = [-1]
+ * Test case 4: [1, 2, 3], expected output = [-1]
+ * Test case 5: [1, 7, 10, 5, 6, 11, 15, 12, 13, 20], expected output = [1, 8]
  */
 MaximumUnsortedArrayApproach1([4, 5, 8, 6, 7]);
 MaximumUnsortedArrayApproach1([1, 3, 2, 4, 5]);
 MaximumUnsortedArrayApproach1([1, 2, 3, 4, 5]);
 MaximumUnsortedArrayApproach1([1, 2, 3]);
+MaximumUnsortedArrayApproach1([1, 7, 10, 5, 6, 11, 15, 12, 13, 20]);
 
 
 /**
@@ -168,14 +170,16 @@ const MaximumUnsortedArrayApproach2 = (A) => {
 
 /*****
  * Test case 1: [4, 5, 8, 6, 7], expected output = [2,4]
- * Test case 1: [1, 3, 2, 4, 5], expected output = [1,2]
- * Test case 1: [1, 2, 3, 4, 5], expected output = [-1]
- * Test case 1: [1, 2, 3], expected output = [-1]
+ * Test case 2: [1, 3, 2, 4, 5], expected output = [1,2]
+ * Test case 3: [1, 2, 3, 4, 5], expected output = [-1]
+ * Test case 4: [1, 2, 3], expected output = [-1]
+ * Test case 5: [1, 7, 10, 5, 6, 11, 15, 12, 13, 20], expected output = [1, 8]
  */
 MaximumUnsortedArrayApproach2([4, 5, 8, 6, 7]);
 MaximumUnsortedArrayApproach2([1, 3, 2, 4, 5]);
 MaximumUnsortedArrayApproach2([1, 2, 3, 4, 5]);
 MaximumUnsortedArrayApproach2([1, 2, 3]);
+MaximumUnsortedArrayApproach2([1, 7, 10, 5, 6, 11, 15, 12, 13, 20]);
 
 
 /**
@@ -259,11 +263,13 @@ const MaximumUnsortedArrayApproach3 = (A) => {
 
 /*****
  * Test case 1: [4, 5, 8, 6, 7], expected output = [2,4]
- * Test case 1: [1, 3, 2, 4, 5], expected output = [1,2]
- * Test case 1: [1, 2, 3, 4, 5], expected output = [-1]
- * Test case 1: [1, 2, 3], expected output = [-1]
+ * Test case 2: [1, 3, 2, 4, 5], expected output = [1,2]
+ * Test case 3: [1, 2, 3, 4, 5], expected output = [-1]
+ * Test case 4: [1, 2, 3], expected output = [-1]
+ * Test case 5: [1, 7, 10, 5, 6, 11, 15, 12, 13, 20], expected output = [1, 8]
  */
 MaximumUnsortedArrayApproach3([4, 5, 8, 6, 7]);
 MaximumUnsortedArrayApproach3([1, 3, 2, 4, 5]);
 MaximumUnsortedArrayApproach3([1, 2, 3, 4, 5]);
 MaximumUnsortedArrayApproach3([1, 2, 3]);
+MaximumUnsortedArrayApproach3([1, 7, 10, 5, 6, 11, 15, 12, 13, 20]);
