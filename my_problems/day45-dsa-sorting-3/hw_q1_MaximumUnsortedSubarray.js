@@ -49,7 +49,10 @@ A is already sorted.
  * @param {Array} A array of integers
  * @returns 
  */
-const MaximumUnsortedArray = (A) => {
+const MaximumUnsortedArrayApproach1 = (A) => {
+
+    console.log('Approach 1 -> ');
+
     // create copy os original array
     const N = A.length;
     let temp = [];
@@ -96,10 +99,10 @@ const MaximumUnsortedArray = (A) => {
  * Test case 1: [1, 2, 3, 4, 5], expected output = [-1]
  * Test case 1: [1, 2, 3], expected output = [-1]
  */
-MaximumUnsortedArray([4, 5, 8, 6, 7]);
-MaximumUnsortedArray([1, 3, 2, 4, 5]);
-MaximumUnsortedArray([1, 2, 3, 4, 5]);
-MaximumUnsortedArray([1, 2, 3]);
+MaximumUnsortedArrayApproach1([4, 5, 8, 6, 7]);
+MaximumUnsortedArrayApproach1([1, 3, 2, 4, 5]);
+MaximumUnsortedArrayApproach1([1, 2, 3, 4, 5]);
+MaximumUnsortedArrayApproach1([1, 2, 3]);
 
 
 /**
@@ -114,6 +117,7 @@ MaximumUnsortedArray([1, 2, 3]);
  */
 const MaximumUnsortedArrayApproach2 = (A) => {
 
+    console.log('Approach 2 -> ');
     const N = A.length;
 
     // generate prefix array
@@ -172,3 +176,94 @@ MaximumUnsortedArrayApproach2([4, 5, 8, 6, 7]);
 MaximumUnsortedArrayApproach2([1, 3, 2, 4, 5]);
 MaximumUnsortedArrayApproach2([1, 2, 3, 4, 5]);
 MaximumUnsortedArrayApproach2([1, 2, 3]);
+
+
+/**
+ * Approach 3: 
+ *      Step 1: a) Find s = index of element which is greater than next element-> from left to right -> from 0 to n-1
+ *      Step 1: b) Find e = index of element which is smaller than previous element - >from right to left -> from n-1 to 0
+ * 
+ *      Step 2: Find Min and Max within range [s,e]
+ *      Step 3: Search from left to right within range [0, s-1] and find if there is any element which is greater than Min
+ *               If found, update s with index of that element
+ *      Step 4: Search from right to left within range [s+1, n-1] and find if there is any element which is less than Max
+ *               If found, update e with index of that element
+ *      Step 5: return [s,e]
+ * TC: O(N)
+ * SC: O(1)
+ * @param {Array} A array of integers
+ * @returns 
+ */
+const MaximumUnsortedArrayApproach3 = (A) => {
+
+    console.log('Approach 3 -> ');
+
+    const N = A.length;
+    let startIndex = -1;
+    let endIndex = -1;
+
+    // Step 1: a)
+    for (let i = 0; i < N - 1; i++) {
+        if (A[i] > A[i + 1]) {
+            startIndex = i;
+            break;
+        }
+    }
+
+    // Step 2: b)
+    for (let i = N - 1; i >= 1; i--) {
+        if (A[i] < A[i - 1]) {
+            endIndex = i;
+            break;
+        }
+    }
+
+    // if start index and end index are not updated, that means the array is already sorted
+    if (startIndex === -1 && endIndex === -1) {
+        console.log('answer -> ', [-1]);
+        return [-1];
+    }
+
+    // Step 2: Find Min and Max within range [s,e]
+    let min = A[startIndex];
+    let max = A[startIndex];
+    for (let i = startIndex; i <= endIndex; i++) {
+        if (A[i] < min) {
+            min = A[i];
+        }
+        if (A[i] > max) {
+            max = A[i];
+        }
+    }
+
+    // Step 3: Update startIndex if possible, increase the range of max possible subarray
+    for (let i = 0; i < startIndex; i++) {
+        if (A[i] > min) {
+            startIndex = i;
+            break;
+        }
+    }
+
+    // Step 4: Update endIndex if possible, increase the range of max possible subarray
+    for (let i = N - 1; i >= endIndex + 1; i--) {
+        if (A[i] < max) {
+            endIndex = i;
+            break;
+        }
+    }
+
+    // Step 5: return startIndex and endIndex
+    console.log('answer -> ', [startIndex, endIndex]);
+    return [startIndex, endIndex];
+}
+
+/*****
+ * Test case 1: [4, 5, 8, 6, 7], expected output = [2,4]
+ * Test case 1: [1, 3, 2, 4, 5], expected output = [1,2]
+ * Test case 1: [1, 2, 3, 4, 5], expected output = [-1]
+ * Test case 1: [1, 2, 3], expected output = [-1]
+ */
+MaximumUnsortedArrayApproach3([4, 5, 8, 6, 7]);
+MaximumUnsortedArrayApproach3([1, 3, 2, 4, 5]);
+MaximumUnsortedArrayApproach3([1, 2, 3, 4, 5]);
+MaximumUnsortedArrayApproach3([1, 2, 3]);
