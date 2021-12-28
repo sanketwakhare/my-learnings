@@ -94,7 +94,81 @@ const MaximumUnsortedArray = (A) => {
  * Test case 1: [4, 5, 8, 6, 7], expected output = [2,4]
  * Test case 1: [1, 3, 2, 4, 5], expected output = [1,2]
  * Test case 1: [1, 2, 3, 4, 5], expected output = [-1]
+ * Test case 1: [1, 2, 3], expected output = [-1]
  */
 MaximumUnsortedArray([4, 5, 8, 6, 7]);
 MaximumUnsortedArray([1, 3, 2, 4, 5]);
 MaximumUnsortedArray([1, 2, 3, 4, 5]);
+MaximumUnsortedArray([1, 2, 3]);
+
+
+/**
+ * Approach 2: 
+ *      Use prefixMax and suffixMin arrays
+ *      To find startIndex, compare A and suffixMin
+ *      To find endIndex, compare A and prefixMax
+ * TC: O(N)
+ * SC: O(N)
+ * @param {Array} A array of integers
+ * @returns 
+ */
+const MaximumUnsortedArrayApproach2 = (A) => {
+
+    const N = A.length;
+
+    // generate prefix array
+    let prefixMax = new Array(N).fill(0);
+    prefixMax[0] = A[0];
+    for (let i = 1; i < N; i++) {
+        prefixMax[i] = Math.max(prefixMax[i - 1], A[i]);
+    }
+    console.log('prefixMax -> ', prefixMax);
+
+    // generate suffix array
+    let suffixMin = new Array(N).fill(0);
+    suffixMin[N - 1] = A[N - 1];
+    for (let i = N - 2; i >= 0; i--) {
+        suffixMin[i] = Math.min(suffixMin[i + 1], A[i]);
+    }
+    console.log('suffixMin -> ', suffixMin);
+
+    // find startIndex value by comparing array A and suffixMin array
+    let startIndex = -1;
+    for (let i = 0; i < N - 1; i++) {
+        // this means there is an element less than A[i] after ith index or to the right side of A[i]
+        if (A[i] > suffixMin[i + 1]) {
+            startIndex = i;
+            break;
+        }
+    }
+
+    // find endIndex value by comparing array A and prefixMax array
+    let endIndex = -1;
+    for (let i = N - 1; i >= 1; i--) {
+        // this means there is an element greater than A[i] before ith index or to the left side of A[i]
+        if (A[i] < prefixMax[i - 1]) {
+            endIndex = i;
+            break;
+        }
+    }
+
+    // if start index and end index are not updated, that means the array is already sorted
+    if (startIndex === -1 && endIndex === -1) {
+        console.log('answer -> ', [-1]);
+        return [-1];
+    }
+
+    console.log('answer -> ', [startIndex, endIndex]);
+    return [startIndex, endIndex];
+}
+
+/*****
+ * Test case 1: [4, 5, 8, 6, 7], expected output = [2,4]
+ * Test case 1: [1, 3, 2, 4, 5], expected output = [1,2]
+ * Test case 1: [1, 2, 3, 4, 5], expected output = [-1]
+ * Test case 1: [1, 2, 3], expected output = [-1]
+ */
+MaximumUnsortedArrayApproach2([4, 5, 8, 6, 7]);
+MaximumUnsortedArrayApproach2([1, 3, 2, 4, 5]);
+MaximumUnsortedArrayApproach2([1, 2, 3, 4, 5]);
+MaximumUnsortedArrayApproach2([1, 2, 3]);
