@@ -49,7 +49,7 @@ Explanation 2:
  */
 const interestingArray = (A) => {
 
-    // Observation: if sum of all array elements is even, then it is possilbe
+    // Observation: if sum of all array elements is even, then it is possible
     // else it is not possible
     // this is because if sum is even, teh array can e splitted into two same half and xor of same elements is 0
 
