@@ -69,9 +69,9 @@ Explanation 1:
  * @param {Array} A 
  * @returns 
  */
-const singleNumberIII = (A) => {
+const singleNumberII = (A) => {
     // Approach: find contribution of set bits for all array elements
-    // in the final contribution, if the contribution of set bit %3 is non zero , that means that element is not repeating thice
+    // in the final contribution, if the contribution of set bit %3 is non zero , that means that element is not repeating thrice
 
     let ans = 0;
     // for every bit position, find the total contribution for all array elements
@@ -94,5 +94,5 @@ const singleNumberIII = (A) => {
 
 }
 
-singleNumberIII([1, 2, 4, 3, 3, 2, 2, 3, 1, 1]);
-singleNumberIII([4, 4, 3, 3, 2, 5, 6, 5, 6, 5, 6, 3, 2, 2]);
+singleNumberII([1, 2, 4, 3, 3, 2, 2, 3, 1, 1]);
+singleNumberII([4, 4, 3, 3, 2, 5, 6, 5, 6, 5, 6, 3, 2, 2]);
