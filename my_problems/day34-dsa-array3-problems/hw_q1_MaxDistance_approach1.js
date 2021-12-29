@@ -32,7 +32,7 @@ For A[0] = 3 and A[2] = 4, the ans is (2 - 0) = 2.
  */
 
 /**
- * Approach 1: Using hashMap
+ * Approach 1: Using hashMap and sorting
  * TC: O(N logN)
  * SC: O(N)
  * @param {Array} A array of integers
