@@ -38,7 +38,7 @@ For A[0] = 3 and A[2] = 4, the ans is (2 - 0) = 2.
  * @param {Array} A array of integers
  * @returns 
  */
-const maximumGap = (A) => {
+const maximumGapApproach1_hashMapAndSorting = (A) => {
 
     /**
      * Approach 1: TC: (N logN), SC: O(N): Accepted Solution
@@ -106,7 +106,7 @@ const maximumGap = (A) => {
  * Test Case 3: A = [1, 5, 12, 4, 9], expected output = 4
  * Test Case 4: A = [1, 5, 12, 9, 5, 4, 9], expected output = 6
  */
-maximumGap([11, 5, 12, 4, 9, 2]);
-maximumGap([3, 5, 4, 2]);
-maximumGap([1, 5, 12, 4, 9]);
-maximumGap([1, 5, 12, 9, 5, 4, 9]);
+maximumGapApproach1_hashMapAndSorting([11, 5, 12, 4, 9, 2]);
+maximumGapApproach1_hashMapAndSorting([3, 5, 4, 2]);
+maximumGapApproach1_hashMapAndSorting([1, 5, 12, 4, 9]);
+maximumGapApproach1_hashMapAndSorting([1, 5, 12, 9, 5, 4, 9]);
