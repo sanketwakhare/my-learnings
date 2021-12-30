@@ -48,12 +48,14 @@ const subsequenceSumK = (A, K) => {
             }
         }
         if (sum === K) {
+            console.log(A, 'contains the subsequence with sum =', K, '? ->', true);
             return true;
         }
     }
+    console.log(A, 'contains the subsequence with sum =', K, '? ->', false);
     return false;
 }
 
-subsequenceSumK([1, 20, 13, 4, 5]);
-subsequenceSumK([2, 2, 2, 2]);
-subsequenceSumK([-1, 4, 6, 3, 7, 2]);
+subsequenceSumK([1, 20, 13, 4, 5], 18);
+subsequenceSumK([2, 2, 2, 2], 5);
+subsequenceSumK([-1, 4, 6, 3, 7, 2], 10);
