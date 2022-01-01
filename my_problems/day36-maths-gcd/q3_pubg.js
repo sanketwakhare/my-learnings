@@ -64,6 +64,11 @@ const myGcd = (a, b) => {
     return b;
 }
 
+/**
+ * Approach: Take GCD of all teh array elements and that is the answer
+ * @param {Array} A array of integers
+ * @returns 
+ */
 const pubG = (A) => {
 
     // take gcd of entire array elements and return the answer
