@@ -25,3 +25,5 @@ gcd_approach1(10, 1);
 gcd_approach1(101, 44);
 gcd_approach1(12, 15);
 gcd_approach1(270, 120);
+gcd_approach1(500, 510);
+gcd_approach1(8632, 8650);
