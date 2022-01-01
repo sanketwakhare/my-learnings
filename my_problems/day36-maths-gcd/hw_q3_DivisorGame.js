@@ -59,10 +59,21 @@ const myGcd = (a, b) => {
     return b;
 }
 
+/**
+ * special integers will be multiple of LCM of B and C
+ * @param {Number} A integer
+ * @param {Number} B integer
+ * @param {Number} C integer
+ * @returns 
+ */
 const divisorGame = (A, B, C) => {
 
     // Make use of property =>  lcm(a,b) * gcd(a,b) = a*b
     let lcm = Math.floor((B * C) / myGcd(B, C));
     let ans = Math.floor(A / lcm);
+    console.log('answer -> ', ans);
     return ans;
 }
+
+divisorGame(12, 3, 2);
+divisorGame(6, 1, 4);
