@@ -72,3 +72,12 @@ const gcd = (A, B) => {
     console.log(`GCD of ${a} and ${b} is ${B}`);
     return B;
 }
+
+gcd(3, 9);
+gcd(1, 10);
+gcd(10, 1);
+gcd(101, 44);
+gcd(12, 15);
+gcd(270, 120);
+gcd(500, 510);
+gcd(8632, 8650);
