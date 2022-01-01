@@ -71,5 +71,10 @@ const pubG = (A) => {
     for (let i = 1; i < A.length; i++) {
         ans = myGcd(A[i], ans);
     }
+    console.log(ans);
     return ans;
 }
+
+pubG([6, 4]);
+pubG([2, 4, 8]);
+pubG([2, 3, 4]);
