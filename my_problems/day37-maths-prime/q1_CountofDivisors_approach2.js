@@ -37,6 +37,9 @@ Explanation 2:
  */
 
 /**
+ * Iteration: N for spf array + sqrt(N) * log(log(N)) => N + N log(N)
+ * TC: O(N logN)
+ * SC: O(N)
  * Generate smallestPrimeFactor array and return
  * @param {Number} N integer
  * @returns array of integers
@@ -63,6 +66,8 @@ const smallestPrimeFactor = (N) => {
 }
 
 /**
+ * Iteration: every time N is divided by at least half => N/2 = N/4 + N/8 ...
+ * TC: O(N logN)
  * Count the no of Divisors for a given number N
  * @param {Number} N 
  * @param {Array} spf smallest prime factors array form 1 to N
@@ -83,6 +88,8 @@ const countNoOfDivisors = (N, spf) => {
 }
 
 /**
+ * TC: O(q * N logN) => for q queries
+ * SC: O(N)
  * Count the no of divisors for all the numbers in array
  * @param {Array} A array of integers
  * @returns array of integers
