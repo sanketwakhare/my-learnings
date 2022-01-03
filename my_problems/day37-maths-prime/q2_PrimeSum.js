@@ -59,7 +59,7 @@ const isPrime = (N) => {
  * Find two prime numbers whose sum is given number A
  * It is guaranteed to have sum as per Gold bach's conjecture
  * @param {Number} A integer
- * @returns 
+ * @returns array of 2 prime numbers with sum A
  */
 const primeSum = (A) => {
     let output = [];
