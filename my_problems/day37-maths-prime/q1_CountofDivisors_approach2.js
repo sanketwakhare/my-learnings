@@ -87,7 +87,7 @@ const countNoOfDivisors = (N, spf) => {
  * @param {Array} A array of integers
  * @returns array of integers
  */
-const countOfDivisorsMain = (A) => {
+const countOfDivisorsMain_approach2 = (A) => {
 
     let output = [];
     const N = A.length;
@@ -106,5 +106,5 @@ const countOfDivisorsMain = (A) => {
     return output;
 }
 
-countOfDivisorsMain([2, 3, 4, 5]);
-countOfDivisorsMain([8, 9, 10]);
+countOfDivisorsMain_approach2([2, 3, 4, 5]);
+countOfDivisorsMain_approach2([8, 9, 10]);
