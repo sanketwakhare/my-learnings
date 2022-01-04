@@ -2,7 +2,7 @@ public class q2_SearchForARange {
     // DO NOT MODIFY THE ARGUMENTS WITH "final" PREFIX. IT IS READ ONLY
     public static int[] searchRange(final int[] A, int K) {
 
-        int[] output = { -1, -1 };
+        int[] output = new int[2];
 
         // initialize start and end index - search space
         int l = 0;
