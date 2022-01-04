@@ -68,7 +68,8 @@ public class hw_q1_SingleElementInASortedArray {
             int mid = l + (r - l) / 2;
 
             if (A[mid] != A[mid - 1] && A[mid] != A[mid + 1]) {
-                // found the unique element
+                // found the unique element as both the adjacent element to the A[mid] are
+                // different
                 return A[mid];
             }
             if (A[mid] == A[mid - 1]) {
