@@ -31,7 +31,7 @@ const isPrime = (N) => {
  * Brute force approach
  * @param {Number} N integer
  */
-const primeFrom1ToN = (N) => {
+const primeFrom1ToN_approach1 = (N) => {
 
     // find prime numbers from 1 to N - Brute force approach
     let prime = [];
@@ -43,5 +43,5 @@ const primeFrom1ToN = (N) => {
     console.log(prime);
 }
 
-primeFrom1ToN(100);
-primeFrom1ToN(300);
+primeFrom1ToN_approach1(100);
+primeFrom1ToN_approach1(300);
