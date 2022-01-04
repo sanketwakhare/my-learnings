@@ -36,6 +36,11 @@
  * Explanation 2:
  * 2 appears once
  */
+
+/**
+ * TC: O(logN) - Binary Search
+ * SC: O(1)
+ */
 public class hw_q1_SingleElementInASortedArray {
     public static int singleElement(int[] A) {
         int ans = -1;
