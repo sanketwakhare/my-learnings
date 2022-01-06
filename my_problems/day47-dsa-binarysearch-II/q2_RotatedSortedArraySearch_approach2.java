@@ -3,6 +3,7 @@
  * 1) To find element K
  * 
  * TC: O(logN)
+ * SC: O(1)
  */
 public class q2_RotatedSortedArraySearch_approach2 {
 

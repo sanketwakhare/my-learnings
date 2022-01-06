@@ -2,6 +2,9 @@
  * Using 2 passes of binary search
  * 1) To find index t -> start index of second sorted array
  * 2) To find element K
+ * 
+ * TC: O(logN)
+ * SC: O(1)
  */
 public class q2_RotatedSortedArraySearch_approach1 {
 
