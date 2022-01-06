@@ -38,8 +38,8 @@ Constraints are satisfied for maximal value of 3.
  */
 
 /**
- * TC:
- * SC:
+ * TC: O(N*logN) => N for sliding window sum and logN for Binary Search
+ * SC: O(1)
  */
 public class q3_SpecialInteger {
 
@@ -65,6 +65,7 @@ public class q3_SpecialInteger {
         return false;
     }
 
+    /* Apply Binary search on range [1 to N] */
     public static final int specialInteger(int[] A, int B) {
 
         // initialize search space
