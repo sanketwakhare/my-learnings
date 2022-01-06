@@ -71,20 +71,20 @@ public class q1_SquareRootOfInteger {
 
     public static void main(String[] args) {
         int ans = findSqrt(11);
-        System.out.println("srqt(" + 11 + ") -> " + ans);
+        System.out.println("sqrt(" + 11 + ") -> " + ans);
         ans = findSqrt(9);
-        System.out.println("srqt(" + 9 + ") -> " + ans);
+        System.out.println("sqrt(" + 9 + ") -> " + ans);
         ans = findSqrt(0);
-        System.out.println("srqt(" + 0 + ") -> " + ans);
+        System.out.println("sqrt(" + 0 + ") -> " + ans);
         ans = findSqrt(1);
-        System.out.println("srqt(" + 1 + ") -> " + ans);
+        System.out.println("sqrt(" + 1 + ") -> " + ans);
         ans = findSqrt(100);
-        System.out.println("srqt(" + 100 + ") -> " + ans);
+        System.out.println("sqrt(" + 100 + ") -> " + ans);
         ans = findSqrt(55);
-        System.out.println("srqt(" + 55 + ") -> " + ans);
+        System.out.println("sqrt(" + 55 + ") -> " + ans);
         ans = findSqrt(1000);
-        System.out.println("srqt(" + 1000 + ") -> " + ans);
+        System.out.println("sqrt(" + 1000 + ") -> " + ans);
         ans = findSqrt(143);
-        System.out.println("srqt(" + 143 + ") -> " + ans);
+        System.out.println("sqrt(" + 143 + ") -> " + ans);
     }
 }
