@@ -67,14 +67,33 @@ public class q3_SpecialInteger {
 
     public static final int specialInteger(int[] A, int B) {
 
-        System.out.println(check(A, 2, B));
-        return 0;
+        // initialize search space
+        int l = 1;
+        int r = A.length;
+        // initialize answer
+        int maxLength = 0;
+
+        while (l <= r) {
+            int mid = l + (r - l) / 2;
+            if (!check(A, mid, B)) {
+                // update possible answer
+                maxLength = mid;
+                // ignore left part as maxLength can not lie to left
+                l = mid + 1;
+            } else {
+                r = mid - 1;
+            }
+        }
+
+        return maxLength;
     }
 
     public static void main(String[] args) {
         int[] input1 = { 1, 2, 3, 4, 5 };
         int out = specialInteger(input1, 10);
         System.out.println("answer -> " + out);
+        int[] input2 = { 5, 17, 100, 11 };
+        int out2 = specialInteger(input2, 130);
+        System.out.println("answer -> " + out2);
     }
-
 }
