@@ -48,7 +48,7 @@ public class q3_SpecialInteger {
         // use sliding window approach
 
         // find sum of first window
-        int sum = 0;
+        long sum = 0;
         for (int i = 0; i < K; i++) {
             sum = sum + A[i];
         }
