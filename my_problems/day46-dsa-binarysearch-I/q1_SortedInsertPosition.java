@@ -63,7 +63,7 @@ public class q1_SortedInsertPosition {
                 l = mid + 1;
             }
         }
-        // if element is not found, return index l where the element would be presnt if
+        // if element is not found, return index l where the element would be present if
         // inserted
         return l;
     }
