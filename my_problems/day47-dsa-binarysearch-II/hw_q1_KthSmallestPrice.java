@@ -41,16 +41,35 @@ public class hw_q1_KthSmallestPrice {
 
         // the range of answer is guaranteed to be between min and max
         // apply Binary Search on range min to max
+        int answer = min;
         while (min <= max) {
             int mid = min + (max - min) / 2;
             int count = countLessThanEqualToMid(A, mid);
+
             if (count < K) {
                 min = mid + 1;
             } else {
+                answer = mid;
                 max = mid - 1;
             }
         }
-        return min;
+        return answer;
+
+        // OR- below code can also be used
+
+        // the range of answer is guaranteed to be between min and max
+        // apply Binary Search on range min to max
+        // while (min <= max) {
+        // int mid = min + (max - min) / 2;
+        // int count = countLessThanEqualToMid(A, mid);
+
+        // if (count < K) {
+        // min = mid + 1;
+        // } else {
+        // max = mid - 1;
+        // }
+        // }
+        // return min;
 
     }
 
