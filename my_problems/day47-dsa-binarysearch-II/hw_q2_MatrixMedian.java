@@ -50,6 +50,21 @@ public class hw_q2_MatrixMedian {
      */
     public static int binarySearch(int[][] A, int l, int r, int expectedCount) {
 
+        // while (l <= r) {
+        // int mid = l + (r - l) / 2;
+        // int count = getCountLessThanOrEqualToK(A, mid);
+        // if (count < expectedCount) {
+        // // if count is less than expected count, ignore left part
+        // l = mid + 1;
+        // } else {
+        // // ignore right part
+        // r = mid - 1;
+        // }
+        // }
+        // // value l will be expected answer
+        // return l;
+
+        int answer = l;
         while (l <= r) {
             int mid = l + (r - l) / 2;
             int count = getCountLessThanOrEqualToK(A, mid);
@@ -57,12 +72,13 @@ public class hw_q2_MatrixMedian {
                 // if count is less than expected count, ignore left part
                 l = mid + 1;
             } else {
+                // update possible answer
+                answer = mid;
                 // ignore right part
                 r = mid - 1;
             }
         }
-        // value l will be expected answer
-        return l;
+        return answer;
     }
 
     /**
@@ -142,7 +158,7 @@ public class hw_q2_MatrixMedian {
         System.out.println("answer -> " + out); // expected output 5
         int[][] input2 = { { 5, 17, 100 } };
         int out2 = findMedian(input2);
-        System.out.println("answer -> " + out2); // expected output 5
+        System.out.println("answer -> " + out2); // expected output 17
         int[][] input3 = { { 1, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3 } };
         int out3 = findMedian(input3);
         System.out.println("answer -> " + out3); // expected output 2
