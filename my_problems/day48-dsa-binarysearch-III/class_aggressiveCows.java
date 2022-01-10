@@ -151,5 +151,8 @@ public class class_aggressiveCows {
                 1564, 7356, 8318, 2610, 7490, 1396 };
         int output4 = findMinimumMaxDistanceBetStalls(input4, 385); // expected output 2
         System.out.println("answer -> " + output4);
+        int[] input5 = { 2, 6, 11, 14, 19, 25, 30, 39, 43 };
+        int output5 = findMinimumMaxDistanceBetStalls(input5, 3); // expected output 18
+        System.out.println("answer -> " + output5);
     }
 }
