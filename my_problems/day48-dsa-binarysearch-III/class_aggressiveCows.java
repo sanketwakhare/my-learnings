@@ -122,7 +122,7 @@ public class class_aggressiveCows {
         int output2 = findMinimumMaxDistanceBetStalls(input2, 2); // expected output 1
         System.out.println("answer -> " + output2);
         int[] input3 = { 2, 6, 11, 14, 19, 25, 30, 39, 43 };
-        int output3 = findMinimumMaxDistanceBetStalls(input3, 4); // expected output 14
+        int output3 = findMinimumMaxDistanceBetStalls(input3, 4); // expected output 12
         System.out.println("answer -> " + output3);
         int[] input4 = { 6939, 2057, 3094, 9698, 6214, 9667, 8682, 6309, 928, 1603, 3194, 6188, 1170, 923, 7887, 3932,
                 9083, 1924, 2795, 1686, 3189, 303, 2254, 1148, 3312, 7357, 6162, 8194, 2923, 4763, 5314, 5499, 1271,
