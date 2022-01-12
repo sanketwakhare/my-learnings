@@ -41,6 +41,10 @@ import java.util.Set;
  * The array has sum 0.
  */
 
+/**
+ * TC: O(N)
+ * SC: O(N)
+ */
 public class q3_Sub_array_with_0_sum {
     public static int solve(int[] A) {
 
