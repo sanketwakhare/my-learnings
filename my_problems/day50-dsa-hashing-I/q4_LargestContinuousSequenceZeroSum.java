@@ -35,7 +35,7 @@ Example Explanation
  * SC: O(N)
  */
 public class q4_LargestContinuousSequenceZeroSum {
-    public static int[] lszero(int[] A) {
+    public static int[] largestSubarrayWithSUmZero(int[] A) {
 
         // Idea:-> the sum will be 0 when prefix array will have duplicate elements
         // consider edge case where subArray starting with 0 index will have sum 0
@@ -84,10 +84,10 @@ public class q4_LargestContinuousSequenceZeroSum {
 
     public static void main(String[] args) {
         int[] input1 = { 1, 2, -2, 4, -4 };
-        int[] output1 = lszero(input1); // expected output 0
+        int[] output1 = largestSubarrayWithSUmZero(input1); // expected output [2,-2,4,-4]
         System.out.println("answer -> " + output1);
         int[] input2 = { -1, 1 };
-        int[] output2 = lszero(input2); // expected output 1
+        int[] output2 = largestSubarrayWithSUmZero(input2); // expected output [-1,1]
         System.out.println("answer -> " + output2);
     }
 }
