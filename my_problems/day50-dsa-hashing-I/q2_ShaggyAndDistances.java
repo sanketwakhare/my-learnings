@@ -47,6 +47,10 @@ import java.util.Map;
  * Only possibility is choosing A[1] and A[2].
  */
 
+/**
+ * TC: O(N)
+ * SC: O(N)
+ */
 public class q2_ShaggyAndDistances {
     public static int solve(int[] A) {
 

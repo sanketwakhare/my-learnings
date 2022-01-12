@@ -39,6 +39,10 @@ import java.util.Set;
  * The set of consecutive elements will be [1, 2].
  */
 
+/**
+ * TC: O(N)
+ * SC: O(N)
+ */
 public class q1_LongestConsecutiveSequence {
     // DO NOT MODIFY THE ARGUMENTS WITH "final" PREFIX. IT IS READ ONLY
     public static int longestConsecutive(final int[] A) {
