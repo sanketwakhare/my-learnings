@@ -62,12 +62,16 @@ public class q3_FindAPeakElement {
             return A[r];
         }
 
+        // redefine search after considering edge cases
+        l = l + 1;
+        r = r - 1;
+
         // binary search
         while (l <= r) {
             // find mid
             int mid = l + (r - l) / 2;
 
-            if (A[mid] > A[mid - 1] && A[mid] > A[mid + 1]) {
+            if (A[mid] >= A[mid - 1] && A[mid] >= A[mid + 1]) {
                 // A[mid] is one of the maxima
                 return A[mid];
             } else if (A[mid + 1] > A[mid]) {
@@ -91,6 +95,9 @@ public class q3_FindAPeakElement {
         System.out.println(out);
         int[] input3 = { 2, 8, 3, 76, 4, 10, 5 };
         out = localMaxima(input3);
+        System.out.println(out);
+        int[] input4 = { 1, 1000000000, 1000000000 };
+        out = localMaxima(input4);
         System.out.println(out);
 
     }
