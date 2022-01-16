@@ -64,7 +64,7 @@ public class hw_q2_FoodPacketsDistribution {
     // define search space
     int l = 1;
     int r = min;
-    // initialize answer with min value of serach space
+    // initialize answer with min value of search space
     int answer = l;
 
     while (l <= r) {
