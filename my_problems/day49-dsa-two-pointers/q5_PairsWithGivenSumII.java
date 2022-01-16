@@ -46,6 +46,9 @@
  * only pair (1, 2) sums up to 2.
  */
 
+/**
+ * TC: O(N): Two pointers approach
+ */
 public class q5_PairsWithGivenSumII {
     public static int countPairs(int[] A, int B) {
 

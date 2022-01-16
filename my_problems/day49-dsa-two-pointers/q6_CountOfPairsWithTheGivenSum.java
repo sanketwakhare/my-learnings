@@ -29,6 +29,9 @@ Output 2:
     2
  */
 
+/**
+ * TC: O(N): Two pointers approach
+ */
 public class q6_CountOfPairsWithTheGivenSum {
 
     public static int countPairs(int[] A, int B) {
