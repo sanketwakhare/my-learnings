@@ -44,6 +44,13 @@
  * No subarray sums up to required number.
  */
 
+/**
+ * Iterations: N => for generating prefix array +
+ * N => for subarray starting with 0 +
+ * N for iterating over prefix arrays ~~ 3N
+ * TC: O(N) -> iterating over array and prefix array same TC as N
+ * SC: O(N) -> for prefix array
+ */
 public class q1_SubarrayWithGivenSum {
 
     public static int[] countPairs(int[] A, int B) {
