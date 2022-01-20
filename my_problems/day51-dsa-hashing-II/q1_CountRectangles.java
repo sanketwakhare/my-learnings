@@ -45,9 +45,13 @@ Explanation 2:
                                            (1, 1), (3, 1), (3, 2), (1, 2)
                                            (2, 1), (3, 1), (3, 2), (2, 2) */
 
+/**
+ * TC: O(N^2)
+ * SC: 2N => O(N)
+ */
 public class q1_CountRectangles {
 
-    public int solve(int[] A, int[] B) {
+    public static int countOfRectangles(int[] A, int[] B) {
 
         // Generate set of coordinates
         // use array list as it implements the equals and hashCode method
@@ -106,6 +110,36 @@ public class q1_CountRectangles {
 
         // divide the rectangles count by 2 as those are considered 2 times
         return count / 2;
+    }
+
+    public static void main(String[] args) {
+
+        int[] A1 = { 1, 1, 2, 2 };
+        int[] B1 = { 1, 2, 1, 2 };
+        int answer = countOfRectangles(A1, B1); // expected output 1
+        System.out.println("answer -> " + answer);
+
+        int[] A2 = { 1, 1, 2, 2, 3, 3 };
+        int[] B2 = { 1, 2, 1, 2, 1, 2 };
+        answer = countOfRectangles(A2, B2); // expected output 3
+        System.out.println("answer -> " + answer);
+
+        int[] A3 = { 1209, 217, 1550, 1271, 1085, 1364, 1271, 31, 62, 217, 1550, 651, 713, 1550, 1116, 1364, 837, 1395,
+                744, 62, 1116, 775, 1271, 1364, 465, 1457, 1147, 713, 992, 465, 806, 1302, 1240, 1457, 186, 186, 465,
+                713, 868, 1550, 620, 31, 1178, 248, 651, 1271, 961, 806, 465, 217, 837, 186, 217, 1240, 1457, 1178, 589,
+                992, 1240, 1023, 961, 124, 1271, 1147, 1395, 496, 899 };
+        int[] B3 = { 1240, 1178, 1550, 1395, 279, 1054, 527, 1426, 1488, 589, 1054, 93, 1178, 558, 0, 1116, 372, 713,
+                1116, 1054, 1426, 310, 341, 1550, 62, 403, 31, 682, 124, 992, 1488, 186, 1209, 1302, 744, 93, 0, 1271,
+                651, 0, 1147, 713, 1302, 1054, 744, 155, 1023, 961, 775, 434, 713, 1085, 1333, 682, 837, 279, 403, 1054,
+                434, 1178, 465, 93, 496, 465, 1116, 1054, 1240 };
+        answer = countOfRectangles(A3, B3); // expected output 2
+        System.out.println("answer -> " + answer);
+
+        int[] A4 = { 1, 2, 3, 4, 1, 4 };
+        int[] B4 = { 1, 2, 3, 4, 4, 5 };
+        answer = countOfRectangles(A4, B4); // expected output 0
+        System.out.println("answer -> " + answer);
+
     }
 
 }
