@@ -47,9 +47,24 @@ Explanation 2:
  */
 const boringSubstring = function (A) {
 
-    // maintain sets for all evens and odds seperately
+
+    /**
+     * Idea: extract the even and odd characters separately.
+     * And combine both the sets together.
+     * 
+     * There can not be any boring substring in even and odd segments.
+     * while comparing ,
+     * 1) check only min odd with min even and max even
+     * 2) check only max odd with min even and max even
+     * 
+     * If we can not rearrange between above combinations,then we can  not form with rest of the combinations.
+     * 
+     ***/
+
+    // maintain sets for all evens and odds separately
     let odds = new Set();
     let evens = new Set();
+
 
     let minOdd = Number.MAX_SAFE_INTEGER;
     let maxOdd = Number.MIN_SAFE_INTEGER;
@@ -68,12 +83,12 @@ const boringSubstring = function (A) {
             maxOdd = Math.max(asciiValue, maxOdd);
         }
     }
-    // console.log('odds->', odds);
-    // console.log('evens->', evens);
-    // console.log('minOdd->', minOdd);
-    // console.log('maxOdd->', maxOdd);
-    // console.log('minEven->', minEven);
-    // console.log('maxEven->', maxEven);
+    console.log('odds->', odds);
+    console.log('evens->', evens);
+    console.log('minOdd->', minOdd);
+    console.log('maxOdd->', maxOdd);
+    console.log('minEven->', minEven);
+    console.log('maxEven->', maxEven);
 
     // compare minOdd with minEven and maxEven, if diff is > 1 then we can rearrange the boring sub-string
     if (Math.abs(minOdd - minEven) > 1) {
