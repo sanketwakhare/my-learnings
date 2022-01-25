@@ -52,6 +52,16 @@
 
 public class q6_LinkedList {
 
+    // public static class ListNode {
+    // public int val;
+    // public ListNode next;
+
+    // ListNode(int x) {
+    // val = x;
+    // next = null;
+    // }
+    // }
+
     static ListNode head = null;
     static int size = 0;
 
@@ -132,12 +142,11 @@ public class q6_LinkedList {
     public static void print_ll() {
         // Output each element followed by a space
         ListNode temp = head;
-
         while (temp.next != null) {
             System.out.print(temp.val + " ");
             temp = temp.next;
         }
-        System.out.println(temp.val);
+        System.out.print(temp.val);
     }
 
     public static void main(String[] args) {
@@ -146,6 +155,7 @@ public class q6_LinkedList {
         q6_LinkedList.insert_node(1, 30);
         q6_LinkedList.insert_node(1, 40);
         print_ll();
+        System.out.println();
         q6_LinkedList.delete_node(2);
         print_ll();
     }
