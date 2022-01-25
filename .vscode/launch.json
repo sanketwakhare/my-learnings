@@ -5,13 +5,41 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "type": "java",
+            "name": "Launch q1_DeleteMiddleNodeOfALinkedList",
+            "request": "launch",
+            "mainClass": "q1_DeleteMiddleNodeOfALinkedList",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
+            "name": "Launch hw_q2_RemoveDuplicatesFromSortedList",
+            "request": "launch",
+            "mainClass": "hw_q2_RemoveDuplicatesFromSortedList",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
+            "name": "Launch qq",
+            "request": "launch",
+            "mainClass": "qq",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
+            "name": "Launch hw_q6_AnotherCountRactangle",
+            "request": "launch",
+            "mainClass": "hw_q6_AnotherCountRactangle",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
             "type": "pwa-node",
             "request": "launch",
             "name": "JS Debugger",
             "skipFiles": [
                 "<node_internals>/**"
             ],
-            "program": "${workspaceFolder}\\my_problems\\day52-dsa-string-pattern-matching-I\\q1_CyclicPermutations.js"
+            "program": "${workspaceFolder}\\my_problems\\day51-dsa-hashing-II\\hw_q1_pointsOnSameLine2.js"
         }
     ]
 }
