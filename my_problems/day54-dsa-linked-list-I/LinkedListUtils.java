@@ -9,7 +9,7 @@ public class LinkedListUtils {
             System.out.print(temp.val + " -> ");
             temp = temp.next;
         }
-        System.out.print(temp.val);
+        System.out.println(temp.val);
 
     }
 
