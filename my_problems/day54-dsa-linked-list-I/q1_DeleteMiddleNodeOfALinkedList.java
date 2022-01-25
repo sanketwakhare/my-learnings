@@ -81,7 +81,17 @@ public class q1_DeleteMiddleNodeOfALinkedList {
 
     public static void main(String[] args) {
 
+        // odd size
         ListNode head = LinkedListUtils.getTestData();
+        LinkedListUtils.printLL(head);
+        head = deleteMiddleNode(head);
+        LinkedListUtils.printLL(head);
+
+        // even size
+        head = LinkedListUtils.getTestData();
+        ListNode x = new ListNode(6);
+        x.next = head;
+        head = x;
         LinkedListUtils.printLL(head);
         head = deleteMiddleNode(head);
         LinkedListUtils.printLL(head);
