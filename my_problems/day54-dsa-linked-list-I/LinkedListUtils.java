@@ -3,7 +3,6 @@ public class LinkedListUtils {
     // 1->2->3->4->5
     public static void printLL(ListNode head) {
 
-        System.out.println();
         ListNode temp = head;
         while (temp.next != null) {
             System.out.print(temp.val + " -> ");
