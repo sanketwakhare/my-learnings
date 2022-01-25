@@ -6,6 +6,48 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch hw_q1_RemoveNthNodeFromListEnd",
+            "request": "launch",
+            "mainClass": "hw_q1_RemoveNthNodeFromListEnd",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
+            "name": "Launch q6_LinkedList",
+            "request": "launch",
+            "mainClass": "q6_LinkedList",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
+            "name": "Launch q5_ReverseLinkedList",
+            "request": "launch",
+            "mainClass": "q5_ReverseLinkedList",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
+            "name": "Launch q4_ReverseLinkListII",
+            "request": "launch",
+            "mainClass": "q4_ReverseLinkListII",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
+            "name": "Launch q3_MiddleElementOfLinkedList",
+            "request": "launch",
+            "mainClass": "q3_MiddleElementOfLinkedList",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
+            "name": "Launch q2_K_ReverseLinkedList",
+            "request": "launch",
+            "mainClass": "q2_K_ReverseLinkedList",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
             "name": "Launch q1_DeleteMiddleNodeOfALinkedList",
             "request": "launch",
             "mainClass": "q1_DeleteMiddleNodeOfALinkedList",
