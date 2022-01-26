@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch q3_ReorderList",
+            "request": "launch",
+            "mainClass": "q3_ReorderList",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
             "name": "Launch hw_q1_RemoveNthNodeFromListEnd",
             "request": "launch",
             "mainClass": "hw_q1_RemoveNthNodeFromListEnd",
@@ -77,7 +84,7 @@
         {
             "type": "pwa-node",
             "request": "launch",
-            "name": "JS Debugger",
+            "name": "Launch hw_q1_pointsOnSameLine2",
             "skipFiles": [
                 "<node_internals>/**"
             ],
