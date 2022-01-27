@@ -1,3 +1,44 @@
+/* Reorder List */
+
+/***
+ * Problem Description
+
+Given a singly linked list A
+
+ A: A0 → A1 → … → An-1 → An 
+reorder it to:
+
+ A0 → An → A1 → An-1 → A2 → An-2 → … 
+You must do this in-place without altering the nodes' values.
+
+Problem Constraints
+1 <= |A| <= 10^6
+
+Input Format
+The first and the only argument of input contains a pointer to the head of the linked list A.
+
+Output Format
+Return a pointer to the head of the modified linked list.
+
+Example Input
+Input 1:
+ A = [1, 2, 3, 4, 5] 
+Input 2:
+ A = [1, 2, 3, 4] 
+
+Example Output
+Output 1:
+ [1, 5, 2, 4, 3] 
+Output 2:
+ [1, 4, 2, 3] 
+
+Example Explanation
+Explanation 1:
+ The array will be arranged to [A0, An, A1, An-1, A2].
+Explanation 2:
+ The array will be arranged to [A0, An, A1, An-1, A2].
+ */
+
 /**
  * Definition for singly-linked list.
  * class ListNode {
@@ -6,8 +47,14 @@
  * ListNode(int x) { val = x; next = null; }
  * }
  */
+
+/**
+ * TC: O(N)
+ * SC: O(1)
+ */
 public class q3_ReorderList {
 
+    // find middle node of linked list
     public static ListNode findMiddle(ListNode head) {
 
         // do it in single pass
@@ -29,6 +76,7 @@ public class q3_ReorderList {
         return slow;
     }
 
+    // reverse a given node
     public static ListNode reverse(ListNode head) {
 
         // base case for head
@@ -51,6 +99,7 @@ public class q3_ReorderList {
         return prev;
     }
 
+    // merge two nodes where size of h1 >= size of h2
     public static ListNode merge(ListNode h1, ListNode h2) {
 
         ListNode head = h1;
@@ -67,22 +116,23 @@ public class q3_ReorderList {
         return head;
     }
 
+    // reorder function
     public static ListNode reorderList(ListNode head) {
 
-        // find middle c1
+        // step 1 - find middle c1
         ListNode c1 = findMiddle(head);
 
-        // break the list into 2 halfs/lists
+        // step 2 - break the list into 2 halves/lists
         // 0 to c1
         // c1+.next to end
         ListNode h1 = head;
         ListNode h2 = c1.next;
         c1.next = null;
 
-        // reverse second ll
+        // step 3 - reverse second ll
         h2 = reverse(h2);
 
-        // merge 1st half and 2nd half
+        // step 4 - merge 1st half and 2nd half
         head = merge(h1, h2);
         return head;
     }
