@@ -3,6 +3,8 @@ public class LinkedListUtils {
     // 1->2->3->4->5
     public static void printLL(ListNode head) {
 
+        if (head == null)
+            return;
         ListNode temp = head;
         while (temp.next != null) {
             System.out.print(temp.val + " -> ");
@@ -76,6 +78,26 @@ public class LinkedListUtils {
         // form the loop
         end.next = temp;
 
+        return head;
+    }
+
+    public static ListNode getUnsortedList() {
+        ListNode head = null;
+        head = insertAtEnd(head, 3);
+        head = insertAtEnd(head, 4);
+        head = insertAtEnd(head, 2);
+        head = insertAtEnd(head, 1);
+        return head;
+    }
+
+    public static ListNode getRandomList(int size) {
+
+        ListNode head = null;
+        while (size > 0) {
+            int value = (int) Math.floor(Math.random() * 100);
+            head = insertAtEnd(head, value);
+            size--;
+        }
         return head;
     }
 
