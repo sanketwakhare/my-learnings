@@ -101,4 +101,10 @@ public class LinkedListUtils {
         return head;
     }
 
+    public static ListNode getSortedList(int size) {
+        ListNode head = getRandomList(size);
+        head = hw_q1_SortList.sortList(head);
+        return head;
+    }
+
 }
