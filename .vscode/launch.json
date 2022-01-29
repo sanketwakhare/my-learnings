@@ -6,6 +6,62 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch q1_CopyList",
+            "request": "launch",
+            "mainClass": "q1_CopyList",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
+            "name": "Launch hw_q1_Array3Pointers",
+            "request": "launch",
+            "mainClass": "hw_q1_Array3Pointers",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
+            "name": "Launch hw_q3_IntersectionOfLinkedLists",
+            "request": "launch",
+            "mainClass": "hw_q3_IntersectionOfLinkedLists",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
+            "name": "Launch hw_q3_intersection",
+            "request": "launch",
+            "mainClass": "hw_q3_intersection",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
+            "name": "Launch hw_q2_MergeTwoSortedLists",
+            "request": "launch",
+            "mainClass": "hw_q2_MergeTwoSortedLists",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
+            "name": "Launch hw_q1_SortList",
+            "request": "launch",
+            "mainClass": "hw_q1_SortList",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
+            "name": "Launch q2_RemoveLoopFromLinkedList",
+            "request": "launch",
+            "mainClass": "q2_RemoveLoopFromLinkedList",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
+            "name": "Launch q1_ListCycle",
+            "request": "launch",
+            "mainClass": "q1_ListCycle",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
             "name": "Launch q3_ReorderList",
             "request": "launch",
             "mainClass": "q3_ReorderList",
