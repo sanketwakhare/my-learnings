@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch hw_q1_PalindromeList",
+            "request": "launch",
+            "mainClass": "hw_q1_PalindromeList",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
+            "name": "Launch Q2_LRUCache",
+            "request": "launch",
+            "mainClass": "Q2_LRUCache",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
             "name": "Launch q1_CopyList",
             "request": "launch",
             "mainClass": "q1_CopyList",

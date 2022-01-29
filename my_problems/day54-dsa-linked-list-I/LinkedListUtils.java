@@ -107,4 +107,15 @@ public class LinkedListUtils {
         return head;
     }
 
+    public static ListNode getPalindromeList() {
+
+        ListNode head = null;
+        head = insertAtEnd(head, 1);
+        head = insertAtEnd(head, 2);
+        head = insertAtEnd(head, 3);
+        head = insertAtEnd(head, 2);
+        head = insertAtEnd(head, 1);
+        return head;
+    }
+
 }
