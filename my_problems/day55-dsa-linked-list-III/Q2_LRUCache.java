@@ -27,7 +27,7 @@ Input :
 import java.util.HashMap;
 import java.util.Map.Entry;
 
-public class Q2_LRUCache {
+public class q2_LRUCache {
 
     /* DLL node structure */
     class DLLNode {
@@ -52,12 +52,12 @@ public class Q2_LRUCache {
     private DLLNode tail;
 
     // initialize dummy nodes
-    Q2_LRUCache() {
+    q2_LRUCache() {
         head = new DLLNode(-1);
         tail = new DLLNode(-1);
     }
 
-    public Q2_LRUCache(int capacity) {
+    public q2_LRUCache(int capacity) {
         this();
         this.capacity = capacity;
         this.hashMap = new HashMap<Integer, DLLNode>();
@@ -150,7 +150,7 @@ public class Q2_LRUCache {
     public static void main(String[] args) {
 
         // test case 1
-        Q2_LRUCache cache = new Q2_LRUCache(5);
+        q2_LRUCache cache = new q2_LRUCache(5);
         cache.set(10, 100);
         cache.set(3, 30);
         cache.set(5, 50);
@@ -179,7 +179,7 @@ public class Q2_LRUCache {
          */
 
         // test case 2
-        Q2_LRUCache cache2 = new Q2_LRUCache(2);
+        q2_LRUCache cache2 = new q2_LRUCache(2);
         cache2.set(1, 10);
         cache2.set(5, 12);
         System.out.println(cache2.get(5));
