@@ -6,6 +6,27 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch q3_FlattenALinkedList",
+            "request": "launch",
+            "mainClass": "q3_FlattenALinkedList",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
+            "name": "Launch hw_q2_AddTwoNumbersAsLists",
+            "request": "launch",
+            "mainClass": "hw_q2_AddTwoNumbersAsLists",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
+            "name": "Launch q4_SwapListNodesInPairs",
+            "request": "launch",
+            "mainClass": "q4_SwapListNodesInPairs",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
             "name": "Launch q2_LRUCache",
             "request": "launch",
             "mainClass": "q2_LRUCache",
