@@ -34,7 +34,7 @@ import java.util.Map.Entry;
 public class q2_LRUCache {
 
     /* DLL node structure */
-    class DLLNode {
+    static class DLLNode {
         int data;
         DLLNode prev;
         DLLNode next;
