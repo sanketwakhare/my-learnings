@@ -43,7 +43,7 @@
  * TC: O(N)
  * SC: O(1)
  */
-public class q4_SwapListNodesInPairs {
+public class hw_q4_SwapListNodesInPairs {
     /**
      * Definition for singly-linked list.
      * class ListNode {

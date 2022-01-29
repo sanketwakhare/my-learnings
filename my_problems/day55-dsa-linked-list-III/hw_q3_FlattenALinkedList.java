@@ -51,7 +51,7 @@
  * The return linked list is the flatten sorted list.
  */
 
-public class q3_FlattenALinkedList {
+public class hw_q3_FlattenALinkedList {
 
     public static class ListNode {
         int val;
