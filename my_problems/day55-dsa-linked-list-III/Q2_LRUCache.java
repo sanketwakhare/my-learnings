@@ -27,6 +27,10 @@ Input :
 import java.util.HashMap;
 import java.util.Map.Entry;
 
+/**
+ * TC: O(N)
+ * SC: O(N) - hashMap and capacity storage
+ */
 public class q2_LRUCache {
 
     /* DLL node structure */
@@ -52,7 +56,7 @@ public class q2_LRUCache {
     private DLLNode tail;
 
     // initialize dummy nodes
-    q2_LRUCache() {
+    public q2_LRUCache() {
         head = new DLLNode(-1);
         tail = new DLLNode(-1);
     }
