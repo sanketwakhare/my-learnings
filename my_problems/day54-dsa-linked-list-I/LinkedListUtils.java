@@ -101,6 +101,17 @@ public class LinkedListUtils {
         return head;
     }
 
+    public static ListNode getRandomLessThan10List(int size) {
+
+        ListNode head = null;
+        while (size > 0) {
+            int value = (int) Math.floor(Math.random() * 10);
+            head = insertAtEnd(head, value);
+            size--;
+        }
+        return head;
+    }
+
     public static ListNode getSortedList(int size) {
         ListNode head = getRandomList(size);
         head = hw_q1_SortList.sortList(head);
