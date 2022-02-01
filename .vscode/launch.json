@@ -6,6 +6,48 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch hw_q4_SortStackUsingAnotherStack",
+            "request": "launch",
+            "mainClass": "hw_q4_SortStackUsingAnotherStack",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
+            "name": "Launch hw_q3_PassingGame",
+            "request": "launch",
+            "mainClass": "hw_q3_PassingGame",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
+            "name": "Launch q3_SimplifyDirectoryPath",
+            "request": "launch",
+            "mainClass": "q3_SimplifyDirectoryPath",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
+            "name": "Launch q2_DoubleCharacterTrouble",
+            "request": "launch",
+            "mainClass": "q2_DoubleCharacterTrouble",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
+            "name": "Launch q1_BalancedParenthesis",
+            "request": "launch",
+            "mainClass": "q1_BalancedParenthesis",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
+            "name": "Launch hw_q3_FlattenALinkedList",
+            "request": "launch",
+            "mainClass": "hw_q3_FlattenALinkedList",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
             "name": "Launch q3_FlattenALinkedList",
             "request": "launch",
             "mainClass": "q3_FlattenALinkedList",
