@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch hw_q1_minStack_1_extra_space",
+            "request": "launch",
+            "mainClass": "hw_q1_minStack_1_extra_space",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
             "name": "Launch hw_q4_SortStackUsingAnotherStack",
             "request": "launch",
             "mainClass": "hw_q4_SortStackUsingAnotherStack",
