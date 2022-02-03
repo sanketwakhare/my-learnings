@@ -97,6 +97,42 @@ public class q2_NearestSmallerElement {
         return output;
     }
 
+    // with array parameter
+    public static int[] prevSmaller(int[] A) {
+        // stack to store the index of elements instead of actual element
+        Stack<Integer> stack = new Stack<Integer>();
+        int[] output = new int[A.length];
+
+        for (int i = 0; i < A.length; i++) {
+            // x is current element
+            int x = A[i];
+
+            // pop elements from array until top is > x
+            // as those elements can not be smaller to any elements on right ith/current
+            // element
+
+            // while(!stack.isEmpty() && stack.peek() >= x) { value can also be stored
+            // instead of indexes
+            while (!stack.isEmpty() && A[stack.peek()] >= x) {
+                stack.pop();
+            }
+
+            // if current stack is empty, closest min oin left is -1
+            if (stack.isEmpty()) {
+                output[i] = -1;
+            } else {
+                // closest min on left of x is top of stack
+                // output.add(stack.peek()); value can als be stored instead of indexes
+                output[i] = A[stack.peek()];
+            }
+            // add x into stack as x can be possible answer to elements on right
+            // stack.push(x); value can also be stored instead of indexes
+            stack.push(i);
+
+        }
+        return output;
+    }
+
     public static void main(String[] args) {
 
         // test 1: A = [39, 27, 11, 4, 24, 32, 32, 1]
@@ -116,6 +152,19 @@ public class q2_NearestSmallerElement {
         ArrayList<Integer> outList2 = prevSmaller(list2);
         System.out.println();
         for (Integer result : outList2) {
+            System.out.print(result + " ");
+        }
+
+        int[] a1 = { 39, 27, 11, 4, 24, 32, 32, 1 };
+        a1 = prevSmaller(a1);
+        System.out.println();
+        for (Integer result : a1) {
+            System.out.print(result + " ");
+        }
+        int[] a2 = { 4, 5, 2, 10, 8, 7, 9, 8, 15, 4, 3, 20, 12, 1, 2, 3 };
+        a2 = prevSmaller(a2);
+        System.out.println();
+        for (Integer result : a2) {
             System.out.print(result + " ");
         }
     }

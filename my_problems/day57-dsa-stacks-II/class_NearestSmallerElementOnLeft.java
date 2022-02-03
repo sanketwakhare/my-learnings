@@ -59,7 +59,7 @@ index 3: No element less than 1 in left of 1, G[3] = -1
  * operations for N elements
  * SC: O(N) for stack
  */
-public class class_NearestSmellerElementOnLeft {
+public class class_NearestSmallerElementOnLeft {
 
     public static ArrayList<Integer> prevSmaller(ArrayList<Integer> A) {
 
@@ -116,6 +116,16 @@ public class class_NearestSmellerElementOnLeft {
         ArrayList<Integer> outList2 = prevSmaller(list2);
         System.out.println();
         for (Integer result : outList2) {
+            System.out.print(result + " ");
+        }
+
+        // test 3: A = [2, 13, 8, 5, 4, 7]
+        // expected answer: -1 2 2 2 2 4
+        Integer[] A3 = { 2, 13, 8, 5, 4, 7 };
+        ArrayList<Integer> list3 = new ArrayList<Integer>(Arrays.asList(A3));
+        ArrayList<Integer> outList3 = prevSmaller(list3);
+        System.out.println();
+        for (Integer result : outList3) {
             System.out.print(result + " ");
         }
     }

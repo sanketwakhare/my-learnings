@@ -59,5 +59,15 @@ public class class_NearestGreaterElementOnLeft {
         for (Integer result : outList2) {
             System.out.print(result + " ");
         }
+
+        // test 3: A = [2, 13, 8, 5, 4, 7]
+        // expected answer: -1 -1 13 8 5 8
+        Integer[] A3 = { 2, 13, 8, 5, 4, 7 };
+        ArrayList<Integer> list3 = new ArrayList<Integer>(Arrays.asList(A3));
+        ArrayList<Integer> outList3 = prevGreater(list3);
+        System.out.println();
+        for (Integer result : outList3) {
+            System.out.print(result + " ");
+        }
     }
 }
