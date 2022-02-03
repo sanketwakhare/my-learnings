@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch hw_2_MaximumFrequencyStack",
+            "request": "launch",
+            "mainClass": "hw_2_MaximumFrequencyStack",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
+            "name": "Launch hw_q1_minStack_2_without_extra_space",
+            "request": "launch",
+            "mainClass": "hw_q1_minStack_2_without_extra_space",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
             "name": "Launch hw_q1_minStack_1_extra_space",
             "request": "launch",
             "mainClass": "hw_q1_minStack_1_extra_space",
