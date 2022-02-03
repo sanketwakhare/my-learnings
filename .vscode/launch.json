@@ -6,6 +6,76 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch hw_q1_DoubleCharacterTrouble",
+            "request": "launch",
+            "mainClass": "hw_q1_DoubleCharacterTrouble",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
+            "name": "Launch q3_LargestRectangleInHistogram",
+            "request": "launch",
+            "mainClass": "q3_LargestRectangleInHistogram",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
+            "name": "Launch q4_Diff_MAXandMIN_SubarraySum",
+            "request": "launch",
+            "mainClass": "q4_Diff_MAXandMIN_SubarraySum",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
+            "name": "Launch class_NearestSmallerElementOnLeft",
+            "request": "launch",
+            "mainClass": "class_NearestSmallerElementOnLeft",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
+            "name": "Launch class_NearestSmellerElementOnLeft",
+            "request": "launch",
+            "mainClass": "class_NearestSmellerElementOnLeft",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
+            "name": "Launch class_NearestGreaterElementOnRight",
+            "request": "launch",
+            "mainClass": "class_NearestGreaterElementOnRight",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
+            "name": "Launch class_NearestSmellerElementOnRight",
+            "request": "launch",
+            "mainClass": "class_NearestSmellerElementOnRight",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
+            "name": "Launch class_NearestGreaterElementOnLeft",
+            "request": "launch",
+            "mainClass": "class_NearestGreaterElementOnLeft",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
+            "name": "Launch class_NearestSmallerElementOnRight",
+            "request": "launch",
+            "mainClass": "class_NearestSmallerElementOnRight",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
+            "name": "Launch q2_NearestSmallerElement",
+            "request": "launch",
+            "mainClass": "q2_NearestSmallerElement",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
             "name": "Launch q1_EvaluateExpression",
             "request": "launch",
             "mainClass": "q1_EvaluateExpression",

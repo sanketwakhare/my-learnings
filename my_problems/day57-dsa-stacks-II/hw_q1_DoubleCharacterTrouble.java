@@ -47,7 +47,7 @@ import java.util.Stack;
  * No removals are to be done.
  */
 
-public class q2_DoubleCharacterTrouble {
+public class hw_q1_DoubleCharacterTrouble {
 
     public static String solve(String A) {
 
@@ -55,32 +55,29 @@ public class q2_DoubleCharacterTrouble {
 
         for (int i = 0; i < A.length(); i++) {
             char currentChar = A.charAt(i);
+
             if (!stack.isEmpty() && stack.peek() == currentChar) {
-                // if consecutive character is found, pop element from stack
                 stack.pop();
             } else {
-                // push element to stack
                 stack.push(currentChar);
             }
         }
 
-        // Retrieve the elements from stack and store as string
+        // retrieve elements from stack
         // using StringBuilder here is faster
-        StringBuilder out = new StringBuilder();
+        StringBuilder output = new StringBuilder();
         while (!stack.isEmpty()) {
-            char currentChar = stack.peek();
-            stack.pop();
-            out.append(currentChar);
+            output.append(stack.pop());
         }
 
         // reverse the string and return
-        return out.reverse().toString();
+        return output.reverse().toString();
     }
 
     public static void main(String[] args) {
         System.out.println(solve("abccbc"));
         System.out.println(solve("ab"));
-        System.out.println(solve("abcjgffrredsdotittdditod"));
+        System.out.println(solve("testaabcdeffedckkrrffhthtththerrebtest"));
     }
 
 }
