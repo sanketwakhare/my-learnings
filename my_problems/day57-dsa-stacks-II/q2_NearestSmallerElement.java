@@ -71,7 +71,7 @@ public class q2_NearestSmallerElement {
             // x is current element
             int x = A.get(i);
 
-            // pop elements from array until top is > x
+            // pop elements from array until top is >= x
             // as those elements can not be smaller to any elements on right ith/current
             // element
 
