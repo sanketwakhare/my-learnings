@@ -45,6 +45,9 @@ import java.util.Stack;
  * width for current index/element
  * 
  * Area = height * width
+ * 
+ * TC: O(N)
+ * SC: O(N)
  */
 public class q3_LargestRectangleInHistogram {
 
