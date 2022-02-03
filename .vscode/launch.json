@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch hw_q3_NextGreater",
+            "request": "launch",
+            "mainClass": "hw_q3_NextGreater",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
             "name": "Launch hw_q1_DoubleCharacterTrouble",
             "request": "launch",
             "mainClass": "hw_q1_DoubleCharacterTrouble",
