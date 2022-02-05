@@ -1,5 +1,6 @@
 {
     "java.project.sourcePaths": [
+        "my_problems/day57-dsa-stacks-II",
         "my_problems/day56-dsa-stacks-I",
         "my_problems/day55-dsa-linked-list-III",
         "my_problems/day55-dsa-linked-list-II",
@@ -11,6 +12,6 @@
         "my_problems/day47-dsa-binarysearch-II",
         "my_problems/day46-dsa-binarysearch-I",
         "my_problems/day38-maths-combinatorics",
-        "my_problems/day57-dsa-stacks-II"
+        "my_problems/day58-dsa-queues-I"
     ]
 }
