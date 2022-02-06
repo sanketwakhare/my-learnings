@@ -6,6 +6,41 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch q3_TaskScheduling",
+            "request": "launch",
+            "mainClass": "q3_TaskScheduling",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
+            "name": "Launch hw_q1_ReversingElementsOfQueue",
+            "request": "launch",
+            "mainClass": "hw_q1_ReversingElementsOfQueue",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
+            "name": "Launch q1_PerfectNumbers",
+            "request": "launch",
+            "mainClass": "q1_PerfectNumbers",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
+            "name": "Launch q2_N_IntegersContainingOnly_1_2_and_3",
+            "request": "launch",
+            "mainClass": "q2_N_IntegersContainingOnly_1_2_and_3",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
+            "name": "Launch hw_q4_MaximumRectangle",
+            "request": "launch",
+            "mainClass": "hw_q4_MaximumRectangle",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
             "name": "Launch hw_q3_NextGreater",
             "request": "launch",
             "mainClass": "hw_q3_NextGreater",
