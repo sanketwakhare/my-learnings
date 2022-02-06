@@ -1,6 +1,8 @@
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.LinkedList;
 import java.util.List;
+import java.util.Queue;
 import java.util.Stack;
 
 /* Reversing Elements Of Queue */
@@ -49,10 +51,16 @@ public class hw_q1_ReversingElementsOfQueue {
 
     public static ArrayList<Integer> solve(ArrayList<Integer> A, int B) {
 
+        Queue<Integer> queue = new LinkedList<Integer>();
+        for (int a : A) {
+            queue.add(a);
+        }
+
         // stack to store first B elements which can be fetched in reverse direction
         Stack<Integer> stack = new Stack<Integer>();
-        for (int i = 0; i < B; i++) {
-            stack.push(A.get(i));
+        for (int i = 0; i < B && !queue.isEmpty(); i++) {
+            // stack.push(A.get(i));
+            stack.push(queue.poll());
         }
 
         // update the input array, first B elements in reverse direction
