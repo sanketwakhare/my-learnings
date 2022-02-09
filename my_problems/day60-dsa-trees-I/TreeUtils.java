@@ -31,4 +31,14 @@ public class TreeUtils {
         insertRight(right, getRandomValue());
         return root;
     }
+
+    public static void printTree(TreeNode root) {
+        // use any type of traversal to print the nodes data
+        if (root == null) {
+            return;
+        }
+        System.out.println(root.val);
+        printTree(root.left);
+        printTree(root.right);
+    }
 }
