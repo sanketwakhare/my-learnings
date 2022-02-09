@@ -37,7 +37,7 @@ public class TreeUtils {
         if (root == null) {
             return;
         }
-        System.out.println(root.val);
+        System.out.print(root.val + " ");
         printTree(root.left);
         printTree(root.right);
     }
