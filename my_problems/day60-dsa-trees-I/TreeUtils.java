@@ -41,4 +41,15 @@ public class TreeUtils {
         printTree(root.left);
         printTree(root.right);
     }
+
+    public static TreeNode createTestTree() {
+        TreeNode root = new TreeNode(10);
+        TreeNode left = insertLeft(root, 20);
+        TreeNode right = insertRight(root, 30);
+        insertLeft(left, 40);
+        insertRight(left, 50);
+        insertLeft(right, 60);
+        insertRight(right, 70);
+        return root;
+    }
 }
