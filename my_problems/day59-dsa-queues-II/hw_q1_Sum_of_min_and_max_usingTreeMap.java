@@ -41,7 +41,7 @@ Output 2:
 
 Example Explanation
 Explanation 1:
- Subarrays of size 4 are : 
+ Subarray of size 4 are : 
     [2, 5, -1, 7],   min + max = -1 + 7 = 6
     [5, -1, 7, -3],  min + max = -3 + 7 = 4      
     [-1, 7, -3, -1], min + max = -3 + 7 = 4
@@ -49,7 +49,7 @@ Explanation 1:
     Sum of all min & max = 6 + 4 + 4 + 4 = 18 
 
 Explanation 2:
- Subarrays of size 2 are : 
+ Subarray of size 2 are : 
     [2, -1],   min + max = -1 + 2 = 1
     [-1, 3],   min + max = -1 + 3 = 2
     Sum of all min & max = 1 + 2 = 3 
@@ -63,7 +63,7 @@ import java.util.TreeMap;
  * TC: O(N LogK) - as treeMap maintains the items in sorted order
  * SC: O(N) - treeMap space
  */
-public class hw_q1_Sum_of_min_and_max {
+public class hw_q1_Sum_of_min_and_max_usingTreeMap {
 
     public static int solve(int[] A, int B) {
 
