@@ -70,14 +70,14 @@ public class class_q1_level_order_traversal_left_to_right {
     public static void main(String[] args) {
 
         // test 1
-        System.out.println("\n******test1");
+        System.out.println("\n******test1*******");
         TreeNode root = TreeUtils.createTree();
         TreeUtils.printTree(root);
         ArrayList<ArrayList<Integer>> output = levelOrder(root);
         TreeUtils.printLevelWiseLeftToRight(output);
 
         // test 2
-        System.out.println("\n******test2");
+        System.out.println("\n******test2*******");
         root = TreeUtils.createTestTree();
         TreeUtils.printTree(root);
         output = levelOrder(root);
@@ -101,7 +101,7 @@ public class class_q1_level_order_traversal_left_to_right {
          * [15, 7]
          * ]
          */
-        System.out.println("\n******test3");
+        System.out.println("\n******test3*******");
         root = new TreeNode(3);
         root.left = new TreeNode(9);
         root.left.left = null;
@@ -135,7 +135,7 @@ public class class_q1_level_order_traversal_left_to_right {
          * [3]
          * ]
          */
-        System.out.println("\n******test4");
+        System.out.println("\n******test4*******");
         root = new TreeNode(1);
         root.left = new TreeNode(6);
         root.left.left = null;
