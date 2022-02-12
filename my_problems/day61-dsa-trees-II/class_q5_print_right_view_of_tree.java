@@ -149,7 +149,7 @@ public class class_q5_print_right_view_of_tree {
         output = rightView(root);
         TreeUtils.printList(output);
 
-        // test 4
+        // test 5
         // @formatter:off
         /* 
                     1
@@ -162,7 +162,7 @@ public class class_q5_print_right_view_of_tree {
         */
         // @formatter:on
         // expected output : [1, 3, 4, 5]
-        System.out.println("\n******test4*******");
+        System.out.println("\n******test5*******");
         root = new TreeNode(1);
         root.left = new TreeNode(2);
         root.right = new TreeNode(3);

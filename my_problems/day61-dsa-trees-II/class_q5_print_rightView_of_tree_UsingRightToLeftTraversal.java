@@ -5,7 +5,7 @@ import java.util.Queue;
 /* Print Right View of the Tree */
 /* Using level traversal from LEFT to RIGHT */
 /* return LAST element from each level for Right View*/
-public class class_q5_print_right_view_of_tree_UsingRightToLeftTraversal {
+public class class_q5_print_rightView_of_tree_UsingRightToLeftTraversal {
 
     public static ArrayList<Integer> rightView(TreeNode root) {
 
