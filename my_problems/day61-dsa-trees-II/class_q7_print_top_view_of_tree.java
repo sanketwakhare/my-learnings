@@ -4,6 +4,10 @@ import java.util.LinkedList;
 import java.util.Map;
 import java.util.Queue;
 
+/**
+ * Top View of the Tree using vertical level order traversal
+ * Print every first element from each vertical level stored in map
+ */
 public class class_q7_print_top_view_of_tree {
 
     public static ArrayList<Integer> topView(TreeNode root) {
