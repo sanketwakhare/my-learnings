@@ -65,11 +65,18 @@ public class TreeUtils {
         }
     }
 
-    public static void printList(ArrayList<Integer> list) {
+    public static void printLevelWiseList(ArrayList<Integer> list) {
         System.out.println();
         int index = 0;
         for (Integer node : list) {
             System.out.println("level " + index++ + " - " + node);
+        }
+    }
+
+    public static void printList(ArrayList<Integer> list) {
+        System.out.println();
+        for (Integer node : list) {
+            System.out.print(node + " ");
         }
     }
 

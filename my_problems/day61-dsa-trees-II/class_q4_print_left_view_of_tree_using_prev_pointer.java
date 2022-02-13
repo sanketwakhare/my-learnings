@@ -74,7 +74,7 @@ public class class_q4_print_left_view_of_tree_using_prev_pointer {
         TreeNode root = TreeUtils.createTestTree();
         TreeUtils.printTree(root);
         ArrayList<Integer> output = leftView(root);
-        TreeUtils.printList(output);
+        TreeUtils.printLevelWiseList(output);
 
         // test 2
         // @formatter:off
@@ -95,7 +95,7 @@ public class class_q4_print_left_view_of_tree_using_prev_pointer {
         root.right.right = new TreeNode(7);
         TreeUtils.printTree(root);
         output = leftView(root);
-        TreeUtils.printList(output);
+        TreeUtils.printLevelWiseList(output);
 
         // test 3
         // @formatter:off
@@ -115,7 +115,7 @@ public class class_q4_print_left_view_of_tree_using_prev_pointer {
         root.right.left = new TreeNode(3);
         TreeUtils.printTree(root);
         output = leftView(root);
-        TreeUtils.printList(output);
+        TreeUtils.printLevelWiseList(output);
     }
 
 }

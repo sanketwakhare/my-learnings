@@ -69,7 +69,7 @@ public class class_q5_print_right_view_of_tree_using_next_variable {
         TreeNode root = TreeUtils.createTestTree();
         TreeUtils.printTree(root);
         ArrayList<Integer> output = rightView(root);
-        TreeUtils.printList(output);
+        TreeUtils.printLevelWiseList(output);
 
         // test 2
         // @formatter:off
@@ -90,7 +90,7 @@ public class class_q5_print_right_view_of_tree_using_next_variable {
         root.right.right = new TreeNode(7);
         TreeUtils.printTree(root);
         output = rightView(root);
-        TreeUtils.printList(output);
+        TreeUtils.printLevelWiseList(output);
 
         // test 3
         // @formatter:off
@@ -110,7 +110,7 @@ public class class_q5_print_right_view_of_tree_using_next_variable {
         root.right.left = new TreeNode(3);
         TreeUtils.printTree(root);
         output = rightView(root);
-        TreeUtils.printList(output);
+        TreeUtils.printLevelWiseList(output);
 
         // test 4
         // @formatter:off
@@ -136,7 +136,7 @@ public class class_q5_print_right_view_of_tree_using_next_variable {
         root.left.left.left = new TreeNode(8);
         TreeUtils.printTree(root);
         output = rightView(root);
-        TreeUtils.printList(output);
+        TreeUtils.printLevelWiseList(output);
 
         // test 5
         // @formatter:off
@@ -159,6 +159,6 @@ public class class_q5_print_right_view_of_tree_using_next_variable {
         root.left.right.right = new TreeNode(5);
         TreeUtils.printTree(root);
         output = rightView(root);
-        TreeUtils.printList(output);
+        TreeUtils.printLevelWiseList(output);
     }
 }
