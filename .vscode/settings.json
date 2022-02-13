@@ -1,10 +1,12 @@
 {
     "java.project.sourcePaths": [
+        "my_problems/day58-dsa-queues-I",
         "my_problems/day57-dsa-stacks-II",
         "my_problems/day56-dsa-stacks-I",
         "my_problems/day55-dsa-linked-list-III",
         "my_problems/day55-dsa-linked-list-II",
         "my_problems/day54-dsa-linked-list-I",
+        "my_problems/day52-dsa-string-pattern-matching-I",
         "my_problems/day51-dsa-hashing-II",
         "my_problems/day50-dsa-hashing-I",
         "my_problems/day49-dsa-two-pointers",
@@ -12,6 +14,8 @@
         "my_problems/day47-dsa-binarysearch-II",
         "my_problems/day46-dsa-binarysearch-I",
         "my_problems/day38-maths-combinatorics",
-        "my_problems/day58-dsa-queues-I"
+        "my_problems/day59-dsa-queues-II",
+        "my_problems/day60-dsa-trees-I",
+        "my_problems\\day61-dsa-trees-II"
     ]
 }

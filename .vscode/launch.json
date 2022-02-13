@@ -6,6 +6,314 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch class_find_Path_between_any_2_nodes_of_Tree",
+            "request": "launch",
+            "mainClass": "class_find_Path_between_any_2_nodes_of_Tree",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
+            "name": "Launch hw_identify_MirrorImages_tree",
+            "request": "launch",
+            "mainClass": "hw_identify_MirrorImages_tree",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
+            "name": "Launch class_q9_construct_binary_tree_from_InOrder_and_PostOrder",
+            "request": "launch",
+            "mainClass": "class_q9_construct_binary_tree_from_InOrder_and_PostOrder",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
+            "name": "Launch class_q9_construct_binary_tree_from_InOrder_and_PreOrder",
+            "request": "launch",
+            "mainClass": "class_q9_construct_binary_tree_from_InOrder_and_PreOrder",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
+            "name": "Launch class_q8_print_bottom_view_of_tree",
+            "request": "launch",
+            "mainClass": "class_q8_print_bottom_view_of_tree",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
+            "name": "Launch class_q7_print_top_view_of_tree",
+            "request": "launch",
+            "mainClass": "class_q7_print_top_view_of_tree",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
+            "name": "Launch class_q5_print_right_view_of_tree_using_next_variable",
+            "request": "launch",
+            "mainClass": "class_q5_print_right_view_of_tree_using_next_variable",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
+            "name": "Launch class_q4_print_left_view_of_tree_using_prev_pointer",
+            "request": "launch",
+            "mainClass": "class_q4_print_left_view_of_tree_using_prev_pointer",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
+            "name": "Launch class_q3_level_order_traversal_zigzag",
+            "request": "launch",
+            "mainClass": "class_q3_level_order_traversal_zigzag",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
+            "name": "Launch class_q3_level_order_traversal_alternate",
+            "request": "launch",
+            "mainClass": "class_q3_level_order_traversal_alternate",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
+            "name": "Launch class_q6_vertical_level_order_traversal",
+            "request": "launch",
+            "mainClass": "class_q6_vertical_level_order_traversal",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
+            "name": "Launch class_q2_level_order_traversal_right_to_left",
+            "request": "launch",
+            "mainClass": "class_q2_level_order_traversal_right_to_left",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
+            "name": "Launch class_q5_print_right_view_of_tree_UsingRightToLeftTraversal",
+            "request": "launch",
+            "mainClass": "class_q5_print_right_view_of_tree_UsingRightToLeftTraversal",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
+            "name": "Launch class_q5_print_right_view_of_tree",
+            "request": "launch",
+            "mainClass": "class_q5_print_right_view_of_tree",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
+            "name": "Launch class_q4_print_left_view_of_tree",
+            "request": "launch",
+            "mainClass": "class_q4_print_left_view_of_tree",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
+            "name": "Launch class_q1_level_order_traversal_left_to_right",
+            "request": "launch",
+            "mainClass": "class_q1_level_order_traversal_left_to_right",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
+            "name": "Launch class_queue_Impl_circularQueue_Arrays",
+            "request": "launch",
+            "mainClass": "class_queue_Impl_circularQueue_Arrays",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
+            "name": "Launch class_queue_Impl_LinkedList",
+            "request": "launch",
+            "mainClass": "class_queue_Impl_LinkedList",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
+            "name": "Launch class_ImplementStackUsingQueues",
+            "request": "launch",
+            "mainClass": "class_ImplementStackUsingQueues",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
+            "name": "Launch class_ImplementQueueUsingStack",
+            "request": "launch",
+            "mainClass": "class_ImplementQueueUsingStack",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
+            "name": "Launch class_find_Path_of_K_from_root_in_a_Tree",
+            "request": "launch",
+            "mainClass": "class_find_Path_of_K_from_root_in_a_Tree",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
+            "name": "Launch class_searchElementInTree",
+            "request": "launch",
+            "mainClass": "class_searchElementInTree",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
+            "name": "Launch class_preOrderTraversal",
+            "request": "launch",
+            "mainClass": "class_preOrderTraversal",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
+            "name": "Launch class_postOrderTraversal",
+            "request": "launch",
+            "mainClass": "class_postOrderTraversal",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
+            "name": "Launch class_inOrderTraversal",
+            "request": "launch",
+            "mainClass": "class_inOrderTraversal",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
+            "name": "Launch q5_PostorderTraversal",
+            "request": "launch",
+            "mainClass": "q5_PostorderTraversal",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
+            "name": "Launch q4_NodesMax",
+            "request": "launch",
+            "mainClass": "q4_NodesMax",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
+            "name": "Launch q3_TreeHeight",
+            "request": "launch",
+            "mainClass": "q3_TreeHeight",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
+            "name": "Launch q2_NodesSum",
+            "request": "launch",
+            "mainClass": "q2_NodesSum",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
+            "name": "Launch q1_NodesCount",
+            "request": "launch",
+            "mainClass": "q1_NodesCount",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
+            "name": "Launch hw_q1_Sum_of_min_and_max_using2Dequeues",
+            "request": "launch",
+            "mainClass": "hw_q1_Sum_of_min_and_max_using2Dequeues",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
+            "name": "Launch hw_q1_Sum_of_min_and_max",
+            "request": "launch",
+            "mainClass": "hw_q1_Sum_of_min_and_max",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
+            "name": "Launch q2_SlidingWindowMaximum_usingDeQueue",
+            "request": "launch",
+            "mainClass": "q2_SlidingWindowMaximum_usingDeQueue",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
+            "name": "Launch q2_SlidingWindowMaximum_usingTreeMap",
+            "request": "launch",
+            "mainClass": "q2_SlidingWindowMaximum_usingTreeMap",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
+            "name": "Launch q1_FirstNonRepeatingCharacter",
+            "request": "launch",
+            "mainClass": "q1_FirstNonRepeatingCharacter",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
+            "name": "Launch class_queue_Impl_Arrays",
+            "request": "launch",
+            "mainClass": "class_queue_Impl_Arrays",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
+            "name": "Launch hw_q2_compareSortedSubarray",
+            "request": "launch",
+            "mainClass": "hw_q2_compareSortedSubarray",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
+            "name": "Launch q2_PeriodOfString",
+            "request": "launch",
+            "mainClass": "q2_PeriodOfString",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
+            "name": "Launch hw_q4_ClosestPairFromSortedArrays",
+            "request": "launch",
+            "mainClass": "hw_q4_ClosestPairFromSortedArrays",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
+            "name": "Launch hw_q3_sortByColor",
+            "request": "launch",
+            "mainClass": "hw_q3_sortByColor",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
+            "name": "Launch class_StackImpl_LinkedList",
+            "request": "launch",
+            "mainClass": "class_StackImpl_LinkedList",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
+            "name": "Launch class_stackImpl_LinkedList",
+            "request": "launch",
+            "mainClass": "class_stackImpl_LinkedList",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
+            "name": "Launch class_stackImpl_Arrays",
+            "request": "launch",
+            "mainClass": "class_stackImpl_Arrays",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
+            "name": "Launch hw_q2_InfixToPostfix",
+            "request": "launch",
+            "mainClass": "hw_q2_InfixToPostfix",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
             "name": "Launch q3_TaskScheduling",
             "request": "launch",
             "mainClass": "q3_TaskScheduling",
