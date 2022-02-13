@@ -23,7 +23,7 @@ public class class_q4_print_left_view_of_tree_using_prev_pointer {
 
         TreeNode prev = null;
 
-        // insert roo into queue
+        // insert root into queue
         queue.add(root);
         // insert null along with it, to identify the end of the current level
         queue.add(null);
@@ -50,7 +50,7 @@ public class class_q4_print_left_view_of_tree_using_prev_pointer {
                 queue.add(null);
 
             }
-            // update prev pointer
+            // update prev variable
             prev = temp;
         }
 
