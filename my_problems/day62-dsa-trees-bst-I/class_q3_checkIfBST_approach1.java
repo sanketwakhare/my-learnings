@@ -23,7 +23,7 @@ public class class_q3_checkIfBST_approach1 {
         inOrderTraversal(root, inOrder);
         // check if inOrder traversal is sorted or not
         for (int i = 1; i < inOrder.size(); i++) {
-            if (inOrder.get(i) < inOrder.get(i - 1)) {
+            if (inOrder.get(i) <= inOrder.get(i - 1)) {
                 return false;
             }
         }
@@ -43,6 +43,17 @@ public class class_q3_checkIfBST_approach1 {
         root = new TreeNode(50);
         root.right = TreeUtils.getRandomNode();
         root.left = TreeUtils.getRandomNode();
+        TreeUtils.printInOrderOfATree(root);
+        System.out.println(isValidBST(root));
+
+        root = new TreeNode(2147483647);
+        TreeUtils.printInOrderOfATree(root);
+        System.out.println(isValidBST(root));
+
+        root = new TreeNode(3);
+        root.left = new TreeNode(2);
+        root.right = new TreeNode(4);
+        root.left.right = new TreeNode(3);
         TreeUtils.printInOrderOfATree(root);
         System.out.println(isValidBST(root));
 
