@@ -120,4 +120,30 @@ public class TreeUtils {
 
         return root;
     }
+
+    public static TreeNode createBST() {
+        // level1
+        TreeNode root = new TreeNode(50);
+
+        // LST
+        // level2
+        TreeNode thirty = insertLeft(root, 30);
+        // level3
+        TreeNode ten = insertLeft(thirty, 10);
+        insertRight(thirty, 40);
+        // level4
+        insertRight(ten, 20);
+
+        // RST
+        // level2
+        TreeNode seventy = insertRight(root, 70);
+        // level3
+        insertLeft(seventy, 60);
+        TreeNode ninety = insertRight(seventy, 90);
+        // level4
+        insertLeft(ninety, 80);
+        insertRight(ninety, 100);
+
+        return root;
+    }
 }
