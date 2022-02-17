@@ -1,10 +1,19 @@
 /* Search element oin BST - Binary Search Tree */
-public class class_q1_searchElementInBST {
+
+/**
+ * Recursive Approach
+ * TC: O(logN) => O(Height)
+ * SC: O(Height)
+ */
+public class class_q1_searchElementInBST_recursive {
 
     public static boolean search(TreeNode root, int K) {
-        if (root == null)
+        if (root == null) {
+            // element K is not found
             return false;
+        }
         if (root.val == K) {
+            // element K is found
             return true;
         } else if (root.val < K) {
             // search in RST
