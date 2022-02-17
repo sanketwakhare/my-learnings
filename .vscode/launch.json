@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch class_deque_implement_using_circular_array",
+            "request": "launch",
+            "mainClass": "class_deque_implement_using_circular_array",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
             "name": "Launch class_find_Path_between_any_2_nodes_of_Tree",
             "request": "launch",
             "mainClass": "class_find_Path_between_any_2_nodes_of_Tree",
