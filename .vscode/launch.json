@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch class_deque_implement_using_linked_list",
+            "request": "launch",
+            "mainClass": "class_deque_implement_using_linked_list",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
             "name": "Launch class_deque_implement_using_circular_array",
             "request": "launch",
             "mainClass": "class_deque_implement_using_circular_array",

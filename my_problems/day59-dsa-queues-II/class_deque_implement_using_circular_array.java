@@ -1,4 +1,4 @@
-/* Implement Dequeue using Circular Array */
+/* Implement Circular Dequeue using Array */
 
 class CustomDeQueue {
 
