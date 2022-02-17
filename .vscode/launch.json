@@ -6,6 +6,34 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch class_q1_searchElementInBST_iterative",
+            "request": "launch",
+            "mainClass": "class_q1_searchElementInBST_iterative",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
+            "name": "Launch class_q2_insertElementInBST_iterative",
+            "request": "launch",
+            "mainClass": "class_q2_insertElementInBST_iterative",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
+            "name": "Launch class_q2_insertElementInBST_recursive",
+            "request": "launch",
+            "mainClass": "class_q2_insertElementInBST_recursive",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
+            "name": "Launch class_q2_insertElementInBST",
+            "request": "launch",
+            "mainClass": "class_q2_insertElementInBST",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
             "name": "Launch class_q1_searchElementInBST",
             "request": "launch",
             "mainClass": "class_q1_searchElementInBST",
