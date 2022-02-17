@@ -146,4 +146,14 @@ public class TreeUtils {
 
         return root;
     }
+
+    public static void printInOrderOfATree(TreeNode root) {
+        // use any type of traversal to print the nodes data
+        if (root == null) {
+            return;
+        }
+        printInOrderOfATree(root.left);
+        System.out.print(root.val + " ");
+        printInOrderOfATree(root.right);
+    }
 }
