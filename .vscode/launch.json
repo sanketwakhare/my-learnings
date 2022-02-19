@@ -6,6 +6,34 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch class_q4_deleteNodeFromBST",
+            "request": "launch",
+            "mainClass": "class_q4_deleteNodeFromBST",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
+            "name": "Launch class_q3_checkIfBST_approach3",
+            "request": "launch",
+            "mainClass": "class_q3_checkIfBST_approach3",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
+            "name": "Launch class_q3_checkIfBST_approach2",
+            "request": "launch",
+            "mainClass": "class_q3_checkIfBST_approach2",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
+            "name": "Launch class_q3_checkIfBST_approach1",
+            "request": "launch",
+            "mainClass": "class_q3_checkIfBST_approach1",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
             "name": "Launch class_q1_searchElementInBST_iterative",
             "request": "launch",
             "mainClass": "class_q1_searchElementInBST_iterative",
