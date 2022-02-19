@@ -1,4 +1,4 @@
-public class class_q3_checkIfBST_approach3 {
+public class class_q3_checkIfValidBST_approach3 {
 
     // check if every node falls within expected range to be BST
     // start with [-Infinity, +Infinity] and check if all nodes satisfy the range
