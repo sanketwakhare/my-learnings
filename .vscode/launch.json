@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch q1_SortedArrayToBalancedBST",
+            "request": "launch",
+            "mainClass": "q1_SortedArrayToBalancedBST",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
             "name": "Launch class_q4_deleteNodeFromBST",
             "request": "launch",
             "mainClass": "class_q4_deleteNodeFromBST",
