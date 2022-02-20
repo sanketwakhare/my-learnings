@@ -1,5 +1,6 @@
 {
     "java.project.sourcePaths": [
+        "my_problems/day62-dsa-trees-bst-I",
         "my_problems/day61-dsa-trees-II",
         "my_problems/day60-dsa-trees-I",
         "my_problems/day59-dsa-queues-II",
@@ -17,6 +18,6 @@
         "my_problems/day47-dsa-binarysearch-II",
         "my_problems/day46-dsa-binarysearch-I",
         "my_problems/day38-maths-combinatorics",
-        "my_problems/day62-dsa-trees-bst-I"
+        "my_problems/day63-dsa-trees-bst-II"
     ]
 }
