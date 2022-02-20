@@ -107,7 +107,7 @@ public class q3_LeastCommonAncestor {
         int C = 3;
         System.out.println(lca(root, B, C));
 
-        // test 1
+        // test 2
         // @formatter:off
         /*
          *     10

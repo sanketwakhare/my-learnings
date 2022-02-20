@@ -1,5 +1,6 @@
-/* Morris InOrder traversal algorithm
-SC: O(1) */
+/* Morris In Order traversal algorithm */
+
+// SC: O(1)
 public class class_q4_morris_inOrder_traversal_sc_1 {
 
     public static void morrisInOrderTraversal(TreeNode root) {

@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch q4_DistanceBetweenNodes_of_BST",
+            "request": "launch",
+            "mainClass": "q4_DistanceBetweenNodes_of_BST",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
             "name": "Launch q3_LeastCommonAncestor",
             "request": "launch",
             "mainClass": "q3_LeastCommonAncestor",
