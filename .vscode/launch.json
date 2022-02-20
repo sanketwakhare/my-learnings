@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch class_q3_find_Kth_smallest_element_inBST_approach1",
+            "request": "launch",
+            "mainClass": "class_q3_find_Kth_smallest_element_inBST_approach1",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
             "name": "Launch class_q2_identify_2_swapped_nodes_in_BST_approach2",
             "request": "launch",
             "mainClass": "class_q2_identify_2_swapped_nodes_in_BST_approach2",
