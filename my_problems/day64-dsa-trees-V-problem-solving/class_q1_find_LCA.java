@@ -3,6 +3,7 @@ import java.util.ArrayList;
 /* Find Least Common Ancestor */
 public class class_q1_find_LCA {
 
+    // find path from node K to root
     public static boolean findPath(TreeNode root, int K, ArrayList<Integer> path) {
 
         if (root == null) {
@@ -19,6 +20,7 @@ public class class_q1_find_LCA {
         return false;
     }
 
+    // find lca and paths from 2 nodes
     public static int findLCA(ArrayList<Integer> path1, ArrayList<Integer> path2) {
 
         int lca = -1;
@@ -88,14 +90,41 @@ public class class_q1_find_LCA {
         root.right.left.right.right.right = new TreeNode(24);
         root.right.right.right = new TreeNode(-9);
 
+        // test case 1
         ArrayList<Integer> path1 = new ArrayList<Integer>();
+        ArrayList<Integer> path2 = new ArrayList<Integer>();
         findPath(root, 41, path1);
         System.out.println(path1);
-        ArrayList<Integer> path2 = new ArrayList<Integer>();
         findPath(root, 17, path2);
         System.out.println(path2);
+        findLCA(path1, path2);
 
-        int lca = findLCA(path1, path2);
+        // test case 2
+        path1 = new ArrayList<Integer>();
+        path2 = new ArrayList<Integer>();
+        findPath(root, 19, path1);
+        System.out.println(path1);
+        findPath(root, -9, path2);
+        System.out.println(path2);
+        findLCA(path1, path2);
+
+        // test case 3
+        path1 = new ArrayList<Integer>();
+        path2 = new ArrayList<Integer>();
+        findPath(root, 19, path1);
+        System.out.println(path1);
+        findPath(root, 6, path2);
+        System.out.println(path2);
+        findLCA(path1, path2);
+
+        // test case 4
+        path1 = new ArrayList<Integer>();
+        path2 = new ArrayList<Integer>();
+        findPath(root, 7, path1);
+        System.out.println(path1);
+        findPath(root, 9, path2);
+        System.out.println(path2);
+        findLCA(path1, path2);
 
     }
 }
