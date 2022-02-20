@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch hw_q2_Common_Nodes_In_Two_BST",
+            "request": "launch",
+            "mainClass": "hw_q2_Common_Nodes_In_Two_BST",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
             "name": "Launch hw_q1_Check_for_BST_with_One_Child",
             "request": "launch",
             "mainClass": "hw_q1_Check_for_BST_with_One_Child",
