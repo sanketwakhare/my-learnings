@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch class_q2_countNodes_at_distance_K_from_root",
+            "request": "launch",
+            "mainClass": "class_q2_countNodes_at_distance_K_from_root",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
             "name": "Launch class_q1_find_LCA",
             "request": "launch",
             "mainClass": "class_q1_find_LCA",
