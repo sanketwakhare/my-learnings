@@ -6,9 +6,30 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch class_q3_checkIfValidBST_approach2",
+            "request": "launch",
+            "mainClass": "class_q3_checkIfValidBST_approach2",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
+            "name": "Launch class_q3_checkIfValidBST_approach1",
+            "request": "launch",
+            "mainClass": "class_q3_checkIfValidBST_approach1",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
             "name": "Launch q2_ValidBinarySearchTree",
             "request": "launch",
             "mainClass": "q2_ValidBinarySearchTree",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
+            "name": "Launch q3_FloorAndCeilInBST",
+            "request": "launch",
+            "mainClass": "q3_FloorAndCeilInBST",
             "projectName": "namaste_js_fdce26b9"
         },
         {
