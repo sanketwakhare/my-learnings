@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch class_q1_find_LCA",
+            "request": "launch",
+            "mainClass": "class_q1_find_LCA",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
             "name": "Launch q4_DistanceBetweenNodes_of_BST",
             "request": "launch",
             "mainClass": "q4_DistanceBetweenNodes_of_BST",
