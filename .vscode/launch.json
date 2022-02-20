@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch class_q4_morris_inOrder_traversal_sc_1",
+            "request": "launch",
+            "mainClass": "class_q4_morris_inOrder_traversal_sc_1",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
             "name": "Launch class_q3_find_Kth_smallest_element_inBST_approach2",
             "request": "launch",
             "mainClass": "class_q3_find_Kth_smallest_element_inBST_approach2",
