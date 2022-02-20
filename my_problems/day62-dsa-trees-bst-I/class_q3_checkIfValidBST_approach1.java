@@ -7,7 +7,7 @@ import java.util.ArrayList;
  * TC: O(N)
  * SC: O(N) => for storing inOrder path
  */
-public class class_q3_checkIfBST_approach1 {
+public class class_q3_checkIfValidBST_approach1 {
 
     public static void inOrderTraversal(TreeNode root, ArrayList<Integer> inOrder) {
         if (root == null) {

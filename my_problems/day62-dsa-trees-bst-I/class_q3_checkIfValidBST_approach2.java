@@ -15,7 +15,7 @@ class Data {
     }
 }
 
-public class class_q3_checkIfBST_approach2 {
+public class class_q3_checkIfValidBST_approach2 {
 
     public static Data isValid(TreeNode root) {
 

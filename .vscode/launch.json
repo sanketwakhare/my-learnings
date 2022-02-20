@@ -6,6 +6,62 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch hw_q3_BST_nodes_in_a_range",
+            "request": "launch",
+            "mainClass": "hw_q3_BST_nodes_in_a_range",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
+            "name": "Launch hw_q2_Common_Nodes_In_Two_BST",
+            "request": "launch",
+            "mainClass": "hw_q2_Common_Nodes_In_Two_BST",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
+            "name": "Launch hw_q1_Check_for_BST_with_One_Child",
+            "request": "launch",
+            "mainClass": "hw_q1_Check_for_BST_with_One_Child",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
+            "name": "Launch class_q3_checkIfValidBST_approach2",
+            "request": "launch",
+            "mainClass": "class_q3_checkIfValidBST_approach2",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
+            "name": "Launch class_q3_checkIfValidBST_approach1",
+            "request": "launch",
+            "mainClass": "class_q3_checkIfValidBST_approach1",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
+            "name": "Launch q2_ValidBinarySearchTree",
+            "request": "launch",
+            "mainClass": "q2_ValidBinarySearchTree",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
+            "name": "Launch q3_FloorAndCeilInBST",
+            "request": "launch",
+            "mainClass": "q3_FloorAndCeilInBST",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
+            "name": "Launch q1_SortedArrayToBalancedBST",
+            "request": "launch",
+            "mainClass": "q1_SortedArrayToBalancedBST",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
             "name": "Launch class_q4_deleteNodeFromBST",
             "request": "launch",
             "mainClass": "class_q4_deleteNodeFromBST",
