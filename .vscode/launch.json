@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch q2_KthSmallestElementInBST",
+            "request": "launch",
+            "mainClass": "q2_KthSmallestElementInBST",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
             "name": "Launch q1_RecoverBinarySearchTree",
             "request": "launch",
             "mainClass": "q1_RecoverBinarySearchTree",
