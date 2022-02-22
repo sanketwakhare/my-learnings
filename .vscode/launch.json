@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch class_q3_node_distance_K_from_any_node",
+            "request": "launch",
+            "mainClass": "class_q3_node_distance_K_from_any_node",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
             "name": "Launch hw_q1_MaxSumPath_in_BinaryTree",
             "request": "launch",
             "mainClass": "hw_q1_MaxSumPath_in_BinaryTree",
