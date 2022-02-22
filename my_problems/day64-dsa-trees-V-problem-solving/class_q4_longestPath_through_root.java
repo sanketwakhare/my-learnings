@@ -1,6 +1,7 @@
 /* Find longest path which occurs through root*/
 public class class_q4_longestPath_through_root {
 
+    // height function
     public static int height(TreeNode root) {
         if (root == null) {
             return -1;
@@ -10,6 +11,7 @@ public class class_q4_longestPath_through_root {
         return Math.max(l, r) + 1;
     }
 
+    // longest path will be height(lst) + height(rst) + 2 edges connecting root
     public static int getLongestPath(TreeNode root) {
         int lst = height(root.left);
         int rst = height(root.right);
