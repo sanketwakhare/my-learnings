@@ -5,6 +5,24 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "name": "q2_Diameter_of_binary_tree",
+            "program": "${workspaceFolder}\\my_problems\\day64-dsa-trees-V-problem-solving\\q2_Diameter_of_binary_tree.js",
+            "request": "launch",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "type": "pwa-node"
+        },
+        {
+            "name": "q1_NodeDistance_C_inBinaryTree",
+            "program": "${workspaceFolder}\\my_problems\\day64-dsa-trees-V-problem-solving\\q1_NodeDistance_C_inBinaryTree.js",
+            "request": "launch",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "type": "pwa-node"
+        },
+        {
             "type": "java",
             "name": "Launch class_q2_countNodes_at_distance_K_from_root",
             "request": "launch",
