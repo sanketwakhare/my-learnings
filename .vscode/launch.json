@@ -5,6 +5,13 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "type": "java",
+            "name": "Launch hw_q1_MaxSumPath_in_BinaryTree",
+            "request": "launch",
+            "mainClass": "hw_q1_MaxSumPath_in_BinaryTree",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
             "name": "q2_Diameter_of_binary_tree",
             "program": "${workspaceFolder}\\my_problems\\day64-dsa-trees-V-problem-solving\\q2_Diameter_of_binary_tree.js",
             "request": "launch",
