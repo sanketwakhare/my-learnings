@@ -947,6 +947,15 @@
                 "<node_internals>/**"
             ],
             "program": "${workspaceFolder}\\my_problems\\day51-dsa-hashing-II\\hw_q1_pointsOnSameLine2.js"
-        }
+        },
+        {
+            "name": "q2_contactFinder",
+            "program": "${workspaceFolder}\\my_problems\\day66-dsa-tries-I\\hw_q1_contactFiinder.js",
+            "request": "launch",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "type": "pwa-node"
+        },
     ]
 }
