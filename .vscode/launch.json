@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch q1_Max_XOR",
+            "request": "launch",
+            "mainClass": "q1_Max_XOR",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
             "name": "Launch q2_AutoComplete",
             "request": "launch",
             "mainClass": "q2_AutoComplete",
