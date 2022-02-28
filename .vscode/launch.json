@@ -6,6 +6,41 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch q2_AutoComplete",
+            "request": "launch",
+            "mainClass": "q2_AutoComplete",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
+            "name": "Launch hw_q2_mS",
+            "request": "launch",
+            "mainClass": "hw_q2_mS",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
+            "name": "Launch Main",
+            "request": "launch",
+            "mainClass": "Main",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
+            "name": "Launch hw_q2_modifiedSearch",
+            "request": "launch",
+            "mainClass": "hw_q2_modifiedSearch",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
+            "name": "Launch q_trees",
+            "request": "launch",
+            "mainClass": "q_trees",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
             "name": "Launch hw_q2_BoundaryTraversal",
             "request": "launch",
             "mainClass": "hw_q2_BoundaryTraversal",
@@ -956,6 +991,6 @@
                 "<node_internals>/**"
             ],
             "type": "pwa-node"
-        },
+        }
     ]
 }
