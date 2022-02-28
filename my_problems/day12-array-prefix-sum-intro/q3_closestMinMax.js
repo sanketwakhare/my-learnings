@@ -35,7 +35,6 @@ Explanation 2:
  */
 
 
-//  TODO
 
 const closestMinMax = (A) => {
 

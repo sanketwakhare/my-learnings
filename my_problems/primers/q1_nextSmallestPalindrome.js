@@ -32,51 +32,50 @@ Output 2:
  "1001"
  */
 
-//TODO: problem is unsolved
 
 const nextSmallestPalindrome = (A) => {
-  let nextPalindrome = "";
-  // find mid
-  let mid = Math.floor(A.length / 2);
+    let nextPalindrome = "";
+    // find mid
+    let mid = Math.floor(A.length / 2);
 
-  let traverseIndex = 1;
+    let traverseIndex = 1;
 
-  while (mid >= traverseIndex) {
-    let left = Number(A[mid - traverseIndex]);
-    let right = Number(A[mid + traverseIndex]);
+    while (mid >= traverseIndex) {
+        let left = Number(A[mid - traverseIndex]);
+        let right = Number(A[mid + traverseIndex]);
 
-    if (left > right) {
-      let leftString = A.substring(0, mid);
-      let rightString = leftString.split("").reverse().join("");
-      nextPalindrome = leftString + A[mid] + rightString;
-    } else if (left < right) {
-      let leftString = A.substring(0, mid + 1);
-      let lastElement = Number(leftString.charAt(leftString.length - 1));
+        if (left > right) {
+            let leftString = A.substring(0, mid);
+            let rightString = leftString.split("").reverse().join("");
+            nextPalindrome = leftString + A[mid] + rightString;
+        } else if (left < right) {
+            let leftString = A.substring(0, mid + 1);
+            let lastElement = Number(leftString.charAt(leftString.length - 1));
 
-      while (lastElement === 9) {}
-      lastElement++;
-      leftString = leftString.substring(0, mid);
-      leftString += lastElement;
-      leftString = leftString.substring(0, mid);
-      let rightString = leftString.split("").reverse().join("");
-      nextPalindrome = leftString + lastElement + rightString;
-    } else {
-      traverseIndex++;
-      if (mid < traverseIndex) {
-        let leftString = A.substring(0, mid);
-        let lastElement = Number(leftString.charAt(leftString.length - 1));
-        while (lastElement === 9) {}
-        lastElement++;
-        leftString = leftString.substring(0, mid);
-        leftString += lastElement;
-        leftString = leftString.substring(0, mid);
-        let rightString = leftString.split("").reverse().join("");
-        nextPalindrome = leftString + lastElement + rightString;
-      }
+            while (lastElement === 9) {}
+            lastElement++;
+            leftString = leftString.substring(0, mid);
+            leftString += lastElement;
+            leftString = leftString.substring(0, mid);
+            let rightString = leftString.split("").reverse().join("");
+            nextPalindrome = leftString + lastElement + rightString;
+        } else {
+            traverseIndex++;
+            if (mid < traverseIndex) {
+                let leftString = A.substring(0, mid);
+                let lastElement = Number(leftString.charAt(leftString.length - 1));
+                while (lastElement === 9) {}
+                lastElement++;
+                leftString = leftString.substring(0, mid);
+                leftString += lastElement;
+                leftString = leftString.substring(0, mid);
+                let rightString = leftString.split("").reverse().join("");
+                nextPalindrome = leftString + lastElement + rightString;
+            }
+        }
     }
-  }
 
-  console.log(nextPalindrome);
+    console.log(nextPalindrome);
 };
 
 // nextSmallestPalindrome("23512");
