@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch hw_q2_Map_Sum_Pairs",
+            "request": "launch",
+            "mainClass": "hw_q2_Map_Sum_Pairs",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
+            "name": "Launch q2_Maximum_XOR_Subarray",
+            "request": "launch",
+            "mainClass": "q2_Maximum_XOR_Subarray",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
             "name": "Launch q1_Max_XOR",
             "request": "launch",
             "mainClass": "q1_Max_XOR",
