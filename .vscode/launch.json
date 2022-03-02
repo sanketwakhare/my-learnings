@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch hw_q2_Valid_Phone_Directory",
+            "request": "launch",
+            "mainClass": "hw_q2_Valid_Phone_Directory",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
             "name": "Launch hw_q2_Map_Sum_Pairs",
             "request": "launch",
             "mainClass": "hw_q2_Map_Sum_Pairs",
