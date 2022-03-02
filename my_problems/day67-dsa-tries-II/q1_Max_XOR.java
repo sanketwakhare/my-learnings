@@ -120,7 +120,6 @@ public class q1_Max_XOR {
             }
             // compare the answers and update max if applicable
             answer = Math.max(answer, A[i] ^ currAns);
-            curr.isEnd = true;
         }
         System.out.println(answer);
         return answer;
