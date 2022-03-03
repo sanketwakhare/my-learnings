@@ -1,6 +1,12 @@
 /* Min Heap Implementation using arrays */
 
-public class class_MinHeap {
+/** Build Min Heap */
+/** Approach 1: build using insert() method and using extra space */
+/**
+ * TC: O(N log N)
+ * SC: O(N)
+ */
+public class class_MinHeap_approach1_extra_space {
 
     class MinHeap {
         int[] heap;
@@ -97,7 +103,7 @@ public class class_MinHeap {
 
     public static void main(String[] args) {
         int[] A = new int[] { 24, 34, 13, 20, 25, 22, 29, 5, 12 };
-        MinHeap minHeap = new class_MinHeap().new MinHeap(A.length);
+        MinHeap minHeap = new class_MinHeap_approach1_extra_space().new MinHeap(A.length);
         for (int i = 0; i < A.length; i++) {
             minHeap.insert(A[i]);
         }
