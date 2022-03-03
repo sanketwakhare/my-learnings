@@ -6,6 +6,27 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch q1_connect_ropes",
+            "request": "launch",
+            "mainClass": "q1_connect_ropes",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
+            "name": "Launch class_MinHeap",
+            "request": "launch",
+            "mainClass": "class_MinHeap",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
+            "name": "Launch class_q1_heap_impl",
+            "request": "launch",
+            "mainClass": "class_q1_heap_impl",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
             "name": "Launch class_binaryTree_using_array",
             "request": "launch",
             "mainClass": "class_binaryTree_using_array",
