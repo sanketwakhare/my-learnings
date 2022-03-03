@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch class_binaryTree_using_array",
+            "request": "launch",
+            "mainClass": "class_binaryTree_using_array",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
             "name": "Launch class_q3_bundledStrings",
             "request": "launch",
             "mainClass": "class_q3_bundledStrings",
