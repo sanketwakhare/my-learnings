@@ -93,6 +93,13 @@ public class class_MinHeap_approach1_extra_space {
             return x;
         }
 
+        public int peekMin() {
+            if (!isEmpty()) {
+                return heap[0];
+            }
+            return -1;
+        }
+
         private void swap(int i, int j) {
             int temp = heap[i];
             heap[i] = heap[j];

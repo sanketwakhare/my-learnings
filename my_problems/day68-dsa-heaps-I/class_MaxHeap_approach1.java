@@ -89,6 +89,13 @@ public class class_MaxHeap_approach1 {
             return x;
         }
 
+        public int peekMax() {
+            if (!isEmpty()) {
+                return heap[0];
+            }
+            return -1;
+        }
+
         private void swap(int i, int j) {
             int temp = heap[i];
             heap[i] = heap[j];
