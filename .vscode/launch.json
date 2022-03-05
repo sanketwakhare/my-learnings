@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch q3_product_of_3",
+            "request": "launch",
+            "mainClass": "q3_product_of_3",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
             "name": "Launch class_MinHeap_approach2_constant_space",
             "request": "launch",
             "mainClass": "class_MinHeap_approach2_constant_space",
