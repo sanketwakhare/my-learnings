@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch q4_Maximum_array_sum_after_B_negations",
+            "request": "launch",
+            "mainClass": "q4_Maximum_array_sum_after_B_negations",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
             "name": "Launch q3_product_of_3",
             "request": "launch",
             "mainClass": "q3_product_of_3",
