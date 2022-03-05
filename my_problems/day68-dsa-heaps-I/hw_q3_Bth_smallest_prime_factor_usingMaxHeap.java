@@ -71,39 +71,40 @@ as we are finding a smallest kth number
 we can ignore few pairs and only K space is required for heap
 */
 
-// Custom Pair type
-class Pair implements Comparable<Pair> {
-    double key;
-    int p;
-    int q;
-
-    public Pair(double key, int p, int q) {
-        this.key = key;
-        this.p = p;
-        this.q = q;
-    }
-
-    @Override
-    public int compareTo(Pair o2) {
-        if (this.key > o2.key)
-            return 1;
-        else if (this.key < o2.key)
-            return -1;
-        return 0;
-    }
-
-    @Override
-    public String toString() {
-        StringBuilder sb = new StringBuilder();
-        sb.append('[');
-        sb.append(key + ", ");
-        sb.append(p + "/" + q);
-        sb.append(']');
-        return sb.toString();
-    }
-}
-
 public class hw_q3_Bth_smallest_prime_factor_usingMaxHeap {
+
+    // Custom Pair type
+    class Pair implements Comparable<Pair> {
+
+        double key;
+        int p;
+        int q;
+
+        public Pair(double key, int p, int q) {
+            this.key = key;
+            this.p = p;
+            this.q = q;
+        }
+
+        @Override
+        public int compareTo(Pair o2) {
+            if (this.key > o2.key)
+                return 1;
+            else if (this.key < o2.key)
+                return -1;
+            return 0;
+        }
+
+        @Override
+        public String toString() {
+            StringBuilder sb = new StringBuilder();
+            sb.append('[');
+            sb.append(key + ", ");
+            sb.append(p + "/" + q);
+            sb.append(']');
+            return sb.toString();
+        }
+    }
 
     public int[] solve(int[] A, int B) {
 

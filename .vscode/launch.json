@@ -6,6 +6,62 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch hw_q4_kth_smallest_in_sorted_matrix_min_heap",
+            "request": "launch",
+            "mainClass": "hw_q4_kth_smallest_in_sorted_matrix_min_heap",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
+            "name": "Launch hw_q4_kth_smallest_in_sorted_matrix",
+            "request": "launch",
+            "mainClass": "hw_q4_kth_smallest_in_sorted_matrix",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
+            "name": "Launch hw_q3_Bth_smallest_prime_factor_usingMinHeap",
+            "request": "launch",
+            "mainClass": "hw_q3_Bth_smallest_prime_factor_usingMinHeap",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
+            "name": "Launch hw_q3_Bth_smallest_prime_factor_usingMaxHeap",
+            "request": "launch",
+            "mainClass": "hw_q3_Bth_smallest_prime_factor_usingMaxHeap",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
+            "name": "Launch hw_q3_kth_smallest_prime_factor_usingMinHeap",
+            "request": "launch",
+            "mainClass": "hw_q3_kth_smallest_prime_factor_usingMinHeap",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
+            "name": "Launch kth_smallest_prime_factor_usingMinHeap",
+            "request": "launch",
+            "mainClass": "kth_smallest_prime_factor_usingMinHeap",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
+            "name": "Launch MaxHeapGenerics",
+            "request": "launch",
+            "mainClass": "MaxHeapGenericsImpl.MaxHeapGenerics",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
+            "name": "Launch MinHeapGenerics",
+            "request": "launch",
+            "mainClass": "MinHeapImplGenerics.MinHeapGenerics",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
             "name": "Launch hw_q2_Misha_and_candies",
             "request": "launch",
             "mainClass": "hw_q2_Misha_and_candies",
