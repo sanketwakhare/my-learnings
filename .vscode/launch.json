@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch hw_q2_Misha_and_candies",
+            "request": "launch",
+            "mainClass": "hw_q2_Misha_and_candies",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
             "name": "Launch hw_q1_B_Closest_Points_to_Origin",
             "request": "launch",
             "mainClass": "hw_q1_B_Closest_Points_to_Origin",
