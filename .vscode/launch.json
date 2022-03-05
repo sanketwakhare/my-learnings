@@ -6,6 +6,34 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch class_MinHeap_approach2_constant_space",
+            "request": "launch",
+            "mainClass": "class_MinHeap_approach2_constant_space",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
+            "name": "Launch q2_Magician_and_Chocolates",
+            "request": "launch",
+            "mainClass": "q2_Magician_and_Chocolates",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
+            "name": "Launch MinHeap",
+            "request": "launch",
+            "mainClass": "MinHeap",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
+            "name": "Launch class_MaxHeap_approach1",
+            "request": "launch",
+            "mainClass": "class_MaxHeap_approach1",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
             "name": "Launch q1_connect_ropes",
             "request": "launch",
             "mainClass": "q1_connect_ropes",
