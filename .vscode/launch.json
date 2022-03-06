@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch class_heap_sort_ascending_order",
+            "request": "launch",
+            "mainClass": "class_heap_sort_ascending_order",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
             "name": "Launch hw_q4_kth_smallest_in_sorted_matrix_optimized",
             "request": "launch",
             "mainClass": "hw_q4_kth_smallest_in_sorted_matrix_optimized",
