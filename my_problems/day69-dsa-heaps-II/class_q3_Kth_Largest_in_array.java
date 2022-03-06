@@ -4,7 +4,7 @@ import MinHeapGenericsImpl.MinHeap;
 
 /**
  * TC: O(N*logK)
- * SC: O(K) - max heap size
+ * SC: O(K) - heap size will max K
  */
 public class class_q3_Kth_Largest_in_array {
 

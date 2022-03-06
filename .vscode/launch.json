@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch class_q4_Kth_largest_from_subarray",
+            "request": "launch",
+            "mainClass": "class_q4_Kth_largest_from_subarray",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
             "name": "Launch class_q3_Kth_Largest_in_array",
             "request": "launch",
             "mainClass": "class_q3_Kth_Largest_in_array",
