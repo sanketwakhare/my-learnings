@@ -12,7 +12,7 @@ public class class_heap_sort_descending_order {
         // step 1
         // find no of leaves
         int leafCount = (A.length + 1) / 2;
-        // and generate max heap in constant space within same array
+        // and generate min heap in constant space within same array
         for (int i = A.length - leafCount - 1; i >= 0; i--) {
             heapify(A, i, A.length);
         }
@@ -22,7 +22,7 @@ public class class_heap_sort_descending_order {
         // step 2: now extract A[0] and push into correct sorted position
         int i = A.length;
         while (i >= 0) {
-            getMaximum(A, i);
+            getMinimum(A, i);
             i--;
         }
 
@@ -52,7 +52,7 @@ public class class_heap_sort_descending_order {
         }
     }
 
-    public void getMaximum(int[] A, int size) {
+    public void getMinimum(int[] A, int size) {
 
         if (size > 0) {
             // swap A[0] and A[last]
