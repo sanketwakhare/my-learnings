@@ -1,11 +1,11 @@
-/* Sort the array in ascending order using Heap sort */
+/* Sort the array in descending order using Heap sort */
 
 /* Heap Sort*/
 /**
  * TC: O(N log N)
  * SC: O(1)
  */
-public class class_heap_sort_ascending_order {
+public class class_heap_sort_descending_order {
 
     public void sort(int[] A) {
 
@@ -16,7 +16,7 @@ public class class_heap_sort_ascending_order {
         for (int i = A.length - leafCount - 1; i >= 0; i--) {
             heapify(A, i, A.length);
         }
-        System.out.print("After converting array to MaxHeap: ");
+        System.out.print("After converting array to MinHeap: ");
         ArrayUtils.printArray(A);
 
         // step 2: now extract A[0] and push into correct sorted position
@@ -35,17 +35,17 @@ public class class_heap_sort_ascending_order {
             int leftChildIndex = (2 * i) + 1;
             int rightChildIndex = (2 * i) + 2;
 
-            int max = Math.max(A[i], A[leftChildIndex]);
+            int min = Math.min(A[i], A[leftChildIndex]);
             if (rightChildIndex < size) {
-                max = Math.max(max, A[rightChildIndex]);
+                min = Math.min(min, A[rightChildIndex]);
             }
 
-            if (A[i] == max) {
+            if (A[i] == min) {
                 return;
-            } else if (A[leftChildIndex] == max) {
+            } else if (A[leftChildIndex] == min) {
                 swap(A, i, leftChildIndex);
                 i = leftChildIndex;
-            } else if (rightChildIndex < size && A[rightChildIndex] == max) {
+            } else if (rightChildIndex < size && A[rightChildIndex] == min) {
                 swap(A, i, rightChildIndex);
                 i = rightChildIndex;
             }
@@ -72,7 +72,7 @@ public class class_heap_sort_ascending_order {
     }
 
     public static void main(String[] args) {
-        class_heap_sort_ascending_order t1 = new class_heap_sort_ascending_order();
+        class_heap_sort_descending_order t1 = new class_heap_sort_descending_order();
         int[] A = new int[] { 7, 13, 1, 2, 5, 7, 6, 8, 2, 10, 3, 14 };
         System.out.print("\ninput array: ");
         ArrayUtils.printArray(A);
@@ -83,7 +83,7 @@ public class class_heap_sort_ascending_order {
         ArrayUtils.printArray(A);
         t1.sort(A);
 
-        A = new int[] { 50, 30 };
+        A = new int[] { 30, 50 };
         System.out.print("\ninput array: ");
         ArrayUtils.printArray(A);
         t1.sort(A);
