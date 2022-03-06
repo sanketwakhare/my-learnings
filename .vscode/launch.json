@@ -6,6 +6,41 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch class_q5_Kth_smallest_from_subarray",
+            "request": "launch",
+            "mainClass": "class_q5_Kth_smallest_from_subarray",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
+            "name": "Launch class_q4_Kth_largest_from_subarray",
+            "request": "launch",
+            "mainClass": "class_q4_Kth_largest_from_subarray",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
+            "name": "Launch class_q3_Kth_Largest_in_array",
+            "request": "launch",
+            "mainClass": "class_q3_Kth_Largest_in_array",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
+            "name": "Launch class_heap_sort_descending_order",
+            "request": "launch",
+            "mainClass": "class_heap_sort_descending_order",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
+            "name": "Launch class_heap_sort_ascending_order",
+            "request": "launch",
+            "mainClass": "class_heap_sort_ascending_order",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
             "name": "Launch hw_q4_kth_smallest_in_sorted_matrix_optimized",
             "request": "launch",
             "mainClass": "hw_q4_kth_smallest_in_sorted_matrix_optimized",
