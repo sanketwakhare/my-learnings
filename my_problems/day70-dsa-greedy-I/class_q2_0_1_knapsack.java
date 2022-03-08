@@ -1,7 +1,7 @@
 import java.util.Arrays;
 
 /**
- * Fractional KnapSack problem
+ * 0/1 KnapSack problem
  * 
  * Given array A => where A[i] represents no of items at i
  * array B => where B[i] represents total price of all items in A[i]
@@ -11,17 +11,12 @@ import java.util.Arrays;
  * choose K items such that you spend max value [get top K expensive items]
  * 
  * Return the max amount/money which can be spent
- * 
- * NOTE: Picking fractional items not allowed. Either pick all items of a
- * product or
- * no items from
- * ith index
  */
-public class class_q1_fractional_knapsack {
+public class class_q2_0_1_knapsack {
 
     public static void main(String[] args) {
 
-        class_q1_fractional_knapsack t1 = new class_q1_fractional_knapsack();
+        class_q2_0_1_knapsack t1 = new class_q2_0_1_knapsack();
 
         // A[i] = no of item at index i
         int[] A = new int[] { 10, 20, 30 };
@@ -46,8 +41,26 @@ public class class_q1_fractional_knapsack {
             items[i] = new InventoryItem(A[i], pricePerItem);
         }
 
-        // TODO:
+        // sort according to max price- array pricePerItem
+        Arrays.sort(items);
+
+        int remainingBudget = bagSize;
         int moneySpent = 0;
+        for (int i = 0; i < items.length; i++) {
+            InventoryItem item = items[i];
+
+            if (item.totalItems <= remainingBudget) {
+                // pick all items if total items in inventory can be accumulated in bag
+                moneySpent += item.itemPrice * item.totalItems;
+                remainingBudget -= item.totalItems;
+            } else if (item.totalItems > remainingBudget) {
+                // pick partial items
+                moneySpent += item.itemPrice * remainingBudget;
+                remainingBudget = 0;
+                break;
+            }
+        }
+
         return moneySpent;
     }
 

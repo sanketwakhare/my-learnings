@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch class_q2_0_1_knapsack",
+            "request": "launch",
+            "mainClass": "class_q2_0_1_knapsack",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
             "name": "Launch q4_Assign_Mice_to_Holes",
             "request": "launch",
             "mainClass": "q4_Assign_Mice_to_Holes",
