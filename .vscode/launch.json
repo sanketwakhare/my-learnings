@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch q1_finish_maximum_jobs",
+            "request": "launch",
+            "mainClass": "q1_finish_maximum_jobs",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
             "name": "Launch class_q7_findMedian_InfiniteStream",
             "request": "launch",
             "mainClass": "class_q7_findMedian_InfiniteStream",
