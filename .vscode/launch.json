@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch q4_Assign_Mice_to_Holes",
+            "request": "launch",
+            "mainClass": "q4_Assign_Mice_to_Holes",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
             "name": "Launch q2_DistributeCandy",
             "request": "launch",
             "mainClass": "q2_DistributeCandy",
