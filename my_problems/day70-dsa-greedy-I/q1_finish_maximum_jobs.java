@@ -47,6 +47,8 @@ Explanation 2:
 import java.util.Arrays;
 import java.util.Comparator;
 
+/* Idea: Pick a pair/job which finishes early */
+
 class Pair {
     int startTime;
     int endTime;
@@ -76,20 +78,22 @@ class EndTimeComparator implements Comparator<Pair> {
         }
         return 0;
     }
-
 }
 
 public class q1_finish_maximum_jobs {
 
-    public int complateMaxJobs(int[] A, int[] B) {
+    public int completeMaxJobs(int[] A, int[] B) {
 
+        // build all pairs
         Pair[] pairs = new Pair[A.length];
         for (int i = 0; i < A.length; i++) {
             pairs[i] = new Pair(A[i], B[i]);
         }
 
+        // sort pairs by end time
         Arrays.sort(pairs, new EndTimeComparator());
 
+        // pick a pair/job which finishes early
         int count = 1;
         Pair temp = pairs[0];
         for (int i = 1; i < pairs.length; i++) {
@@ -106,11 +110,11 @@ public class q1_finish_maximum_jobs {
         q1_finish_maximum_jobs t1 = new q1_finish_maximum_jobs();
         int[] A = new int[] { 1, 5, 7, 1 };
         int[] B = new int[] { 7, 8, 8, 8 };
-        System.out.println("answer: " + t1.complateMaxJobs(A, B));
+        System.out.println("answer: " + t1.completeMaxJobs(A, B));
 
         A = new int[] { 3, 2, 6 };
         B = new int[] { 9, 8, 9 };
-        System.out.println("answer: " + t1.complateMaxJobs(A, B));
+        System.out.println("answer: " + t1.completeMaxJobs(A, B));
 
     }
 
