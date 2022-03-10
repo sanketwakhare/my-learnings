@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch class_q4_permutations",
+            "request": "launch",
+            "mainClass": "class_q4_permutations",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
             "name": "Launch q1_Subset",
             "request": "launch",
             "mainClass": "q1_Subset",
