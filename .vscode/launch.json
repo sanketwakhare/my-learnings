@@ -6,6 +6,69 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch q4_Permutations",
+            "request": "launch",
+            "mainClass": "q4_Permutations",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
+            "name": "Launch q3_SIXLETS",
+            "request": "launch",
+            "mainClass": "q3_SIXLETS",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
+            "name": "Launch q2_combination_sum",
+            "request": "launch",
+            "mainClass": "q2_combination_sum",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
+            "name": "Launch class_q4_permutations_copy",
+            "request": "launch",
+            "mainClass": "class_q4_permutations_copy",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
+            "name": "Launch class_q4_permutations",
+            "request": "launch",
+            "mainClass": "class_q4_permutations",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
+            "name": "Launch q1_Subset",
+            "request": "launch",
+            "mainClass": "q1_Subset",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
+            "name": "Launch class_q3_print_subsets_with_sum_K",
+            "request": "launch",
+            "mainClass": "class_q3_print_subsets_with_sum_K",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
+            "name": "Launch class_q2_count_subsets_with_sum_K",
+            "request": "launch",
+            "mainClass": "class_q2_count_subsets_with_sum_K",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
+            "name": "Launch class_q1_N_digit_numbers",
+            "request": "launch",
+            "mainClass": "class_q1_N_digit_numbers",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
             "name": "Launch class_q2_0_1_knapsack",
             "request": "launch",
             "mainClass": "class_q2_0_1_knapsack",
