@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch q3_SIXLETS",
+            "request": "launch",
+            "mainClass": "q3_SIXLETS",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
+            "name": "Launch q2_combination_sum",
+            "request": "launch",
+            "mainClass": "q2_combination_sum",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
             "name": "Launch class_q4_permutations_copy",
             "request": "launch",
             "mainClass": "class_q4_permutations_copy",
