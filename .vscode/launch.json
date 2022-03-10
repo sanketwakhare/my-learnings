@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch hw_q1_Combinations_Sum_II",
+            "request": "launch",
+            "mainClass": "hw_q1_Combinations_Sum_II",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
             "name": "Launch q4_Permutations",
             "request": "launch",
             "mainClass": "q4_Permutations",
