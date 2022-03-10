@@ -18,10 +18,7 @@ public class class_q4_permutations {
 
         // base condition
         if (i == n) {
-            ArrayList<Integer> currList = new ArrayList<Integer>();
-            for (int j = 0; j < n; j++) {
-                currList.add(A.get(j));
-            }
+            ArrayList<Integer> currList = new ArrayList<Integer>(A);
             list.add(currList);
         }
 
