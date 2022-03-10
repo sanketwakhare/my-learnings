@@ -18,7 +18,6 @@ DO NOT USE LIBRARY FUNCTION FOR GENERATING COMBINATIONS.
 
 Example : itertools.combinations in python. If you do, we will disqualify your submission and give you penalty points.
 
-
 Problem Constraints
 
 1 <= N <= 20
@@ -84,6 +83,10 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 
+/**
+ * TC: O(2*N)
+ * SC: O(N)
+ */
 public class hw_q1_Combinations_Sum_II {
 
     public static ArrayList<ArrayList<Integer>> combinationSum(ArrayList<Integer> A, int B) {
