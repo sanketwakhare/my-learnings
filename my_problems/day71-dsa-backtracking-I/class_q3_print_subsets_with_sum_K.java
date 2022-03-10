@@ -50,11 +50,15 @@ public class class_q3_print_subsets_with_sum_K {
     private static void printList(List<Integer> list) {
 
         StringBuilder sb = new StringBuilder();
-        sb.append("{ ");
-        for (Integer item : list) {
-            sb.append(item + ", ");
+        if (list.size() > 0) {
+            sb.append("{");
+        } else {
+            sb.append("{ ");
         }
-        sb.replace(sb.length() - 2, sb.length(), " ");
+        for (Integer item : list) {
+            sb.append(" " + item + ",");
+        }
+        sb.replace(sb.length() - 1, sb.length(), " ");
         sb.append("}");
         System.out.print("\n" + sb.toString());
     }
