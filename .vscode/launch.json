@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch hw_q2_Number_of_Squareful_Arrays",
+            "request": "launch",
+            "mainClass": "hw_q2_Number_of_Squareful_Arrays",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
             "name": "Launch hw_q1_Combinations_Sum_II",
             "request": "launch",
             "mainClass": "hw_q1_Combinations_Sum_II",
