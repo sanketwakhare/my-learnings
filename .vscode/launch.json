@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch q2_N_Queens_Q_as_string",
+            "request": "launch",
+            "mainClass": "q2_N_Queens_Q_as_string",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
+            "name": "Launch q2_N_Queens",
+            "request": "launch",
+            "mainClass": "q2_N_Queens",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
             "name": "Launch q1_Rat_In_a_Maze",
             "request": "launch",
             "mainClass": "q1_Rat_In_a_Maze",
