@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch q3_Sudoku",
+            "request": "launch",
+            "mainClass": "q3_Sudoku",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
             "name": "Launch q2_N_Queens_Q_as_string",
             "request": "launch",
             "mainClass": "q2_N_Queens_Q_as_string",
