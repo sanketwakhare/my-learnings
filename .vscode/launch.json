@@ -6,6 +6,34 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch q3_Sudoku",
+            "request": "launch",
+            "mainClass": "q3_Sudoku",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
+            "name": "Launch q2_N_Queens_Q_as_string",
+            "request": "launch",
+            "mainClass": "q2_N_Queens_Q_as_string",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
+            "name": "Launch q2_N_Queens",
+            "request": "launch",
+            "mainClass": "q2_N_Queens",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
+            "name": "Launch q1_Rat_In_a_Maze",
+            "request": "launch",
+            "mainClass": "q1_Rat_In_a_Maze",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
             "name": "Launch hw_q2_Number_of_Squareful_Arrays",
             "request": "launch",
             "mainClass": "hw_q2_Number_of_Squareful_Arrays",
