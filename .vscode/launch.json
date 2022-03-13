@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch hw_q2_All_Unique_Permutations",
+            "request": "launch",
+            "mainClass": "hw_q2_All_Unique_Permutations",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
+            "name": "Launch hw_q1_Subsets_II",
+            "request": "launch",
+            "mainClass": "hw_q1_Subsets_II",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
             "name": "Launch q3_Letter_Phone_recursive",
             "request": "launch",
             "mainClass": "q3_Letter_Phone_recursive",
