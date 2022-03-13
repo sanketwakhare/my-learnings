@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch test",
+            "request": "launch",
+            "mainClass": "test",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
             "name": "Launch q5_leetcode_uniquePaths_two",
             "request": "launch",
             "mainClass": "q5_leetcode_uniquePaths_two",
