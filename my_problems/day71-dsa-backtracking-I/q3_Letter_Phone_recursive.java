@@ -55,18 +55,16 @@ Explanation 1:
 Explanation 2:
 
  Only 3 possible letter combinations. */
-import java.util.ArrayDeque;
 import java.util.ArrayList;
-import java.util.Deque;
 import java.util.HashMap;
 import java.util.Map;
 
 /***
- * Iterative Approach
+ * Recursive Approach
  * TC: O(N^k) where N is no of digits and k = max no of letters in a digit
- * SC: O(N^k) to store all combinations
+ * SC: O(N^k) to store all combinations + stack space
  */
-public class q3_Letter_Phone {
+public class q3_Letter_Phone_recursive {
     public ArrayList<String> letterCombinations(String A) {
 
         ArrayList<String> result = new ArrayList<String>();
@@ -84,51 +82,36 @@ public class q3_Letter_Phone {
         map.put('8', "tuv");
         map.put('9', "wxyz");
 
-        Deque<String> deque = new ArrayDeque<String>();
-
-        // insert characters of first digit
-        String values = map.get(A.charAt(0));
-        for (int i = 0; i < values.length(); i++) {
-            String currChar = String.valueOf(values.charAt(i));
-            deque.addLast(currChar);
-        }
-        // add $ at last to identify end of current digit data
-        deque.addLast("$");
-
-        // for next characters, find all combinations
-        for (int i = 1; i < A.length(); i++) {
-
-            String value = map.get(A.charAt(i));
-
-            // remove character form deque and find all combinations
-            String x = deque.pollFirst();
-            while (deque.size() > 0 && x != "$") {
-                for (int j = 0; j < value.length(); j++) {
-                    // insert new character
-                    StringBuilder sb = new StringBuilder();
-                    String newChar = String.valueOf(value.charAt(j));
-                    sb.append(x).append(newChar);
-                    deque.addLast(sb.toString());
-                }
-                x = deque.pollFirst();
-            }
-            // add $ at last to identify end of current digit data
-            deque.addLast("$");
-        }
-
-        // at last we will have all teh combinations, fetch from deque and return
-        while (deque.size() > 1) {
-            result.add(deque.pollFirst());
-        }
+        backtrack(A, 0, new StringBuilder(), map, result);
 
         System.out.println(result);
         return result;
 
     }
 
+    private void backtrack(String digits, int index, StringBuilder sb, Map<Character, String> map,
+            ArrayList<String> result) {
+
+        // base condition
+        if (digits.length() == index) {
+            result.add(sb.toString());
+            return;
+        }
+
+        String values = map.get(digits.charAt(index));
+        for (int i = 0; i < values.length(); i++) {
+            // do
+            sb.append(values.charAt(i));
+            // recursive call
+            backtrack(digits, index + 1, sb, map, result);
+            // undo
+            sb.deleteCharAt(sb.length() - 1);
+        }
+    }
+
     public static void main(String[] args) {
 
-        q3_Letter_Phone t1 = new q3_Letter_Phone();
+        q3_Letter_Phone_recursive t1 = new q3_Letter_Phone_recursive();
         t1.letterCombinations("23"); // [ad, ae, af, bd, be, bf, cd, ce, cf]
         t1.letterCombinations("173"); // [1pd, 1pe, 1pf, 1qd, 1qe, 1qf, 1rd, 1re, 1rf, 1sd, 1se, 1sf]
         t1.letterCombinations("432"); // [gda, gdb, gdc, gea, geb, gec, gfa, gfb, gfc, hda, hdb, hdc, hea, heb, hec,
