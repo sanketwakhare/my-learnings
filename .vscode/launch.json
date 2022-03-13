@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch hw_q4_merge_k_sorted_list",
+            "request": "launch",
+            "mainClass": "hw_q4_merge_k_sorted_list",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
             "name": "Launch hw_q2_All_Unique_Permutations",
             "request": "launch",
             "mainClass": "hw_q2_All_Unique_Permutations",
