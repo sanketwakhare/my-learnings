@@ -75,6 +75,11 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+/**
+ * Recursive Relation: T(N) = T(N-1) * N + 1
+ * TC: O(2^N)
+ * SC:O(N) => for storing each element in list
+ */
 public class q1_Subset {
 
     public static List<List<Integer>> solve(int[] A) {
@@ -91,12 +96,6 @@ public class q1_Subset {
         return subsetList;
     }
 
-    /**
-     * recursive function
-     * T(N) = T(N) * T(N-1) + 1 => T(2^N)
-     * TC: O(2^N)
-     * SC:O(N) => for storing each element in list
-     */
     private static void subsets(int i, int n, int[] a, List<Integer> list, List<List<Integer>> subsetList) {
 
         // add list elements until now
