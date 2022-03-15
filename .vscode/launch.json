@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch class_q1_fib_rec_app1",
+            "request": "launch",
+            "mainClass": "class_q1_fib_rec_app1",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
             "name": "Launch hw_q4_merge_k_sorted_list",
             "request": "launch",
             "mainClass": "hw_q4_merge_k_sorted_list",
