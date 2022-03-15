@@ -1,3 +1,5 @@
+/* Stairs */
+
 import java.util.Arrays;
 
 public class class_q2_climb_stairs {
