@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch hw_q2_Max_Sum_Without_Adjacent_Elements",
+            "request": "launch",
+            "mainClass": "hw_q2_Max_Sum_Without_Adjacent_Elements",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
             "name": "Launch hw_q1_Dice_Throw",
             "request": "launch",
             "mainClass": "hw_q1_Dice_Throw",
