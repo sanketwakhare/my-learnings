@@ -1,6 +1,6 @@
 import java.util.Arrays;
 
-/* Given an array A of size N, find maximum subsequence sum of adjacent elements */
+/* Given an array A of size N, find maximum subsequence sum of non-adjacent elements */
 
 public class class_q1_find_max_subsequence_sum {
 
