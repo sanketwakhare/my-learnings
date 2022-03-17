@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch Solution",
+            "request": "launch",
+            "mainClass": "Solution",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
+            "name": "Launch class_q1_find_max_subsequence_sum",
+            "request": "launch",
+            "mainClass": "class_q1_find_max_subsequence_sum",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
             "name": "Launch hw_q2_Max_Sum_Without_Adjacent_Elements",
             "request": "launch",
             "mainClass": "hw_q2_Max_Sum_Without_Adjacent_Elements",
