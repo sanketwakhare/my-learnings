@@ -6,6 +6,34 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch q4_Minimum_Number_of_Squares",
+            "request": "launch",
+            "mainClass": "q4_Minimum_Number_of_Squares",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
+            "name": "Launch q2_Stairs",
+            "request": "launch",
+            "mainClass": "q2_Stairs",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
+            "name": "Launch q2_Fibonacci_Number",
+            "request": "launch",
+            "mainClass": "q2_Fibonacci_Number",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
+            "name": "Launch q1_Lets_Party",
+            "request": "launch",
+            "mainClass": "q1_Lets_Party",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
             "name": "Launch class_q4_dice_throw",
             "request": "launch",
             "mainClass": "class_q4_dice_throw",
