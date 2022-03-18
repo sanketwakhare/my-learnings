@@ -6,7 +6,7 @@ Note: We can travel in only right and Down directions
 
 */
 
-public class class_q2_grid_path_ways {
+public class class_q2_Total_Unique_Paths {
 
     /*
      * Approach 1: Simple recursion
@@ -111,7 +111,7 @@ public class class_q2_grid_path_ways {
 
     public static void main(String[] args) {
 
-        class_q2_grid_path_ways t1 = new class_q2_grid_path_ways();
+        class_q2_Total_Unique_Paths t1 = new class_q2_Total_Unique_Paths();
 
         int n;
         int m;
