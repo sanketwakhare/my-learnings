@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch class_q4_Unique_Path_with_Obstacles",
+            "request": "launch",
+            "mainClass": "class_q4_Unique_Path_with_Obstacles",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
             "name": "Launch class_q2_Total_Unique_Paths",
             "request": "launch",
             "mainClass": "class_q2_Total_Unique_Paths",
