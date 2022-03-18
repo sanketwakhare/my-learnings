@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch class_q2_Total_Unique_Paths",
+            "request": "launch",
+            "mainClass": "class_q2_Total_Unique_Paths",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
+            "name": "Launch class_q3_min_Path_Sum",
+            "request": "launch",
+            "mainClass": "class_q3_min_Path_Sum",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
             "name": "Launch class_q2_grid_path_ways",
             "request": "launch",
             "mainClass": "class_q2_grid_path_ways",
