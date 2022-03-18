@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch class_q5_Dragon_and_Princess",
+            "request": "launch",
+            "mainClass": "class_q5_Dragon_and_Princess",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
             "name": "Launch class_q4_Unique_Path_with_Obstacles",
             "request": "launch",
             "mainClass": "class_q4_Unique_Path_with_Obstacles",
