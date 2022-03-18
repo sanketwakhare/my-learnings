@@ -88,17 +88,14 @@ public class class_q2_Total_Unique_Paths {
 
         /**
          * Step 1:
-         * fill first row and first column with value 1 as there can be only 1 way to
+         * fill first row with value 1 as there can be only 1 way to
          * reach those cells.
          */
-        for (int i = 0; i < 1; i++) {
-            dp[i][0] = 1;
-        }
         for (int j = 0; j < m; j++) {
             dp[0][j] = 1;
         }
 
-        /* Step 2: */
+        /* Step 2: there can be only be single way from 0th column */
         for (int i = 1; i < n; i++) {
             for (int j = 1; j < m; j++) {
                 // take same element + left element
