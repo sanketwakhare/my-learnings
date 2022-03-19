@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch q3_Longest_Increasing_Subsequence",
+            "request": "launch",
+            "mainClass": "q3_Longest_Increasing_Subsequence",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
             "name": "Launch Max_Sum_Non_Adjacent_DP",
             "request": "launch",
             "mainClass": "Max_Sum_Non_Adjacent_DP",
