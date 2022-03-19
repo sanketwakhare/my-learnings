@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch count_valid_parenthesis",
+            "request": "launch",
+            "mainClass": "count_valid_parenthesis",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
             "name": "Launch class_q5_Dragon_and_Princess",
             "request": "launch",
             "mainClass": "class_q5_Dragon_and_Princess",
