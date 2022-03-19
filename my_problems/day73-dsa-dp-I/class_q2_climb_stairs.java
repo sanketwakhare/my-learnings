@@ -85,31 +85,42 @@ public class class_q2_climb_stairs {
 
         class_q2_climb_stairs t1 = new class_q2_climb_stairs();
 
-        // Approach 1 - recursion
-        System.out.println(t1.climbStairs(10));
-        System.out.println(t1.climbStairs(4));
-        System.out.println(t1.climbStairs(3));
-        System.out.println(t1.climbStairs(2));
+        int n;
 
-        // Approach 2 - dp with recursion
-        int n = 10;
-        int[] dp = new int[n + 1];
-        Arrays.fill(dp, -1);
-        System.out.println(t1.climbStairs_dp(n, dp));
-        n = 4;
-        dp = new int[n + 1];
-        Arrays.fill(dp, -1);
-        System.out.println(t1.climbStairs_dp(n, dp));
-
-        // Approach 3 - dp with iterative - tabulation method
-        n = 10;
-        System.out.println(t1.climbStairs_tabulation(n));
-        n = 4;
-        System.out.println(t1.climbStairs_tabulation(n));
-
-        // Approach 4 - dp with iterative - space optimized
-        System.out.println(t1.climbStairs_iterative(10));
-        System.out.println(t1.climbStairs_iterative(8));
+        {
+            // Approach 1 - recursion
+            System.out.println("Approach 1 - recursion");
+            System.out.println(t1.climbStairs(10));
+            System.out.println(t1.climbStairs(4));
+            System.out.println(t1.climbStairs(3));
+            System.out.println(t1.climbStairs(2));
+        }
+        {
+            // Approach 2 - dp with recursion
+            System.out.println("Approach 2 - dp with recursion");
+            n = 10;
+            int[] dp = new int[n + 1];
+            Arrays.fill(dp, -1);
+            System.out.println(t1.climbStairs_dp(n, dp));
+            n = 4;
+            dp = new int[n + 1];
+            Arrays.fill(dp, -1);
+            System.out.println(t1.climbStairs_dp(n, dp));
+        }
+        {
+            // Approach 3 - dp with iterative - tabulation method
+            System.out.println("Approach 3 - dp with iterative - tabulation method");
+            n = 10;
+            System.out.println(t1.climbStairs_tabulation(n));
+            n = 4;
+            System.out.println(t1.climbStairs_tabulation(n));
+        }
+        {
+            // Approach 4 - dp with iterative - space optimized
+            System.out.println("Approach 4 - dp with iterative - space optimized");
+            System.out.println(t1.climbStairs_iterative(10));
+            System.out.println(t1.climbStairs_iterative(8));
+        }
 
     }
 }

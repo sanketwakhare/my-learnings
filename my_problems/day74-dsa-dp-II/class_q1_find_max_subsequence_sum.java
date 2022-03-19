@@ -5,7 +5,7 @@ import java.util.Arrays;
 public class class_q1_find_max_subsequence_sum {
 
     /*
-     * Approach: Simple Recursion
+     * Approach 1: Simple Recursion
      * TC: O(2^n)
      * SC: O(n) - stack space
      * slower - will give TLE for large inputs
@@ -23,7 +23,7 @@ public class class_q1_find_max_subsequence_sum {
     }
 
     /*
-     * Approach: DP + Recursion
+     * Approach 2: DP + Recursion
      * TC: O(n)
      * SC: O(n) - stack space
      * Better than approach 1
@@ -106,31 +106,42 @@ public class class_q1_find_max_subsequence_sum {
     public static void main(String[] args) {
 
         class_q1_find_max_subsequence_sum t1 = new class_q1_find_max_subsequence_sum();
+        int[] A;
+        int n;
+        {
+            // Approach 1 - simple recursion
+            System.out.println("Approach 1 - simple recursion");
+            A = new int[] { 9, 4, 13, 24 };
+            n = A.length;
+            System.out.println(t1.maxSum_recursive(n - 1, A));
+        }
 
-        // Approach 1 - simple recursion
-        int[] A = new int[] { 9, 4, 13, 24 };
-        int n = A.length;
-        System.out.println(t1.maxSum_recursive(n - 1, A));
+        {
+            // Approach 2 - recursion + dp
+            System.out.println("Approach 2 - recursion + dp");
+            A = new int[] { 9, 4, 13, 24 };
+            n = A.length;
+            int[] dp = new int[A.length];
+            Arrays.fill(dp, Integer.MIN_VALUE);
+            System.out.println(t1.maxSum_recursive_dp(n - 1, A, dp));
+        }
 
-        // Approach 2 - simple recursion
-        A = new int[] { 9, 4, 13, 24 };
-        n = A.length;
-        int[] dp = new int[A.length];
-        Arrays.fill(dp, Integer.MIN_VALUE);
-        System.out.println(t1.maxSum_recursive_dp(n - 1, A, dp));
+        {
+            // Approach 3 - tabulation - iterative approach
+            System.out.println("Approach 3 - tabulation - iterative approach");
+            A = new int[] { 9, 4, 13, 24 };
+            System.out.println(t1.maxSum_tabulation(A));
+            A = new int[] { 6, 5, 10, 8, 2 };
+            System.out.println(t1.maxSum_tabulation(A)); // 18
+        }
 
-        // Approach 3 - tabulation - iterative approach
-        A = new int[] { 9, 4, 13, 24 };
-        System.out.println(t1.maxSum_tabulation(A));
-        A = new int[] { 6, 5, 10, 8, 2 };
-        System.out.println(t1.maxSum_tabulation(A)); // 18
-
-        // Approach 4- iterative - maxSum_tabulation_optimized
-        A = new int[] { 9, 4, 13, 24 };
-        System.out.println(t1.maxSum_tabulation_optimized(A));
-        A = new int[] { 6, 5, 10, 8, 2, 4, 2, 9 };
-        System.out.println(t1.maxSum_tabulation_optimized(A)); // 29
-
+        {
+            // Approach 4 - iterative - maxSum_tabulation_optimized
+            System.out.println("Approach 4 - iterative - maxSum_tabulation_optimized");
+            A = new int[] { 9, 4, 13, 24 };
+            System.out.println(t1.maxSum_tabulation_optimized(A));
+            A = new int[] { 6, 5, 10, 8, 2, 4, 2, 9 };
+            System.out.println(t1.maxSum_tabulation_optimized(A)); // 29
+        }
     }
-
 }

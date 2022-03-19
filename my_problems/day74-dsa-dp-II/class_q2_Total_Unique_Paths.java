@@ -112,47 +112,63 @@ public class class_q2_Total_Unique_Paths {
 
         int n;
         int m;
+        int[][] dp;
 
-        /* Approach 1 - simple recursion */
-        System.out.println("Approach 1 - simple recursion");
-        n = 4;
-        m = 4;
-        System.out.println(t1.ways_backtrack_recursion(n - 1, m - 1)); // 20
-        n = 5;
-        m = 6;
-        System.out.println(t1.ways_backtrack_recursion(n - 1, m - 1)); // 126
-
-        /* Approach 2 - recursion + DP */
-        System.out.println("Approach 2 - recursion + DP");
-        n = 4;
-        m = 4;
-        int[][] dp = new int[n][m];
-        for (int i = 0; i < n; i++) {
-            Arrays.fill(dp[i], -1);
+        {
+            /* Approach 1 - simple recursion */
+            System.out.println("Approach 1 - simple recursion");
+            n = 4;
+            m = 4;
+            System.out.println(t1.ways_backtrack_recursion(n - 1, m - 1)); // 20
+            n = 5;
+            m = 6;
+            System.out.println(t1.ways_backtrack_recursion(n - 1, m - 1)); // 126
         }
-        System.out.println(t1.ways_recursion_dp(n - 1, m - 1, dp)); // 20
 
-        /* Approach 3 - tabulation method - iterative */
-        System.out.println("Approach 3 - tabulation method");
-        // test case 1
-        n = 4;
-        m = 4;
-        System.out.println(t1.ways_tabulation(n, m)); // 20
-        // test case 2
-        n = 4;
-        m = 5;
-        System.out.println(t1.ways_tabulation(n, m)); // 35
+        {
+            /* Approach 2 - recursion + DP */
+            System.out.println("Approach 2 - recursion + DP");
+            n = 4;
+            m = 4;
+            dp = new int[n][m];
+            for (int i = 0; i < n; i++) {
+                Arrays.fill(dp[i], -1);
+            }
+            System.out.println(t1.ways_recursion_dp(n - 1, m - 1, dp)); // 20
+            n = 4;
+            m = 5;
+            dp = new int[n][m];
+            for (int i = 0; i < n; i++) {
+                Arrays.fill(dp[i], -1);
+            }
+            System.out.println(t1.ways_recursion_dp(n - 1, m - 1, dp)); // 35
+        }
 
-        /* Approach 4 - iterative method + space optimized */
-        System.out.println("Approach 4 - iterative space optimized method");
-        // test case 1
-        n = 4;
-        m = 4;
-        System.out.println(t1.ways_iterative_optimized(n, m)); // 20
-        // test case 2
-        n = 4;
-        m = 5;
-        System.out.println(t1.ways_iterative_optimized(n, m)); // 35
+        {
+            /* Approach 3 - tabulation method - iterative */
+            System.out.println("Approach 3 - tabulation method");
+            // test case 1
+            n = 4;
+            m = 4;
+            System.out.println(t1.ways_tabulation(n, m)); // 20
+            // test case 2
+            n = 4;
+            m = 5;
+            System.out.println(t1.ways_tabulation(n, m)); // 35
+        }
+
+        {
+            /* Approach 4 - iterative method + space optimized */
+            System.out.println("Approach 4 - iterative space optimized method");
+            // test case 1
+            n = 4;
+            m = 4;
+            System.out.println(t1.ways_iterative_optimized(n, m)); // 20
+            // test case 2
+            n = 4;
+            m = 5;
+            System.out.println(t1.ways_iterative_optimized(n, m)); // 35
+        }
 
     }
 

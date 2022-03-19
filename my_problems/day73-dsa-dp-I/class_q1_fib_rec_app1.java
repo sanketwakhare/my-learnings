@@ -5,6 +5,7 @@ import java.util.Arrays;
 public class class_q1_fib_rec_app1 {
 
     /*
+     * Approach 1 - simple recursion
      * TC: O(2^n) -> each number has 2 subproblem to solve
      * SC: O(N) - stack space
      */
@@ -16,6 +17,7 @@ public class class_q1_fib_rec_app1 {
     }
 
     /**
+     * Approach 1 - recursion + dp
      * TC: O(N)
      * SC: O(N) - stack space and O(N) - dp array
      * 
@@ -37,6 +39,7 @@ public class class_q1_fib_rec_app1 {
     }
 
     /**
+     * Approach 3 - tabulation (iterative)
      * TC: O(N)
      * SC: O(N) - for dp array
      */
@@ -56,6 +59,7 @@ public class class_q1_fib_rec_app1 {
     }
 
     /**
+     * Approach 4 - iterative + space optimized
      * TC: O(N)
      * SC: O(1)
      */
@@ -79,24 +83,35 @@ public class class_q1_fib_rec_app1 {
     public static void main(String[] args) {
 
         class_q1_fib_rec_app1 t1 = new class_q1_fib_rec_app1();
+        int n;
+        int dp[];
 
-        // approach1- recursion
-        int n = 6;
-        int ans = t1.fib(n);
-        System.out.println(ans);
-
-        // approach2- dp array with recursion
-        n = 9;
-        int dp[] = new int[n + 1];
-        Arrays.fill(dp, -1);
-        System.out.println(t1.fib_dp(n, dp));
-
-        // approach 3- tabulation iterative
-        n = 12;
-        System.out.println(t1.fib_tabulation_iterative(n));
-
-        // approach 4- space optimized
-        n = 10;
-        System.out.println(t1.fib_iterative_optimized(n));
+        {
+            // Approach 1 - recursion
+            System.out.println("Approach 1 - recursion");
+            n = 6;
+            System.out.println(t1.fib(n)); // 8
+            System.out.println(t1.fib(10)); // 55
+        }
+        {
+            // Approach 2 - dp array with recursion
+            System.out.println("Approach 2 - dp array with recursion");
+            n = 9;
+            dp = new int[n + 1];
+            Arrays.fill(dp, -1);
+            System.out.println(t1.fib_dp(n, dp)); // 34
+        }
+        {
+            // Approach 3 - tabulation iterative
+            System.out.println("Approach 3 - tabulation iterative");
+            n = 12;
+            System.out.println(t1.fib_tabulation_iterative(n)); // 144
+        }
+        {
+            // Approach 4- space optimized
+            System.out.println("Approach 4- space optimized");
+            n = 10;
+            System.out.println(t1.fib_iterative_optimized(n)); // 55
+        }
     }
 }
