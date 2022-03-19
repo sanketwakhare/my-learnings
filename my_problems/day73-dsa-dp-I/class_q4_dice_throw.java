@@ -108,33 +108,47 @@ public class class_q4_dice_throw {
     public static void main(String[] args) {
 
         class_q4_dice_throw t1 = new class_q4_dice_throw();
+        int n;
+        int[] dp;
 
-        // Approach 1
-        int n = 10;
-        int[] dp = new int[n + 1];
-        Arrays.fill(dp, -1);
-        dp[0] = 1;
-        System.out.println(t1.waysToGetSum(n, dp)); // 492
+        {
+            // Approach 1 : recursive + initialize dp[0] with 1
+            System.out.println("Approach 1 : recursive + initialize dp[0] with 1");
+            n = 10;
+            dp = new int[n + 1];
+            Arrays.fill(dp, -1);
+            dp[0] = 1;
+            System.out.println(t1.waysToGetSum(n, dp)); // 492
+        }
 
-        // Approach 2
-        n = 8;
-        dp = new int[n + 6];
-        Arrays.fill(dp, -1);
-        dp[1] = 1;
-        dp[2] = 2;
-        dp[3] = 4;
-        dp[4] = 8;
-        dp[5] = 16;
-        dp[6] = 32;
-        System.out.println(t1.waysToGetSum_approach2(n, dp)); // 125
+        {
+            // Approach 2: recursive + initialize dp[1] to dp[6]
+            System.out.println("Approach 2: recursive + initialize dp[1] to dp[6]");
+            n = 8;
+            dp = new int[n + 6];
+            Arrays.fill(dp, -1);
+            dp[1] = 1;
+            dp[2] = 2;
+            dp[3] = 4;
+            dp[4] = 8;
+            dp[5] = 16;
+            dp[6] = 32;
+            System.out.println(t1.waysToGetSum_approach2(n, dp)); // 125
+        }
 
-        // Approach 3
-        n = 10;
-        System.out.println(t1.waysToGetSum_tabulation(n)); // 492
+        {
+            // Approach 3: iterative tabulation method
+            System.out.println("Approach 3: iterative tabulation method");
+            n = 10;
+            System.out.println(t1.waysToGetSum_tabulation(n)); // 492
+        }
 
-        // Approach 4
-        n = 12;
-        System.out.println(t1.waysToGetSum_tabulation_optimized(n)); // 1936
+        {
+            // Approach 4: iterative tabulation method + space optimized
+            System.out.println("Approach 4: iterative tabulation method + space optimized");
+            n = 12;
+            System.out.println(t1.waysToGetSum_tabulation_optimized(n)); // 1936
+        }
 
     }
 }

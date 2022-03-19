@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch Max_Sum_Non_Adjacent_DP",
+            "request": "launch",
+            "mainClass": "Max_Sum_Non_Adjacent_DP",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
             "name": "Launch count_valid_parenthesis",
             "request": "launch",
             "mainClass": "count_valid_parenthesis",
