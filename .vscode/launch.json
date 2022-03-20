@@ -6,6 +6,55 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch q4_Min_Sum_Path_in_Matrix",
+            "request": "launch",
+            "mainClass": "q4_Min_Sum_Path_in_Matrix",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
+            "name": "Launch q2_Unique_Paths_in_a_Grid",
+            "request": "launch",
+            "mainClass": "q2_Unique_Paths_in_a_Grid",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
+            "name": "Launch q1_Dungeon_Princess",
+            "request": "launch",
+            "mainClass": "q1_Dungeon_Princess",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
+            "name": "Launch Maximum_Path_Sum_in_the_matrix",
+            "request": "launch",
+            "mainClass": "Maximum_Path_Sum_in_the_matrix",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
+            "name": "Launch hw_q1_Min_Sum_Path_in_Triangle",
+            "request": "launch",
+            "mainClass": "hw_q1_Min_Sum_Path_in_Triangle",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
+            "name": "Launch hw_q1_triangle",
+            "request": "launch",
+            "mainClass": "hw_q1_triangle",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
+            "name": "Launch hw_q3_Ways_to_Decode",
+            "request": "launch",
+            "mainClass": "hw_q3_Ways_to_Decode",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
             "name": "Launch q3_Longest_Increasing_Subsequence",
             "request": "launch",
             "mainClass": "q3_Longest_Increasing_Subsequence",
