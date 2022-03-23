@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch q1_Longest_Common_Subsequence",
+            "request": "launch",
+            "mainClass": "q1_Longest_Common_Subsequence",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
             "name": "Launch q4_Min_Sum_Path_in_Matrix",
             "request": "launch",
             "mainClass": "q4_Min_Sum_Path_in_Matrix",
