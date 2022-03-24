@@ -64,6 +64,8 @@ Only valid possibility is to take the given item.
 Explanation 2:
 
 Take the second item twice. */
+
+/* similar to 0-1 knapsack, only difference is we can pick same item multiple times */
 public class q2_Unbounded_Knapsack {
 
     public int space_optimized(int n, int target, int[] values, int[] weights) {
@@ -86,6 +88,8 @@ public class q2_Unbounded_Knapsack {
                 // pick
                 int y = 0;
                 if (j - weights[i - 1] >= 0) {
+                    // similar to 0-1 knapsack, only difference is we can pick same item multiple
+                    // times
                     y = values[i - 1] + dp[currRow][j - weights[i - 1]];
                 }
                 dp[currRow][j] = Math.max(x, y);
