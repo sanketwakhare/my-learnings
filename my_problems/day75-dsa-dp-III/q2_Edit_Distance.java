@@ -66,8 +66,13 @@ public class q2_Edit_Distance {
      */
     public int backtrack(int n, int m, String A, String B) {
 
-        if (n < 0 || m < 0)
+        if (n < 0 && m < 0)
             return 0;
+
+        if (n < 0)
+            return 1 * (m + 1);
+        if (m < 0)
+            return 1 * (n + 1);
 
         if (A.charAt(n) == B.charAt(m)) {
             // reduce both lengths
@@ -85,7 +90,7 @@ public class q2_Edit_Distance {
     }
 
     /**
-     * Approach 2- recursion + DP
+     * Approach 2 - recursion + DP
      * TC: O(n x m)
      * SC: O(n x m) + recursion stack space
      */
@@ -116,7 +121,90 @@ public class q2_Edit_Distance {
         int replacement = 1 + editDistance_recursion(n - 1, m - 1, A, B, dp);
         // return min cost
         return dp[n][m] = Math.min(Math.min(insertion, deletion), replacement);
+    }
 
+    /***
+     * Approach 3 - editDistance tabulation method
+     * TC: O(n x m)
+     * SC: O(n x m) for dp array
+     */
+    public int editDistance_tabulation(String A, String B) {
+
+        int n = A.length();
+        int m = B.length();
+        int[][] dp = new int[n + 1][m + 1];
+
+        // consider first character of row and column is empty
+        dp[0][0] = 0;
+        for (int j = 1; j <= m; j++) {
+            dp[0][j] = j * 1; // cost of insertion
+        }
+        for (int i = 1; i <= n; i++) {
+            int[] row = dp[i];
+            Arrays.fill(row, Integer.MAX_VALUE);
+            row[0] = i * 1; // cost of deletion
+        }
+
+        for (int i = 1; i <= n; i++) {
+            for (int j = 1; j <= m; j++) {
+                if (A.charAt(i - 1) != B.charAt(j - 1)) {
+                    int insertion = 1 + dp[i][j - 1];
+                    int deletion = 1 + dp[i - 1][j];
+                    int replacement = 1 + dp[i - 1][j - 1];
+                    // consider min cost of insertion replacement and deletion
+                    dp[i][j] = Math.min(Math.min(insertion, deletion), replacement);
+                } else {
+                    // characters match, consider previous min cost
+                    dp[i][j] = dp[i - 1][j - 1];
+                }
+            }
+        }
+        return dp[n][m];
+    }
+
+    /***
+     * Approach 4 - space optimized
+     * TC: O(n x m)
+     * SC: O(2 x m) for dp array
+     */
+    public int editDistance_space_optimized(String A, String B) {
+
+        int n = A.length();
+        int m = B.length();
+        int[][] dp = new int[2][m + 1];
+
+        // consider first character of row and column is empty
+        dp[0][0] = 0;
+        for (int j = 1; j <= m; j++) {
+            dp[0][j] = j * 1; // cost of insertion
+        }
+        for (int i = 1; i <= 1; i++) {
+            int[] row = dp[i];
+            Arrays.fill(row, Integer.MAX_VALUE);
+            row[0] = i * 1; // cost of deletion
+        }
+
+        for (int i = 1; i <= n; i++) {
+
+            int prevRowNo = (i - 1) % 2;
+            int rowNo = i % 2;
+            dp[prevRowNo][0] = (i - 1) * 1;
+            dp[rowNo][0] = i * 1;
+
+            for (int j = 1; j <= m; j++) {
+                if (A.charAt(i - 1) != B.charAt(j - 1)) {
+                    int insertion = 1 + dp[rowNo][j - 1];
+                    int deletion = 1 + dp[prevRowNo][j];
+                    int replacement = 1 + dp[prevRowNo][j - 1];
+                    // consider min cost of insertion replacement and deletion
+                    dp[rowNo][j] = Math.min(Math.min(insertion, deletion), replacement);
+                } else {
+                    // characters match, consider previous min cost
+                    dp[rowNo][j] = dp[prevRowNo][j - 1];
+                }
+            }
+        }
+        return dp[n % 2][m];
     }
 
     public static void main(String[] args) {
@@ -129,11 +217,20 @@ public class q2_Edit_Distance {
         {
             // Approach 1 - simple recursion (backtracking)
             System.out.println("Approach 1 - simple recursion (backtracking)");
+
+            // test case 1
             A = "Anshuman";
             B = "Antihuman";
             n = A.length();
             m = B.length();
-            System.out.println(t1.backtrack(n - 1, m - 1, A, B));
+            System.out.println(t1.backtrack(n - 1, m - 1, A, B)); // 2 replacements
+
+            // test case 2
+            A = "aa";
+            B = "aaaaa";
+            n = A.length();
+            m = B.length();
+            System.out.println(t1.backtrack(n - 1, m - 1, A, B)); // 3 insertions
         }
 
         {
@@ -147,7 +244,7 @@ public class q2_Edit_Distance {
             dp = new int[n][m];
             for (int[] row : dp)
                 Arrays.fill(row, -1);
-            System.out.println(t1.editDistance_recursion(n - 1, m - 1, A, B, dp));
+            System.out.println(t1.editDistance_recursion(n - 1, m - 1, A, B, dp)); // 2 replacements
 
             // test case 2
             A = "crossword";
@@ -157,7 +254,7 @@ public class q2_Edit_Distance {
             dp = new int[n][m];
             for (int[] row : dp)
                 Arrays.fill(row, -1);
-            System.out.println(t1.editDistance_recursion(n - 1, m - 1, A, B, dp));
+            System.out.println(t1.editDistance_recursion(n - 1, m - 1, A, B, dp)); // 6 [1 insertion + 5 replacements]
 
             // test case 3
             A = "aaa";
@@ -167,7 +264,7 @@ public class q2_Edit_Distance {
             dp = new int[n][m];
             for (int[] row : dp)
                 Arrays.fill(row, -1);
-            System.out.println(t1.editDistance_recursion(n - 1, m - 1, A, B, dp));
+            System.out.println(t1.editDistance_recursion(n - 1, m - 1, A, B, dp)); // 1 deletion
 
             // test case 4
             A = "aaa";
@@ -177,7 +274,54 @@ public class q2_Edit_Distance {
             dp = new int[n][m];
             for (int[] row : dp)
                 Arrays.fill(row, -1);
-            System.out.println(t1.editDistance_recursion(n - 1, m - 1, A, B, dp));
+            System.out.println(t1.editDistance_recursion(n - 1, m - 1, A, B, dp)); // 3 insertions
+        }
+        {
+            // Approach 3 - editDistance tabulation method
+            System.out.println("Approach 3 - editDistance tabulation method");
+
+            // test case 1
+            A = "Anshuman";
+            B = "Antihuman";
+            System.out.println(t1.editDistance_tabulation(A, B)); // 2 replacements
+
+            // test case 2
+            A = "aaa";
+            B = "aa";
+            System.out.println(t1.editDistance_tabulation(A, B)); // 1 deletion
+
+            // test case 3
+            A = "aaa";
+            B = "aaaaaa";
+            System.out.println(t1.editDistance_tabulation(A, B)); // 3 insertions
+
+            A = "abaabbbbabaabaa";
+            B = "aaaababa";
+            System.out.println(t1.editDistance_tabulation(A, B)); // 7
+        }
+        {
+            // Approach 4 - space optimized
+            System.out.println("Approach 4 - space optimized");
+
+            // test case 1
+            A = "Anshuman";
+            B = "Antihuman";
+            System.out.println(t1.editDistance_space_optimized(A, B)); // 2 replacements
+
+            // test case 2
+            A = "aaa";
+            B = "aa";
+            System.out.println(t1.editDistance_space_optimized(A, B)); // 1 deletion
+
+            // test case 3
+            A = "aaa";
+            B = "aaaaaa";
+            System.out.println(t1.editDistance_space_optimized(A, B)); // 3 insertions
+
+            // test case 4
+            A = "abaabbbbabaabaa";
+            B = "aaaababa";
+            System.out.println(t1.editDistance_space_optimized(A, B)); // 3 insertions
         }
     }
 }
