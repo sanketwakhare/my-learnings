@@ -160,16 +160,48 @@ public class q2_0_1_knapsack {
         return dp[n][target];
     }
 
+    /**
+     * Approach 4 - space optimized solution + DP
+     * TC: O(n x target)
+     * SC: O(n x target) for dp array
+     */
+    public int space_optimized(int n, int target, int[] values, int[] weights) {
+
+        // initialize base cases. first row and first column with 0
+        int[][] dp = new int[2][target + 1];
+        Arrays.fill(dp[0], 0);
+        for (int i = 1; i <= 1; i++) {
+            int[] row = dp[i];
+            Arrays.fill(row, -1);
+            row[0] = 0;
+        }
+
+        for (int i = 1; i <= n; i++) {
+            int prevRow = (i - 1) % 2;
+            int currRow = i % 2;
+            for (int j = 1; j <= target; j++) {
+                // do not pick
+                int x = dp[prevRow][j];
+                // pick
+                int y = 0;
+                if (j - weights[i - 1] >= 0) {
+                    y = values[i - 1] + dp[prevRow][j - weights[i - 1]];
+                }
+                dp[currRow][j] = Math.max(x, y);
+            }
+        }
+        return dp[n % 2][target];
+    }
+
     public static void main(String[] args) {
 
         q2_0_1_knapsack t1 = new q2_0_1_knapsack();
         int[] A, B;
         int C, n;
         int[][] dp;
-
         {
             // Approach 1 - backtrack
-            System.out.println("Approach 1 - backtrack");
+            System.out.println("*** Approach 1 - backtrack");
 
             // test case 1
             A = new int[] { 60, 100, 120 };
@@ -187,7 +219,7 @@ public class q2_0_1_knapsack {
         }
         {
             // Approach 2 - recursion + DP
-            System.out.println("Approach 2 - recursion  + DP");
+            System.out.println("*** Approach 2 - recursion  + DP");
 
             // test case 1
             A = new int[] { 60, 100, 120 };
@@ -227,7 +259,7 @@ public class q2_0_1_knapsack {
         }
         {
             // Approach 3 - tabulation + DP
-            System.out.println("Approach 3 - tabulation + DP");
+            System.out.println("*** Approach 3 - tabulation + DP");
 
             // test case 1
             A = new int[] { 60, 100, 120 };
@@ -253,7 +285,47 @@ public class q2_0_1_knapsack {
             n = A.length;
             System.out.println(t1.tabulation_dp(n, C, A, B)); // 24576
 
+            // test case 4
+            A = new int[] { 12, 20, 15, 6, 10 };
+            B = new int[] { 3, 6, 5, 2, 4 };
+            C = 8;
+            n = A.length;
+            System.out.println(t1.tabulation_dp(n, C, A, B)); // 27
+        }
+        {
+            // Approach 4 - space optimized solution + DP
+            System.out.println("*** Approach 4 - space optimized solution + DP");
+
+            // test case 1
+            A = new int[] { 60, 100, 120 };
+            B = new int[] { 10, 20, 30 };
+            C = 50;
+            n = A.length;
+            System.out.println(t1.space_optimized(n, C, A, B)); // 220
+
+            // test case 2
+            A = new int[] { 10, 20, 30, 40 };
+            B = new int[] { 12, 13, 15, 19 };
+            C = 10;
+            n = A.length;
+            System.out.println(t1.space_optimized(n, C, A, B)); // 0
+
+            // test case 3
+            A = new int[] { 468, 335, 501, 170, 725, 479, 359, 963, 465, 706, 146, 282, 828, 962, 492, 996, 943, 828,
+                    437, 392, 605, 903, 154, 293, 383, 422, 717, 719, 896, 448, 727, 772, 539, 870, 913, 668, 300, 36,
+                    895, 704, 812, 323 };
+            B = new int[] { 4, 4, 5, 2, 2, 4, 9, 8, 5, 3, 8, 8, 10, 4, 2, 10, 9, 7, 6, 1, 3, 9, 7, 1, 3, 5, 9, 7, 6, 1,
+                    10, 1, 1, 7, 2, 4, 9, 10, 4, 5, 5, 7 };
+            C = 841;
+            n = A.length;
+            System.out.println(t1.space_optimized(n, C, A, B)); // 24576
+
+            // test case 4
+            A = new int[] { 12, 20, 15, 6, 10 };
+            B = new int[] { 3, 6, 5, 2, 4 };
+            C = 8;
+            n = A.length;
+            System.out.println(t1.space_optimized(n, C, A, B)); // 27
         }
     }
-
 }
