@@ -1,5 +1,17 @@
 {
     "java.project.sourcePaths": [
+        "my_problems/mentor-session-3-interview-dsa",
+        "my_problems/day75-dsa-dp-III",
+        "my_problems/day74-dsa-dp-II",
+        "my_problems/day73-dsa-dp-I",
+        "my_problems/day72-dsa-backtracking-II",
+        "my_problems/day71-dsa-backtracking-I",
+        "my_problems/day70-dsa-greedy-I",
+        "my_problems/day69-dsa-heaps-II",
+        "my_problems/day68-dsa-heaps-I",
+        "my_problems/day67-dsa-tries-II",
+        "my_problems/day66-dsa-tries-I",
+        "my_problems/day64-dsa-trees-V-problem-solving",
         "my_problems/day63-dsa-trees-bst-II",
         "my_problems/day62-dsa-trees-bst-I",
         "my_problems/day61-dsa-trees-II",
@@ -19,17 +31,6 @@
         "my_problems/day47-dsa-binarysearch-II",
         "my_problems/day46-dsa-binarysearch-I",
         "my_problems/day38-maths-combinatorics",
-        "my_problems/day64-dsa-trees-V-problem-solving",
-        "my_problems/day66-dsa-tries-I",
-        "my_problems/mentor-session-3-interview-dsa",
-        "my_problems/day67-dsa-tries-II",
-        "my_problems/day68-dsa-heaps-I",
-        "my_problems\\day69-dsa-heaps-II",
-        "my_problems\\day70-dsa-greedy-I",
-        "my_problems\\day71-dsa-backtracking-I",
-        "my_problems\\day72-dsa-backtracking-II",
-        "my_problems\\day73-dsa-dp-I",
-        "my_problems\\day74-dsa-dp-II",
-        "my_problems\\day75-dsa-dp-III"
+        "my_problems/day76-dsa-dp-IV"
     ]
 }

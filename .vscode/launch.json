@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch q2_0_1_knapsack",
+            "request": "launch",
+            "mainClass": "q2_0_1_knapsack",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
             "name": "Launch q3_Regular_Expression_Match",
             "request": "launch",
             "mainClass": "q3_Regular_Expression_Match",
