@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch q2_Coin_Sum_Infinite",
+            "request": "launch",
+            "mainClass": "q2_Coin_Sum_Infinite",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
             "name": "Launch q2_Unbounded_Knapsack",
             "request": "launch",
             "mainClass": "q2_Unbounded_Knapsack",
