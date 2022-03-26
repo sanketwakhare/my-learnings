@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch hw_q3_Ways_to_send_the_signal",
+            "request": "launch",
+            "mainClass": "hw_q3_Ways_to_send_the_signal",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
             "name": "Launch hw_q2_Tushars_Birthday_Party",
             "request": "launch",
             "mainClass": "hw_q2_Tushars_Birthday_Party",
