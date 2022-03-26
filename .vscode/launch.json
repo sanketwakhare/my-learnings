@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch hw_q1_Buying_Candies",
+            "request": "launch",
+            "mainClass": "hw_q1_Buying_Candies",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
             "name": "Launch q2_Coin_Sum_Infinite",
             "request": "launch",
             "mainClass": "q2_Coin_Sum_Infinite",
