@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch q3_0_1_Knapsack_II",
+            "request": "launch",
+            "mainClass": "q3_0_1_Knapsack_II",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
             "name": "Launch hw_q3_Ways_to_send_the_signal",
             "request": "launch",
             "mainClass": "hw_q3_Ways_to_send_the_signal",
