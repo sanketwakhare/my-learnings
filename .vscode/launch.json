@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch q3_Russian_Doll_Envelopes",
+            "request": "launch",
+            "mainClass": "q3_Russian_Doll_Envelopes",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
             "name": "Launch q1_Longest_Palindromic_Subsequence",
             "request": "launch",
             "mainClass": "q1_Longest_Palindromic_Subsequence",
