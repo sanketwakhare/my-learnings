@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch q2_Matrix_Chain_Multiplication",
+            "request": "launch",
+            "mainClass": "q2_Matrix_Chain_Multiplication",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
             "name": "Launch q3_Russian_Doll_Envelopes",
             "request": "launch",
             "mainClass": "q3_Russian_Doll_Envelopes",
