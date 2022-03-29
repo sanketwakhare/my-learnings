@@ -57,7 +57,7 @@ Explanation 2:
  Cost to multiply two matrices with dimensions 10 x 20 and 20 x 30 = 10 * 20 * 30 = 6000. */
 public class q2_Matrix_Chain_Multiplication {
 
-    // recursion + DP
+    // Approach 1 - recursion + DP [memoization]
     public int minCost(int[] A, int i, int j, int[][] dp) {
         if (i == j)
             return 0;
@@ -72,27 +72,66 @@ public class q2_Matrix_Chain_Multiplication {
         return dp[i][j];
     }
 
+    // Approach 2 - iterative approach [tabulation]
+    public int tabulation_mcm(int[] A) {
+        int n = A.length;
+        // initialize dp array with max value as we need to find the min value
+        int[][] dp = new int[n][n];
+        for (int[] row : dp)
+            Arrays.fill(row, Integer.MAX_VALUE);
+
+        // start from bottom row to top row
+        for (int i = n; i >= 1; i--) {
+            // start from left column to right column
+            for (int j = i; j < n; j++) {
+                // base case
+                if (i == j)
+                    dp[i][j] = 0;
+                // recursive relation converted to iterative code
+                for (int k = i; k < j; k++) {
+                    dp[i][j] = Math.min(dp[i][j],
+                            dp[i][k] + dp[k + 1][j] + (A[i - 1] * A[k] * A[j]));
+                }
+            }
+        }
+        // answer will be stored at dp[1][n-1]
+        return dp[1][n - 1];
+    }
+
     public static void main(String[] args) {
         q2_Matrix_Chain_Multiplication t1 = new q2_Matrix_Chain_Multiplication();
         int[] A;
-        int n;
-        int[][] dp;
 
-        // test case 1
-        A = new int[] { 40, 20, 30, 10, 30 };
-        n = A.length;
-        dp = new int[n][n];
-        for (int[] row : dp)
-            Arrays.fill(row, -1);
-        System.out.println(t1.minCost(A, 1, n - 1, dp)); // 26000
+        {
+            System.out.println("Approach 1 - recursion + dp");
+            int n;
+            int[][] dp;
 
-        // test case 2
-        A = new int[] { 45, 17, 34, 27, 12, 22 };
-        n = A.length;
-        dp = new int[n][n];
-        for (int[] row : dp)
-            Arrays.fill(row, -1);
-        System.out.println(t1.minCost(A, 1, n - 1, dp)); // 39012
+            // test case 1
+            A = new int[] { 40, 20, 30, 10, 30 };
+            n = A.length;
+            dp = new int[n][n];
+            for (int[] row : dp)
+                Arrays.fill(row, -1);
+            System.out.println(t1.minCost(A, 1, n - 1, dp)); // 26000
+
+            // test case 2
+            A = new int[] { 45, 17, 34, 27, 12, 22 };
+            n = A.length;
+            dp = new int[n][n];
+            for (int[] row : dp)
+                Arrays.fill(row, -1);
+            System.out.println(t1.minCost(A, 1, n - 1, dp)); // 39012
+        }
+        {
+            System.out.println("Approach 2 - tabulation + dp");
+            // test case 1
+            A = new int[] { 40, 20, 30, 10, 30 };
+            System.out.println(t1.tabulation_mcm(A)); // 26000
+            // test case 2
+            A = new int[] { 45, 17, 34, 27, 12, 22 };
+            System.out.println(t1.tabulation_mcm(A)); // 39012
+        }
 
     }
 
