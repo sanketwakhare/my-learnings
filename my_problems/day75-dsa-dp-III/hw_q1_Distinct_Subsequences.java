@@ -134,6 +134,67 @@ public class hw_q1_Distinct_Subsequences {
         return dp[n][m];
     }
 
+    /* Approach 3 - Space optimized with 2 rows */
+    public int numDistinct_space_2rows(String A, String B) {
+
+        // initialization block
+        int n = A.length();
+        int m = B.length();
+        int[][] dp = new int[2][m + 1];
+        for (int i = 0; i <= n; i++) {
+            dp[i % 2][0] = 1;
+        }
+
+        for (int i = 1; i <= n; i++) {
+            int prevRow = (i - 1) % 2;
+            int currRow = i % 2;
+            for (int j = 1; j <= m; j++) {
+                if (A.charAt(i - 1) == B.charAt(j - 1)) {
+                    // pick
+                    int x = dp[prevRow][j - 1];
+                    // do not pick
+                    int y = dp[prevRow][j];
+                    dp[currRow][j] = x + y;
+                } else {
+                    dp[currRow][j] = dp[prevRow][j];
+                }
+            }
+        }
+        return dp[n % 2][m];
+    }
+
+    /*
+     * Approach 4 - Space optimized with single row
+     * Observation: the dp[i][j] depends upon only on previous row and left values
+     * TC: O(n x m)
+     * SC: O(m) for 1d dp array
+     */
+    public int numDistinct_space__single_rows(String A, String B) {
+
+        // initialization block
+        int n = A.length();
+        int m = B.length();
+        int[] dp = new int[m + 1];
+        dp[0] = 1;
+
+        for (int i = 1; i <= n; i++) {
+            // start from last column (right to left) as current value is dependent upon
+            // previous value
+            for (int j = m; j >= 1; j--) {
+                if (A.charAt(i - 1) == B.charAt(j - 1)) {
+                    // pick
+                    int x = dp[j - 1];
+                    // do not pick
+                    int y = dp[j];
+                    dp[j] = x + y;
+                } else {
+                    dp[j] = dp[j];
+                }
+            }
+        }
+        return dp[m];
+    }
+
     public static void main(String[] args) {
 
         hw_q1_Distinct_Subsequences t1 = new hw_q1_Distinct_Subsequences();
@@ -172,6 +233,42 @@ public class hw_q1_Distinct_Subsequences {
             A = "aaaababbababbaabbaaababaaabbbaaabbb";
             B = "bbababa";
             System.out.println(t1.numDistinct_tabulation(A, B)); // 22113
+
+        }
+        {
+            System.out.println("Approach 3 - Tabulation space optimized till 2 rows");
+            // test case 1
+            A = "rabbbit";
+            B = "rabbit";
+            System.out.println(t1.numDistinct_space_2rows(A, B)); // 3
+
+            // test case 2
+            A = "abc";
+            B = "abc";
+            System.out.println(t1.numDistinct_space_2rows(A, B)); // 1
+
+            // test case 3
+            A = "aaaababbababbaabbaaababaaabbbaaabbb";
+            B = "bbababa";
+            System.out.println(t1.numDistinct_space_2rows(A, B)); // 22113
+
+        }
+        {
+            System.out.println("Approach 4 - Tabulation space optimized to single row");
+            // test case 1
+            A = "rabbbit";
+            B = "rabbit";
+            System.out.println(t1.numDistinct_space__single_rows(A, B)); // 3
+
+            // test case 2
+            A = "abc";
+            B = "abc";
+            System.out.println(t1.numDistinct_space__single_rows(A, B)); // 1
+
+            // test case 3
+            A = "aaaababbababbaabbaaababaaabbbaaabbb";
+            B = "bbababa";
+            System.out.println(t1.numDistinct_space__single_rows(A, B)); // 22113
 
         }
     }
