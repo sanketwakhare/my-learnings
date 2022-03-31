@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch hw_q1__Number_of_islands",
+            "request": "launch",
+            "mainClass": "hw_q1__Number_of_islands",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
             "name": "Launch q1_Path_in_Directed_Graph",
             "request": "launch",
             "mainClass": "q1_Path_in_Directed_Graph",
