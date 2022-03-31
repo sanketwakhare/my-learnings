@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch q1_Path_in_Directed_Graph",
+            "request": "launch",
+            "mainClass": "q1_Path_in_Directed_Graph",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
             "name": "Launch hw_q1_Distinct_Subsequences",
             "request": "launch",
             "mainClass": "hw_q1_Distinct_Subsequences",
