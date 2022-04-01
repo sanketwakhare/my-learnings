@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch class_q3_bfsTraversal",
+            "request": "launch",
+            "mainClass": "class_q3_bfsTraversal",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
             "name": "Launch class_q2_build_adjacency_list",
             "request": "launch",
             "mainClass": "class_q2_build_adjacency_list",

@@ -139,7 +139,6 @@ public class q1_Path_in_Directed_Graph {
                 if (nextNode == target) {
                     // path exist
                     isPathExist = true;
-                    ;
                     break;
                 }
                 // if nextNode is not visited already
