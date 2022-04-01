@@ -8,7 +8,6 @@ public class class_q1_build_adjacency_matrix {
             int u = B[i][0];
             int v = B[i][1];
             mat[u][v] = 1;
-            mat[v][u] = 1;
         }
 
         for (int i = 0; i < mat.length; i++) {
@@ -25,7 +24,7 @@ public class class_q1_build_adjacency_matrix {
         class_q1_build_adjacency_matrix t1 = new class_q1_build_adjacency_matrix();
         // test case 1
         int n = 5;
-        // undirected graph - the direction exist from both sides
+        // directed graph - the direction exist from both sides
         int[][] B = new int[][] { { 1, 4 },
                 { 2, 1 }, { 4, 3 }, { 4, 5 }, { 2, 3 }, { 2, 4 }, { 1, 5 }, { 5, 3 },
                 { 2, 5 }, { 5, 1 }, { 4, 2 }, { 3, 1 }, { 5, 4 }, { 3, 4 }, { 1, 3 }, { 4, 1 }, { 3, 5 }, { 3, 2 },
