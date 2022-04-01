@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch class_q1_build_adjacency_matrix",
+            "request": "launch",
+            "mainClass": "class_q1_build_adjacency_matrix",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
             "name": "Launch hw_q1__Number_of_islands__BFS",
             "request": "launch",
             "mainClass": "hw_q1__Number_of_islands__BFS",
