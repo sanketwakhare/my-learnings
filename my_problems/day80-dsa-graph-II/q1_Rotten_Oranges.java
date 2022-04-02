@@ -83,7 +83,7 @@ public class q1_Rotten_Oranges {
         // coordinate of orange
         int i;
         int j;
-        // previous distance
+        // min distance to get rotten
         int minDist;
 
         public Pair(int i, int j, int minDist) {
@@ -107,8 +107,8 @@ public class q1_Rotten_Oranges {
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < m; j++) {
                 if (A[i][j] == 2) {
-                    minDistance[i][j] = -1;
-                    queue.add(new Pair(i, j, -1));
+                    minDistance[i][j] = 0;
+                    queue.add(new Pair(i, j, 0));
                 } else if (A[i][j] == 0) {
                     // initialize empty spaces with INT_MIN
                     minDistance[i][j] = Integer.MIN_VALUE;
@@ -126,9 +126,8 @@ public class q1_Rotten_Oranges {
 
             Pair x = queue.poll();
 
-            // update new distance
+            // new distance
             int dist = x.minDist + 1;
-            minDistance[x.i][x.j] = dist;
 
             for (int k = 0; k < rows.length; k++) {
                 int new_i = x.i + rows[k];
@@ -137,7 +136,10 @@ public class q1_Rotten_Oranges {
                 if (new_i >= 0 && new_j >= 0 && new_i < n && new_j < m && A[new_i][new_j] == 1) {
                     // mark the orange as rotten
                     A[new_i][new_j] = 2;
+                    // add new rotten orange/coordinate to queue
                     queue.add(new Pair(new_i, new_j, dist));
+                    // update distance
+                    minDistance[new_i][new_j] = dist;
                 }
             }
         }
