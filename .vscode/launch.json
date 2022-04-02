@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch q2_First_Depth_First_Search",
+            "request": "launch",
+            "mainClass": "q2_First_Depth_First_Search",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
             "name": "Launch class_shortest_distance_from_source_to_dest",
             "request": "launch",
             "mainClass": "class_shortest_distance_from_source_to_dest",
