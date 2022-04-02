@@ -98,8 +98,7 @@ public class q1_Rotten_Oranges {
         int n = A.length;
         int m = A[0].length;
         int[][] minDistance = new int[n][m];
-
-        // store the initial rotten oranges in Queue
+        // Queue for BFS traversal
         Queue<Pair> queue = new LinkedList<Pair>();
 
         // fill queue with rotten oranges first
@@ -108,6 +107,7 @@ public class q1_Rotten_Oranges {
             for (int j = 0; j < m; j++) {
                 if (A[i][j] == 2) {
                     minDistance[i][j] = 0;
+                    // store the initial rotten oranges in Queue
                     queue.add(new Pair(i, j, 0));
                 } else if (A[i][j] == 0) {
                     // initialize empty spaces with INT_MIN
