@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch q1_Rotten_Oranges",
+            "request": "launch",
+            "mainClass": "q1_Rotten_Oranges",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
             "name": "Launch class_q2_no_of_islands",
             "request": "launch",
             "mainClass": "class_q2_no_of_islands",
