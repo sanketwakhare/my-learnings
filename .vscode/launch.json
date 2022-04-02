@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch class_q1_dfsTraversal",
+            "request": "launch",
+            "mainClass": "class_q1_dfsTraversal",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
             "name": "Launch q2_First_Depth_First_Search",
             "request": "launch",
             "mainClass": "q2_First_Depth_First_Search",

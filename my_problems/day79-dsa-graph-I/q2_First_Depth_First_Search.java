@@ -96,8 +96,6 @@ public class q2_First_Depth_First_Search {
                 int nextNode = adjList.get(i);
                 if (isPathPresent(list, nextNode, dest, visited)) {
                     return true;
-                } else {
-                    continue;
                 }
             }
         }

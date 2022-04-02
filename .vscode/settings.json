@@ -1,6 +1,7 @@
 {
     "java.project.sourcePaths": [
         "my_problems/mentor-session-3-interview-dsa",
+        "my_problems/day79-dsa-graph-I",
         "my_problems/day78-dsa-dp-VI",
         "my_problems/day77-dsa-dp-V",
         "my_problems/day76-dsa-dp-IV",
@@ -34,6 +35,6 @@
         "my_problems/day47-dsa-binarysearch-II",
         "my_problems/day46-dsa-binarysearch-I",
         "my_problems/day38-maths-combinatorics",
-        "my_problems/day79-dsa-graph-I"
+        "my_problems/day80-dsa-graph-II"
     ]
 }
