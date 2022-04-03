@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch hw_q2_Distance_of_nearest_cell",
+            "request": "launch",
+            "mainClass": "hw_q2_Distance_of_nearest_cell",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
             "name": "Launch q4_Construct_Roads",
             "request": "launch",
             "mainClass": "q4_Construct_Roads",
