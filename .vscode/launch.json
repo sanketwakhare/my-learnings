@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch hw_q1_Reversing_Edges",
+            "request": "launch",
+            "mainClass": "hw_q1_Reversing_Edges",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
             "name": "Launch hw_q3_Cycle_in_Directed_graph",
             "request": "launch",
             "mainClass": "hw_q3_Cycle_in_Directed_graph",
