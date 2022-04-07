@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch Kruskals_algorithm",
+            "request": "launch",
+            "mainClass": "Kruskals_algorithm",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
+            "name": "Launch q1_Batches",
+            "request": "launch",
+            "mainClass": "q1_Batches",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
             "name": "Launch Prims_algorithm",
             "request": "launch",
             "mainClass": "Prims_algorithm",

@@ -6,22 +6,22 @@ import java.util.PriorityQueue;
 /* Prim's algorithm implementation */
 public class Prims_algorithm {
 
-    class Edge {
+    class Pair {
         int weight;
         int u;
         int v;
 
-        public Edge(int _u, int _v, int _w) {
+        public Pair(int _u, int _v, int _w) {
             this.u = _u;
             this.v = _v;
             this.weight = _w;
         }
     }
 
-    class WeightComparator implements Comparator<Edge> {
+    class WeightComparator implements Comparator<Pair> {
 
         @Override
-        public int compare(Prims_algorithm.Edge o1, Prims_algorithm.Edge o2) {
+        public int compare(Prims_algorithm.Pair o1, Prims_algorithm.Pair o2) {
             return o1.weight - o2.weight;
         }
 
@@ -32,17 +32,17 @@ public class Prims_algorithm {
         int totalCost = 0;
 
         // consider first node as 1
-        List<List<Edge>> edges = buildAdjList(A, B);
+        List<List<Pair>> edges = buildAdjList(A, B);
         boolean[] visited = new boolean[A + 1];
 
         // initialize minHeap
-        PriorityQueue<Edge> queue = new PriorityQueue<Edge>(new WeightComparator());
+        PriorityQueue<Pair> queue = new PriorityQueue<Pair>(new WeightComparator());
 
         // insert node 1 in queue and mark as visited
-        queue.add(new Edge(1, 1, 0));
+        queue.add(new Pair(1, 1, 0));
 
         while (!queue.isEmpty()) {
-            Edge x = queue.poll();
+            Pair x = queue.poll();
             int x_target = x.v;
             if (!visited[x_target]) {
 
@@ -51,7 +51,7 @@ public class Prims_algorithm {
                 totalCost += x.weight;
 
                 // traverse all neighbors of node v
-                for (Edge e : edges.get(x_target)) {
+                for (Pair e : edges.get(x_target)) {
                     int source = e.u;
                     int target = e.v;
                     if (visited[source] && visited[target]) {
@@ -66,17 +66,17 @@ public class Prims_algorithm {
         return totalCost;
     }
 
-    private List<List<Edge>> buildAdjList(int A, int[][] B) {
-        List<List<Edge>> edges = new ArrayList<List<Edge>>();
+    private List<List<Pair>> buildAdjList(int A, int[][] B) {
+        List<List<Pair>> edges = new ArrayList<List<Pair>>();
         for (int i = 0; i <= A; i++) {
-            edges.add(new ArrayList<Edge>());
+            edges.add(new ArrayList<Pair>());
         }
         for (int i = 0; i < B.length; i++) {
             int u = B[i][0];
             int v = B[i][1];
             int w = B[i][2];
-            edges.get(u).add(new Edge(u, v, w));
-            edges.get(v).add(new Edge(v, u, w));
+            edges.get(u).add(new Pair(u, v, w));
+            edges.get(v).add(new Pair(v, u, w));
         }
         return edges;
     }
