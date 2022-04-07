@@ -1,4 +1,3 @@
-import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -181,7 +180,6 @@ public class q3_Regular_Expression_Match {
         String A; // input string to test
         String B; // pattern
         int n, m;
-        int[][] dp;
 
         {
             // Approach 1 - backtracking
