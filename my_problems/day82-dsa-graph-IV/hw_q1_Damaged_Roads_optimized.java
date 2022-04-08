@@ -70,128 +70,75 @@ Explanation 2:
 
  The minimum possible cost will be 39. */
 
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.PriorityQueue;
+import java.util.Arrays;
 
-/* This solution is using extra space and giving MLE or heap out of space */
-public class hw_q1_Damaged_Roads_Brute_force {
+/* Accepted solution */
+public class hw_q1_Damaged_Roads_optimized {
 
-    // Node
-    class Node {
-        int i;
-        int j;
-
-        public Node(int i, int j) {
-            this.i = i;
-            this.j = j;
-        }
-
-        public String toString() {
-            return "[i=" + i + ", j=" + j + "]";
-        }
-    }
-
-    // Edge
-    class Edge {
-        Node u;
-        Node v;
+    class Pair implements Comparable<Pair> {
         int weight;
+        boolean isVertical;
 
-        public Edge(Node u, Node v, int weight) {
-            this.u = u;
-            this.v = v;
+        public Pair(int weight, boolean isVertical) {
             this.weight = weight;
+            this.isVertical = isVertical;
         }
-    }
 
-    class WeightComparator implements Comparator<Edge> {
         @Override
-        public int compare(Edge o1, Edge o2) {
-            if (o1.weight < o2.weight)
-                return -1;
-            if (o1.weight > o2.weight)
-                return 1;
-            return 0;
+        public int compareTo(Pair o) {
+            return this.weight - o.weight;
         }
     }
 
     public int solve(int[] A, int[] B) {
+
         long p = 1000000007;
         long minCost = 0;
-        int n = A.length + 1;
-        int m = B.length + 1;
+        long n = A.length + 1;
+        long m = B.length + 1;
 
-        // build adjacency list
-        // node map e.g. key = '0+0' node value = (i=0,j=0)
-        Map<String, Node> nodeMap = new HashMap<String, Node>();
-        // node to edges mapping - adjacency list
-        Map<Node, List<Edge>> map = new HashMap<Node, List<Edge>>();
-        // visited list for nodes
-        Map<Node, Boolean> visited = new HashMap<Node, Boolean>();
-        for (int i = 0; i < n; i++) {
-            for (int j = 0; j < m; j++) {
-                Node node = new Node(i, j);
-                nodeMap.put(i + "+" + j, node);
-                map.put(node, new ArrayList<Edge>());
-                visited.put(node, false);
-            }
+        // maintain a N + M size array and store the weights and a flag to identify if
+        // weight is for vertical or horizontal edge
+        Pair[] temp = new Pair[A.length + B.length];
+        int i;
+        for (i = 0; i < A.length; i++) {
+            temp[i] = new Pair(A[i], true);
         }
-        for (int i = 0; i < n; i++) {
-            for (int j = 0; j < m; j++) {
-                Node u = nodeMap.get(i + "+" + j);
-                Node v = null;
-                if (i < n - 1) {
-                    v = nodeMap.get((i + 1) + "+" + j);
-                    // add edge to source and target as undirected graph
-                    map.get(u).add(new Edge(u, v, A[i]));
-                    map.get(v).add(new Edge(v, u, A[i]));
-                }
-                Node w = null;
-                if (j < m - 1) {
-                    w = nodeMap.get(i + "+" + (j + 1));
-                    // add edge to source and target as undirected graph
-                    map.get(u).add(new Edge(u, w, B[j]));
-                    map.get(w).add(new Edge(w, u, B[j]));
-                }
-            }
+        for (int j = 0; j < B.length; j++) {
+            temp[i++] = new Pair(B[j], false);
         }
+        // sort the array by weight
+        Arrays.sort(temp);
 
-        // Apply Prim's algorithm
-        PriorityQueue<Edge> queue = new PriorityQueue<Edge>(new WeightComparator());
-        // insert first node into Priority List
-        Node firstNode = nodeMap.get("0+0");
-        queue.add(new Edge(firstNode, firstNode, 0));
+        // for a N nodes there can be N-1 edges in minimum spanning tree (here N = n+m)
+        long targetEdges = n * m - 1;
+        i = 0;
+        while (targetEdges > 0) {
 
-        while (!queue.isEmpty()) {
-            Edge parentEdge = queue.poll();
-            Node v = parentEdge.v;
-
-            if (!visited.get(v)) {
-                visited.put(v, true);
-                minCost = (((long) minCost % p) + ((long) parentEdge.weight % p)) % p;
-
-                // traverse all neighbors of node v
-                List<Edge> neighbors = map.get(v);
-                for (Edge neighbor : neighbors) {
-                    Node sourceNode = neighbor.u;
-                    Node targetNode = neighbor.v;
-                    if (!visited.get(targetNode) || !visited.get(sourceNode)) {
-                        queue.add(neighbor);
-                    }
-                }
+            Pair pair = temp[i];
+            if (pair.isVertical) {
+                long wt = ((m % p) * (pair.weight % p)) % p;
+                minCost = ((minCost % p) + (wt % p)) % p;
+                // decrease n every time possible vertical edges are considered
+                n--;
+                // reduce target edges count by m as m edges are considered
+                targetEdges -= m;
+            } else {
+                long wt = ((n % p) * (pair.weight % p)) % p;
+                minCost = ((minCost % p) + (wt % p)) % p;
+                // decrease m every time possible horizontal edges are considered
+                m--;
+                // reduce target edges count by n as n edges are considered
+                targetEdges -= n;
             }
+            i++;
         }
-
         return (int) minCost;
     }
 
     public static void main(String[] args) {
 
-        hw_q1_Damaged_Roads_Brute_force t1 = new hw_q1_Damaged_Roads_Brute_force();
+        hw_q1_Damaged_Roads_optimized t1 = new hw_q1_Damaged_Roads_optimized();
         int[] A, B;
 
         // test case 1
@@ -262,7 +209,7 @@ public class hw_q1_Damaged_Roads_Brute_force {
                 920, 947, 951, 725, 995, 293, 401, 212, 2, 875, 558, 755, 130, 596, 87, 160, 649, 721, 311, 282, 438,
                 921, 83, 669, 801, 721, 323, 628, 225, 827, 154, 80, 176, 368, 945, 381, 81, 707, 203, 300, 266, 113,
                 446, 176, 738, 739, 892, 85, 239, 306, 657, 52, 999, 949, 230, 576, 320, 227, 343 };
-        System.out.println(t1.solve(A, B)); // 92085798
+        System.out.println(t1.solve(A, B)); // 39
 
     }
 }

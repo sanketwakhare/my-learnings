@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch hw_q1_Damaged_Roads_Brute_force",
+            "request": "launch",
+            "mainClass": "hw_q1_Damaged_Roads_Brute_force",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
+            "name": "Launch hw_q1_Damaged_Roads_optimized",
+            "request": "launch",
+            "mainClass": "hw_q1_Damaged_Roads_optimized",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
             "name": "Launch hw_q1_Damaged_Roads",
             "request": "launch",
             "mainClass": "hw_q1_Damaged_Roads",
