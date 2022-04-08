@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch hw_q1_Damaged_Roads",
+            "request": "launch",
+            "mainClass": "hw_q1_Damaged_Roads",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
             "name": "Launch Kruskals_algorithm",
             "request": "launch",
             "mainClass": "Kruskals_algorithm",
