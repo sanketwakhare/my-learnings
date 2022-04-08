@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch q2_Commutable_Islands",
+            "request": "launch",
+            "mainClass": "q2_Commutable_Islands",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
             "name": "Launch hw_q1_Damaged_Roads_Brute_force",
             "request": "launch",
             "mainClass": "hw_q1_Damaged_Roads_Brute_force",
