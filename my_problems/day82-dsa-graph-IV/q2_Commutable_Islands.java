@@ -166,7 +166,7 @@ public class q2_Commutable_Islands {
                 { 1, 4, 3 },
                 { 4, 3, 2 },
                 { 1, 3, 10 } };
-        System.out.println(t1.solve(A, B));
+        System.out.println(t1.solve(A, B)); // 6
 
     }
 }
