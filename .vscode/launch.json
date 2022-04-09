@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch hw_q2_Knight_On_Chess_Board",
+            "request": "launch",
+            "mainClass": "hw_q2_Knight_On_Chess_Board",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
             "name": "Launch Solution_1",
             "request": "launch",
             "mainClass": "Solution_1",
