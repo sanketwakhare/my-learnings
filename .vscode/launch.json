@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch Solution_1",
+            "request": "launch",
+            "mainClass": "Solution_1",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
             "name": "Launch q3_Construction_Cost",
             "request": "launch",
             "mainClass": "q3_Construction_Cost",
