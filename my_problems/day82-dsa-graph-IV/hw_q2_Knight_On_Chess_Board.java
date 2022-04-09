@@ -199,33 +199,33 @@ public class hw_q2_Knight_On_Chess_Board {
         hw_q2_Knight_On_Chess_Board t1 = new hw_q2_Knight_On_Chess_Board();
         int A, B, C, D, E, F;
 
-        // {
-        // A = 8;
-        // B = 8;
-        // C = 1;
-        // D = 1;
-        // E = 8;
-        // F = 8;
-        // System.out.println(t1.knight(A, B, C, D, E, F));
-        // }
-        // {
-        // A = 8;
-        // B = 8;
-        // C = 5;
-        // D = 6;
-        // E = 3;
-        // F = 3;
-        // System.out.println(t1.knight(A, B, C, D, E, F));
-        // }
-        // {
-        // A = 2;
-        // B = 4;
-        // C = 2;
-        // D = 1;
-        // E = 4;
-        // F = 4;
-        // System.out.println(t1.knight(A, B, C, D, E, F));
-        // }
+        {
+            A = 8;
+            B = 8;
+            C = 1;
+            D = 1;
+            E = 8;
+            F = 8;
+            System.out.println(t1.knight(A, B, C, D, E, F)); // 6
+        }
+        {
+            A = 8;
+            B = 8;
+            C = 5;
+            D = 6;
+            E = 3;
+            F = 3;
+            System.out.println(t1.knight(A, B, C, D, E, F)); // 3
+        }
+        {
+            A = 2;
+            B = 4;
+            C = 2;
+            D = 1;
+            E = 4;
+            F = 4;
+            System.out.println(t1.knight(A, B, C, D, E, F)); // -1
+        }
         {
             A = 10;
             B = 3;
@@ -233,7 +233,7 @@ public class hw_q2_Knight_On_Chess_Board {
             D = 1;
             E = 10;
             F = 1;
-            System.out.println(t1.knight(A, B, C, D, E, F));
+            System.out.println(t1.knight(A, B, C, D, E, F)); // 5
         }
     }
 }
