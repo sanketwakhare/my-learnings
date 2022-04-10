@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch AddThemUp",
+            "request": "launch",
+            "mainClass": "AddThemUp",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
             "name": "Launch hw_q3_Special_Median",
             "request": "launch",
             "mainClass": "hw_q3_Special_Median",
