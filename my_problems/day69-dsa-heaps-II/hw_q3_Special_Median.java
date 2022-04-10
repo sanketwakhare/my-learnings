@@ -100,10 +100,14 @@ public class hw_q3_Special_Median {
             int size1 = maxHeap.size();
             int size2 = minHeap.size();
 
-            int median;
+            int median = Integer.MAX_VALUE;
             if ((size1 + size2) % 2 == 0) {
                 // if combines size of both the heaps is even
-                median = (minHeap.peekMin() + maxHeap.peekMax()) / 2;
+                int sum = minHeap.peekMin() + maxHeap.peekMax();
+                if (sum % 2 == 0) {
+                    // consider median only when sum is completely divisible by 2
+                    median = sum / 2;
+                }
             } else {
                 // if combined size of both the heaps is odd
                 if (size1 > size2) {
@@ -319,16 +323,20 @@ public class hw_q3_Special_Median {
         hw_q3_Special_Median t1 = new hw_q3_Special_Median();
         int[] A;
 
+        // {
+        // A = new int[] { 4, 6, 8, 4 };
+        // System.out.println(t1.solve(A));
+        // }
+        // {
+        // A = new int[] { 2, 7, 3, 1 };
+        // System.out.println(t1.solve(A));
+        // }
+        // {
+        // A = new int[] { 4, 14, 4, 15, 9, 8, 2, 10, 4, 3 };
+        // System.out.println(t1.solve(A));
+        // }
         {
-            A = new int[] { 4, 6, 8, 4 };
-            System.out.println(t1.solve(A));
-        }
-        {
-            A = new int[] { 2, 7, 3, 1 };
-            System.out.println(t1.solve(A));
-        }
-        {
-            A = new int[] { 4, 14, 4, 15, 9, 8, 2, 10, 4, 3 };
+            A = new int[] { 2147483647, -2147483648, 0 };
             System.out.println(t1.solve(A));
         }
     }
