@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch hw_q2_Max_Rectangle_in_Binary_Matrix",
+            "request": "launch",
+            "mainClass": "hw_q2_Max_Rectangle_in_Binary_Matrix",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
+            "name": "Launch problem_solving_MaxSizeSquare",
+            "request": "launch",
+            "mainClass": "problem_solving_MaxSizeSquare",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
             "name": "Launch AddThemUp",
             "request": "launch",
             "mainClass": "AddThemUp",
