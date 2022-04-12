@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch hw_q2_Palindrome_Partitioning_II",
+            "request": "launch",
+            "mainClass": "hw_q2_Palindrome_Partitioning_II",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
             "name": "Launch q3_Longest_Increasing_Subsequence_optimized",
             "request": "launch",
             "mainClass": "q3_Longest_Increasing_Subsequence_optimized",
