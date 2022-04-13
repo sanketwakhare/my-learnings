@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch q1_Max_Absolute_Difference",
+            "request": "launch",
+            "mainClass": "q1_Max_Absolute_Difference",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
             "name": "Launch q2_Rain_Water_Trapped_space_optimized",
             "request": "launch",
             "mainClass": "q2_Rain_Water_Trapped_space_optimized",

@@ -44,7 +44,7 @@ Only possibility is i = 1 and j = 1. That gives answer = 0.
  * @param {Array} A array of integers
  * @return {Number} max value of |A[i]-A[j]| + |i-j|
  */
-const minAbsoluteDifference = (A) => {
+const maxAbsoluteDifference = (A) => {
 
     // this logic/approach is based on the mathematical equations
 
@@ -77,5 +77,5 @@ const minAbsoluteDifference = (A) => {
     return answer;
 }
 
-minAbsoluteDifference([6, 1, 8, 3, 4, 5]);
-minAbsoluteDifference([1, 3, -1]);
+maxAbsoluteDifference([6, 1, 8, 3, 4, 5]);
+maxAbsoluteDifference([1, 3, -1]);
