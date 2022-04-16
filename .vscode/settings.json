@@ -1,6 +1,7 @@
 {
     "java.project.sourcePaths": [
         "my_problems/mentor-session-3-interview-dsa",
+        "my_problems/day83-dsa-graph-V",
         "my_problems/day82-dsa-graph-IV",
         "my_problems/day81-dsa-graph-III",
         "my_problems/day80-dsa-graph-II",
@@ -39,7 +40,9 @@
         "my_problems/day46-dsa-binarysearch-I",
         "my_problems/day38-maths-combinatorics",
         "my_problems/day33-dsa-array2-problems",
+        "my_problems/day32-advancedbatchstarts-dsa-array1",
+        "my_problems/day10-array-dynamic-array-intro",
         "my_problems/day01-advance-test-practice",
-        "my_problems/day32-advancedbatchstarts-dsa-array1"
+        "my_problems/day11-array-subarray-intro"
     ]
 }

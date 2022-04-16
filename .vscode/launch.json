@@ -6,6 +6,34 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch hw_q1_Sheldon_and_Pair_of_Cities",
+            "request": "launch",
+            "mainClass": "hw_q1_Sheldon_and_Pair_of_Cities",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
+            "name": "Launch q10_Subarray_With_Least_Average",
+            "request": "launch",
+            "mainClass": "q10_Subarray_With_Least_Average",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
+            "name": "Launch q1_Floyd_Warshall_Algorithm",
+            "request": "launch",
+            "mainClass": "q1_Floyd_Warshall_Algorithm",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
+            "name": "Launch q3_Make_Circle",
+            "request": "launch",
+            "mainClass": "q3_Make_Circle",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
             "name": "Launch hw_q2_Max_Non_Negative_SubArray",
             "request": "launch",
             "mainClass": "hw_q2_Max_Non_Negative_SubArray",
