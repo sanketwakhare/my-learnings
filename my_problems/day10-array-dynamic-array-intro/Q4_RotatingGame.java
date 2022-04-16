@@ -1,4 +1,3 @@
-package com.abc;
 
 import java.util.Scanner;
 
@@ -16,13 +15,13 @@ public class Q4_RotatingGame {
 		String[] tokens = line1.split(" ");
 		int arrayLength = Integer.parseInt(tokens[0]);
 		int bRotations = Integer.parseInt(line2);
-		int actualRotations = (bRotations%arrayLength);
-		
-		for (int i = arrayLength - actualRotations+1 ; i < tokens.length; i++) {
+		int actualRotations = (bRotations % arrayLength);
+
+		for (int i = arrayLength - actualRotations + 1; i < tokens.length; i++) {
 			System.out.print(tokens[i] + " ");
 		}
-		for (int i = 1; i < arrayLength - actualRotations+1 ; i++) {
-			System.out.print(tokens[i]+" " );
+		for (int i = 1; i < arrayLength - actualRotations + 1; i++) {
+			System.out.print(tokens[i] + " ");
 		}
 
 		scanner.close();
