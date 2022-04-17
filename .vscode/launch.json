@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch hw_q2_Another_Coin_Problem",
+            "request": "launch",
+            "mainClass": "hw_q2_Another_Coin_Problem",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
+            "name": "Launch hw_q1_Seats",
+            "request": "launch",
+            "mainClass": "hw_q1_Seats",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
             "name": "Launch hw_q1_Sheldon_and_Pair_of_Cities",
             "request": "launch",
             "mainClass": "hw_q1_Sheldon_and_Pair_of_Cities",

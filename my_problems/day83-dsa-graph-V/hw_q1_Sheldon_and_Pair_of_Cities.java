@@ -91,8 +91,6 @@ Explanation 2:
  Distance between (2,3) will 1 if we take path 1->3.
  Distance between (1,2) will 2 if we take path 1->3->2. */
 
-import java.util.Arrays;
-
 public class hw_q1_Sheldon_and_Pair_of_Cities {
     public int[] solve(int A, int B, int C, int[] D, int[] E, int[] F, int[] G, int[] H) {
 
