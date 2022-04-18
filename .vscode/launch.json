@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch hw_q2_Primal_Power_Sieve_of_Eratosthenes",
+            "request": "launch",
+            "mainClass": "hw_q2_Primal_Power_Sieve_of_Eratosthenes",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
             "name": "Launch hw_q2_Minimize_the_absolute_difference",
             "request": "launch",
             "mainClass": "hw_q2_Minimize_the_absolute_difference",
