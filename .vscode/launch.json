@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch hw_q2_N_max_pair_combinations",
+            "request": "launch",
+            "mainClass": "hw_q2_N_max_pair_combinations",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
             "name": "Launch q3_Closest_min_max",
             "request": "launch",
             "mainClass": "q3_Closest_min_max",
