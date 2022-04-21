@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch Kadence_min_sum_subarray",
+            "request": "launch",
+            "mainClass": "Kadence_min_sum_subarray",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
             "name": "Launch hw_q2_N_max_pair_combinations",
             "request": "launch",
             "mainClass": "hw_q2_N_max_pair_combinations",
