@@ -28,8 +28,8 @@ public class class_q3_bfsTraversal {
                     for (int j = 0; j < dest.size(); j++) {
                         int nextNode = dest.get(j);
                         if (!visited[nextNode]) {
-                            queue.add(nextNode);
                             visited[nextNode] = true;
+                            queue.add(nextNode);
                         }
                     }
                 }
