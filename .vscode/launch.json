@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch hw_q1_Smallest_Prefix_String",
+            "request": "launch",
+            "mainClass": "hw_q1_Smallest_Prefix_String",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
             "name": "Launch hw_q3_Make_String_Pallindrome",
             "request": "launch",
             "mainClass": "hw_q3_Make_String_Pallindrome",
