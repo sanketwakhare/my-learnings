@@ -6,6 +6,62 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch hw_q3_Make_String_Pallindrome",
+            "request": "launch",
+            "mainClass": "hw_q3_Make_String_Pallindrome",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
+            "name": "Launch sudoku_practice",
+            "request": "launch",
+            "mainClass": "sudoku_practice",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
+            "name": "Launch leetcode_PalindromeLinkedList",
+            "request": "launch",
+            "mainClass": "leetcode_PalindromeLinkedList",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
+            "name": "Launch wildcard_leetcode",
+            "request": "launch",
+            "mainClass": "wildcard_leetcode",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
+            "name": "Launch hw_q2_Largest_Distance_between_nodes_of_a_Tree",
+            "request": "launch",
+            "mainClass": "hw_q2_Largest_Distance_between_nodes_of_a_Tree",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
+            "name": "Launch waterFlow",
+            "request": "launch",
+            "mainClass": "waterFlow",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
+            "name": "Launch maxDepth",
+            "request": "launch",
+            "mainClass": "maxDepth",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
+            "name": "Launch hw_q3_Maximum_Depth",
+            "request": "launch",
+            "mainClass": "hw_q3_Maximum_Depth",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
             "name": "Launch Kadence_min_sum_subarray",
             "request": "launch",
             "mainClass": "Kadence_min_sum_subarray",
