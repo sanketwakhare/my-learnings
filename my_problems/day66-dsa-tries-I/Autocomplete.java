@@ -1,11 +1,10 @@
-
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class q2_AutoComplete {
+public class Autocomplete {
 
     public static void main(String[] args) {
 
@@ -94,7 +93,7 @@ public class q2_AutoComplete {
         }
 
         @Override
-        public int compareTo(Pair o) {
+        public int compareTo(Autocomplete.Pair o) {
             // sort in descending order of weights
             return o.weight - this.weight;
         }
@@ -179,5 +178,4 @@ public class q2_AutoComplete {
         }
 
     }
-
-};
+}
