@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch hw_q2_Modified_Search",
+            "request": "launch",
+            "mainClass": "hw_q2_Modified_Search",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
+            "name": "Launch Autocomplete",
+            "request": "launch",
+            "mainClass": "Autocomplete",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
             "name": "Launch hw_q1_Smallest_Prefix_String",
             "request": "launch",
             "mainClass": "hw_q1_Smallest_Prefix_String",

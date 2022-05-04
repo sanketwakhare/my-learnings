@@ -1,0 +1,5 @@
+Allocate books
+GCD
+Rearrange Array
+Prime Sum
+Find Distance to travel from (A[0], B[0]) to (A[n-1], B[n-1]) in a 2d plane/grid where you can travel in 8 directions
