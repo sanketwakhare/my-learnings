@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch Main_Executor",
+            "request": "launch",
+            "mainClass": "Main_Executor",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
+            "name": "Launch hw_q4_Binary_Strings",
+            "request": "launch",
+            "mainClass": "hw_q4_Binary_Strings",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
             "name": "Launch hw_q1_Interleaving_String",
             "request": "launch",
             "mainClass": "hw_q1_Interleaving_String",
