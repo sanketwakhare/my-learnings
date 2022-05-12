@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch Main_MergeSort",
+            "request": "launch",
+            "mainClass": "Main_MergeSort",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
+            "name": "Launch Main_MergeSorter",
+            "request": "launch",
+            "mainClass": "Main_MergeSorter",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
             "name": "Launch Main_Executor",
             "request": "launch",
             "mainClass": "Main_Executor",
