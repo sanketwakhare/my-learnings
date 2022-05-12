@@ -45,7 +45,11 @@
         "my_problems/day11-array-subarray-intro",
         "my_problems/day10-array-dynamic-array-intro",
         "my_problems/day01-advance-test-practice",
+        "my_os_assignments/day03-threads/merge-sort-threaded",
         "my_os_assignments/day02-threads",
-        "my_os_assignments/day03-threads/merge-sort-threaded"
+        "my_os_assignments/day03-threads/added-subtractor"
+    ],
+    "cSpell.words": [
+        "Subtracter"
     ]
 }

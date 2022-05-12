@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch Main_AdderSubtractor",
+            "request": "launch",
+            "mainClass": "Main_AdderSubtractor",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
+            "name": "Launch Main_AddedSubtractor",
+            "request": "launch",
+            "mainClass": "Main_AddedSubtractor",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
             "name": "Launch Main_MergeSort",
             "request": "launch",
             "mainClass": "Main_MergeSort",
