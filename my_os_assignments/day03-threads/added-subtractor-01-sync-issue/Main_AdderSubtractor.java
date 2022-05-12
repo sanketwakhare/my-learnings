@@ -6,7 +6,6 @@ import java.util.concurrent.Future;
 /* Synchronization Issue when adder and subtractor are using shared data */
 public class Main_AdderSubtractor {
     public static void main(String[] args) {
-        System.out.println("Adder Subtractor Synchronization");
 
         Counter counter = new Counter();
         Adder adder = new Adder(counter);
@@ -23,7 +22,7 @@ public class Main_AdderSubtractor {
             e.printStackTrace();
         }
 
-        System.out.println(counter.value);
+        System.out.println("Counter value: " + counter.value);
         executor.shutdown();
     }
 }
