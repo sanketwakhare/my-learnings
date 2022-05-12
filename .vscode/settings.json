@@ -47,10 +47,7 @@
         "my_problems/day01-advance-test-practice",
         "my_os_assignments/day02-threads",
         "my_os_assignments/day03-threads/merge-sort-threaded",
-        "my_os_assignments/day03-threads/added-subtractor-02-petersons-soln",
-        "my_os_assignments/day03-threads/added-subtractor-01-sync-issue"
-    ],
-    "cSpell.words": [
-        "Subtracter"
+        "my_os_assignments/day03-threads/adder-subtractor-01-sync-issue",
+        "my_os_assignments/day03-threads/adder-subtractor-02-petersons-soln"
     ]
 }
