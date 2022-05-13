@@ -6,23 +6,30 @@ import java.util.Map;
 // TODO: solution not working
 public class q3_Make_Circle {
 
+    // Maintain a count variable and apply DFS considering source as any node
+    int count = 0;
+    int[] inDegree, outDegree;
+
     public int solve(String[] A) {
+
+        count = 0;
+        inDegree = new int[26];
+        outDegree = new int[26];
 
         // build adjacency list using HashMAp
         Map<Character, List<Integer>> map = buildAdjList(A);
 
-        // Maintain a count variable and apply DFS considering source as any node
-        int count = 0;
+        // if in degree and out degree are not matching, return false
+        for (int i = 0; i < 26; i++) {
+            if (inDegree[i] != outDegree[i])
+                return 0;
+        }
+
         boolean[] visited = new boolean[A.length];
         boolean flag = false;
 
-        for (int i = 0; i < A.length; i++) {
-            int source = i;
-            flag = dfsTraversal(source, A, map, visited, count);
-            if (flag == true) {
-                break;
-            }
-        }
+        int source = 0;
+        flag = dfsTraversal(source, A, map, visited);
 
         return flag == true ? 1 : 0;
     }
@@ -42,12 +49,17 @@ public class q3_Make_Circle {
                 list.add(i);
                 map.put(startChar, list);
             }
+
+            char endChar = str1.charAt(str1.length() - 1);
+
+            inDegree[startChar - 'a']++;
+            outDegree[endChar - 'a']++;
+
         }
         return map;
     }
 
-    private boolean dfsTraversal(int source, String[] A, Map<Character, List<Integer>> map, boolean[] visited,
-            int count) {
+    private boolean dfsTraversal(int source, String[] A, Map<Character, List<Integer>> map, boolean[] visited) {
 
         if (count == A.length && visited[source]) {
             return true;
@@ -65,10 +77,13 @@ public class q3_Make_Circle {
             }
             for (int i = 0; i < neighbors.size(); i++) {
                 int target = neighbors.get(i);
-                if (A[target] != A[source]) {
-                    if (dfsTraversal(target, A, map, visited, count)) {
+                if (A[target] != A[source]
+                        && ((!visited[target] && count < A.length) || (visited[target] && count == A.length))) {
+                    if (dfsTraversal(target, A, map, visited)) {
                         return true;
                     }
+                    count--;
+                    visited[target] = false;
                 }
             }
         }
