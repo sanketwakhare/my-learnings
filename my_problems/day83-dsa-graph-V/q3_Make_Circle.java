@@ -1,9 +1,62 @@
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+/* Make Circle */
 
-// TODO: solution not working
+/* Problem Description
+Given an array of strings A of size N, find if the given strings can be chained to form a circle.
+
+A string X can be put before another string Y in circle if the last character of X is same as first character of Y.
+
+NOTE: All strings consist of lower case characters.
+
+
+
+Problem Constraints
+1 <= N <= 105
+
+Sum of length of all strings <= 106
+
+
+
+Input Format
+First and only argument is a string array A of size N.
+
+
+
+Output Format
+Return an integer 1 if it is possible to chain the strings to form a circle else return 0.
+
+
+
+Example Input
+Input 1:
+
+ A = ["aab", "bac", "aaa", "cda"]
+Input 2:
+
+ A = ["abc", "cbc"]
+
+
+Example Output
+Output 1:
+
+ 1
+Output 2:
+
+ 0
+
+
+Example Explanation
+Explanation 1:
+
+ We can chain the strings aab -> bac -> cda -> aaa -> aab. So this forms a circle. So, output will be 1. 
+Explanation 2:
+
+ There is no way to chain the given strings such that they forms a circle. */
+
+import java.util.HashMap;
+import java.util.LinkedList;
+import java.util.Map;
+import java.util.Queue;
+
 public class q3_Make_Circle {
 
     // Maintain a count variable and apply DFS considering source as any node
@@ -16,8 +69,10 @@ public class q3_Make_Circle {
         inDegree = new int[26];
         outDegree = new int[26];
 
-        // build adjacency list using HashMAp
-        Map<Character, List<Integer>> map = buildAdjList(A);
+        // build adjacency list using HashMap.
+        // Use Queue to remove visited element and add it to end of Queue so that
+        // unvisited elements are visited first. Optimization to avoid TLE
+        Map<Character, Queue<Integer>> map = buildAdjList(A);
 
         // if in degree and out degree are not matching, return false
         for (int i = 0; i < 26; i++) {
@@ -25,18 +80,21 @@ public class q3_Make_Circle {
                 return 0;
         }
 
+        // initialize visited array
         boolean[] visited = new boolean[A.length];
         boolean flag = false;
 
+        // start with first string as source and perform DFS traversal
         int source = 0;
         flag = dfsTraversal(source, A, map, visited);
 
         return flag == true ? 1 : 0;
     }
 
-    private Map<Character, List<Integer>> buildAdjList(String[] A) {
+    private Map<Character, Queue<Integer>> buildAdjList(String[] A) {
 
-        Map<Character, List<Integer>> map = new HashMap<Character, List<Integer>>();
+        // maintain Queue of index of all strings for each starting characters
+        Map<Character, Queue<Integer>> map = new HashMap<Character, Queue<Integer>>();
 
         for (int i = 0; i < A.length; i++) {
 
@@ -45,46 +103,64 @@ public class q3_Make_Circle {
             if (map.containsKey(startChar)) {
                 map.get(startChar).add(i);
             } else {
-                ArrayList<Integer> list = new ArrayList<Integer>();
+                Queue<Integer> list = new LinkedList<Integer>();
                 list.add(i);
                 map.put(startChar, list);
             }
 
+            // maintain inDegree and outDegree array to eliminate the cases where they do
+            // not match.
+            // Observation is to form a circle, inDegree and outDegree of start and end
+            // characters of strings should be equal.
             char endChar = str1.charAt(str1.length() - 1);
-
             inDegree[startChar - 'a']++;
             outDegree[endChar - 'a']++;
-
         }
         return map;
     }
 
-    private boolean dfsTraversal(int source, String[] A, Map<Character, List<Integer>> map, boolean[] visited) {
+    private boolean dfsTraversal(int source, String[] A, Map<Character, Queue<Integer>> map, boolean[] visited) {
 
+        // base condition when count = no of nodes visited and last node is already
+        // visited
         if (count == A.length && visited[source]) {
             return true;
         }
 
         if (!visited[source]) {
+            // id nodes are unvisited, mark them as visited and increase the count
             visited[source] = true;
             count++;
 
+            // access source string and get the end character of source string
+            // get neighbors who start with end characters of source strings
             String sourceStr = A[source];
-            List<Integer> neighbors = map.get(sourceStr.charAt(sourceStr.length() - 1));
+            Queue<Integer> neighbors = map.get(sourceStr.charAt(sourceStr.length() - 1));
 
+            // if there are no neighbors, return false
             if (neighbors == null) {
                 return false;
             }
+            // iterate over each neighbor
             for (int i = 0; i < neighbors.size(); i++) {
-                int target = neighbors.get(i);
+
+                // remove neighbor from queue
+                int target = neighbors.poll();
+
+                // if no self loop
+                // if current count is < length if input array strings
+                // if count = length of input array string and target node is already visited,
+                // apply DFS
                 if (A[target] != A[source]
                         && ((!visited[target] && count < A.length) || (visited[target] && count == A.length))) {
                     if (dfsTraversal(target, A, map, visited)) {
+                        // if circle is formed, return true
                         return true;
                     }
-                    count--;
-                    visited[target] = false;
                 }
+                // add neighbor back to queue at last so that it will be visited last
+                // as we need to try other paths/possibilities
+                neighbors.add(target);
             }
         }
         return false;
@@ -106,74 +182,4 @@ public class q3_Make_Circle {
         }
 
     }
-
-    /*
-     * Topological sorting- not working
-     * public int solve(String[] A) {
-     * 
-     * List<List<Integer>> list = new ArrayList<List<Integer>>();
-     * int[] inDegree = new int[26];
-     * for (int i = 0; i < 26; i++) {
-     * list.add(new ArrayList<Integer>());
-     * inDegree[i] = -1;
-     * }
-     * 
-     * for (int i = 0; i < A.length; i++) {
-     * String str = A[i];
-     * int u = str.charAt(0) - 'a';
-     * int v = str.charAt(str.length() - 1) - 'a';
-     * if (u != v) {
-     * list.get(u).add(v);
-     * if (inDegree[u] == -1)
-     * inDegree[u] = 0;
-     * if (inDegree[v] == -1)
-     * inDegree[v] = 0;
-     * }
-     * }
-     * for (int i = 0; i < list.size(); i++) {
-     * int u = i;
-     * int v = -1;
-     * List<Integer> neighbors = list.get(i);
-     * if (neighbors.size() > 0 && inDegree[u] == -1) {
-     * inDegree[u] = 0;
-     * }
-     * for (int j = 0; j < neighbors.size(); j++) {
-     * v = neighbors.get(j);
-     * inDegree[v]++;
-     * }
-     * }
-     * 
-     * // Apply Topological sorting
-     * int noOfNodes = 0;
-     * Queue<Integer> queue = new LinkedList<Integer>();
-     * for (int i = 0; i < inDegree.length; i++) {
-     * if (inDegree[i] == 0) {
-     * queue.add(i);
-     * }
-     * if (inDegree[i] != -1) {
-     * noOfNodes++;
-     * }
-     * }
-     * 
-     * List<Integer> path = new ArrayList<Integer>();
-     * while (!queue.isEmpty()) {
-     * int x = queue.poll();
-     * path.add(x);
-     * List<Integer> neighbors = list.get(x);
-     * for (int i = 0; i < neighbors.size(); i++) {
-     * int child = neighbors.get(i);
-     * inDegree[child]--;
-     * if (inDegree[child] == 0) {
-     * queue.add(child);
-     * }
-     * }
-     * }
-     * 
-     * if (path.size() == noOfNodes) {
-     * return 0;
-     * }
-     * 
-     * return 1;
-     * }
-     */
 }
