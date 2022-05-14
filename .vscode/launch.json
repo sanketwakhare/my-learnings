@@ -6,6 +6,48 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch Main_AdderSubtractorFour",
+            "request": "launch",
+            "mainClass": "Main_AdderSubtractorFour",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
+            "name": "Launch Main_AdderSubtractorThree",
+            "request": "launch",
+            "mainClass": "Main_AdderSubtractorThree",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
+            "name": "Launch Main_AdderSubtractorTwo",
+            "request": "launch",
+            "mainClass": "Main_AdderSubtractorTwo",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
+            "name": "Launch Network_Delay_Time",
+            "request": "launch",
+            "mainClass": "Network_Delay_Time",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
+            "name": "Launch q3_Make_Circle_Kosaraju",
+            "request": "launch",
+            "mainClass": "q3_Make_Circle_Kosaraju",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
+            "name": "Launch Driver",
+            "request": "launch",
+            "mainClass": "Driver",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
             "name": "Launch Main_AdderSubtractor",
             "request": "launch",
             "mainClass": "Main_AdderSubtractor",

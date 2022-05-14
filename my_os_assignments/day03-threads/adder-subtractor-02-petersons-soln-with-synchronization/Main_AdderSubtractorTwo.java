@@ -4,12 +4,12 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
 
 /* Synchronization Issue when adder and subtractor are using shared data */
-public class Main_AdderSubtractor {
+public class Main_AdderSubtractorTwo {
     public static void main(String[] args) {
 
-        Counter counter = new Counter();
-        Adder adder = new Adder(counter);
-        Subtractor subtractor = new Subtractor(counter);
+        CounterTwo counter = new CounterTwo();
+        AdderTwo adder = new AdderTwo(counter);
+        SubtractorTwo subtractor = new SubtractorTwo(counter);
 
         ExecutorService executor = Executors.newFixedThreadPool(2);
         Future<?> adderFuture = executor.submit(adder);
@@ -22,7 +22,7 @@ public class Main_AdderSubtractor {
             e.printStackTrace();
         }
 
-        System.out.println("Counter value: " + counter.value);
+        System.out.println("Counter value: " + counter.getValue());
         executor.shutdown();
     }
 }

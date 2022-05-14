@@ -1,8 +1,8 @@
-public class Adder implements Runnable {
+public class AdderOne implements Runnable {
 
-    Counter counter;
+    CounterOne counter;
 
-    public Adder(Counter counter) {
+    public AdderOne(CounterOne counter) {
         this.counter = counter;
     }
 

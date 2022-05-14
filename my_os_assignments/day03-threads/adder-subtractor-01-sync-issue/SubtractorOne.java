@@ -1,8 +1,8 @@
-public class Subtractor implements Runnable {
+public class SubtractorOne implements Runnable {
 
-    Counter counter;
+    CounterOne counter;
 
-    public Subtractor(Counter counter) {
+    public SubtractorOne(CounterOne counter) {
         this.counter = counter;
     }
 
