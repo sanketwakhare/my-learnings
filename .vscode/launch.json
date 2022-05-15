@@ -6,6 +6,27 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch TaskManagerDriver",
+            "request": "launch",
+            "mainClass": "TaskManagerDriver",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
+            "name": "Launch hw_q2_Flip_Array",
+            "request": "launch",
+            "mainClass": "hw_q2_Flip_Array",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
+            "name": "Launch hw_q3_The_ship_company",
+            "request": "launch",
+            "mainClass": "hw_q3_The_ship_company",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
             "name": "Launch Main_AdderSubtractorFour",
             "request": "launch",
             "mainClass": "Main_AdderSubtractorFour",

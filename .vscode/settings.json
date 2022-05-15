@@ -51,6 +51,7 @@
         "my_os_assignments/day03-threads/adder-subtractor-02-petersons-soln-with-synchronization",
         "my_os_assignments/day03-threads/adder-subtractor-01-sync-issue",
         "my_os_assignments/day02-threads",
-        "leetcode"
+        "leetcode",
+        "scratch/task-manager"
     ]
 }
