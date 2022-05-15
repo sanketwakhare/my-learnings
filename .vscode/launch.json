@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch Driver_QuickSort",
+            "request": "launch",
+            "mainClass": "Driver_QuickSort",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
             "name": "Launch TaskManagerDriver",
             "request": "launch",
             "mainClass": "TaskManagerDriver",
