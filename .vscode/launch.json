@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch hw_q1_Repeat_and_Missing",
+            "request": "launch",
+            "mainClass": "hw_q1_Repeat_and_Missing",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
             "name": "Launch SpiralMatrix_III",
             "request": "launch",
             "mainClass": "SpiralMatrix_III",

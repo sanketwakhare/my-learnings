@@ -1,5 +1,6 @@
 {
     "java.project.sourcePaths": [
+        "scratch/task-manager",
         "my_problems/mentor-session-3-interview-dsa",
         "my_problems/day83-dsa-graph-V",
         "my_problems/day82-dsa-graph-IV",
@@ -52,6 +53,6 @@
         "my_os_assignments/day03-threads/adder-subtractor-01-sync-issue",
         "my_os_assignments/day02-threads",
         "leetcode",
-        "scratch/task-manager"
+        "my_problems/day16-maths-modules"
     ]
 }
