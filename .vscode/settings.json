@@ -42,6 +42,7 @@
         "my_problems/day38-maths-combinatorics",
         "my_problems/day33-dsa-array2-problems",
         "my_problems/day32-advancedbatchstarts-dsa-array1",
+        "my_problems/day16-maths-modules",
         "my_problems/day12-array-prefix-sum-intro",
         "my_problems/day11-array-subarray-intro",
         "my_problems/day10-array-dynamic-array-intro",
@@ -53,6 +54,6 @@
         "my_os_assignments/day03-threads/adder-subtractor-01-sync-issue",
         "my_os_assignments/day02-threads",
         "leetcode",
-        "my_problems/day16-maths-modules"
+        "my_problems/day18-sorting-intro"
     ]
 }
