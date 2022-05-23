@@ -4,15 +4,15 @@ import java.util.List;
 
 /* Noble Integer when all array elements are DISTINCT */
 /* Given an integer array A, find if an integer p exists in the array such that 
-the number of integers greater than p in the array equals p. */
+the number of integers less than p in the array equals p. */
 
 /* A = [-10 -5 1 3 4 5]
 3,4 and 5 are Noble integers */
-public class class_q2_Nobel_Integer {
+public class class_q2_Nobel_Integer_DISTINCT {
 
     public static void main(String[] args) {
         // array elements are DISTINCT here
-        class_q2_Nobel_Integer t1 = new class_q2_Nobel_Integer();
+        class_q2_Nobel_Integer_DISTINCT t1 = new class_q2_Nobel_Integer_DISTINCT();
         int[] A;
         {
             A = new int[] { 5, 4, 3, 1, -10, -5 };
