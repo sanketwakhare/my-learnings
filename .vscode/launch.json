@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch class_q2_Nobel_Integer",
+            "request": "launch",
+            "mainClass": "class_q2_Nobel_Integer",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
             "name": "Launch hw_q1_Minimum_Cost",
             "request": "launch",
             "mainClass": "hw_q1_Minimum_Cost",
