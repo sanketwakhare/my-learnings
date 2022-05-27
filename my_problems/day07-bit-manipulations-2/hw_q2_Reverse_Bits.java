@@ -5,6 +5,7 @@ public class hw_q2_Reverse_Bits {
 
         for (int i = 0; i < 32; i++) {
             if (checkBit(A, i)) {
+                // add value of the set bit to result in reverse direction
                 result += (((long) 1) << (31 - i));
             }
         }
