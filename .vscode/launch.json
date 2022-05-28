@@ -6,6 +6,69 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch hw_q3_Different_Bits_Sum_Pairwise",
+            "request": "launch",
+            "mainClass": "hw_q3_Different_Bits_Sum_Pairwise",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
+            "name": "Launch hw_q1_Interesting_Array",
+            "request": "launch",
+            "mainClass": "hw_q1_Interesting_Array",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
+            "name": "Launch q1_SingleNumber_II",
+            "request": "launch",
+            "mainClass": "q1_SingleNumber_II",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
+            "name": "Launch q3_Count_Set_Bits",
+            "request": "launch",
+            "mainClass": "q3_Count_Set_Bits",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
+            "name": "Launch q1_Single_Number_III",
+            "request": "launch",
+            "mainClass": "q1_Single_Number_III",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
+            "name": "Launch hw_q2_Reverse_Bits",
+            "request": "launch",
+            "mainClass": "hw_q2_Reverse_Bits",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
+            "name": "Launch hw_q1_Smallest_XOR",
+            "request": "launch",
+            "mainClass": "hw_q1_Smallest_XOR",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
+            "name": "Launch LongestValidParenthesis",
+            "request": "launch",
+            "mainClass": "LongestValidParenthesis",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
+            "name": "Launch hw_q2_Largest_Number",
+            "request": "launch",
+            "mainClass": "hw_q2_Largest_Number",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
             "name": "Launch class_q4_min_pair_difference_Possible",
             "request": "launch",
             "mainClass": "class_q4_min_pair_difference_Possible",
