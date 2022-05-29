@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch class_q10_Count_subArrays_with_sum_0",
+            "request": "launch",
+            "mainClass": "class_q10_Count_subArrays_with_sum_0",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
+            "name": "Launch class_q10_Count_SubArrays_with_Sum_0",
+            "request": "launch",
+            "mainClass": "class_q10_Count_SubArrays_with_Sum_0",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
             "name": "Launch class_q9_binary_subarray_with_sum_0",
             "request": "launch",
             "mainClass": "class_q9_binary_subarray_with_sum_0",
