@@ -1,6 +1,10 @@
 import java.util.HashMap;
 import java.util.Map;
 
+/* Find frequency of every element in the array*/
+/**
+ * Build HashMap with value as frequency
+ */
 public class class_q1_find_frequency_of_elements {
 
     public void findFreq(int[] A) {
