@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch class_q5_count_UNIQUE_elements",
+            "request": "launch",
+            "mainClass": "class_q5_count_UNIQUE_elements",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
             "name": "Launch class_q4_count_Distinct_elements",
             "request": "launch",
             "mainClass": "class_q4_count_Distinct_elements",
