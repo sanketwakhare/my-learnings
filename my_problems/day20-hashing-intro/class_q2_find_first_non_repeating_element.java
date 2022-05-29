@@ -1,4 +1,4 @@
-import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.Map;
 
 /* Find First Non Repeating Element in array */
@@ -8,7 +8,7 @@ public class class_q2_find_first_non_repeating_element {
 
     public int firstNonRepeating(int[] A) {
 
-        Map<Integer, Integer> map = new HashMap<Integer, Integer>();
+        Map<Integer, Integer> map = new LinkedHashMap<Integer, Integer>();
 
         for (int ele : A) {
             int freq = map.getOrDefault(ele, 0);
@@ -32,7 +32,7 @@ public class class_q2_find_first_non_repeating_element {
         {
             A = new int[] { 1, 3, 6, 3, 5, 4, 2, 1, 2, 4, 1, 2, 4, 4, 6 };
             int ele = t1.firstNonRepeating(A);
-            System.out.println(ele);
+            System.out.println(ele); // 5
         }
     }
 }
