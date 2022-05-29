@@ -43,7 +43,11 @@ public class class_q10_Count_subArrays_with_sum_0 {
         int[] A;
         {
             A = new int[] { 5, -1, -2, 3, 2, -2, -4, 4 };
-            System.out.println(t1.countSubArrays(A));
+            System.out.println(t1.countSubArrays(A)); // 6
+        }
+        {
+            A = new int[] { 3, 2, 3, -5, 2, 3, 2, -2, -5, 2, 3, 2, -5 };
+            System.out.println(t1.countSubArrays(A)); // 16
         }
 
     }
