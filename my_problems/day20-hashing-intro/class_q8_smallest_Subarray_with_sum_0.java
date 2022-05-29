@@ -2,6 +2,10 @@ import java.util.HashMap;
 import java.util.Map;
 
 /* Find Smallest length subarray with sum = 0 */
+/**
+ * TC: O(N)
+ * SC: O(N)
+ */
 public class class_q8_smallest_Subarray_with_sum_0 {
 
     public int[] smallestSubArraySumZero(int[] A) {
