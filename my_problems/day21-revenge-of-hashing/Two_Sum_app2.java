@@ -1,6 +1,7 @@
 import java.util.HashMap;
 import java.util.Map;
 
+/* 2 Sum */
 /* Approach 1 -with HashMap with frequencies */
 public class Two_Sum_app2 {
 

@@ -2,6 +2,8 @@ import java.util.HashMap;
 import java.util.Map;
 
 /* Distinct Numbers in Window */
+/* TC: O(N) */
+/* SC: O(B) - map of size B */
 public class q4_Distinct_Numbers_In_Window {
     public int[] dNums(int[] A, int B) {
         int n = A.length;

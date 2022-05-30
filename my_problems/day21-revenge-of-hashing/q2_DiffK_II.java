@@ -1,6 +1,7 @@
 import java.util.HashSet;
 import java.util.Set;
 
+/* Diff K */
 /* A[i] - A[j] = K And i!=j */
 public class q2_DiffK_II {
 

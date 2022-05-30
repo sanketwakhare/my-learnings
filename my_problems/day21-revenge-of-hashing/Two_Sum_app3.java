@@ -1,6 +1,7 @@
 import java.util.HashSet;
 import java.util.Set;
 
+/* 2 Sum */
 /* use HashSet when we just have check if there exist a pair */
 public class Two_Sum_app3 {
 
