@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch q3_Longest_Consecutive_Sequence",
+            "request": "launch",
+            "mainClass": "q3_Longest_Consecutive_Sequence",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
             "name": "Launch q2_DiffK_II",
             "request": "launch",
             "mainClass": "q2_DiffK_II",
