@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch q4_Distinct_Numbers_In_Window",
+            "request": "launch",
+            "mainClass": "q4_Distinct_Numbers_In_Window",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
             "name": "Launch class_q10_Count_subArrays_with_sum_0",
             "request": "launch",
             "mainClass": "class_q10_Count_subArrays_with_sum_0",
