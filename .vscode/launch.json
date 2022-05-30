@@ -6,6 +6,34 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch Two_Sum_app3",
+            "request": "launch",
+            "mainClass": "Two_Sum_app3",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
+            "name": "Launch Two_Sum_app2",
+            "request": "launch",
+            "mainClass": "Two_Sum_app2",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
+            "name": "Launch Two_Sum_app1",
+            "request": "launch",
+            "mainClass": "Two_Sum_app1",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
+            "name": "Launch Two_Sum",
+            "request": "launch",
+            "mainClass": "Two_Sum",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
             "name": "Launch q4_Distinct_Numbers_In_Window",
             "request": "launch",
             "mainClass": "q4_Distinct_Numbers_In_Window",
