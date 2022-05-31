@@ -35,10 +35,9 @@ public class class_q8_smallest_Subarray_with_sum_0 {
                     start = map.get(pf[i]) + 1;
                     end = i;
                 }
-            } else {
-                // store latest occurrence till now
-                map.put(pf[i], i);
             }
+            // store latest occurrence till now
+            map.put(pf[i], i);
         }
 
         // return empty array if subarray not present
@@ -60,7 +59,7 @@ public class class_q8_smallest_Subarray_with_sum_0 {
         class_q8_smallest_Subarray_with_sum_0 t1 = new class_q8_smallest_Subarray_with_sum_0();
         int[] A, out;
         {
-            A = new int[] { 8, -19, 8, 2, -8, 19, 5, -2, -23 };
+            A = new int[] { 8, -19, 8, 0, 2, -8, 19, 5, -2, -23 };
             out = t1.smallestSubArraySumZero(A);
             ArrayUtils.printArray(out); // empty array
         }
