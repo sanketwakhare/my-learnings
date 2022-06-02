@@ -79,12 +79,15 @@ const compareSortedSubarray_approach2 = (A, B) => {
         // for l1 to r2, insert into hashMap
         for (let j = 0; j < size1; j++) {
             // insert elements in hashMap and update frequencies
+
+            // increase frequency
             if (hashMap.has(A[l1 + j])) {
                 hashMap.set(A[l1 + j], hashMap.get(A[l1 + j]) + 1);
             } else {
                 hashMap.set(A[l1 + j], 1);
             }
 
+            // decrease frequency
             if (hashMap.has(A[l2 + j])) {
                 hashMap.set(A[l2 + j], hashMap.get(A[l2 + j]) - 1);
             } else {
