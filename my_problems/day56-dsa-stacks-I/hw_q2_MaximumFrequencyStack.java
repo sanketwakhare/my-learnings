@@ -1,6 +1,6 @@
 /* Maximum Frequency stack */
 
-/** 
+/*
  * Problem Description
 
 You are given a matrix A which represent operations of size N x 2. Assume initially you have a stack-like data structure you have to perform operations on it.
@@ -68,16 +68,16 @@ import java.util.Stack;
  * TC: O(N)
  * SC: O(N)
  */
-public class hw_2_MaximumFrequencyStack {
+public class hw_q2_MaximumFrequencyStack {
 
     int maxFreq;
     Map<Integer, Integer> eleFreqMap;
     Map<Integer, Stack<Integer>> stackFreqMap;
 
-    public hw_2_MaximumFrequencyStack() {
+    public hw_q2_MaximumFrequencyStack() {
         maxFreq = 0;
-        eleFreqMap = new HashMap<Integer, Integer>();
-        stackFreqMap = new HashMap<Integer, Stack<Integer>>();
+        eleFreqMap = new HashMap<>();
+        stackFreqMap = new HashMap<>();
     }
 
     public int push(int x) {
@@ -99,7 +99,7 @@ public class hw_2_MaximumFrequencyStack {
             stack = stackFreqMap.get(currentFreqOfX);
             stack.push(x);
         } else {
-            stack = new Stack<Integer>();
+            stack = new Stack<>();
             stack.push(x);
         }
         stackFreqMap.put(currentFreqOfX, stack);
@@ -138,10 +138,9 @@ public class hw_2_MaximumFrequencyStack {
 
     public ArrayList<Integer> solve(ArrayList<ArrayList<Integer>> A) {
 
-        ArrayList<Integer> outputList = new ArrayList<Integer>();
+        ArrayList<Integer> outputList = new ArrayList<>();
 
-        for (int i = 0; i < A.size(); i++) {
-            ArrayList<Integer> currentRec = A.get(i);
+        for (ArrayList<Integer> currentRec : A) {
             int operation = currentRec.get(0);
             int x = currentRec.get(1);
 
@@ -164,7 +163,7 @@ public class hw_2_MaximumFrequencyStack {
 
         // test 1
         // expected answer [-1 -1 -1 -1 -1 -1 5 7 5 4 ]
-        ArrayList<ArrayList<Integer>> A = new ArrayList<ArrayList<Integer>>();
+        ArrayList<ArrayList<Integer>> A = new ArrayList<>();
         A.add(buildListElement(1, 5));
         A.add(buildListElement(1, 7));
         A.add(buildListElement(1, 5));
@@ -175,7 +174,7 @@ public class hw_2_MaximumFrequencyStack {
         A.add(buildListElement(2, 0));
         A.add(buildListElement(2, 0));
         A.add(buildListElement(2, 0));
-        hw_2_MaximumFrequencyStack minFreStackMain1 = new hw_2_MaximumFrequencyStack();
+        hw_q2_MaximumFrequencyStack minFreStackMain1 = new hw_q2_MaximumFrequencyStack();
         ArrayList<Integer> outList = minFreStackMain1.solve(A);
         System.out.println();
         for (Integer result : outList) {
@@ -184,11 +183,11 @@ public class hw_2_MaximumFrequencyStack {
 
         // test 2
         // expected answer [-1 5 -1 ]
-        A = new ArrayList<ArrayList<Integer>>();
+        A = new ArrayList<>();
         A.add(buildListElement(1, 5));
         A.add(buildListElement(2, 0));
         A.add(buildListElement(1, 4));
-        hw_2_MaximumFrequencyStack minFreStackMain2 = new hw_2_MaximumFrequencyStack();
+        hw_q2_MaximumFrequencyStack minFreStackMain2 = new hw_q2_MaximumFrequencyStack();
         outList = minFreStackMain2.solve(A);
         System.out.println();
         for (Integer result : outList) {
@@ -197,7 +196,7 @@ public class hw_2_MaximumFrequencyStack {
 
         // test 3
         // expected answer [-1 4 -1 9 -1 -1 6 ]
-        A = new ArrayList<ArrayList<Integer>>();
+        A = new ArrayList<>();
         A.add(buildListElement(1, 4));
         A.add(buildListElement(2, 0));
         A.add(buildListElement(1, 9));
@@ -205,7 +204,7 @@ public class hw_2_MaximumFrequencyStack {
         A.add(buildListElement(1, 6));
         A.add(buildListElement(1, 6));
         A.add(buildListElement(2, 0));
-        hw_2_MaximumFrequencyStack minFreStackMain3 = new hw_2_MaximumFrequencyStack();
+        hw_q2_MaximumFrequencyStack minFreStackMain3 = new hw_q2_MaximumFrequencyStack();
         outList = minFreStackMain3.solve(A);
         System.out.println();
         for (Integer result : outList) {
@@ -214,7 +213,7 @@ public class hw_2_MaximumFrequencyStack {
 
         // test 4
         // expected answer [-1 2 -1 -1 7 2 -1 -1 -1 7 1 4 ]
-        A = new ArrayList<ArrayList<Integer>>();
+        A = new ArrayList<>();
         A.add(buildListElement(1, 2));
         A.add(buildListElement(2, 0));
         A.add(buildListElement(1, 2));
@@ -227,7 +226,7 @@ public class hw_2_MaximumFrequencyStack {
         A.add(buildListElement(2, 0));
         A.add(buildListElement(2, 0));
         A.add(buildListElement(2, 0));
-        hw_2_MaximumFrequencyStack minFreStackMain4 = new hw_2_MaximumFrequencyStack();
+        hw_q2_MaximumFrequencyStack minFreStackMain4 = new hw_q2_MaximumFrequencyStack();
         outList = minFreStackMain4.solve(A);
         System.out.println();
         for (Integer result : outList) {
@@ -237,7 +236,7 @@ public class hw_2_MaximumFrequencyStack {
     }
 
     private static ArrayList<Integer> buildListElement(int operation, int x) {
-        ArrayList<Integer> list = new ArrayList<Integer>();
+        ArrayList<Integer> list = new ArrayList<>();
         list.add(operation);
         list.add(x);
         return list;
