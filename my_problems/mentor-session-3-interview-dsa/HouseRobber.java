@@ -1,7 +1,7 @@
 import java.util.Arrays;
 
 /* House Robber Problem solution */
-public class Solution {
+public class HouseRobber {
 
     public int getMax(int n, int[] nums, int[] dp) {
 
@@ -27,7 +27,7 @@ public class Solution {
 
     public static void main(String[] args) {
 
-        Solution o = new Solution();
+        HouseRobber o = new HouseRobber();
 
         {
             int[] nums = new int[] { 1, 2, 3, 1 };

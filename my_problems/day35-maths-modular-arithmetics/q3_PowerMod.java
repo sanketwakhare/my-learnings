@@ -1,4 +1,4 @@
-public class Solution {
+public class q3_PowerMod {
 
     public long myPower(long a,long n, long m) {
         if(n==0) {

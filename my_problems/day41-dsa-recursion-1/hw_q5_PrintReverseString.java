@@ -31,7 +31,7 @@ Explanation 1:
 import java.lang.*;
 import java.util.*;
 
-public class Main {
+public class hw_q5_PrintReverseString {
 
     private static String reverseRecursive(String inp) {
 

@@ -1,5 +1,5 @@
 /**Accepted Solution in Java */
-public class Solution {
+public class q5_pairSumDivisibleByM {
     public int solve(int[] A, int B) {
 
         int p = 1000000007;

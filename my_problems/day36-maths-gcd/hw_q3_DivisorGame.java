@@ -38,7 +38,7 @@ Explanation 1:
 Explanation 2:
  Only 4 is a positive integer less than equal to 6 which is divisible by 1 and 4.
  */
- public class Solution {
+ public class hw_q3_DivisorGame {
 
     //  gcd function
     public int myGcd(int a, int b) {

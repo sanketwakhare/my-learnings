@@ -39,7 +39,7 @@ Explanation 2:
  Second player attack first player twice. [0, 1, 0]
  */
 
- public class Solution {
+ public class q3_PubG {
     
     // custom gcd function using gcd(a,b) = gcd(a,b%a) where b>a
     public int myGcd(int a, int b) {

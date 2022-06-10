@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/adder-subtractor-01-sync-issue" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/adder-subtractor-02-petersons-soln-with-synchronization" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/adder-subtractor-03-semaphore-soln" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/merge-sort-threaded" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/quick-sort-threaded" isTestSource="false" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>

@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="task-manager">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/scratch/task-manager.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

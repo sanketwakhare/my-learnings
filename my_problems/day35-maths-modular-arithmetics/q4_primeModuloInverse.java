@@ -61,7 +61,7 @@ Explanation 2:
  Similarly, (6 * 4) % 23 = 1.
  */
 
-public class Solution {
+public class q4_primeModuloInverse {
     public long myPower(long a,long n, long m) {
         if(n==0) {
             return 1 % m;

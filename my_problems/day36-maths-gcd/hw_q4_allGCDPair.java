@@ -43,7 +43,7 @@ Explanation 2:
  */
 
 import java.lang.*;
-public class Solution {
+public class hw_q4_allGCDPair {
     public int[] solve(int[] A) {
 
         // Observation: for n elements there are n*n pairs

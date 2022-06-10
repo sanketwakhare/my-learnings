@@ -1,6 +1,5 @@
 {
     "java.project.sourcePaths": [
-        "system-design/lld",
         "scratch/task-manager",
         "my_problems/mentor-session-3-interview-dsa",
         "my_problems/day83-dsa-graph-V",
@@ -60,6 +59,6 @@
         "my_os_assignments/day03-threads/adder-subtractor-01-sync-issue",
         "my_os_assignments/day02-threads",
         "leetcode",
-        "scratch/trieimpl"
+        "my_problems/day45-dsa-sorting-3"
     ]
 }

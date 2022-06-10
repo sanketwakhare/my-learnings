@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/day01-advance-test-practice" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/day05-introtoprobsolving" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/day06-bit-manipulations" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/day07-bit-manipulations-2" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/day09-time-complexity-2" isTestSource="false" packagePrefix="com.abc" />
+      <sourceFolder url="file://$MODULE_DIR$/day10-array-dynamic-array-intro" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/day11-array-subarray-intro" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/day12-array-prefix-sum-intro" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/day13-array-prefix-sum-carry-forward-2" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/day14-2d-matrix" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/day15-array-problems" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/day16-maths-modules" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/day17-maths-logical" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/day18-sorting-intro" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/day20-hashing-intro" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/day21-revenge-of-hashing" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/day22-strings" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/day23-recursion-I" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/day24-recursion-II" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/day25-recursion-III" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/day26-subsets" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/day27-subsequences" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/day28-problem-solving-1" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/day30-problem-solving-paridhi-mam" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/day31-oops-linkedlist" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/day32-advancedbatchstarts-dsa-array1" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/day33-dsa-array2-problems" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/day34-dsa-array3-problems" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/day35-maths-modular-arithmetics" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/day36-maths-gcd" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/day37-maths-prime" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/day38-maths-combinatorics" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/day39-bit-manipulations-1" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/day40-bit-manipulations-2" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/day41-dsa-recursion-1" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/day42-dsa-recursion-2" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/day43-dsa-sorting-1" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/day44-dsa-sorting-2" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/day45-dsa-sorting-3" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/day46-dsa-binarysearch-I" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/day47-dsa-binarysearch-II" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/day48-dsa-binarysearch-III" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/day49-dsa-two-pointers" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/day50-dsa-hashing-I" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/day51-dsa-hashing-II" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/day52-dsa-string-pattern-matching-I" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/day53-dsa-problem-on-string-with-hashmaps" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/day54-dsa-linked-list-I" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/day55-dsa-linked-list-II" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/day55-dsa-linked-list-III" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/day56-dsa-stacks-I" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/day57-dsa-stacks-II" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/day58-dsa-queues-I" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/day59-dsa-queues-II" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/day60-dsa-trees-I" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/day61-dsa-trees-II" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/day62-dsa-trees-bst-I" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/day63-dsa-trees-bst-II" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/day64-dsa-trees-V-problem-solving" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/day66-dsa-tries-I" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/day67-dsa-tries-II" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/day68-dsa-heaps-I" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/day69-dsa-heaps-II" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/day70-dsa-greedy-I" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/day71-dsa-backtracking-I" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/day72-dsa-backtracking-II" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/day73-dsa-dp-I" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/day74-dsa-dp-II" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/day75-dsa-dp-III" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/day76-dsa-dp-IV" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/day77-dsa-dp-V" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/day78-dsa-dp-VI" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/day79-dsa-graph-I" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/day80-dsa-graph-II" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/day81-dsa-graph-III" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/day82-dsa-graph-IV" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/day83-dsa-graph-V" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/mentor-session-3-interview-dsa" isTestSource="false" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>

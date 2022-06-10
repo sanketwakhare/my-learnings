@@ -2,7 +2,7 @@
  * Iterative solution
  * TC: O(log(max(a,b)))
  */
-public class Solution {
+public class q1_GCD {
 
     // custom function to calculate the GCD
     public int myGcd(int a, int b) {
