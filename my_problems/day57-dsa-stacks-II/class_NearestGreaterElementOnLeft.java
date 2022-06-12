@@ -53,8 +53,8 @@ public class class_NearestGreaterElementOnLeft {
         // test 2: A = [4, 5, 2, 10, 8, 7, 9, 8, 15, 4, 3, 20, 12, 1, 2, 3]
         // expected answer: -1 -1 5 -1 10 8 10 9 -1 15 4 -1 20 12 12 12
         Integer[] A2 = { 4, 5, 2, 10, 8, 7, 9, 8, 15, 4, 3, 20, 12, 1, 2, 3 };
-        ArrayList<Integer> list2 = new ArrayList<>(Arrays.asList(A2));
-        ArrayList<Integer> outList2 = prevGreater(list2);
+        list1 = new ArrayList<>(Arrays.asList(A2));
+        ArrayList<Integer> outList2 = prevGreater(list1);
         System.out.println();
         for (Integer result : outList2) {
             System.out.print(result + " ");
@@ -63,8 +63,8 @@ public class class_NearestGreaterElementOnLeft {
         // test 3: A = [2, 13, 8, 5, 4, 7]
         // expected answer: -1 -1 13 8 5 8
         Integer[] A3 = { 2, 13, 8, 5, 4, 7 };
-        ArrayList<Integer> list3 = new ArrayList<>(Arrays.asList(A3));
-        ArrayList<Integer> outList3 = prevGreater(list3);
+        list1 = new ArrayList<>(Arrays.asList(A3));
+        ArrayList<Integer> outList3 = prevGreater(list1);
         System.out.println();
         for (Integer result : outList3) {
             System.out.print(result + " ");
