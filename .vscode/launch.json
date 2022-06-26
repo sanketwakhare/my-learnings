@@ -3,6 +3,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch class_aggressiveCows",
+            "request": "launch",
+            "mainClass": "class_aggressiveCows",
+            "projectName": "namaste_js_fdce26b9"
+        },
+        {
+            "type": "java",
             "name": "Launch q1_sum_the_difference",
             "request": "launch",
             "mainClass": "q1_sum_the_difference",
