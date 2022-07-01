@@ -57,3 +57,20 @@ const fizzBuzz = (A) => {
 }
 
 fizzBuzz(20);
+
+
+// get nth fib number
+function fizzBuzz2(A) {
+    const divisibleByThree = A % 3 === 0;
+    const divisibleByFive = A % 5 === 0;
+    if (divisibleByThree && divisibleByFive) {
+        return 'FizzBuzz';
+    } else if (divisibleByThree) {
+        return 'Fizz';
+    } else if (divisibleByFive) {
+        return 'Buzz';
+    }
+    return String(A);
+}
+
+fizzBuzz2(20);
