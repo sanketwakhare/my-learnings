@@ -5,6 +5,18 @@
 //				this.data = data
 //				this.next = null
 //			}
+
+/*Proof:
+M + K = distance covered by slow
+
+2 (M +K ) = distance covered by fast
+M + N + K  = distance covered by fast
+2 (M +K) = M + N + K
+2 M + 2 K = M + K + N
+M + K = N
+M = N - K
+*/
+
 module.exports = {
     //param A : head node of linked list
     //return the head node in the linked list
