@@ -1,0 +1,55 @@
+The Classics:
+select m.movie_name
+from movies m INNER JOIN statistics s 
+WHERE m.movie_id = s.movie_id AND (s.times_played > 1000 )
+AND m.release_year < 2000
+GROUP BY s.movie_id
+HAVING AVG(s.rating) > 3 ;
+
+Highly Paid:
+SELECT emp.employee_name from employees emp
+where emp.employee_id IN (
+    SELECT employee_id from salaries
+        where salary IN (
+            select MAX(salary) from salaries group by department_id
+        )
+)
+order by emp.employee_id;
+
+Not Alone:
+SELECT employee_name from employees e Inner Join salaries s
+ON e.employee_id = s.employee_id where s.department_id IN(
+SELECT department_id from salaries where employee_id IN 
+(SELECT employee_id from employees where employee_name LIKE '%q%')
+);
+
+Here in India:
+select e.employee_name,
+    s.salary,
+    d.department_name
+FROM employees e INNER JOIN salaries s ON e.employee_id = s.employee_id
+                INNER JOIN departments d ON s.department_id = d.department_id
+
+WHERE s.salary > 10000 AND d.department_location = "India";
+
+SQL U3:
+SELECT Name from q3_employees as emp, q3_salaries as sal
+    WHERE emp.PanId = sal.PanId
+    ORDER BY sal.Salary DESC
+    LIMIT 1
+	
+Special Test:
+SELECT s.student_name, stat.test_score, d.department_name 
+FROM 
+    students s INNER JOIN test_stats stat ON s.student_id = stat.student_id
+    INNER JOIN tests t ON stat.test_id = t.test_id
+    INNER JOIN departments d ON t.test_id = d.department_id
+WHERE s.student_id IN(
+        SELECT student_id from test_stats WHERE test_score >=90 AND test_id IN(
+        SELECT test_id FROM tests WHERE test_type = "hiring" )
+    );
+	
+The Short Straw:
+select d.department_location, MIN(salary) as min_sal from salaries s INNER JOIN departments d
+ON s.department_id = d.department_id
+GROUP BY d.department_location;
