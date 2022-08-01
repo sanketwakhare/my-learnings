@@ -75,3 +75,17 @@ class SegmentTree {
         return this.left.sum(start, Math.min(mid, end)) + this.right.sum(Math.max(mid + 1, start), end);
     }
 }
+
+
+//A = [2, 4, 5, 7]
+//
+//
+//              23[0,3]
+//            /           \
+//        6[0,1]          17[2,3]
+//        /   \          /    \
+//    2[0,0]  4[1,1]  10[2,2]  7[3,3]
+//
+//
+//[0,2] = [0,3] - [3,3] = 18 - 7 = 11
+//[0,2] = mid = 1
