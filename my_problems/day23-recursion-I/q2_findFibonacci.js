@@ -59,7 +59,7 @@ const findAthFibonacci = function (A) {
     // call recursive function
     const ans = fib(A);
 
-    console.log(`fb at index ${A} = ${ans}`);
+    console.log(`${A}th Fibonacci number = ${ans}`);
     return ans;
 
 }

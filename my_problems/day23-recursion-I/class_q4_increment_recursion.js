@@ -13,9 +13,6 @@ const increment = (N) => {
 
     increment(N - 1);
 
-    /* use setTimeout to not block the main thread/ avoid the stack overflow error */
-    setTimeout(function () { increment(N - 1) }, 1);
-
     // print current N
     console.log(N);
 }
