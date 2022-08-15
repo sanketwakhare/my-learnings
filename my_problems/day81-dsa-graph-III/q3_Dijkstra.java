@@ -94,7 +94,7 @@ import java.util.PriorityQueue;
 
 public class q3_Dijkstra {
 
-    class DistanceToNodePair implements Comparable<DistanceToNodePair> {
+    static class DistanceToNodePair implements Comparable<DistanceToNodePair> {
         int dist;
         int node;
 
@@ -108,7 +108,7 @@ public class q3_Dijkstra {
         }
     }
 
-    class NodeToWeightPair {
+    static class NodeToWeightPair {
         int node;
         int weight;
 
@@ -139,8 +139,7 @@ public class q3_Dijkstra {
             if (d == dist[node]) {
                 // traverse all the neighboring nodes of the node x.node
                 List<NodeToWeightPair> neighbors = list.get(node);
-                for (int i = 0; i < neighbors.size(); i++) {
-                    NodeToWeightPair temp = neighbors.get(i);
+                for (NodeToWeightPair temp : neighbors) {
                     int t_node = temp.node;
                     int t_weight = temp.weight;
 
@@ -163,14 +162,14 @@ public class q3_Dijkstra {
 
     public List<List<NodeToWeightPair>> buildAdjList(int A, int[][] B) {
 
-        List<List<NodeToWeightPair>> list = new ArrayList<List<NodeToWeightPair>>();
+        List<List<NodeToWeightPair>> list = new ArrayList<>();
         for (int i = 0; i < A; i++) {
-            list.add(new ArrayList<NodeToWeightPair>());
+            list.add(new ArrayList<>());
         }
-        for (int i = 0; i < B.length; i++) {
-            int u = B[i][0];
-            int v = B[i][1];
-            int weight = B[i][2];
+        for (int[] nodesInfo : B) {
+            int u = nodesInfo[0];
+            int v = nodesInfo[1];
+            int weight = nodesInfo[2];
             list.get(u).add(new NodeToWeightPair(v, weight));
             list.get(v).add(new NodeToWeightPair(u, weight));
         }

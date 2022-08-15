@@ -5,7 +5,7 @@ import java.util.List;
 public class Kruskals_algorithm {
 
     // custom object type to store the edge and weight information
-    class Pair implements Comparable<Pair> {
+    static class Pair implements Comparable<Pair> {
         int u;
         int v;
         int weight;
@@ -36,11 +36,11 @@ public class Kruskals_algorithm {
         int minCost = 0;
 
         // build edge list
-        List<Pair> list = new ArrayList<Pair>();
-        for (int i = 0; i < B.length; i++) {
-            int u = B[i][0];
-            int v = B[i][1];
-            int weight = B[i][2];
+        List<Pair> list = new ArrayList<>();
+        for (int[] nodesInfo : B) {
+            int u = nodesInfo[0];
+            int v = nodesInfo[1];
+            int weight = nodesInfo[2];
             list.add(new Pair(u, v, weight));
         }
         // sort the edges by weight in ascending order
@@ -49,7 +49,7 @@ public class Kruskals_algorithm {
 
         // initialize parent array. this means every node is parent of itself[each node
         // represents unique connect component initially]
-        int parent[] = new int[A + 1];
+        int[] parent = new int[A + 1];
         for (int i = 1; i <= A; i++) {
             parent[i] = i;
         }

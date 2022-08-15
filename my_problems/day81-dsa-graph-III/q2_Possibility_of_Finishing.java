@@ -80,7 +80,7 @@ public class q2_Possibility_of_Finishing {
         int[] inDegree = new int[A + 1];
         List<List<Integer>> list = buildAdjList(A, B, C, inDegree);
 
-        PriorityQueue<Integer> queue = new PriorityQueue<Integer>();
+        PriorityQueue<Integer> queue = new PriorityQueue<>();
         for (int i = 1; i <= A; i++) {
             // add all the nodes with in degree 0 into priority queue(min heap)
             if (inDegree[i] == 0)
@@ -88,13 +88,12 @@ public class q2_Possibility_of_Finishing {
         }
 
         // BFS traversal
-        List<Integer> path = new ArrayList<Integer>();
+        List<Integer> path = new ArrayList<>();
         while (!queue.isEmpty()) {
             int x = queue.poll();
             path.add(x);
             List<Integer> neighbors = list.get(x);
-            for (int i = 0; i < neighbors.size(); i++) {
-                int temp = neighbors.get(i);
+            for (int temp : neighbors) {
                 // decrement the in degree of neighbor
                 inDegree[temp]--;
                 if (inDegree[temp] == 0) {
