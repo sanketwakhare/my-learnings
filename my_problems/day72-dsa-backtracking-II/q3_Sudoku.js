@@ -3,7 +3,10 @@ const solveSudoku = function (A) {
     let board = A.map(row => row.split("").map(ele => ele === '.' ? 0 : Number(ele)));
     backtrack(board, 0);
     board = board.map(row => row.join(""));
-    console.log(board);
+    for(let i=0; i< A.length; i++) {
+        A[i] = board[i];
+    }
+    console.log(A);
 
     function backtrack(board, cellNumber) {
 
