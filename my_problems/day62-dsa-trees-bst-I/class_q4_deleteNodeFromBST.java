@@ -8,7 +8,7 @@ public class class_q4_deleteNodeFromBST {
 
     public static List<TreeNode> searchNode(TreeNode root, int K) {
 
-        List<TreeNode> list = new ArrayList<TreeNode>();
+        List<TreeNode> list = new ArrayList<>();
         TreeNode parent = null;
         // base condition
         if (root == null) {
@@ -57,7 +57,7 @@ public class class_q4_deleteNodeFromBST {
             return root;
         }
 
-        // case 1: delete element with one child
+        // case 1: delete leaf node
         if (curr.left == null && curr.right == null) {
             // delete curr
             if (parent == null) {
