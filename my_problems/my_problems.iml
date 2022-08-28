@@ -81,6 +81,7 @@
       <sourceFolder url="file://$MODULE_DIR$/day82-dsa-graph-IV" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/day83-dsa-graph-V" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/mentor-session-3-interview-dsa" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/hld" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
