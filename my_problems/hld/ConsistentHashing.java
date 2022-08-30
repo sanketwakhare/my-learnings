@@ -1,7 +1,6 @@
 /* Consistent Hashing */
 
 import java.util.*;
-import java.util.stream.Stream;
 
 /*
 * Problem Description
