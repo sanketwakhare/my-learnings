@@ -70,10 +70,13 @@ public class DistinctIslands {
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < m; j++) {
                 if (visited[i][j] == 0 && grid[i][j] == 1) {
+                    // initialize new list
                     list = new ArrayList<>();
+                    // insert base coordinate
                     list.add(new Pair(0, 0));
+                    // mark base coordinate as visited
                     visited[i][j] = 1;
-                    dfs(grid, i, j, n, m, i, j, visited, distinctIslands, list);
+                    dfs(grid, i, j, n, m, i, j, visited, list);
                     distinctIslands.add(list);
                 }
             }
@@ -86,8 +89,7 @@ public class DistinctIslands {
 
     public void dfs(int[][] grid, int i, int j, int n, int m, int baseRow, int baseCol,
                     int[][] visited,
-                    Set<List<Pair>> distinctIslands,
-                    List<Pair> list) {
+                    List<Pair> currIsland) {
 
         if (i < 0 || i >= n || j < 0 || j >= m) return;
 
@@ -95,9 +97,11 @@ public class DistinctIslands {
             int newRow = i + dx[index];
             int newCol = j + dy[index];
             if (isSafe(newRow, newCol, n, m, grid, visited)) {
+                // mark as visited
                 visited[newRow][newCol] = 1;
-                list.add(new Pair(newRow - baseRow, newCol - baseCol));
-                dfs(grid, newRow, newCol, n, m, baseRow, baseCol, visited, distinctIslands, list);
+                // update current list of coordinates
+                currIsland.add(new Pair(newRow - baseRow, newCol - baseCol));
+                dfs(grid, newRow, newCol, n, m, baseRow, baseCol, visited, currIsland);
             }
         }
     }
