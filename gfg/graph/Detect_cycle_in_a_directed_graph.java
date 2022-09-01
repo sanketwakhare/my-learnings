@@ -4,6 +4,10 @@ import java.util.*;
 import java.io.*;
 import java.lang.*;
 
+/*Detect cycle in a directed graph*/
+
+/* https://practice.geeksforgeeks.org/problems/detect-cycle-in-a-directed-graph/1?utm_source=youtube&utm_medium=collab_striver_ytdescription&utm_campaign=detect-cycle-in-a-directed-graph */
+
 public class Detect_cycle_in_a_directed_graph {
 
     public static void main(String[] args) throws FileNotFoundException {
