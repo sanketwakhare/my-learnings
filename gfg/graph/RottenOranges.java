@@ -3,6 +3,10 @@ package graph;
 import java.util.LinkedList;
 import java.util.Queue;
 
+/* Rotten Oranges */
+
+/* https://practice.geeksforgeeks.org/problems/rotten-oranges2536/1?utm_source=youtube&utm_medium=collab_striver_ytdescription&utm_campaign=rotten_oranges */
+
 class QueueData {
     int row;
     int col;
