@@ -8,7 +8,7 @@ import java.lang.*;
 
 /* https://practice.geeksforgeeks.org/problems/detect-cycle-in-a-directed-graph/1?utm_source=youtube&utm_medium=collab_striver_ytdescription&utm_campaign=detect-cycle-in-a-directed-graph */
 
-public class Detect_cycle_in_a_directed_graph {
+public class Detect_cycle_in_a_directed_graph_dfs {
 
     public static void main(String[] args) throws FileNotFoundException {
         Scanner sc = new Scanner(new FileInputStream("gfg/resources/Detect_cycle_in_a_directed_graph.txt"));
@@ -25,7 +25,7 @@ public class Detect_cycle_in_a_directed_graph {
                 int v = sc.nextInt();
                 list.get(u).add(v);
             }
-            if (new Detect_cycle_in_a_directed_graph().isCyclic(V, list))
+            if (new Detect_cycle_in_a_directed_graph_dfs().isCyclic(V, list))
                 System.out.println("1");
             else
                 System.out.println("0");
