@@ -19,7 +19,7 @@ class PrerequisiteTasks {
                     prerequisites[i][j] = sc.nextInt();
                 }
             }
-            Solution ob = new Solution();
+            PrerequisiteTasks ob = new PrerequisiteTasks();
             if (ob.isPossible(N, prerequisites)) {
                 System.out.println("Yes");
             } else {
@@ -29,16 +29,8 @@ class PrerequisiteTasks {
         }
     }
 
-}
-
-// } Driver Code Ends
-
-
-//User function Template for Java
-
-class Solution {
     public boolean isPossible(int N, int[][] prerequisites) {
-        // apply topological sort alogiruthm - Kahn's algorithm and figure out if cycle is present or not
+        // apply topological sort algorithm - Kahn's algorithm and figure out if cycle is present or not
 
         // initialize indegree array
         int[] indegree = new int[N];
