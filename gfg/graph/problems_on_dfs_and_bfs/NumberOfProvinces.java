@@ -1,4 +1,4 @@
-package graph;
+package graph.problems_on_dfs_and_bfs;
 
 import java.io.BufferedReader;
 import java.io.FileInputStream;

@@ -1,4 +1,4 @@
-package graph;
+package graph.problems_on_dfs_and_bfs;
 
 import java.util.LinkedList;
 import java.util.Queue;

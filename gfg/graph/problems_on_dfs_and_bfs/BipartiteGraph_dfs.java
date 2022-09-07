@@ -1,4 +1,4 @@
-package graph;
+package graph.problems_on_dfs_and_bfs;
 
 import java.io.BufferedReader;
 import java.io.FileInputStream;
@@ -6,14 +6,12 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.LinkedList;
-import java.util.Queue;
 
 /*Bipartite Graph*/
 
 /* https://practice.geeksforgeeks.org/problems/bipartite-graph/1?utm_source=youtube&utm_medium=collab_striver_ytdescription&utm_campaign=bipartite-graph */
 
-public class BipartiteGraph_bfs {
+public class BipartiteGraph_dfs {
     // Driver code
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream("gfg/resources/BipartiteGraph.txt")));
@@ -33,7 +31,7 @@ public class BipartiteGraph_bfs {
                 adj.get(u).add(v);
                 adj.get(v).add(u);
             }
-            BipartiteGraph_bfs obj = new BipartiteGraph_bfs();
+            BipartiteGraph_dfs obj = new BipartiteGraph_dfs();
             boolean ans = obj.isBipartite(V, adj);
             if (ans)
                 System.out.println("1");
@@ -48,29 +46,23 @@ public class BipartiteGraph_bfs {
 
         for (int i = 0; i < V; i++) {
             if (colors[i] == -1) {
-                if (!bfs(i, adj, colors))
+                colors[i] = 0;
+                if (!dfs(i, adj, colors, 0))
                     return false;
             }
         }
         return true;
     }
 
-    public boolean bfs(int i, ArrayList<ArrayList<Integer>> adj, int[] colors) {
-        Queue<Integer> queue = new LinkedList<>();
-        queue.offer(i);
-        colors[i] = 0;
-        while (!queue.isEmpty()) {
-            int curr = queue.poll();
-            int currColor = colors[curr];
-            ArrayList<Integer> neighbors = adj.get(curr);
-            for (int neighbor : neighbors) {
-                if (colors[neighbor] == -1) {
-                    int oppisiteColor = currColor == 1 ? 0 : 1;
-                    colors[neighbor] = oppisiteColor;
-                    queue.offer(neighbor);
-                } else if (colors[neighbor] == currColor) {
-                    return false;
-                }
+    public boolean dfs(int i, ArrayList<ArrayList<Integer>> adj, int[] colors, int color) {
+        ArrayList<Integer> neighbors = adj.get(i);
+        for (int temp : neighbors) {
+            if (colors[temp] == -1) {
+                int oppositeColor = color == 1 ? 0 : 1;
+                colors[temp] = oppositeColor;
+                if (!dfs(temp, adj, colors, oppositeColor)) return false;
+            } else if (colors[temp] == color) {
+                return false;
             }
         }
         return true;
