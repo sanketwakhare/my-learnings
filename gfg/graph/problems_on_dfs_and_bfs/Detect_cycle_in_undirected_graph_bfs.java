@@ -8,7 +8,8 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.Queue;
 
-
+/* Detect cycle in undirected graph */
+/* https://practice.geeksforgeeks.org/problems/detect-cycle-in-an-undirected-graph/0 */
 class Pair {
     int first;
     int second;

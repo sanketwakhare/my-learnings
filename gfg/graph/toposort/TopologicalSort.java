@@ -9,7 +9,8 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
 
-
+/* Topological sort */
+/* https://practice.geeksforgeeks.org/problems/topological-sort/1?utm_source=youtube&utm_medium=collab_striver_ytdescription&utm_campaign=topological-sort */
 public class TopologicalSort {
 
     public static void main(String[] args) throws IOException {

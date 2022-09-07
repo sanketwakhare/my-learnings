@@ -6,6 +6,8 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 
+/* Detect cycle in undirected graph */
+/* https://practice.geeksforgeeks.org/problems/detect-cycle-in-an-undirected-graph/0 */
 public class Detect_cycle_in_undirected_graph_dfs {
 
     public static void main(String[] args) throws IOException {
