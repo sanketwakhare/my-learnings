@@ -94,11 +94,7 @@ public class TopologicalSort {
             }
         }
         if (result.size() == V) {
-            int[] output = new int[V];
-            for (int i = 0; i < V; i++) {
-                output[i] = result.get(i);
-            }
-            return output;
+            return result.stream().mapToInt(i -> i).toArray();
         }
 
         return new int[]{};
