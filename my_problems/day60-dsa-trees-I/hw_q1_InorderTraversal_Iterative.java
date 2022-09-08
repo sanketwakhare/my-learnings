@@ -56,7 +56,7 @@ import java.util.Stack;
 public class hw_q1_InorderTraversal_Iterative {
 
     public static void main(String[] args) {
-        hw_q1_InorderTraversal_Recursive t1 = new hw_q1_InorderTraversal_Recursive();
+        hw_q1_InorderTraversal_Iterative t1 = new hw_q1_InorderTraversal_Iterative();
         TreeNode root = TreeUtils.createTestTree();
         int[] result = t1.inorderTraversal(root);
         System.out.println(Arrays.toString(result));
