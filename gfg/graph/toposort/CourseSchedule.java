@@ -11,7 +11,7 @@ class CourseSchedule {
     //{ Driver Code Starts
     public static void main(String[] args) throws IOException {
         BufferedReader read =
-                new BufferedReader(new InputStreamReader(new FileInputStream("gfg/resources/course_schedule.txt")));
+                new BufferedReader(new InputStreamReader(new FileInputStream("gfg/graph/resources/course_schedule.txt")));
         int t = Integer.parseInt(read.readLine());
 
         while (t-- > 0) {

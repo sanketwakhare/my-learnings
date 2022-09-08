@@ -12,7 +12,7 @@ public class Detect_cycle_in_undirected_graph_dfs {
 
     public static void main(String[] args) throws IOException {
         BufferedReader br =
-                new BufferedReader(new InputStreamReader(new FileInputStream("gfg/resources/Detect_cycle_in_undirected_graph.txt")));
+                new BufferedReader(new InputStreamReader(new FileInputStream("gfg/graph/resources/Detect_cycle_in_undirected_graph.txt")));
         int T = Integer.parseInt(br.readLine().trim());
         while (T-- > 0) {
             String[] s = br.readLine().trim().split(" ");

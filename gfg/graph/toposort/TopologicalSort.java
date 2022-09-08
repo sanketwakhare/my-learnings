@@ -16,7 +16,7 @@ public class TopologicalSort {
     public static void main(String[] args) throws IOException {
 
         BufferedReader read =
-                new BufferedReader(new InputStreamReader(new FileInputStream("gfg/resources/TopologicalSort.txt")));
+                new BufferedReader(new InputStreamReader(new FileInputStream("gfg/graph/resources/TopologicalSort.txt")));
         int t = Integer.parseInt(read.readLine());
 
         while (t-- > 0) {

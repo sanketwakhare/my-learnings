@@ -12,7 +12,7 @@ import java.io.InputStreamReader;
 public class Flood_Fill_Algorithm {
 
     public static void main(String[] args) throws IOException {
-        BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream("gfg/resources/Flood_Fill_Algorithm.txt")));
+        BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream("gfg/graph/resources/Flood_Fill_Algorithm.txt")));
         int T = Integer.parseInt(br.readLine().trim());
         while (T-- > 0) {
             String[] S1 = br.readLine().trim().split(" ");
@@ -30,9 +30,8 @@ public class Flood_Fill_Algorithm {
             int newColor = Integer.parseInt(S3[2]);
             Flood_Fill_Algorithm obj = new Flood_Fill_Algorithm();
             int[][] ans = obj.floodFill(image, sr, sc, newColor);
-            for (int i = 0; i < ans.length; i++) {
-                for (int j = 0; j < ans[i].length; j++)
-                    System.out.print(ans[i][j] + " ");
+            for (int[] an : ans) {
+                for (int i : an) System.out.print(i + " ");
                 System.out.println();
             }
             System.out.println("------");

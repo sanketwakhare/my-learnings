@@ -16,7 +16,7 @@ import java.util.Queue;
 public class BipartiteGraph_bfs {
     // Driver code
     public static void main(String[] args) throws IOException {
-        BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream("gfg/resources/BipartiteGraph.txt")));
+        BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream("gfg/graph/resources/BipartiteGraph.txt")));
         int T = Integer.parseInt(br.readLine().trim());
         while (T-- > 0) {
             String[] S = br.readLine().trim().split(" ");

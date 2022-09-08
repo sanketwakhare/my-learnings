@@ -13,7 +13,7 @@ public class NumberOfProvinces {
 
     public static void main(String[] args) throws IOException {
         BufferedReader read =
-                new BufferedReader(new InputStreamReader(new FileInputStream("gfg/resources/NumberOfProvinces.txt")));
+                new BufferedReader(new InputStreamReader(new FileInputStream("gfg/graph/resources/NumberOfProvinces.txt")));
         int t = Integer.parseInt(read.readLine());
         while (t-- > 0) {
             int V = Integer.parseInt(read.readLine());

@@ -8,7 +8,7 @@ import java.util.*;
 /* https://practice.geeksforgeeks.org/problems/prerequisite-tasks/1?utm_source=youtube&utm_medium=collab_striver_ytdescription&utm_campaign=prerequisite-tasks */
 class PrerequisiteTasks {
     public static void main(String[] args) throws IOException {
-        Scanner sc = new Scanner(new FileInputStream("gfg/resources/prerequisite_tasks.txt"));
+        Scanner sc = new Scanner(new FileInputStream("gfg/graph/resources/prerequisite_tasks.txt"));
         int t = sc.nextInt();
         while (t > 0) {
             int N = sc.nextInt();

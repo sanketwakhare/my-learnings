@@ -11,7 +11,7 @@ import java.util.*;
 public class Detect_cycle_in_a_directed_graph_bfs {
 
     public static void main(String[] args) throws FileNotFoundException {
-        Scanner sc = new Scanner(new FileInputStream("gfg/resources/Detect_cycle_in_a_directed_graph.txt"));
+        Scanner sc = new Scanner(new FileInputStream("gfg/graph/resources/Detect_cycle_in_a_directed_graph.txt"));
         int t = sc.nextInt();
 
         while (t-- > 0) {
