@@ -2,6 +2,11 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Stack;
 
+/**
+ * PostOrder traversal
+ * TC: O(N)
+ * SC: O(N)
+ */
 public class q5_Postorder_iterative_2_stacks {
     public static void main(String[] args) {
         TreeNode root = TreeUtils.createTestTree();
