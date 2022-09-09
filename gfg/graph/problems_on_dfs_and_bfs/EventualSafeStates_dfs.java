@@ -1,4 +1,4 @@
-package graph.toposort;
+package graph.problems_on_dfs_and_bfs;
 
 import java.io.FileInputStream;
 import java.io.IOException;
