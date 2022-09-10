@@ -3,8 +3,12 @@ package dp.stocks;
 /* Best Time to Buy and Sell Stock II */
 /* https://www.codingninjas.com/codestudio/problems/selling-stock_630282?source=youtube&campaign=striver_dp_videos&utm_source=youtube&utm_medium=affiliate&utm_campaign=striver_dp_videos */
 
+/* Infinite transactions are allowed */
+
 import java.util.Arrays;
 
+/* TC: O(N)
+ * SC: O(N x 2) for dp array */
 public class Best_Time_to_Buy_and_Sell_Stock_II_tabulation {
 
     public static void main(String[] args) {

@@ -6,6 +6,10 @@ import java.util.List;
 /* Best Time to Buy and Sell Stock */
 /* https://www.codingninjas.com/codestudio/problems/stocks-are-profitable_893405?source=youtube&campaign=striver_dp_videos&utm_source=youtube&utm_medium=affiliate&utm_campaign=striver_dp_videos&leftPanelTab=0 */
 
+/* Only single transaction is allowed */
+
+/* TC: O(N)
+ * SC: O(1) */
 public class Best_Time_to_Buy_and_Sell_Stock_I {
 
     public static void main(String[] args) {
