@@ -8,6 +8,8 @@ package dp.stocks;
 import java.util.ArrayList;
 import java.util.List;
 
+/* TC: O(2^N * N) all possible combinations of either buy or sell + repeated sub-problems will get called N times
+ * SC: O(N) recursive stack space */
 public class Best_Time_to_Buy_and_Sell_Stock_III_brute_force_recursion {
 
     public static void main(String[] args) {
