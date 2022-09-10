@@ -23,18 +23,9 @@ public class Best_Time_to_Buy_and_Sell_Stock_II_tabulation_space_opt {
     }
 
     public static long getMaximumProfit(int n, long[] values) {
-        // Your code goes here.
-        return f(n, values);
-    }
-
-    private static long f(int n, long[] values) {
-        long[][] dp = new long[n + 1][2];
-        for (long[] row : dp) {
-            Arrays.fill(row, -1);
-        }
         long nextSell = 0;
         long nextBuy = 0;
-        long currSell = 0;
+        long currSell;
         long currBuy = 0;
         for (int index = n - 1; index >= 0; index--) {
             // buy
