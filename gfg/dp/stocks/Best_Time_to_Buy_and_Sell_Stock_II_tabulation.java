@@ -28,11 +28,6 @@ public class Best_Time_to_Buy_and_Sell_Stock_II_tabulation {
 
     public static long getMaximumProfit(int n, long[] values) {
         long[][] dp = new long[n + 1][2];
-        for (long[] row : dp) {
-            Arrays.fill(row, -1);
-        }
-        dp[n][0] = 0;
-        dp[n][1] = 0;
         for (int index = n - 1; index >= 0; index--) {
             // buy
             long buy = -values[index] + dp[index + 1][0];
