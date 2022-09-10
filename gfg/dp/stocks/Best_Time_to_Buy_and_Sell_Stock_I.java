@@ -1,4 +1,4 @@
-package dp.buyandsellstocks;
+package dp.stocks;
 
 import java.util.ArrayList;
 import java.util.List;
