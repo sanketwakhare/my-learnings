@@ -1,5 +1,6 @@
 package arrays_interview_prep;
-
+/* Kadane's Algorithm */
+/* https://practice.geeksforgeeks.org/problems/kadanes-algorithm-1587115620/1 */
 public class KadenceAlgo {
 
     public static void main(String[] args) {
