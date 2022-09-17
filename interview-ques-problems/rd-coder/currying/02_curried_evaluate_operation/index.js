@@ -30,3 +30,5 @@ console.log(sum(4)(2)); // 6
 console.log(multiply(4)(2)); // 8
 console.log(divide(10)(2)); // 5
 console.log(subtract(4)(2)); // 2
+
+console.log(sum(4)(multiply(4)(3))); // 16
