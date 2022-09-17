@@ -1,0 +1,18 @@
+// Function Currying
+
+function sum(a) {
+
+    return function () {
+        let val = 0;
+        for (let i = 0; i < arguments.length; i++) {
+            val += arguments[i];
+        }
+        if (arguments.length > 0) {
+            return sum(a + val);
+        }
+        return a;
+
+    }
+}
+
+console.log(sum(5)(6)(7)(4, 5)(3)(-20)(...[1, 2, 3, 4])());
