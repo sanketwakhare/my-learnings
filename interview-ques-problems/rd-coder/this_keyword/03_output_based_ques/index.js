@@ -52,3 +52,21 @@ const newUser1 = {
 };
 newUser1.sayHello(); // hello John
 newUser1.sayHi(); // hi undefined
+// -------------------------------------------
+var length = 4;
+
+function cb() {
+    console.log(this.length);
+}
+
+const obj = {
+    length: 5,
+    method1(fn) {
+        fn();
+    },
+    method2(fn) {
+        arguments[0]();
+    }
+};
+obj.method1(cb); // output ? -> 4
+obj.method2(cb); // output ? -> 1
