@@ -43,3 +43,10 @@ const callA2 = (x) => {
   };
 };
 console.log(callA2(55));
+
+// swap two elements using destructuring
+let a = 10;
+let b = 20;
+console.log(a, b);
+[a, b] = [b, a];
+console.log(a, b);
