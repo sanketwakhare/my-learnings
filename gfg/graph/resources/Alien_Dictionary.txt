@@ -1,0 +1,7 @@
+3
+5 4
+baa abcd abca cab cada
+3 3
+caa aaa aab
+3 3
+abc aca aba
