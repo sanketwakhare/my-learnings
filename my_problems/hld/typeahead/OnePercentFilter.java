@@ -14,4 +14,26 @@ public class  OnePercentFilter {
         }
         return false;
     }
+
+    public static void main(String[] args) {
+        OnePercentFilter filter = new OnePercentFilter();
+
+        int trueCount = 0;
+        int falseCount = 0;
+
+        // Test the filter 100,000 times
+        for (int i = 0; i < 100000; i++) {
+            boolean result = filter.filter();
+            if (result) {
+                trueCount++;
+            } else {
+                falseCount++;
+            }
+        }
+
+        // Check that the number of true results is close to 1% of the total
+        double truePercentage = ((double)trueCount / 100000) * 100;
+        double error = Math.abs(truePercentage - 1.0);
+        System.out.println(error); // Acceptable error rate of 0.5%
+    }
 }
