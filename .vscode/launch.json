@@ -2,6 +2,15 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "name": "Check_if_Object_Instance_of_Class",
+            "program": "${workspaceFolder}/leetcode_javascript/Check_if_Object_Instance_of_Class.js",
+            "request": "launch",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "type": "node"
+        },
+        {
             "type": "java",
             "name": "Launch class_aggressiveCows",
             "request": "launch",
