@@ -3,7 +3,7 @@ import java.util.Map;
 
 public class hw_q5_LongestCommonPrefix_Trie {
 
-    class TrieNode {
+    static class TrieNode {
         Character data;
         Map<Character, TrieNode> children;
         boolean isLeaf;
@@ -42,10 +42,9 @@ public class hw_q5_LongestCommonPrefix_Trie {
 
         public String getCommonPrefix(int totalWords) {
             StringBuilder commonPrefix = new StringBuilder();
-            if(this == null) return commonPrefix.toString();
             TrieNode curr = this;
             boolean done = false;
-            while(!done && curr != null) {
+            while(!done) {
                 boolean isFreqMatching = false;
                 for(Map.Entry<Character, TrieNode> entry: curr.children.entrySet()) {
                     Character ch = entry.getKey();
@@ -69,13 +68,11 @@ public class hw_q5_LongestCommonPrefix_Trie {
 
         int n = A.length;
         TrieNode root = new TrieNode('#');
-        for(int i=0; i<A.length; i++) {
-            String word = A[i];
+        for (String word : A) {
             root.insertWord(word);
         }
         // find a last character with freq matching n
-        String commonPrefix = root.getCommonPrefix(n);
-        return commonPrefix;
+        return root.getCommonPrefix(n);
 
     }
 
