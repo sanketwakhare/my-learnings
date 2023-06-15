@@ -59,7 +59,7 @@ public class class_q3_min_no_perfect_squares {
         System.out.println(t1.minSquares(16));
 
         // Approach 2 - correct - dp array
-        int n = 12;
+        int n = 467;
         int[] dp = new int[n + 1];
         Arrays.fill(dp, -1);
         System.out.println(t1.minSquares_dp(n, dp));

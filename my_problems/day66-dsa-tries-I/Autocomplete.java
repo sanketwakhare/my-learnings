@@ -129,7 +129,7 @@ public class Autocomplete {
             TrieNode parent = this;
             for (int i = 0; i < word.length(); i++) {
                 Character ch = word.charAt(i);
-                boolean isLeaf = (i == word.length() - 1) ? true : false;
+                boolean isLeaf = i == word.length() - 1;
                 if (!parent.children.containsKey(ch)) {
                     parent.insertCharacter(ch, index, isLeaf);
                 } else {

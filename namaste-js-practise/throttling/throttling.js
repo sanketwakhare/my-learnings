@@ -52,7 +52,7 @@ const betterLoggerFunction = throttle(loggerFunc, 1000);
 window.addEventListener("resize", betterLoggerFunction);
 
 // This is the normal Function without Throttling
-//Check the console for the difference between the calls of Normal Function and the Throttled Function
+// Check the console for the difference between the calls of Normal Function and the Throttled Function
 const normalFunc = () => {
   console.count("Normal Function");
 };

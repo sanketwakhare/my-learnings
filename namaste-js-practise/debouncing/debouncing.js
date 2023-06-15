@@ -2,7 +2,8 @@
 let counter = 0;
 const getData = () => {
   // calls an API and gets Data
-  console.log("Fetching Data ..", counter++);
+  const searchInputElement = document.getElementById('searchText');
+  console.log("Fetching Data ..", counter++, searchInputElement.value);
 };
 
 const debounce = function (fn, d) {
@@ -18,3 +19,17 @@ const debounce = function (fn, d) {
 };
 
 const betterFunction = debounce(getData, 500);
+
+function my_debounce(func, wait = 0) {
+  let timeout = null;
+  return function (...args) {
+    const context = this;
+    clearTimeout(timeout);
+    timeout = setTimeout(() => {
+      timeout = null;
+      func.call(context, ...args);
+    }, wait);
+  }
+}
+
+const my_betterFunction = my_debounce(getData, 400);

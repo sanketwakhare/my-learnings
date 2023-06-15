@@ -1,0 +1,13 @@
+{
+  "name": "curry",
+  "module": "curry",
+  "version": "1.0.0",
+  "description": "curry",
+  "main": "curry.js",
+  "scripts": {},
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jasmine": "^5.0.0"
+  }
+}

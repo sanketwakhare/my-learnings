@@ -1,0 +1,40 @@
+// write your code here...
+Typeahead
+
+MVP:
+    get Suggestions = 5 top suggestions
+    after 3 characters entered, then provide suggestions
+    
+cov -> covid
+
+Design Goals:
+    low latency
+    available
+    
+Scale:
+    1 million per day search
+    word - cov - .....
+    
+    typeahead searvice -> suggestions
+    search service -> store the existing searches
+    
+    analytics
+    
+    eqaul reads + writes
+    
+    1 word -> 5 top suggestions
+    search string = request -> 50 characters
+    
+    cov -[covid 100]
+        [cov.. 70]
+        [cov.. 60]
+
+APIS:
+    getTopSuggestions()
+        
+Optimizations of writes:
+	sampling
+	
+	time decay factor
+		
+    
