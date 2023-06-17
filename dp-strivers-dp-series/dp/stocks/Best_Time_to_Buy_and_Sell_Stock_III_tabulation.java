@@ -6,7 +6,6 @@ package dp.stocks;
 /* At most 2 transactions are allowed */
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 /* TC: O(N x 2 x 3)

@@ -5,8 +5,6 @@ package dp.stocks;
 
 /* Infinite transactions are allowed */
 
-import java.util.Arrays;
-
 /* TC: O(N)
  * SC: O(N x 2) for dp array */
 public class Best_Time_to_Buy_and_Sell_Stock_II_tabulation {
