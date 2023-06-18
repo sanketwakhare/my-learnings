@@ -91,17 +91,46 @@ public class hw_q2_Max_Sum_Without_Adjacent_Elements {
 
         hw_q2_Max_Sum_Without_Adjacent_Elements t1 = new hw_q2_Max_Sum_Without_Adjacent_Elements();
 
-        int[][] A = new int[][] {
-                new int[] { 1, 2, 3, 4 },
-                new int[] { 2, 3, 4, 5 }
+        int[][] A = new int[][]{
+                new int[]{1, 2, 3, 4},
+                new int[]{2, 3, 4, 5}
         };
         System.out.println(t1.adjacent(A)); // 8
+        System.out.println(t1.adjacent2(A)); // 8
 
-        A = new int[][] {
-                new int[] { 1 },
-                new int[] { 2 }
+        A = new int[][]{
+                new int[]{1},
+                new int[]{2}
         };
         System.out.println(t1.adjacent(A)); // 2
+        System.out.println(t1.adjacent2(A)); // 2
     }
+
+
+    /**
+     * Tabulation solution
+     */
+    public int adjacent2(int[][] A) {
+        int[] input = new int[A[0].length];
+        for (int i = 0; i < A[0].length; i++) {
+            input[i] = Math.max(A[0][i], A[1][i]);
+        }
+        return maxSum2(input);
+    }
+
+    public int maxSum2(int[] input) {
+
+        int n = input.length;
+        int[] dp = new int[n + 1];
+        dp[1] = input[0];
+
+        for (int i = 2; i <= n; i++) {
+            int pick = input[i - 1] + dp[i - 2];
+            int dontPick = dp[i - 1];
+            dp[i] = Math.max(pick, dontPick);
+        }
+        return dp[n];
+    }
+
 
 }
