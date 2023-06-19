@@ -3,12 +3,12 @@ package dp.array_1d;
 /**
  * Climbing Stairs
  * <p>
- * https://leetcode.com/problems/climbing-stairs/
+ * <a href="https://leetcode.com/problems/climbing-stairs/">Climbing Stairs</a>
  */
-public class ClimbingStairs {
+public class Dp_02_ClimbingStairs {
 
     public static void main(String[] args) {
-        ClimbingStairs t1 = new ClimbingStairs();
+        Dp_02_ClimbingStairs t1 = new Dp_02_ClimbingStairs();
         {
             int result = t1.climbStairs(2);
             System.out.println(result); // 2

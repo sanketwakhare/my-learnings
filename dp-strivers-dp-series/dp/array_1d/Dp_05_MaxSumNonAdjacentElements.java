@@ -5,12 +5,12 @@ import java.util.Arrays;
 /**
  * Max Sum Non Adjacent Elements
  *
- * <a href="https://www.codingninjas.com/codestudio/problems/maximum-sum-of-non-adjacent-elements_843261">Problem Link 1</a>
+ * <a href="https://www.codingninjas.com/codestudio/problems/maximum-sum-of-non-adjacent-elements_843261">Max Sum Non Adjacent Elements</a>
  */
-public class MaxSumNonAdjacentElements {
+public class Dp_05_MaxSumNonAdjacentElements {
 
     public static void main(String[] args) {
-        MaxSumNonAdjacentElements t1 = new MaxSumNonAdjacentElements();
+        Dp_05_MaxSumNonAdjacentElements t1 = new Dp_05_MaxSumNonAdjacentElements();
         {
             int[] input = new int[]{5, 5, 10, 100, 10, 5};
             t1.maxSumNonAdjacentElements(input); // 110

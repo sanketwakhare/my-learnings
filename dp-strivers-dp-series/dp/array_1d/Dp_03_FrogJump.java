@@ -12,15 +12,15 @@ import java.util.Arrays;
  * If the Frog is on 'ith' staircase, he can jump either to '(i+1)th' stair or to '(i+2)th' stair.
  * Your task is to find the minimum total energy used by the frog to reach from '1st' stair to 'Nth' stair.
  * <p>
- * https://www.codingninjas.com/codestudio/problems/frog-jump_3621012
+ * <a href="https://www.codingninjas.com/codestudio/problems/frog-jump_3621012">Frog Jump</a>
  */
-public class FrogJump {
+public class Dp_03_FrogJump {
     public static void main(String[] args) {
-        FrogJump.frogJump(9, new int[]{7, 5, 5, 8, 4, 9, 1, 1, 10}); // 15
-        FrogJump.frogJump(4, new int[]{10, 20, 30, 10}); // 20
+        Dp_03_FrogJump.frogJump(9, new int[]{7, 5, 5, 8, 4, 9, 1, 1, 10}); // 15
+        Dp_03_FrogJump.frogJump(4, new int[]{10, 20, 30, 10}); // 20
     }
 
-    public static int frogJump(int n, int heights[]) {
+    public static void frogJump(int n, int[] heights) {
         // approach 1: recursion
         {
             long start = System.nanoTime();
@@ -66,7 +66,6 @@ public class FrogJump {
             double elapsedTime = (end - start) / 1e6;
             System.out.println(answer + " [time: " + elapsedTime + " ms]");
         }
-        return 0;
     }
 
     // approach 4: iterative tabulation + space optimized

@@ -6,10 +6,10 @@ package dp.array_1d;
  * <a href="https://leetcode.com/problems/house-robber-ii/">House Robber II</a>
  * <a href="https://www.codingninjas.com/codestudio/problems/house-robber_839733">House Robber II Code Studio</a>
  */
-public class HouseRobberII {
+public class Dp_06_HouseRobberII {
 
     public static void main(String[] args) {
-        HouseRobberII t1 = new HouseRobberII();
+        Dp_06_HouseRobberII t1 = new Dp_06_HouseRobberII();
         {
             // test case 1
             int[] input = new int[]{2, 3, 2};
@@ -40,7 +40,7 @@ public class HouseRobberII {
     public int rob(int[] nums) {
         int n = nums.length;
         if (n == 1) return nums[0];
-        // create 2 temp array by excluding first or last element each and apply MaxSumNonAdjacentElements solution
+        // create 2 temp array by excluding first or last element each and apply Dp_05_MaxSumNonAdjacentElements solution
         int[] t1 = new int[n - 1];
         int[] t2 = new int[n - 1];
         for (int i = 0; i < n; i++) {

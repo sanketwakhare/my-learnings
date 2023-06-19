@@ -3,16 +3,18 @@ package dp.array_2d;
 import java.util.Arrays;
 
 /**
+ * Unique Paths
+ * <p>
  * Given two values M and N, which represent a matrix[M][N].
  * We need to find the total unique paths from the top-left cell (matrix[0][0]) to the rightmost cell (matrix[M-1][N-1]).
- *
- *
- * <a href="https://takeuforward.org/data-structure/grid-unique-paths-dp-on-grids-dp8/">TUG Link</a>
+ * <p>
+ * <a href="https://www.codingninjas.com/codestudio/problems/total-unique-paths_1081470">Unique Paths</a>
+ * <a href="https://takeuforward.org/data-structure/grid-unique-paths-dp-on-grids-dp8/">Take U Forward Link</a>
  */
-public class GridUniquePaths_1 {
+public class Dp_08_UniquePaths1 {
 
     public static void main(String[] args) {
-        GridUniquePaths_1 t1 = new GridUniquePaths_1();
+        Dp_08_UniquePaths1 t1 = new Dp_08_UniquePaths1();
         int m = 15, n = 15;
         t1.uniquePaths(m, n);
     }

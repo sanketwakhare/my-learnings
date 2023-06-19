@@ -5,11 +5,11 @@ import java.util.Arrays;
 /**
  * Frog Jump K
  * <p>
- * <a href="https://atcoder.jp/contests/dp/tasks/dp_b">...</a>
+ * <a href="https://atcoder.jp/contests/dp/tasks/dp_b">Frog Jump K</a>
  */
-public class FrogJumpK {
+public class Dp_04_FrogJumpK {
     public static void main(String[] args) {
-        FrogJumpK t1 = new FrogJumpK();
+        Dp_04_FrogJumpK t1 = new Dp_04_FrogJumpK();
         {
             // test case 1
             int[] input = new int[]{10, 30, 40, 50, 20, 30, 15, 7, 3, 6, 4, 3, 29, 23, 3};

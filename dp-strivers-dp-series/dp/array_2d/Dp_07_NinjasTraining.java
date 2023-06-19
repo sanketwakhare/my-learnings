@@ -16,12 +16,12 @@ package dp.array_2d;
  * If the given ‘POINTS’ array is [[1,2,5], [3 ,1 ,1] ,[3,3,3] ],the answer will be 11 as 5 + 3 + 3.
  *
  *
- * <a href="https://www.codingninjas.com/codestudio/problems/ninja-s-training_3621003">Problem link code studio</a>
+ * <a href="https://www.codingninjas.com/codestudio/problems/ninja-s-training_3621003">Ninjas Training</a>
  */
-public class NinjasTraining {
+public class Dp_07_NinjasTraining {
 
     public static void main(String[] args) {
-        NinjasTraining t1 = new NinjasTraining();
+        Dp_07_NinjasTraining t1 = new Dp_07_NinjasTraining();
         {
             int[][] input = new int[][]{{1, 2, 5}, {3, 1, 1}, {3, 3, 3}};
             t1.ninjasTraining(input.length, input); // 11
