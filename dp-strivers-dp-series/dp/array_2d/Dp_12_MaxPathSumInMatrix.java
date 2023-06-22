@@ -38,7 +38,7 @@ public class Dp_12_MaxPathSumInMatrix {
                 for (int k = 0; k < dx.length; k++) {
                     int row = i + dx[k];
                     int col = j + dy[k];
-                    if (row >= 0 && col >= 0 && row < n && col < m) {
+                    if (col >= 0 && col < m) {
                         max = Math.max(max, matrix[row][col]);
                     }
                 }
