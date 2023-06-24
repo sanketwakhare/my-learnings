@@ -24,6 +24,38 @@ public class SubsetSumEqualToK_approach3_tabulation {
     }
 
     public boolean subsetSumToK(int n, int k, int[] arr) {
+        int[][] dp = new int[n][k + 1];
+
+        // base case 1: if k == 0, then we can always make a subset with sum 0
+        for(int i=0; i<n; i++) {
+            dp[i][0] = 1;
+        }
+
+        // base case 2: if we have only one element in the array, then we can make a subset with sum equal to that element only
+        for (int j = 1; j <= k; j++) {
+            dp[0][j] = arr[0] == j ? 1: 0;
+        }
+
+        // choice diagram
+        for (int index = 1; index < n; index++) {
+            for (int target = 1; target <= k; target++) {
+                // for each index, we have two choices: pick or not pick
+                // if we pick, then we have to check if we can make a subset with sum equal to (target - arr[index])
+                int pick = 0;
+                if (target >= arr[index]) {
+                    pick = dp[index - 1][target - arr[index]];
+                }
+                // if we don't pick, then we have to check if we can make a subset with sum equal to target
+                int notPick = dp[index - 1][target];
+                // if either of the above two choices is true, then we can make a subset with sum equal to target
+                dp[index][target] = (pick == 1 || notPick == 1) ? 1 : 0;
+            }
+        }
+        // return the last cell of the dp table
+        return dp[n-1][k] == 1;
+    }
+
+    public boolean subsetSumToKWithBoolean(int n, int k, int[] arr) {
         Boolean[][] dp = new Boolean[n][k + 1];
         for (Boolean[] row : dp)
             Arrays.fill(row, null);
