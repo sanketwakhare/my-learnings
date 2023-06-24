@@ -9,6 +9,7 @@ import java.util.Arrays;
  */
 public class SubsetSumEqualToK_approach2_memoization {
 
+    // Time: O(n*k), Space: O(n*k) + O(n) for recursion stack
     public static void main(String[] args) {
         // test 1
         int n1 = 4;

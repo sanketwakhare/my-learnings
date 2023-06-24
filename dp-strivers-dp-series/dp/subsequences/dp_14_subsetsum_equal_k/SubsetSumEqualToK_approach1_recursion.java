@@ -7,6 +7,7 @@ package dp.subsequences.dp_14_subsetsum_equal_k;
  */
 public class SubsetSumEqualToK_approach1_recursion {
 
+    // Time: O(2^n), Space: O(n) as recursion stack will have at max n elements
     public static void main(String[] args) {
         // test 1
         int n1 = 4;

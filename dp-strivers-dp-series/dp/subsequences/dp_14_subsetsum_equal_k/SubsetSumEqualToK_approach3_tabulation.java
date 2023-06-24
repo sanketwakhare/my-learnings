@@ -9,6 +9,7 @@ import java.util.Arrays;
  */
 public class SubsetSumEqualToK_approach3_tabulation {
 
+    // TC: O(n*k) , SC: O(n*k)
     public static void main(String[] args) {
         // test 1
         int n1 = 4;
