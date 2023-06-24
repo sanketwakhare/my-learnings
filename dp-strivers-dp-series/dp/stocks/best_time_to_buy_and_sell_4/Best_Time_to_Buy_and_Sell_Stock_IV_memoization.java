@@ -1,4 +1,4 @@
-package dp.stocks;
+package dp.stocks.best_time_to_buy_and_sell_4;
 
 /* Best Time to Buy and Sell Stock IV */
 /* https://www.codingninjas.com/codestudio/problems/best-time-to-buy-and-sell-stock_1080698?source=youtube&campaign=striver_dp_videos&utm_source=youtube&utm_medium=affiliate&utm_campaign=striver_dp_videos&leftPanelTab=0 */

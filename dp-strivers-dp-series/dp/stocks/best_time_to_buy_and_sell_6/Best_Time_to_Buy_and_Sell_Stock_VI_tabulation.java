@@ -1,4 +1,4 @@
-package dp.stocks;
+package dp.stocks.best_time_to_buy_and_sell_6;
 
 /* Best Time to Buy and Sell Stock with Transaction Fee - VI */
 /* https://www.codingninjas.com/codestudio/problems/rahul-and-his-chocolates_3118974?source=youtube&campaign=striver_dp_videos&utm_source=youtube&utm_medium=affiliate&utm_campaign=striver_dp_videos&leftPanelTab=0 */

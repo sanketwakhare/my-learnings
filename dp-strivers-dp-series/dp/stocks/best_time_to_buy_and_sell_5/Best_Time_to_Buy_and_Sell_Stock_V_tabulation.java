@@ -1,4 +1,4 @@
-package dp.stocks;
+package dp.stocks.best_time_to_buy_and_sell_5;
 
 /* Best Time to Buy and Sell Stock with Cooldown - V */
 /* https://www.codingninjas.com/codestudio/problems/highway-billboards_3125969?source=youtube&campaign=striver_dp_videos&utm_source=youtube&utm_medium=affiliate&utm_campaign=striver_dp_videos&leftPanelTab=0 */

@@ -1,4 +1,4 @@
-package dp.stocks;
+package dp.stocks.best_time_to_buy_and_sell_1;
 
 import java.util.ArrayList;
 import java.util.List;
