@@ -1,7 +1,5 @@
 package dp.subsequences.dp_15_partition_equal_subset_sum;
 
-import java.util.Arrays;
-
 /**
  * Partition Equal Subset Sum
  * <p>
@@ -9,7 +7,7 @@ import java.util.Arrays;
  */
 public class PartitionEqualSubsetSum_approach3_tabulation {
 
-    // Time: O(n * target), Space: O(n * target) + O(n) recursion stack space where target = sum / 2
+    // Time: O(n*target), Space: O(n*target) as dp array is of size n*target where target is sum/2
     public static void main(String[] args) {
         // test 1
         int n1 = 4;
