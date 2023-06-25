@@ -19,7 +19,7 @@ public class CountSubsetWithSumK_approach2_memoization {
         // test 2
         int k2 = 4;
         int[] arr2 = new int[]{2, 5, 1, 6, 7};
-        System.out.println(new CountSubsetWithSumK_approach2_memoization().findWays(arr2, k2)); // 2
+        System.out.println(new CountSubsetWithSumK_approach2_memoization().findWays(arr2, k2)); // 0
 
         // test 3
         int k3 = 5;
@@ -34,7 +34,7 @@ public class CountSubsetWithSumK_approach2_memoization {
         // test 5
         int k5 = 31;
         int[] arr5 = new int[]{9, 7, 0, 3, 9, 8, 6, 5, 7, 6};
-        System.out.println(new CountSubsetWithSumK_approach2_memoization().findWays(arr5, k5)); // 1
+        System.out.println(new CountSubsetWithSumK_approach2_memoization().findWays(arr5, k5)); // 37
     }
 
     public int findWays(int num[], int tar) {

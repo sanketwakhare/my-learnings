@@ -7,7 +7,7 @@ package dp.subsequences.dp_17_count_subset_with_sum_k;
  */
 public class CountSubsetWithSumK_approach4_space_optimization {
 
-    // TC: O(n * tar) & SC: O(n * tar)
+    // TC: O(n * tar) & SC: O(tar) - where tar is the target
     public static void main(String[] args) {
         // test 1
         int k1 = 5;
@@ -17,7 +17,7 @@ public class CountSubsetWithSumK_approach4_space_optimization {
         // test 2
         int k2 = 4;
         int[] arr2 = new int[]{2, 5, 1, 6, 7};
-        System.out.println(new CountSubsetWithSumK_approach4_space_optimization().findWays(arr2, k2)); // 2
+        System.out.println(new CountSubsetWithSumK_approach4_space_optimization().findWays(arr2, k2)); // 0
 
         // test 3
         int k3 = 5;
@@ -32,45 +32,29 @@ public class CountSubsetWithSumK_approach4_space_optimization {
         // test 5
         int k5 = 31;
         int[] arr5 = new int[]{9, 7, 0, 3, 9, 8, 6, 5, 7, 6};
-        System.out.println(new CountSubsetWithSumK_approach4_space_optimization().findWays(arr5, k5)); // 1
+        System.out.println(new CountSubsetWithSumK_approach4_space_optimization().findWays(arr5, k5)); // 37
     }
 
     public int findWays(int num[], int tar) {
         int n = num.length;
-        int[][] dp = new int[n][tar + 1];
+        int[] prev = new int[tar + 1];
 
-        for (int i = 0; i < n; i++) {
-            dp[i][0] = 1;
-        }
-        if (num[0] <= tar) dp[0][num[0]] = 1;
+        prev[0] = 1;
+        if (num[0] <= tar) prev[num[0]] = 1;
 
         for (int index = 1; index < n; index++) {
+            int[] curr = new int[tar + 1];
+            curr[0] = 1;
             for (int target = 1; target <= tar; target++) {
-                int notPick = dp[index - 1][target];
+                int notPick = prev[target];
                 int pick = 0;
                 if (target >= num[index]) {
-                    pick = dp[index - 1][target - num[index]];
+                    pick = prev[target - num[index]];
                 }
-                dp[index][target] = pick + notPick;
+                curr[target] = pick + notPick;
             }
+            prev = curr;
         }
-        return dp[n - 1][tar];
-    }
-
-    public int f(int index, int target, int[] arr, int[][] dp) {
-
-        if (target == 0) return 1;
-        if (index == 0) {
-            return arr[0] == target ? 1 : 0;
-        }
-
-        if (dp[index][target] != -1) return dp[index][target];
-
-        int notPick = f(index - 1, target, arr, dp);
-        int pick = 0;
-        if (target >= arr[index]) {
-            pick = f(index - 1, target - arr[index], arr, dp);
-        }
-        return dp[index][target] = pick + notPick;
+        return prev[tar];
     }
 }

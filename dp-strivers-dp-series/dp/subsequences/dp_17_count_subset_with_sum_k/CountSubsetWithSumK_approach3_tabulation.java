@@ -17,7 +17,7 @@ public class CountSubsetWithSumK_approach3_tabulation {
         // test 2
         int k2 = 4;
         int[] arr2 = new int[]{2, 5, 1, 6, 7};
-        System.out.println(new CountSubsetWithSumK_approach3_tabulation().findWays(arr2, k2)); // 2
+        System.out.println(new CountSubsetWithSumK_approach3_tabulation().findWays(arr2, k2)); // 0
 
         // test 3
         int k3 = 5;
@@ -32,7 +32,7 @@ public class CountSubsetWithSumK_approach3_tabulation {
         // test 5
         int k5 = 31;
         int[] arr5 = new int[]{9, 7, 0, 3, 9, 8, 6, 5, 7, 6};
-        System.out.println(new CountSubsetWithSumK_approach3_tabulation().findWays(arr5, k5)); // 1
+        System.out.println(new CountSubsetWithSumK_approach3_tabulation().findWays(arr5, k5)); // 37
     }
 
     public int findWays(int num[], int tar) {
@@ -55,22 +55,5 @@ public class CountSubsetWithSumK_approach3_tabulation {
             }
         }
         return dp[n - 1][tar];
-    }
-
-    public int f(int index, int target, int[] arr, int[][] dp) {
-
-        if (target == 0) return 1;
-        if (index == 0) {
-            return arr[0] == target ? 1 : 0;
-        }
-
-        if (dp[index][target] != -1) return dp[index][target];
-
-        int notPick = f(index - 1, target, arr, dp);
-        int pick = 0;
-        if (target >= arr[index]) {
-            pick = f(index - 1, target - arr[index], arr, dp);
-        }
-        return dp[index][target] = pick + notPick;
     }
 }

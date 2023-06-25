@@ -17,7 +17,7 @@ public class CountSubsetWithSumK_approach1_recursion {
         // test 2
         int k2 = 4;
         int[] arr2 = new int[]{2, 5, 1, 6, 7};
-        System.out.println(new CountSubsetWithSumK_approach1_recursion().findWays(arr2, k2)); // 2
+        System.out.println(new CountSubsetWithSumK_approach1_recursion().findWays(arr2, k2)); // 0
 
         // test 3
         int k3 = 5;
