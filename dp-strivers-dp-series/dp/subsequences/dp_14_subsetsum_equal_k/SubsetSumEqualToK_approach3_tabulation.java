@@ -27,14 +27,16 @@ public class SubsetSumEqualToK_approach3_tabulation {
     public boolean subsetSumToK(int n, int k, int[] arr) {
         int[][] dp = new int[n][k + 1];
 
+        // IMPORTANT state - dp[i][j] represents if we can make a subset with sum j using elements from arr[0...i]
+
         // base case 1: if k == 0, then we can always make a subset with sum 0
-        for(int i=0; i<n; i++) {
+        for (int i = 0; i < n; i++) {
             dp[i][0] = 1;
         }
 
         // base case 2: if we have only one element in the array, then we can make a subset with sum equal to that element only
         for (int j = 1; j <= k; j++) {
-            dp[0][j] = arr[0] == j ? 1: 0;
+            dp[0][j] = arr[0] == j ? 1 : 0;
         }
 
         // choice diagram
