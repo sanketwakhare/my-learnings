@@ -2,6 +2,12 @@ package dp.subsequences.dp_19_0_1_knapsack;
 
 // f(n-1, W) = represents the maximum value that can be obtained with capacity W using items up to index n-1
 // f(n-1, W) = max(f(n-1, W), f(n-1, W-w[n-1]) + v[n-1])
+
+/**
+ * 0/1 Knapsack Problem
+ *
+ * <a href="https://www.codingninjas.com/studio/problems/0-1-knapsack_920542">0/1 Knapsack Problem</a>
+ */
 public class Knapsack_0_1_approach1_recursion {
 
     // Time complexity: O(2^n) and Space complexity: O(n) for recursion stack (Auxiliary Stack Space) - where n is the size of the array
