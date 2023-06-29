@@ -39,6 +39,13 @@ public class Knapsack_0_1_approach1_recursion {
         int n4 = 1;
         int maxWeight4 = 1;
         System.out.println(new Knapsack_0_1_approach1_recursion().knapsack(weight4, value4, n4, maxWeight4)); // 0
+
+        // test 5
+        int[] weight5 = {96, 43, 28, 37, 92, 5, 3, 54, 93};
+        int[] value5 = {359, 963, 465, 706, 146, 282, 828, 962, 492};
+        int n5 = 9;
+        int maxWeight5 = 383;
+        System.out.println(new Knapsack_0_1_approach1_recursion().knapsack(weight5, value5, n5, maxWeight5)); // 5057
     }
 
     public int knapsack(int[] weight, int[] value, int n, int maxWeight) {
