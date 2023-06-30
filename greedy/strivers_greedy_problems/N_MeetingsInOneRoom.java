@@ -1,4 +1,4 @@
-package n_meeting_in_one_rooms;
+package strivers_greedy_problems;
 
 import java.util.ArrayList;
 import java.util.Comparator;
