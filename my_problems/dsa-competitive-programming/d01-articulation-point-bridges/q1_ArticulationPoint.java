@@ -1,5 +1,92 @@
 import java.util.*;
 
+/**
+ Q1. Articulation Points
+ Problem Description
+ Given an undirected graph having A nodes. A matrix B of size M x 2 is given which represents the M edges such that there is a edge between node B[i][0] and node B[i][1].
+ <p>
+ You have to find all the Articulation Points in the graph.
+ <p>
+ A vertex in an undirected connected graph is an articulation point iff removing it (and edges through it) disconnects the graph.
+ <p>
+ For a disconnected undirected graph, an articulation point is a vertex removing which increases number of connected components.
+ <p>
+ Return an one-dimensional array which contains all the Articulation Points .
+ <p>
+ You can return the Articulation points in any order.
+ <p>
+ NOTE:
+ <p>
+ There are no self-loops in the graph.
+ There are no multiple edges between two nodes.
+ The graph may or may not be connected.
+ Nodes are numbered from 1 to A.
+ Your solution will run on multiple test cases. If you are using global variables make sure to clear them.
+ <p>
+ <p>
+ Problem Constraints
+ 1 <= A, M <= 3×105
+ <p>
+ 1 <= B[i][0], B[i][1] <= A
+ <p>
+ <p>
+ <p>
+ Input Format
+ The first argument given is an integer A representing the number of nodes in the graph.
+ <p>
+ The second argument given is an matrix B of size M x 2 which represents the M edges such that there is a edge between node B[i][0] and node B[i][1].
+ <p>
+ <p>
+ <p>
+ Output Format
+ Return an one-dimensional array which contains all the Articulation Points .
+ <p>
+ <p>
+ <p>
+ Example Input
+ Input 1:
+ <p>
+ A = 5
+ B = [  [1, 2]
+ [4, 1]
+ [2, 4]
+ [3, 4]
+ [5, 2]
+ [3, 1] ]
+ Input 2:
+ <p>
+ A = 5
+ B = [  [1, 2]
+ [2, 3]
+ [3, 4]
+ [4, 5] ]
+ <p>
+ <p>
+ Example Output
+ Output 1:
+ <p>
+ [2]
+ Output 2:
+ <p>
+ [2, 3, 4]
+ <p>
+ <p>
+ Example Explanation:
+
+ Explanation 1:
+ <p>
+ Node 2 is the only articulation point in the graph as removing it graphs breaks down into two
+ component one which contains nodes [5] and another with [1, 3, 4].
+ Explanation 2:
+ <p>
+ <p>
+ Node 2 is an articulation point in the graph as removing it graphs breaks down into two component,
+ one which contains nodes [1] and another with [3, 4, 5].
+ Node 3 is an articulation point in the graph as removing it graphs breaks down into two component,
+ one which contains nodes [1, 2] and another with [4, 5].
+ Node 4 is an articulation point in the graph as removing it graphs breaks down into two component,
+ one which contains nodes [1, 2, 3] and another with [5].
+ */
 public class q1_ArticulationPoint {
 
     int time = 0;
