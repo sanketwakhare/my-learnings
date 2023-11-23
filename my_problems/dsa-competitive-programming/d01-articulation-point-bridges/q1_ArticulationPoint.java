@@ -113,16 +113,18 @@ public class q1_ArticulationPoint {
         vis[curr] = true;
 
         for (int neighbor : adj.get(curr)) {
-            if (!vis[neighbor]) {
-                children++;
-                dfs(neighbor, curr, disc, low, artPoints, adj, vis);
-                low[curr] = Math.min(low[curr], low[neighbor]);
+            if(neighbor != parent) {
+                if (!vis[neighbor]) {
+                    children++;
+                    dfs(neighbor, curr, disc, low, artPoints, adj, vis);
+                    low[curr] = Math.min(low[curr], low[neighbor]);
 
-                if (parent != -1 && low[neighbor] >= disc[curr]) {
-                    artPoints.add(curr);
+                    if (parent != -1 && low[neighbor] >= disc[curr]) {
+                        artPoints.add(curr);
+                    }
+                } else {
+                    low[curr] = Math.min(low[curr], disc[neighbor]);
                 }
-            } else {
-                low[curr] = Math.min(low[curr], disc[neighbor]);
             }
         }
 
