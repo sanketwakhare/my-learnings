@@ -84,6 +84,7 @@
       <sourceFolder url="file://$MODULE_DIR$/hld" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/degree-eval-contest/01-degree-eval-contest-intro-to-prob-solv-I" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/dsa-competitive-programming/d01-articulation-point-bridges" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/dsa-competitive-programming/d02-avl-tree" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
