@@ -1,7 +1,4 @@
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 /**
  * Bi-connected Xor
@@ -97,12 +94,10 @@ import java.util.Set;
  * <p>
  * We have no possible way to increase the number of connected components by deleting any node so we return -1.
  */
-public class hw_q2_Bi_connected_Xor {
-
-    int time = 0;
+public class hw_q2_Bi_connected_Xor_correct_solution {
 
     public static void main(String[] args) {
-        hw_q2_Bi_connected_Xor t = new hw_q2_Bi_connected_Xor();
+        hw_q2_Bi_connected_Xor_correct_solution t = new hw_q2_Bi_connected_Xor_correct_solution();
 
         int[] a1 = {1, 2, 3, 4, 5, 6};
         int[][] b1 = {{1, 2}, {1, 3}, {1, 4}, {2, 3}, {3, 5}, {3, 6}, {4, 6}};
@@ -124,116 +119,88 @@ public class hw_q2_Bi_connected_Xor {
         // with sum weights as 28329 (all nodes except 25, 34 and 38), 293(node 25), 539(node 34)
         // 28329 ^ 293 ^ 539 = 28055 which is incorrect as per expectation (29153)
 
+        // 293^28868
         int[] a4 = {335, 501, 170, 725, 479, 359, 963};
         int[][] b4 = {{1, 2}, {2, 3}, {3, 1}, {2, 4}, {2, 5}, {2, 7}, {4, 6}, {5, 6}};
         int res4 = t.solve(a4, b4);
         System.out.println(res4); // expected: 1057
     }
 
+    static int maxn = 300009;
+    static int[] par = new int[maxn];
+    static int[] disc = new int[maxn];
+    static int[] low = new int[maxn];
+    static int[] visited = new int[maxn];
+    static int flag, s, ct;
+    static int ans;
+    static ArrayList<ArrayList<Integer>> adj;
+
+    public static void graph() {
+        flag = 0;
+        s = 0;
+        ct = 1;
+        ans = 0;
+        Arrays.fill(visited, 0);
+        Arrays.fill(disc, 0);
+        Arrays.fill(low, 0);
+        Arrays.fill(par, 0);
+        adj = new ArrayList<ArrayList<Integer>>(maxn);
+        for (int i = 0; i < maxn; i++) {
+            adj.add(new ArrayList<Integer>());
+        }
+    }
+
     public int solve(int[] A, int[][] B) {
-
-        time = 0;
-        int n = A.length;
-        Set<Integer> artPoints = new HashSet<>();
-        List<List<Integer>> adj = new ArrayList<>();
-        for (int i = 0; i <= n; i++) {
-            adj.add(new ArrayList<>());
-        }
-
+        graph();
+        for (int a : A)
+            s += a;
         for (int[] edge : B) {
-            int u = edge[0];
-            int v = edge[1];
-            adj.get(u).add(v);
-            adj.get(v).add(u);
+            adj.get(edge[0]).add(edge[1]);
+            adj.get(edge[1]).add(edge[0]);
         }
-
-        int[] disc = new int[n + 1];
-        int[] low = new int[n + 1];
-        boolean[] vis = new boolean[n + 1];
-
-        for (int i = 1; i <= n; i++) {
-            if (!vis[i]) {
-                dfs(i, -1, disc, low, artPoints, adj, vis);
-            }
-        }
-
-        int[] articulationPoints = artPoints.stream().mapToInt(i -> i).toArray();
-
-        // to handle edge case
-        int sumwt = 0;
-        for (int i = 1; i <= n; i++) {
-            if (adj.get(i).isEmpty()) {
-                sumwt += A[i - 1];
-            }
-        }
-//        System.out.println(sumwt);
-        boolean flag = false;
-
-        int maxXor = 0;
-        for (int currArtPoint : articulationPoints) {
-            // perform DFS
-            int currXor = 0;
-            boolean[] visited = new boolean[n + 1];
-            for (int i = 1; i <= n; i++) {
-                if (adj.get(i).isEmpty()) {
-                    continue;
-                }
-                List<Integer> sumList = new ArrayList<>();
-                if (!visited[i] && i != currArtPoint) {
-                    dfs_xor(i, currArtPoint, adj, visited, sumList);
-                } else continue;
-                int currSum = 0;
-                for (int el : sumList) {
-                    currSum += A[el - 1];
-                }
-
-                // to handle edge case
-                if (!flag && sumwt != 0) {
-                    currSum += sumwt;
-                    flag = true;
-                }
-                currXor = currXor ^ currSum;
-            }
-            maxXor = Math.max(maxXor, currXor);
-        }
-
-        // find max XOR
-        return articulationPoints.length == 0 ? -1 : maxXor;
+        dfs(1, 0, 1, A);
+        if (flag == 0)
+            ans = -1;
+        return ans;
     }
 
-    private void dfs_xor(int currNode, int currArtPoint, List<List<Integer>> adj, boolean[] vis, List<Integer> sumList) {
-        sumList.add(currNode);
-        vis[currNode] = true;
-        for (int neighbor : adj.get(currNode)) {
-            if (neighbor != currArtPoint && !vis[neighbor]) {
-                dfs_xor(neighbor, currArtPoint, adj, vis, sumList);
-            }
-        }
-    }
-
-    public void dfs(int curr, int parent, int[] disc, int[] low, Set<Integer> artPoints, List<List<Integer>> adj, boolean[] vis) {
-        int children = 0;
-        disc[curr] = low[curr] = ++time;
-        vis[curr] = true;
-
-        for (int neighbor : adj.get(curr)) {
-            if (neighbor != parent) {
-                if (!vis[neighbor]) {
-                    children++;
-                    dfs(neighbor, curr, disc, low, artPoints, adj, vis);
-                    low[curr] = Math.min(low[curr], low[neighbor]);
-
-                    if (parent != -1 && low[neighbor] >= disc[curr]) {
-                        artPoints.add(curr);
-                    }
-                } else {
-                    low[curr] = Math.min(low[curr], disc[neighbor]);
+    public static int dfs(int v, int p, int root, int[] A) {
+        disc[v] = ct;
+        low[v] = ct++;
+        visited[v] = 1;
+        int child = 0;
+        int sum = A[v - 1];
+        par[v] = p;
+        int pre = 0;
+        int pre2 = 0;
+        int art = 0;
+        for (int u : adj.get(v)) {
+            if (visited[u] == 0) {
+                child++;
+                par[u] = v;
+                int sumChild = dfs(u, v, root, A);
+                low[v] = Math.min(low[v], low[u]);
+                sum += sumChild;
+                if (v == root && child > 1) {
+                    art = 1;
+                    flag = 1;
+                    pre2 += sumChild;
+                    pre = pre ^ sumChild;
                 }
-            }
+                if (v != root && low[u] >= disc[v]) {
+                    art = 1;
+                    flag = 1;
+                    int m2 = sumChild;
+                    pre2 += m2;
+                    pre = pre ^ m2;
+                }
+            } else if (par[v] != u) low[v] = Math.min(low[v], disc[u]);
         }
-
-        if (parent == -1 && children > 1) {
-            artPoints.add(curr);
+        if (art > 0) {
+            int rem = s - pre2 - A[v - 1];
+            pre = pre ^ rem;
+            ans = Math.max(ans, pre);
         }
+        return sum;
     }
 }
