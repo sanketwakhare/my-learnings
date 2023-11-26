@@ -28,6 +28,10 @@ public class AVLTreeImpl {
         root = avlTree.insert(root, 75, null);
         root = avlTree.insert(root, 25, null);
         root = avlTree.insert(root, 95, null);
+
+        // Search element in AVL Tree
+        boolean found = avlTree.search(root, 90);
+        System.out.println("element " + (found ? "found" : "not found"));
     }
 
     // find height of the tree and populate teh height in all AVL Tree nodes
@@ -131,12 +135,30 @@ public class AVLTreeImpl {
     }
 
     // TODO: delete node from AVL tree
-    public Node delete(Node root, int data) {
-        return null;
+    public Node delete(Node root, int K, Node prev) {
+        return root;
     }
 
-    // TODO: search Node in AVL tree
-    public int search(Node root, int data) {
-        return -1;
+    // search Node in AVL tree
+    public boolean search(Node root, int K) {
+        // base condition
+        if (root == null)
+            return false;
+
+        Node temp = root;
+        while (temp != null) {
+            if (temp.data == K) {
+                // element K is found
+                return true;
+            } else if (temp.data < K) {
+                // search in RST
+                temp = temp.right;
+            } else {
+                // search in LST
+                temp = temp.left;
+            }
+        }
+        // element K is not found
+        return false;
     }
 }
