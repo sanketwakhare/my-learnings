@@ -30,7 +30,7 @@ public class class_q3_isAncestor {
 
     // TC: O(1)
     public boolean isAncestor(int x, int y, int[] intime, int[] outtime) {
-        return intime[x] <= intime[y] && outtime[x] >= outtime[y];
+        return x >= 0 && x < intime.length && y >= 0 && y < intime.length && intime[x] <= intime[y] && outtime[x] >= outtime[y];
     }
 
     // TC: O(N + M)
