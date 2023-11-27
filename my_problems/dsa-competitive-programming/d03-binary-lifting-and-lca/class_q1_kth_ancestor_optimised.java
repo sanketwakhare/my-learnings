@@ -2,6 +2,9 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+/**
+ * Binary Lifting
+ */
 public class class_q1_kth_ancestor_optimised {
     public static void main(String[] args) {
         class_q1_kth_ancestor_optimised t = new class_q1_kth_ancestor_optimised();
@@ -15,8 +18,11 @@ public class class_q1_kth_ancestor_optimised {
         t.dfs_populate_up_parent_array(1, -1, adjList, up, vis);
 
         System.out.println(Arrays.deepToString(up));
-        int res1 = t.kthAncestor(12, 3, up, a1);
-        System.out.println(res1);
+        System.out.println(t.kthAncestor(12, 3, up, a1)); // 2
+        System.out.println(t.kthAncestor(12, 2, up, a1)); // 7
+        System.out.println(t.kthAncestor(6, 2, up, a1)); // 3
+        System.out.println(t.kthAncestor(6, 3, up, a1)); // 1
+        System.out.println(t.kthAncestor(6, 4, up, a1)); // -1
     }
 
     // find kth ancestor
