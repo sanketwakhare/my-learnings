@@ -13,6 +13,8 @@ public class class_q1_ncr_approach1 {
         System.out.println(t.ncr(100, 5, 1000000007));
     }
 
+    // TC: O(n . r)
+    // SC: O(n . r)
     public int ncr(int n, int r, int m) {
         int[][] ncr = new int[n + 1][r + 1];
         // nC0 = 1
