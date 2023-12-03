@@ -87,6 +87,8 @@
       <sourceFolder url="file://$MODULE_DIR$/dsa-competitive-programming/d02-avl-tree" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/dsa-competitive-programming/d03-binary-lifting-and-lca" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/dsa-competitive-programming/d04-combinatorics" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/dsa-competitive-programming/d05-digit-dp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/dsa-competitive-programming/d06-dp-on-trees" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
