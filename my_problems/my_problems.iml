@@ -89,6 +89,7 @@
       <sourceFolder url="file://$MODULE_DIR$/dsa-competitive-programming/d04-combinatorics" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/dsa-competitive-programming/d05-digit-dp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/dsa-competitive-programming/d06-dp-on-trees" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/dsa-competitive-programming/d07-matrix-exponentiation" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
