@@ -30,24 +30,24 @@ public class class_q1_digit_occurrence_k_times {
         int[] numB = intToDigitArray(b);
         // count will always be <= k, so keep dp state countOfd size as k + 1
         dp = new int[numB.length][2][k + 1];
-        for (int[][] t : dp) {
-            for (int[] r : t) {
-                Arrays.fill(r, -1);
-            }
-        }
+        initDPArray(dp, -1);
         int f1 = f(0, 0, 0, numB, d, k, dp);
 
         int[] numA = intToDigitArray(a - 1);
         dp = new int[numA.length][2][k + 1];
-        for (int[][] t : dp) {
-            for (int[] r : t) {
-                Arrays.fill(r, -1);
-            }
-        }
+        initDPArray(dp, -1);
         int f2 = f(0, 0, 0, numA, d, k, dp);
 
         answer = f1 - f2;
         return answer;
+    }
+
+    public void initDPArray(int[][][] dp, int val) {
+        for (int[][] t : dp) {
+            for (int[] r : t) {
+                Arrays.fill(r, val);
+            }
+        }
     }
 
     public int[] intToDigitArray(int x) {
@@ -81,6 +81,7 @@ public class class_q1_digit_occurrence_k_times {
             maxDigit = num[position];
         }
 
+        // i represents new_digit
         for (int i = 0; i <= maxDigit; i++) {
             int tmpCount = countOfd;
             int tmpIsSmaller = isSmaller;

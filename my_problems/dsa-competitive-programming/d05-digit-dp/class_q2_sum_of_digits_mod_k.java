@@ -29,24 +29,24 @@ public class class_q2_sum_of_digits_mod_k {
         int[] numB = intToDigitArray(b);
         // sum will always be less than k so keep third state size as k
         dp = new int[numB.length][2][k];
-        for (int[][] t : dp) {
-            for (int[] r : t) {
-                Arrays.fill(r, -1);
-            }
-        }
+        initDPArray(dp, -1);
         int f1 = f(0, 0, 0, numB, k, dp);
 
         int[] numA = intToDigitArray(a - 1);
         dp = new int[numA.length][2][k];
-        for (int[][] t : dp) {
-            for (int[] r : t) {
-                Arrays.fill(r, -1);
-            }
-        }
+        initDPArray(dp, -1);
         int f2 = f(0, 0, 0, numA, k, dp);
 
         answer = f1 - f2;
         return answer;
+    }
+
+    public void initDPArray(int[][][] dp, int val) {
+        for (int[][] t : dp) {
+            for (int[] r : t) {
+                Arrays.fill(r, val);
+            }
+        }
     }
 
     public int[] intToDigitArray(int x) {
@@ -67,6 +67,7 @@ public class class_q2_sum_of_digits_mod_k {
             return 0;
         }
 
+        // memoization
         if (dp[position][isSmaller][sumModK] != -1) {
             return dp[position][isSmaller][sumModK];
         }
@@ -78,6 +79,7 @@ public class class_q2_sum_of_digits_mod_k {
             maxDigit = num[position];
         }
 
+        // i represents new_digit
         for (int i = 0; i <= maxDigit; i++) {
             int tmpSumModK = sumModK;
             int tmpIsSmaller = isSmaller;
