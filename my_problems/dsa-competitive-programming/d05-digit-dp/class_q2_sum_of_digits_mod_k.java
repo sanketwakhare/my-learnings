@@ -1,6 +1,7 @@
 import java.util.Arrays;
 
 /*
+Investigation
 Given range [a, b] inclusive of both a and b, find the total numbers whose sum of digits is divisible by k
  */
 public class class_q2_sum_of_digits_mod_k {
@@ -81,13 +82,15 @@ public class class_q2_sum_of_digits_mod_k {
 
         // i represents new_digit
         for (int i = 0; i <= maxDigit; i++) {
-            int tmpSumModK = sumModK;
-            int tmpIsSmaller = isSmaller;
-            tmpSumModK = tmpSumModK + i;
+
+            int tmpSumModK = sumModK + i;
             tmpSumModK %= k;
+
+            int tmpIsSmaller = isSmaller;
             if (i < maxDigit) {
                 tmpIsSmaller = 1;
             }
+
             answer += f(position + 1, tmpIsSmaller, tmpSumModK, num, k, dp);
         }
 

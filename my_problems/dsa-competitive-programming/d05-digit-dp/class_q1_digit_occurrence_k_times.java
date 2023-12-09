@@ -83,12 +83,15 @@ public class class_q1_digit_occurrence_k_times {
 
         // i represents new_digit
         for (int i = 0; i <= maxDigit; i++) {
+
             int tmpCount = countOfd;
-            int tmpIsSmaller = isSmaller;
             if (i == d) tmpCount++;
+
+            int tmpIsSmaller = isSmaller;
             if (i < maxDigit) {
                 tmpIsSmaller = 1;
             }
+
             answer += f(position + 1, tmpIsSmaller, tmpCount, num, d, k, dp);
         }
 
