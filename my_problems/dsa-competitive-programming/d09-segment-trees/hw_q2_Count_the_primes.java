@@ -126,7 +126,7 @@ public class hw_q2_Count_the_primes {
         int rightChildIndex = 2 * currIndex + 2;
         build(leftChildIndex, start, mid, A, seg);
         build(rightChildIndex, mid + 1, end, A, seg);
-        // update prime count value parent nodes
+        // update prime count value in parent nodes
         seg[currIndex] = seg[leftChildIndex] + seg[rightChildIndex];
     }
 
