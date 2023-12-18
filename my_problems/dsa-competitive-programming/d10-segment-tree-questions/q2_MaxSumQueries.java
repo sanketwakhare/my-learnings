@@ -130,7 +130,7 @@ public class q2_MaxSumQueries {
         return list.stream().mapToInt(i -> i).toArray();
     }
 
-    private int[] calcualteCurrValues(int[] left, int[] right) {
+    private int[] calculateCurrValue(int[] left, int[] right) {
         int maxValue = Math.max(left[0], right[0]);
         maxValue = Math.max(maxValue, left[2] + right[1]);
         int maxPrefix = Math.max(left[1], left[3] + right[1]);
@@ -156,7 +156,7 @@ public class q2_MaxSumQueries {
         int[] left = seg[leftChildIndex];
         int[] right = seg[rightChildIndex];
 
-        seg[currIndex] = calcualteCurrValues(left, right);
+        seg[currIndex] = calculateCurrValue(left, right);
     }
 
     private void update(int currIndex, int start, int end, int index, int value, int[] A, int[][] seg) {
@@ -179,7 +179,7 @@ public class q2_MaxSumQueries {
         int[] left = seg[leftChildIndex];
         int[] right = seg[rightChildIndex];
 
-        seg[currIndex] = calcualteCurrValues(left, right);
+        seg[currIndex] = calculateCurrValue(left, right);
     }
 
     private int[] get(int currIndex, int start, int end, int l, int r, int[][] seg) {
@@ -199,6 +199,6 @@ public class q2_MaxSumQueries {
         int[] left = get(leftChildIndex, start, mid, l, r, seg);
         int[] right = get(rightChildIndex, mid + 1, end, l, r, seg);
 
-        return calcualteCurrValues(left, right);
+        return calculateCurrValue(left, right);
     }
 }
