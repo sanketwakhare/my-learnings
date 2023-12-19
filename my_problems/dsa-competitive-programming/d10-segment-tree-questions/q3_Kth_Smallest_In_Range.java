@@ -68,10 +68,10 @@ Explanation 2:
 import java.util.Arrays;
 import java.util.Comparator;
 
-public class Kth_Smallest_In_Range {
+public class q3_Kth_Smallest_In_Range {
 
     public static void main(String[] args) {
-        Kth_Smallest_In_Range t = new Kth_Smallest_In_Range();
+        q3_Kth_Smallest_In_Range t = new q3_Kth_Smallest_In_Range();
         {
             int[] A = new int[]{1, -2, 6, 1, 3};
             int[][] B = new int[][]{{2, 4, 2}, {1, 5, 4}, {3, 3, 1}};
