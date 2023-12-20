@@ -2,6 +2,16 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+/*
+Given array A and Q queries
+Perform below 2 types of queries
+1. Find min in the range [l, r]
+2. add x in all the element in range [l, r]
+B[i][0] = type of query
+B[i][1] = l
+B[i][2] = r
+B[i][3] = x if type is 2
+ */
 public class class_q1_min_queries_range_updates {
 
     public static void main(String[] args) {
