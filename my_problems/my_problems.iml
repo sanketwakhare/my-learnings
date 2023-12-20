@@ -93,6 +93,8 @@
       <sourceFolder url="file://$MODULE_DIR$/dsa-competitive-programming/d08-nim-game" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/dsa-competitive-programming/d09-segment-trees" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/dsa-competitive-programming/d10-segment-tree-questions" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/dsa-competitive-programming/d11-segmenrt-tree-lazy-propogation" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/dsa-competitive-programming/d12-tree-flattening" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
