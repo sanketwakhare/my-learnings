@@ -9,9 +9,9 @@ Return 1 if present else return 0.
 
 Return array of result for all teh queries where result[i] represents answer for ith query.
  */
-public class q1_is_x_present_in_subtree_of_y {
+public class class_q1_is_x_present_in_subtree_of_y {
     public static void main(String[] args) {
-        q1_is_x_present_in_subtree_of_y t = new q1_is_x_present_in_subtree_of_y();
+        class_q1_is_x_present_in_subtree_of_y t = new class_q1_is_x_present_in_subtree_of_y();
         {
             int A = 6;
             int[][] B = {{1, 2}, {1, 3}, {2, 4}, {2, 5}, {3, 6}};

@@ -9,9 +9,9 @@ Perform below operation for given type of query
 Type 1: given x and value, update value of node x to value. [set val[x] = value]
 Type 2: given x, find sum of subtree of x
  */
-public class q2_subtree_sum_of_x {
+public class class_q2_subtree_sum_of_x {
     public static void main(String[] args) {
-        q2_subtree_sum_of_x t = new q2_subtree_sum_of_x();
+        class_q2_subtree_sum_of_x t = new class_q2_subtree_sum_of_x();
         {
             int[] values = {1, 3, 4, 2, 6, 5};
             int[][] B = {{1, 2}, {1, 3}, {2, 4}, {2, 5}, {3, 6}};
