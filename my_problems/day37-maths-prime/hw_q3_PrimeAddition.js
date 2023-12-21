@@ -39,6 +39,11 @@ const isPrime = (N) => {
     return true;
 }
 
+/*
+References
+https://www.geeksforgeeks.org/minimum-number-of-primes-required-such-that-their-sum-is-equal-to-n/
+*/
+
 /**
  * Return minimum distinct prime numbers by which the A is sum
  * e.g. 13+13 = 26
@@ -50,20 +55,20 @@ const isPrime = (N) => {
 const primeAddition = (A) => {
     // if A is prime, return 1
     if (isPrime(A)) {
-        console.log(A, '->', 1);
-        return 1;
+        answer = 1;
+    } else if(A % 2 === 0) {
+        answer = 2;
+    } else  if(isPrime(A -2)) {
+        answer = 2;
+    } else {
+        answer = 3;
     }
-    // else return 2
-    console.log(A, '->', 2);
-    return 2;
-
-    // if A is prime, return 1 else return 0
-    // observation is 2 is only even which is prime
-    // if (A === 2) return 1;
-    // return 2;
+    console.log(answer);
+    return answer;
 }
 
 primeAddition(26);
+primeAddition(27);
 primeAddition(2);
 primeAddition(10004);
 primeAddition(14448);
