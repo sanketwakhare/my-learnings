@@ -31,13 +31,19 @@ Array.prototype.myFilter = function (callbackFn, thisArg) {
     throw new TypeError(callbackFn + " is not a function");
   }
 
-  const result = [];
+  const result = [] as any[];
   for (let index = 0; index < this.length; index++) {
     const curr = this[index];
     if (callbackFn.call(thisArg, curr, index, this)) {
       result.push(curr);
     }
   }
+  // Alternatively, we can use forEach
+  // this.forEach((curr, index) => {
+  //   if (callbackFn.call(thisArg, curr, index, this)) {
+  //     result.push(curr);
+  //   }
+  // })
   return result;
 };
 
