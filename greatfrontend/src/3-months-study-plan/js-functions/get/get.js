@@ -7,23 +7,21 @@
  * @return {*}
  */
 export default function get(objectParam, pathParam, defaultValue) {
+  const tokens = Array.isArray(pathParam) ? pathParam : pathParam.split(".");
 
-    const tokens = Array.isArray(pathParam) ? pathParam : pathParam.split(".");
-
-    let objRef = objectParam;
-    for (const token of tokens) {
-        if (!objRef) {
-            return defaultValue;
-        }
-
-        const keys = Object.keys(objRef);
-        const keyArray = Array.from(keys);
-        if (keyArray.includes(String(token))) {
-            objRef = objRef[token];
-        } else {
-            return defaultValue;
-        }
+  let objRef = objectParam;
+  for (const token of tokens) {
+    if (!objRef) {
+      return defaultValue;
     }
-    return objRef;
 
+    const keys = Object.keys(objRef);
+    const keyArray = Array.from(keys);
+    if (keyArray.includes(String(token))) {
+      objRef = objRef[token];
+    } else {
+      return defaultValue;
+    }
+  }
+  return objRef;
 }
