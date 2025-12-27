@@ -1,4 +1,6 @@
 /**
+ * Implement the Array.prototype.reduce() method
+ * 
  * Array.prototype.reduce
  * 
  * 

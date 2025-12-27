@@ -1,4 +1,7 @@
 /**
+ * 
+ * Implement the Array.prototype.filter() method
+ * 
  * Array.prototype.filter
  * 
  * Array.prototype.filter creates a new array populated with the results of calling a provided function on every element in the calling array.

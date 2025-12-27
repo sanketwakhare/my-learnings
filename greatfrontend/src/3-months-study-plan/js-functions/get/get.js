@@ -1,4 +1,7 @@
 /**
+ * Implement a function to safely access deeply-nested properties in JavaScript objects
+ */
+/**
  * Gets the value at `path` of `object`. If the resolved value is `undefined`,
  * the `defaultValue` is returned in its place.
  * @param {Object} objectParam

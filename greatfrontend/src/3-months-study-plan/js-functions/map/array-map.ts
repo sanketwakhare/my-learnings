@@ -1,3 +1,7 @@
+/**
+ * Implement the Array.prototype.filter() method
+ */
+
 interface Array<T> {
   myMap<U>(
     callbackFn: (value: T, index: number, array: Array<T>) => U,

@@ -1,4 +1,8 @@
 /**
+ * Implement a function that sums numbers by accepting a number and allows for repeated calling with more numbers until it is not called with any number
+ */
+
+/**
  * Implement a sum function that accepts a number and allows for repeated calling with more numbers. Calling the function without an argument will sum up all the arguments thus far and return the total.
 
 Examples

@@ -1,4 +1,8 @@
 /**
+ * Implement a jQuery-like function that sets the style of a DOM element
+ */
+
+/**
  * jQuery.css
  * 
  * In Vanilla JavaScript, the way to set styles on an element would be as follows:
