@@ -66,3 +66,43 @@ export default function camelCaseKeys(object) {
     return newObj;
   }
 }
+
+
+/**
+ * Alternate Solution
+ * 
+ * const capitalize = (str: string): string => {
+  if (!str) return str;
+  return str.charAt(0).toUpperCase() + str.slice(1);
+};
+
+const toCamelCase = (key: string): string => {
+  const words = key.split("_");
+  if (words.length === 1) return key;
+  
+  return words
+    .map((word, index) => 
+      index === 0 ? word.toLowerCase() : capitalize(word)
+    )
+    .join("");
+};
+
+export default function camelCaseKeys(value: any): any {
+  if (Array.isArray(value)) {
+    return value.map((item) => camelCaseKeys(item));
+  }
+  
+  if (value !== null && typeof value === "object") {
+    const newObj: Record<string, any> = {};
+    
+    for (const [key, val] of Object.entries(value)) {
+      const camelKey = toCamelCase(key);
+      newObj[camelKey] = camelCaseKeys(val);
+    }
+    
+    return newObj;
+  }
+  
+  return value;
+}
+ */
