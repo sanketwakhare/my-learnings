@@ -41,23 +41,31 @@ await promiseAllSettled([p0, p1, p2]);
  */
 export default function promiseAllSettled(iterable) {
   return new Promise((resolve) => {
+    // Initialize results array with the correct length
     const result = new Array(iterable.length);
+
+    // Handle empty array case - resolve immediately
     if (iterable.length === 0) {
       resolve(result);
       return;
     }
 
+    // Track how many promises are settled
     let settledCount = 0;
 
     iterable.forEach((currPromise, index) => {
+      // Wrap in Promise.resolve to handle non-promise values
       Promise.resolve(currPromise)
         .then((res) => {
+          // Promise fulfilled
           result[index] = { status: "fulfilled", value: res };
         })
         .catch((err) => {
+          // Promise rejected
           result[index] = { status: "rejected", reason: err };
         })
         .finally(() => {
+          // Update counter and resolve if all promises have settled
           settledCount += 1;
           if (settledCount === iterable.length) {
             resolve(result);
