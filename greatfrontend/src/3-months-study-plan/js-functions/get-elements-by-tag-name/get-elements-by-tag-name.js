@@ -44,3 +44,24 @@ export default function getElementsByTagName(el, tagName) {
   traverse(el);
   return result;
 }
+
+/**
+ * Iterative solution using queue -BFS
+ 
+export default function getElementsByTagName(el, tagName) {
+  const result = [];
+  const normalizedTagName = tagName.toLowerCase();
+  const queue = [el];
+    while (queue.length > 0) {  
+        const current = queue.shift();        
+        const children = current.children;
+        for (const child of children) {
+            if (child.tagName.toLowerCase() === normalizedTagName) {
+                result.push(child);
+            }
+            queue.push(child);
+        }
+    }
+    return result;
+}
+ */
