@@ -33,36 +33,60 @@ textSearch('aaaa', 'aa');
  * @return {string}
  */
 export default function textSearch(text, query) {
-  if (query.length === 0 || text.length === 0) {
+  // Handle edge cases: if either string is empty, return original text
+  if (text.length === 0 || query.length === 0) {
     return text;
   }
 
-  const lowerText = text.toLowerCase();
-  const lowerQuery = query.toLowerCase();
-  const isMatch = new Array(text.length).fill(false);
+  // Convert both strings to lowercase for case-insensitive comparison
+  const textLower = text.toLowerCase();
+  const queryLower = query.toLowerCase();
 
-  for (let i = 0; i <= lowerText.length - lowerQuery.length; i++) {
-    if (lowerText.substring(i, i + lowerQuery.length) === lowerQuery) {
-      for (let j = 0; j < lowerQuery.length; j++) {
-        isMatch[i + j] = true;
+  // Create a binary mapping array to track which characters are part of a match
+  // 0 = not matched, 1 = matched
+  const binaryMapping = new Array(text.length).fill(0);
+
+  // First pass: find all matches and mark matched characters
+  for (let i = 0; i < textLower.length - queryLower.length; i++) {
+    // Extract substring of the same length as query starting at position i
+    const currSubStr = textLower.substring(i, i + queryLower.length);
+
+    // Check if current substring matches the query
+    if (currSubStr === queryLower) {
+      // Mark all characters in this match as 1 in the binary mapping
+      for (let j = 0; j < queryLower.length; j++) {
+        binaryMapping[i + j] = 1;
       }
-      i += lowerQuery.length - 1;
+
+      // Skip ahead by (query.length - 1) to avoid overlapping matches
+      // The -1 is because the loop will increment i by 1 anyway
+      i += query.length - 1;
     }
   }
 
-  let result = "";
-  for (let i = 0; i < text.length; i++) {
-    if (isMatch[i]) {
+  // Second pass: build the result string with <b> tags around matched sections
+  const result = [];
+  for (let i = 0; i < binaryMapping.length; i++) {
+    // If current character is part of a match
+    if (binaryMapping[i] === 1) {
+      // Find the end of this consecutive matched section
       let j = i + 1;
-      while (j < text.length && isMatch[j]) {
+      while (j < text.length && binaryMapping[j] === 1) {
         j++;
       }
-      result += "<b>" + text.substring(i, j) + "</b>";
+
+      // Wrap the entire matched section in <b> tags
+      // This combines consecutive matches into a single bold tag
+      result.push(`<b>${text.substring(i, j)}</b>`);
+
+      // Move index to the end of this matched section (subtract 1 for loop increment)
       i = j - 1;
-      continue;
+    } else {
+      // Not a match, just add the original character
+      result.push(text[i]);
     }
-    result += text[i];
   }
 
-  return result;
+  // Join all parts together to form the final string
+  return result.join("");
 }
