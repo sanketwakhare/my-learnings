@@ -60,7 +60,7 @@ export default function textSearch(text, query) {
 
       // Skip ahead by (query.length - 1) to avoid overlapping matches
       // The -1 is because the loop will increment i by 1 anyway
-      i += query.length - 1;
+      i += queryLower.length - 1;
     }
   }
 
