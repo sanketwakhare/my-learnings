@@ -1,3 +1,4 @@
+import { Fragment } from "react";
 import "./Tweet.css";
 
 export default function Tweet() {
@@ -31,7 +32,7 @@ export default function Tweet() {
                 if (index === tweet.metadata.length - 1) {
                   return m;
                 }
-                return <span>{m} &middot; </span>;
+                return <Fragment key={m}>{m} &middot;</Fragment>;
               })}
             </div>
           </div>
