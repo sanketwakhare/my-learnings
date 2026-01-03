@@ -7,6 +7,7 @@ import HolyGrail from "./examples/holy-grail/HolyGrail";
 import TodoList from "./examples/to-do-list/TodoList";
 import TemperatureConverter from "./examples/temperature-converter/TemperatureConverter";
 import StarRating from "./examples/star-rating/StarRating";
+import ContactForm from "./examples/contact-form/ContactForm";
 
 export default function App() {
   return (
@@ -24,6 +25,7 @@ export default function App() {
           path="star-rating"
           element={<StarRating maxStars={5} initialFilled={3} />}
         />
+        <Route path="contact-form" element={<ContactForm />} />
       </Route>
     </Routes>
   );

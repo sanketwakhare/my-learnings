@@ -1,3 +1,4 @@
+import ContactForm from "./contact-form/ContactForm";
 import HolyGrail from "./holy-grail/HolyGrail";
 import StarRating from "./star-rating/StarRating";
 import TemperatureConverter from "./temperature-converter/TemperatureConverter";
@@ -37,6 +38,13 @@ export const examples = [
     name: "Star Rating",
     component: StarRating,
     description:
-      "Build a star rating component that allows users to rate items by selecting stars",
+      "Build a star rating component that shows a row of star icons for users to select the number of filled stars corresponding to the rating",
+  },
+  {
+    id: "contact-form",
+    name: "Contact Form",
+    component: ContactForm,
+    description:
+      "Build a contact form which submits user feedback and contact details to a back end API",
   },
 ];
