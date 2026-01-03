@@ -20,9 +20,3 @@ The form and submission should be implemented **entirely in HTML**.
 Do **not** use any JavaScript or framework-specific features for this question.
 
 There is **no need to do any client-side validation** on the fields. Validation will be done on the server side.
-
----
-
-## Submission API
-
-Upon submission, POST the form data to the following endpoint:
