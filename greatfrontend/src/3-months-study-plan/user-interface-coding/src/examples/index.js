@@ -1,4 +1,5 @@
 import HolyGrail from "./holy-grail/HolyGrail";
+import TemperatureConverter from "./temperature-converter/TemperatureConverter";
 import TodoList from "./to-do-list/TodoList";
 import Tweet from "./tweet/Tweet";
 
@@ -22,5 +23,12 @@ export const examples = [
     component: TodoList,
     description:
       "Build a Todo list that lets users add new tasks and delete existing tasks",
+  },
+  {
+    id: "temperature-converter",
+    name: "Temperature Converter",
+    component: TemperatureConverter,
+    description:
+      "Build a temperature converter widget that converts temperature values between Celsius and Fahrenheit",
   },
 ];

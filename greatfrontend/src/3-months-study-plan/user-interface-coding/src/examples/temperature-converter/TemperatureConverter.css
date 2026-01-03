@@ -1,0 +1,28 @@
+.temperatureConverterContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+}
+
+.celsiusColumn,
+.fahrenheitColumn {
+  display: flex;
+  flex-direction: column;
+  row-gap: 8px;
+  height: 24px;
+
+  input {
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 4px 8px;
+  }
+}
+
+.equalsSign {
+  display: flex;
+  align-items: flex-start;
+  height: 24px;
+  padding: 4px;
+}
