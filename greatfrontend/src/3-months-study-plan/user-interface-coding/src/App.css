@@ -2,6 +2,9 @@
   width: 100%;
   min-height: 100vh;
   background-color: #f5f5f5;
+
+  --primary-color: #8b1df2;
+  --hover-color: #760dd9;
 }
 
 /* Home page */
@@ -15,14 +18,112 @@
 .home h1 {
   font-size: 3rem;
   margin-bottom: 1rem;
-  color: #1a1a1a;
+  color: var(--primary-color);
   font-weight: 700;
 }
 
 .home > p {
   font-size: 1.2rem;
   color: #666;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
+}
+
+/* Search Container */
+.search-container {
+  margin-bottom: 2rem;
+  width: 100%;
+  max-width: 600px;
+}
+
+.search-box {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background: white;
+  border: 2px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 0 16px;
+  transition: all 0.3s ease;
+}
+
+.search-box:focus-within {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(29, 161, 242, 0.1);
+}
+
+.search-icon {
+  color: #666;
+  flex-shrink: 0;
+  margin-right: 12px;
+}
+
+.search-input {
+  flex: 1;
+  border: none;
+  outline: none;
+  padding: 14px 0;
+  font-size: 1rem;
+  color: #1a1a1a;
+  background: transparent;
+}
+
+.search-input::placeholder {
+  color: #999;
+}
+
+.clear-button {
+  background: #f0f0f0;
+  border: none;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #666;
+  font-size: 14px;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+}
+
+.clear-button:hover {
+  background: #e0e0e0;
+  color: #1a1a1a;
+}
+
+/* Search Results Info */
+.search-results-info {
+  margin-bottom: 1.5rem;
+  color: #666;
+  font-size: 0.95rem;
+}
+
+.search-results-info strong {
+  color: #1a1a1a;
+}
+
+/* No Results */
+.no-results {
+  text-align: center;
+  padding: 60px 20px;
+  color: #666;
+}
+
+.no-results-icon {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  opacity: 0.5;
+}
+
+.no-results h3 {
+  font-size: 1.5rem;
+  color: #1a1a1a;
+  margin-bottom: 0.5rem;
+}
+
+.no-results p {
+  font-size: 1rem;
 }
 
 /* Examples grid */
@@ -64,7 +165,7 @@
 }
 
 .example-card:hover {
-  border-color: #8b1df2;
+  border-color: var(--primary-color);
   transform: translateY(-4px);
   box-shadow: 0 8px 24px rgba(86, 29, 242, 0.15);
 }
@@ -72,7 +173,7 @@
 .example-card h3 {
   margin: 0 0 12px 0;
   font-size: 1.5rem;
-  color: #1a1a1a;
+  color: var(--primary-color);
   font-weight: 600;
 }
 
@@ -100,7 +201,7 @@
 
 .back-button {
   padding: 10px 20px;
-  background: #5d1df2;
+  background: var(--primary-color);
   color: white;
   border: none;
   border-radius: 8px;
@@ -113,7 +214,7 @@
 }
 
 .back-button:hover {
-  background: #430dd9;
+  background: var(--hover-color);
   transform: translateX(-2px);
 }
 
