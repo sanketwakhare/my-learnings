@@ -1,0 +1,45 @@
+.holyGrailContainer {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.columns {
+  display: flex;
+  flex-grow: 1;
+}
+
+header,
+nav,
+main,
+aside,
+footer {
+  padding: 12px;
+}
+
+header {
+  background-color: tomato;
+  height: 60px;
+}
+
+nav {
+  background-color: coral;
+  flex-shrink: 0;
+  width: 100px;
+}
+
+main {
+  background-color: moccasin;
+  flex-grow: 1;
+}
+
+aside {
+  background-color: sandybrown;
+  flex-shrink: 0;
+  width: 100px;
+}
+
+footer {
+  background-color: slategray;
+  height: 60px;
+}
