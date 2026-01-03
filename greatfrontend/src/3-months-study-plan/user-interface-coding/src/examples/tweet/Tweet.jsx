@@ -1,4 +1,4 @@
-import "./styles.css";
+import "./Tweet.css";
 
 export default function Tweet() {
   const tweet = {
