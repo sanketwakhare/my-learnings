@@ -2,6 +2,8 @@
 
 Build a simple temperature converter widget that contains two text inputs for temperatures in Celsius and Fahrenheit respectively, allowing for conversion between the temperature scales.
 
+![Google Search Temperature converter](google-search-temperature-converter.png)
+
 ---
 
 #### Requirements
