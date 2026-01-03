@@ -1,4 +1,5 @@
 import HolyGrail from "./holy-grail/HolyGrail";
+import TodoList from "./to-do-list/TodoList";
 import Tweet from "./tweet/Tweet";
 
 export const examples = [
@@ -14,5 +15,12 @@ export const examples = [
     component: HolyGrail,
     description:
       "Build the famous holy grail layout consisting of a header, 3 columns, and a footer",
+  },
+  {
+    id: "to-do-list",
+    name: "To-Do List",
+    component: TodoList,
+    description:
+      "Build a Todo list that lets users add new tasks and delete existing tasks",
   },
 ];
