@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "./TodoList.css";
 
 export default function TodoList() {
   const [tasks, setTasks] = useState([
@@ -12,8 +13,13 @@ export default function TodoList() {
     if (newTask.trim() !== "") {
       const updateTaskList = [...tasks, newTask];
       setTasks(updateTaskList);
-      // clear input field
       setNewTask("");
+    }
+  };
+
+  const handleKeyPress = (e) => {
+    if (e.key === "Enter") {
+      addTask();
     }
   };
 
@@ -23,32 +29,49 @@ export default function TodoList() {
   };
 
   return (
-    <div>
-      <h1>Todo List</h1>
-      <div>
-        <input
-          type="text"
-          placeholder="Add your task"
-          value={newTask}
-          onChange={(e) => {
-            const name = e.target.value;
-            setNewTask(name);
-          }}
-        />
-        <div>
-          <button onClick={addTask}>Submit</button>
+    <div className="todo-container">
+      <div className="todo-card">
+        <h1 className="todo-title">📝 Todo List</h1>
+        <p className="todo-subtitle">
+          {tasks.length} {tasks.length === 1 ? "task" : "tasks"} remaining
+        </p>
+
+        <div className="input-section">
+          <input
+            type="text"
+            placeholder="Add a new task..."
+            value={newTask}
+            onChange={(e) => setNewTask(e.target.value)}
+            onKeyPress={handleKeyPress}
+            className="task-input"
+          />
+          <button onClick={addTask} className="add-button">
+            Add Task
+          </button>
         </div>
+
+        {tasks.length === 0 ? (
+          <div className="empty-state">
+            <div className="empty-icon">✓</div>
+            <p>No tasks yet. Add one above!</p>
+          </div>
+        ) : (
+          <ul className="task-list">
+            {tasks.map((task, index) => (
+              <li key={index} className="task-item">
+                <span className="task-text">{task}</span>
+                <button
+                  onClick={() => deleteTask(index)}
+                  className="delete-button"
+                  aria-label="Delete task"
+                >
+                  ✕
+                </button>
+              </li>
+            ))}
+          </ul>
+        )}
       </div>
-      <ul>
-        {tasks.map((task, index) => {
-          return (
-            <li key={index}>
-              <span>{task}</span>
-              <button onClick={() => deleteTask(index)}>Delete</button>
-            </li>
-          );
-        })}
-      </ul>
     </div>
   );
 }
