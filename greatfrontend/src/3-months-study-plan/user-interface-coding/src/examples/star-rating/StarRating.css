@@ -1,0 +1,38 @@
+.star-rating-container {
+  display: inline-block;
+  --icon-size: 32px;
+  --border-color: #7a3030;
+  --filled-color: #ffd700;
+}
+
+.star-rating {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+}
+
+.star-icon {
+  height: var(--icon-size);
+  width: var(--icon-size);
+  transition: all 0.2s ease;
+  color: var(--border-color);
+  cursor: pointer;
+}
+
+.star-icon:hover {
+  transform: scale(1.1);
+}
+
+.star-icon:active {
+  transform: scale(0.95);
+}
+
+.star-icon-filled {
+  fill: var(--filled-color);
+}
+
+.rating-text {
+  margin-top: 8px;
+  font-size: 0.9rem;
+  text-align: center;
+}

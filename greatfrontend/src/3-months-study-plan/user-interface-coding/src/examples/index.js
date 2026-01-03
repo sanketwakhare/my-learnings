@@ -1,4 +1,5 @@
 import HolyGrail from "./holy-grail/HolyGrail";
+import StarRating from "./star-rating/StarRating";
 import TemperatureConverter from "./temperature-converter/TemperatureConverter";
 import TodoList from "./to-do-list/TodoList";
 import Tweet from "./tweet/Tweet";
@@ -30,5 +31,12 @@ export const examples = [
     component: TemperatureConverter,
     description:
       "Build a temperature converter widget that converts temperature values between Celsius and Fahrenheit",
+  },
+  {
+    id: "star-rating",
+    name: "Star Rating",
+    component: StarRating,
+    description:
+      "Build a star rating component that allows users to rate items by selecting stars",
   },
 ];

@@ -6,6 +6,7 @@ import Tweet from "./examples/tweet/Tweet";
 import HolyGrail from "./examples/holy-grail/HolyGrail";
 import TodoList from "./examples/to-do-list/TodoList";
 import TemperatureConverter from "./examples/temperature-converter/TemperatureConverter";
+import StarRating from "./examples/star-rating/StarRating";
 
 export default function App() {
   return (
@@ -18,6 +19,10 @@ export default function App() {
         <Route
           path="temperature-converter"
           element={<TemperatureConverter />}
+        />
+        <Route
+          path="star-rating"
+          element={<StarRating maxStars={5} initialFilled={3} />}
         />
       </Route>
     </Routes>
