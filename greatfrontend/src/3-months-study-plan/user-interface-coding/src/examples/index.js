@@ -1,11 +1,3 @@
-import ContactForm from "./contact-form/ContactForm";
-import HolyGrail from "./holy-grail/HolyGrail";
-import ProgressBar from "./progress-bar/ProgressBar";
-import StarRating from "./star-rating/StarRating";
-import TemperatureConverter from "./temperature-converter/TemperatureConverter";
-import TodoList from "./to-do-list/TodoList";
-import Tweet from "./tweet/Tweet";
-
 export const examples = [
   {
     id: "tweet",
