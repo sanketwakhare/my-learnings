@@ -1,0 +1,22 @@
+.progress-bar-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.progress-bar-fill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  transition: width 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.progress-bar-label {
+  color: white;
+  font-weight: bold;
+  white-space: nowrap;
+}
