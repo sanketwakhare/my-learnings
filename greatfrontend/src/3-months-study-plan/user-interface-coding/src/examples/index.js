@@ -40,4 +40,10 @@ export const examples = [
     description:
       "Build a progress bar component that visually represents the completion percentage of a task",
   },
+  {
+    id: "digital-clock",
+    name: "Digital Clock",
+    description:
+      "Build a 7 segment digital clock clock that displays the current time and updates every second",
+  },
 ];

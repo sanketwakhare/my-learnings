@@ -9,6 +9,7 @@ import TemperatureConverter from "./examples/temperature-converter/TemperatureCo
 import StarRating from "./examples/star-rating/StarRating";
 import ContactForm from "./examples/contact-form/ContactForm";
 import ProgressBarStories from "./examples/progress-bar/ProgressBar.stories";
+import DigitalClock from "./examples/digital-clock/DigitalClock";
 
 export default function App() {
   return (
@@ -28,6 +29,7 @@ export default function App() {
         />
         <Route path="contact-form" element={<ContactForm />} />
         <Route path="progress-bar" element={<ProgressBarStories />} />
+        <Route path="digital-clock" element={<DigitalClock />} />
       </Route>
     </Routes>
   );

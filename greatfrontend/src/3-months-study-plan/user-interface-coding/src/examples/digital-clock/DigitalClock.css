@@ -1,0 +1,119 @@
+.clock-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.digital-clock {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  padding: 40px;
+  background: linear-gradient(135deg, #121312 0%, #0a0e0a 100%);
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.digit-group {
+  display: flex;
+  gap: 8px;
+}
+
+.seven-segment-display {
+  position: relative;
+  width: 60px;
+  height: 100px;
+}
+
+.segment {
+  position: absolute;
+  background-color: transparent;
+  transition: background-color 0.1s ease;
+}
+
+.segment.on {
+  background-color: #00ff00;
+  box-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00;
+}
+
+/* Horizontal segments */
+.seg-a,
+.seg-d,
+.seg-g {
+  width: 50px;
+  height: 8px;
+  left: 5px;
+  clip-path: polygon(10% 0%, 90% 0%, 100% 50%, 90% 100%, 10% 100%, 0% 50%);
+}
+
+.seg-a {
+  top: 0;
+}
+
+.seg-g {
+  top: 46px;
+}
+
+.seg-d {
+  top: 92px;
+}
+
+/* Vertical segments */
+.seg-b,
+.seg-c,
+.seg-e,
+.seg-f {
+  width: 8px;
+  height: 40px;
+  clip-path: polygon(50% 0%, 100% 10%, 100% 90%, 50% 100%, 0% 90%, 0% 10%);
+}
+
+.seg-b {
+  top: 5px;
+  right: 0;
+}
+
+.seg-c {
+  top: 55px;
+  right: 0;
+}
+
+.seg-e {
+  top: 55px;
+  left: 0;
+}
+
+.seg-f {
+  top: 5px;
+  left: 0;
+}
+
+.colon {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100px;
+  padding: 20px 0;
+  animation: blink 1s steps(1) infinite;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  background-color: #00ff00;
+  border-radius: 50%;
+  box-shadow: 0 0 10px #00ff00;
+}
+
+@keyframes blink {
+  0%,
+  49% {
+    opacity: 1;
+  }
+  50%,
+  100% {
+    opacity: 0.2;
+  }
+}
